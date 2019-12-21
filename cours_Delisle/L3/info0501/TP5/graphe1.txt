@@ -1,0 +1,29 @@
+nSommets 12
+oriente 0
+value 0
+complet 0
+debutDefAretes
+0 1
+0 4
+0 5
+1 2
+1 5
+2 3
+2 5
+2 6
+3 6
+3 7
+4 5
+4 8
+4 9
+5 6
+5 9
+6 7
+6 9
+6 10
+6 11
+7 11
+8 9
+9 10
+10 11
+finDefAretes

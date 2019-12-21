@@ -1,0 +1,152 @@
+  body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px 0px 5px 0px;
+}
+
+a:link, a:visited {
+	color: #900;
+	text-decoration: none;
+}
+#pageContainer {
+	width: 100%;
+}
+
+.cleaner {
+	clear:both;
+}
+
+#middleColumn {
+	float: left;
+	width: 70%; 
+}
+
+#middleColumnVariabel {
+	float: left;
+	width: 70%; 
+}
+
+#middleColumn2spalter {
+	float: left;
+}
+
+.pathway {
+	font-size: 0.8em;
+}
+
+.bu {
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+
+#topBarInstituteVariabel {
+	display: none;
+}
+
+#universitaetVariabel {
+	display: none;
+}
+
+#topBar {
+	display: none;
+}
+
+.noprint {
+	display: none;
+}
+
+.copyright {
+	display: none;
+}
+
+#leftColumn {
+	display: none;
+}
+
+#leftColumnVariabel {
+	display: none;
+}
+
+#leftColumn3spalterVariabel {
+	display: none;
+}
+
+.siegel {
+	display: none;
+}
+
+.searchBoxHeader {
+	display: none;
+}
+
+.searchBoxHeader2spaltig {
+	display: none;
+}
+
+.top {
+	display: none;
+}
+
+.topVariabel {
+	display: none;
+}
+
+#naviHor {
+	display: none;
+}
+
+#topBarInstitute {
+	display: none;
+}
+
+#universitaet {
+	display: none;
+}
+
+#universitaet2spalterVariabel {
+	display: none;
+}
+
+#searchBoxRightColumn {
+	display: none;
+}
+
+#naviHorUni3spalter {
+	display: none;
+}
+
+.bearbeiter {
+	display: none;
+}
+
+#greyBar {
+	display: none;
+}
+
+.Institutslogo {
+	display: none;
+}
+
+#footer {
+	display: none;
+}
+
+.internetextnavig {
+	display: none;
+}
+
+#rightColumn {
+	width: 20%;
+	float: right;
+}
+
+#rightColumnVariabel {
+	width: 20%;
+	float: right;
+}
+
+.headlineRightColumn {
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-left: 0px;	
+}

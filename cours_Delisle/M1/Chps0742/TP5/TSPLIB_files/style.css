@@ -1,0 +1,594 @@
+  body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	color: #000;
+	line-height: 1.3em;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+    text-align: center;
+}
+
+img {
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+}
+
+a:link, a:visited {
+	color: #900;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #900;
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.2em;
+	color: #900;
+	font-weight: normal;
+	margin: 0px 0px 10px -5px;
+	padding: 5px;
+	border-bottom: 1px dashed #999;
+}
+
+h2 {
+	font-size: 1.4em;
+	line-height: 1.2em;
+	color: #333;
+	font-weight: normal;
+	margin: 20px 0px 10px -1px;	
+}
+
+h3 {
+	font-size: 1em;
+	line-height: 1.2em;
+	color: #333;
+	font-weight: bold;
+	margin: 20px 0px 10px -1px;	
+}
+
+.bu {
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+
+.bearbeiter {
+	font-size: 0.8em;
+	text-align: right;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	color: #666;
+}
+
+.internetextnavig {
+	font-size: 0.8em;
+	text-align: right;
+	line-height: 1.2em;
+}
+
+.seitenanker {
+	font-size: 0.8em;
+	text-align: right;
+	line-height: 1.2em;
+}
+
+#topBar {
+	height: 25px;
+	background-color: #990000;
+	margin-bottom: 25px;
+	min-width: 982px;
+}
+
+#pageContainer {
+    text-align: left;
+    margin: 0px auto;
+	border: solid 1px #fff;
+	border-width: 0px 1px;
+	min-width: 60px;
+	width: 960px;
+	position: relative;
+	padding: 0px 10px 0px 10px;
+}
+
+#leftColumn {
+	width: 220px;
+	float: left;
+}
+
+#naviMainContainer li {
+	margin-bottom: -1px;
+}
+
+#naviMainContainer ul {
+	margin: 0px 0px 8px 0px;
+	padding: 0px 0px 0px 0px;
+	list-style-type: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-weight: normal;
+	line-height: 1.2em;
+}
+
+#naviMainContainer a {
+	display: block;
+	padding: 5px 5px 6px 1px;
+	width: 200px;
+	color: #000;
+	background-color: #fff;
+	border-top: 1px solid #fc6; 
+}
+
+a.naviMainContainer:link {
+	color: #000;
+	text-decoration: none;
+	border-top: 1px solid #fc6;	
+}
+
+.lastNav {
+	border-bottom: 1px solid #fc6;		
+}
+
+a.naviMainContainer:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+#naviMainContainer a:hover {
+	background-color: #efefef;
+	color: #000;
+	text-decoration: none;	
+}
+
+#naviMainContainer a.current {
+	background-color:#efefef;
+	color: #000;
+	border-top: 1px solid #fc6; 
+	font-weight: bold;		
+}
+
+#naviMainContainer a.current:visited {
+	color:#000;
+	border-top: 1px solid #fc6; 
+}
+
+#naviMainContainer a.current:hover {
+	background-color: #efefef;
+	color: #000;
+	border-top: 1px solid #fc6; 
+	text-decoration: none;			
+}
+
+.lastNavCurrent {
+	border-bottom: 1px solid #fc6;		
+}
+
+#naviMainContainer a.lastNavCurrent {
+	background-color:#efefef;
+	color: #000;
+	border-top: 1px solid #fc6; 
+	font-weight: bold;		
+}
+
+#naviMainContainer a.lastNavCurrent:visited {
+	color:#000;
+	border-top: 1px solid #fc6; 
+}
+
+#naviMainContainer a.lastNavCurrent:hover {
+	background-color: #efefef;
+	color: #000;
+	border-top: 1px solid #fc6; 
+	text-decoration: none;			
+}
+
+#naviSubContainer li {
+	margin: 0px;
+}
+
+#naviSubContainer ul {
+	margin: 0px 0px 8px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 0.8em;
+	list-style-type: none;
+	font-weight: normal;
+}
+
+#naviSubContainer a {
+	display: block;
+	padding: 2px 5px 2px 1px;
+	width: 200px;		
+	background-color: #fff;
+	border-top: 0px solid #b3cce7;
+	border-bottom: 0px solid #e4e8ed;	
+}
+
+#naviSubContainer a:link {
+	color: #000;
+}
+
+#naviSubContainer a:visited {
+	color:#000;
+}
+
+#naviSubContainer a:hover {
+	color: #000;
+	text-decoration: none;
+	background-color: #efefef;	
+}
+
+#naviSubContainer a.current {
+	background-color:#efefef;
+	color: #000;
+	font-weight: bold;		
+}
+
+#naviSubContainer a.current:visited {
+	background-color:#efefef;
+	color: #000;
+	font-weight: bold;		
+}
+
+#naviSubContainer a.current:hover {
+	background-color:#efefef;
+	color: #000;
+	font-weight: bold;		
+}
+
+
+#search {
+	margin: 5px 0px 0px 50px;
+	font-size: 0.9em;
+	color: #666;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#search a {
+	font-size: 0.8em;
+	color: #666;
+	text-transform: none;
+	font-weight: normal;
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
+#search a:link {
+	color: #666;
+	text-decoration: none;
+}
+
+#search a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+#search a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.cleaner {
+	clear:both;
+}
+
+#wrap {
+	float: left;
+	margin: 0px;
+	width: 528px;
+}
+
+#middleColumn {
+	position: relative;
+	float: left;
+	width: 476px;
+	border-left: 2px solid #900;
+	border-right: 1px dashed #999;
+	float: left;
+	min-height: 500px;
+	padding: 0px 20px 0px 20px;
+}
+
+#middleColumn2spalter {
+	position: relative;
+	float: left;
+	width: 697px;
+	border-left: 2px solid #900;
+	border-right: 1px dashed #999;
+	float:left;
+	min-height: 500px;
+	padding: 0px 20px 0px 20px;
+}
+
+#content {
+	margin-top: 7px;
+}
+
+#content p {
+	margin: 0px 0px 5px 0px;
+}
+
+#content ul {
+	margin: 0px 0px 15px 15px;
+	padding-left: 0px;
+	list-style: none;
+}
+
+#content ul li {
+	line-height: 1.4em;
+	padding-left: 15px;
+	background: url(http://www.uni-heidelberg.de/images/uni/zentral/all/dot_liste_schwarz.gif) no-repeat;
+	background-position: 0px 7px;
+}
+
+#naviHor {
+	text-align: right;
+	font-size: 0.8em;
+	line-height: 0px;
+	color: #666;
+	padding-bottom: 16px;
+}
+
+#naviHor a:link {
+	color: #666;
+	text-decoration: none;
+}
+
+#naviHor a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+#naviHor a:hover {
+	color: #666;
+	text-decoration: underline;
+}
+
+.pathway {
+	font-size: 0.8em;
+	line-height: 1.2em;
+	color: #666;
+	padding-top: 8px;
+}
+
+.pathway a:link {
+	text-decoration: none;
+	color: #666;	
+}
+
+.pathway a:visited {
+	text-decoration: none;
+	color: #666;	
+}
+
+.pathway a:hover {
+	text-decoration: underline;
+	color: #666;
+}
+
+.top {
+	position: relative;
+	float: left;
+	padding-top: 30px;
+	margin: 0px;
+}
+
+#rightColumn {
+	width: 200px;
+	margin: 0px;
+	float: right;
+	min-height: 200px;
+}
+
+.keyVisual {
+	height: 105px;
+}
+
+.headlineRightColumn {
+	line-height: 1.3em;
+	border-bottom: 1px dashed #999;
+	margin-bottom: 0.4em;
+	font-size: 1em;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-left: 0px;	
+}
+
+.boxRightColumn {
+	margin-bottom: 5px;
+	font-size: 0.9em;
+	line-height: 1.3em;
+	background-color: #efefef; 
+	padding: 4px 7px 4px 7px;	
+}
+
+.headlineBoxRightColumn {
+	margin-bottom: 5px;
+	font-size: 0.9em;
+	color: #900;	
+	font-weight: bold;	
+	line-height: 1.2em;
+}
+
+a.headlineBoxRightColumn:link { color:#900; text-decoration: none; }
+a.headlineBoxRightColumn:visited { color:#900; text-decoration: none; }
+a.headlineBoxRightColumn:hover { color:#000; text-decoration: underline; }
+a.headlineBoxRightColumn:active { color:#900; text-decoration: underline; }
+
+.boxRightColumn img {
+	margin: 5px 0px;	
+}
+
+.clear {
+	overflow: hidden;
+	clear: left;
+	height: 1px;
+	margin: -1px 0px 0px 0px;
+	font-size: 1px;
+}
+
+.copyright {
+	font-size: 0.9em;
+	color: Black;
+	text-align: center;
+}
+
+#footerBar {
+	height: 25px;
+	background-color: #900;
+	margin: 0px 0px 17px 0px;
+}
+
+#footer {
+	color: #2269B6;
+}
+
+#greyBar {
+	height: 17px;
+	background-color: #efefef;
+	margin: 10px 0px 17px 0px;
+}
+
+#topBarInstitute {
+	height: 25px;
+	background-color: #990000;
+	margin-bottom: 15px;
+	min-width: 982px;
+}
+
+#universitaet {
+	height: 25px;
+	min-width: 982px;
+}
+
+.institutslogo {
+	height: 83px;
+}
+
+
+#searchBoxRightColumn {
+	width: 200px;
+	background-color: #efefef;
+	margin-bottom: 3px;
+}
+
+#searchBoxRightColumn #search {
+	margin: 5px 0px 0px 5px;
+}
+
+.inputSearchRight {
+	font-size: 0.9em;
+	background-color: #fff;
+	border: 1px solid #666;
+	color: #666;
+	padding-left: 2px;
+	width: 130px;
+}
+
+.inputSearchRightButton {
+	border: 0px solid #666;
+	background: url(http://www.uni-heidelberg.de/images/uni/zentral/all/icon_search.gif) no-repeat;
+	width: 13px;
+	height: 23px;
+	background-position: center;
+}
+	
+#pageContainerVariabel {
+    text-align: left;
+    margin: 0px auto;
+	border: solid 1px #fff;
+	border-width: 0px 1px;
+	position:relative;
+	padding: 0px 10px 0px 10px;
+	min-width: 740px;
+}
+
+#pageContainer2spalterVariabel {
+    text-align: left;
+    margin: 0px auto;
+	border: solid 1px #fff;
+	border-width: 0px 1px;
+	position:relative;
+	padding: 0px 10px 0px 10px;
+	min-width: 520px;
+}
+
+#leftColumnVariabel {
+	width: 220px;
+	float: left;
+	position: relative;
+}
+
+#wrapVariabel {
+	margin-right: 220px;
+	margin-left: 220px;
+}
+
+#topBarInstituteVariabel {
+	height: 25px;
+	background-color: #990000;
+	margin-bottom: 15px;
+	min-width: 770px;
+}
+
+#topBarInstitute2spalterVariabel {
+	height: 25px;
+	background-color: #990000;
+	margin-bottom: 15px;
+	min-width: 550px;
+}
+
+#universitaetVariabel {
+	height: 25px;
+	min-width: 770px;
+}
+
+#universitaet2spalterVariabel {
+	height: 25px;
+	min-width: 470px;
+}
+
+#middleColumn2spalterVariabel {
+	margin-left: 220px;
+	border-left: 2px solid #900;
+	border-right: 1px dashed #999;
+	min-height: 500px;
+	padding: 0px 20px 0px 20px;
+	min-width: 220px;
+}
+
+#rightColumnVariabel {
+    float: right; width: 200px;
+    margin: 0px; padding: 0px;
+	min-height: 200px;
+}
+
+#leftColumn3spalterVariabel {
+    float: left; width: 200px;
+    margin: 0px; padding: 0px;
+}
+
+#wrap3spalterVariabel {
+    margin: 0px 220px 0px 220px;
+    padding: 0px 10px;
+}
+
+#middleColumnVariabel {
+	min-height: 500px;
+	padding: 0px 20px 0px 20px;
+	border-left: 2px solid #900;
+	border-right: 1px dashed #999;
+	min-width: 220px;
+}
+
+.topVariabel {
+	padding-top: 30px;
+	margin: 0px;
+}

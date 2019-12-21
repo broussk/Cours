@@ -1,0 +1,6 @@
+nVariables 3
+nContraintes 1
+max
++ 10 x1 + 8 x2 + 5 x3
+
++ 6 x1 + 5 x2 + 4 x3 <= 9

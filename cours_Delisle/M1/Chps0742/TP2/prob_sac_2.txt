@@ -1,0 +1,6 @@
+nVariables 3
+nContraintes 1
+max
++ 20 x1 + 5 x2 + 1 x3
+
++ 10 x1 + 5 x2 + 3 x3 <= 39

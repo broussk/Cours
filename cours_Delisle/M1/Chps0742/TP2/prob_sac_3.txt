@@ -1,0 +1,6 @@
+nVariables 7
+nContraintes 1
+max
++ 20 x1 + 39 x2 + 52 x3 + 58 x4 + 31 x5 + 4 x6 + 5 x7
+
++ 15 x1 + 30 x2 + 41 x3 + 46 x4 + 25 x5 + 4 x6 + 5 x7 <= 101

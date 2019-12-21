@@ -1,0 +1,11 @@
+10
+Lire_mes_mails 4
+Dormir 1
+Aller_sur_facebook 3
+Manger 2
+Me_reveiller 16
+Reviser_mes_algos_d_info0501 9
+Venerer_mon_prof_d_info0501 10
+Terminer_mon_tp_d_info0501 14
+Ameliorer_mon_tp_d_info0501 8
+Prendre_l_apero 7
