@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Launcher_Example.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" layoutX="42.0" layoutY="31.0" onMouseEntered="#changeGame" stroke="BLACK" strokeType="INSIDE" width="42.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff54" height="45.0" layoutX="42.0" layoutY="134.0" onMouseEntered="#startGame" stroke="BLACK" strokeType="INSIDE" width="42.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffae21" height="45.0" layoutX="42.0" layoutY="218.0" onMouseEntered="#pauseGame" stroke="BLACK" strokeType="INSIDE" width="42.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="45.0" layoutX="42.0" layoutY="321.0" onMouseEntered="#stopGame" stroke="BLACK" strokeType="INSIDE" width="42.0" />
+      <Circle fill="#ff1fe6" layoutX="524.0" layoutY="105.0" onMouseEntered="#saveGame" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#21d6ff" layoutX="524.0" layoutY="292.0" onMouseEntered="#loadGame" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="gameNameLabel" alignment="CENTER" layoutX="483.0" layoutY="148.0" prefHeight="89.0" prefWidth="77.0" />
+      <Pane fx:id="gamePanel" layoutX="115.0" prefHeight="400.0" prefWidth="370.0" />
+   </children>
+</Pane>

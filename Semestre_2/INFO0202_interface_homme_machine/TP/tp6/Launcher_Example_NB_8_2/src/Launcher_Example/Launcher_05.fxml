@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Launcher_Example.Controller">
+  <panes>
+    <TitledPane animated="false" text="Changing ?">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="162.0" layoutY="115.0" mnemonicParsing="false" onAction="#changeGame" prefHeight="47.0" prefWidth="253.0" text="Click Me !!!!!!!!!!!!!" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="Current Game">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="37.0" layoutY="27.0" mnemonicParsing="false" onAction="#startGame" prefHeight="135.0" prefWidth="209.0" text="Start" />
+                  <Button layoutX="339.0" layoutY="27.0" mnemonicParsing="false" onAction="#stopGame" prefHeight="135.0" prefWidth="209.0" text="Stop" />
+                  <Button layoutX="195.0" layoutY="181.0" mnemonicParsing="false" onAction="#pauseGame" prefHeight="135.0" prefWidth="209.0" text="Pause" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="State Management">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="42.0" layoutY="81.0" mnemonicParsing="false" onAction="#saveGame" prefHeight="142.0" prefWidth="209.0" text="Save" />
+                  <Button layoutX="299.0" layoutY="81.0" mnemonicParsing="false" onAction="#loadGame" prefHeight="142.0" prefWidth="209.0" text="Load" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+      <TitledPane animated="false" text="Game">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="gameNameLabel" alignment="CENTER" layoutX="438.0" layoutY="82.0" prefHeight="100.0" prefWidth="100.0" />
+                  <Pane fx:id="gamePanel" layoutX="99.0" layoutY="10.0" prefHeight="280.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+  </panes>
+</Accordion>

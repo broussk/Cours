@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Launcher_Example.Controller">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="326.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Game">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#changeGame" text="Change" />
+                  <MenuItem mnemonicParsing="false" onAction="#startGame" text="Start" />
+                  <MenuItem mnemonicParsing="false" onAction="#pauseGame" text="Pause" />
+                  <MenuItem mnemonicParsing="false" onAction="#stopGame" text="Stop" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="I/O">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Save State" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadGame" text="Load State" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="gameNameLabel" alignment="CENTER" layoutY="27.0" prefHeight="32.0" prefWidth="326.0" />
+      <Pane fx:id="gamePanel" layoutX="-5.0" layoutY="59.0" prefHeight="344.0" prefWidth="337.0" />
+   </children>
+</Pane>

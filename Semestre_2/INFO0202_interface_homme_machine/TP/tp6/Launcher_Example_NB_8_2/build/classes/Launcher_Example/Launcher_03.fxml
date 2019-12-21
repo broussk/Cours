@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Launcher_Example.Controller">
+   <top>
+      <Label alignment="CENTER" onMouseClicked="#changeGame" prefHeight="17.0" prefWidth="648.0" text="Change the current game" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <Label alignment="CENTER" onMouseClicked="#startGame" prefHeight="250.0" prefWidth="50.0" text="Start" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Label alignment="CENTER" onMouseClicked="#stopGame" prefHeight="250.0" prefWidth="50.0" text="Stop" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Label alignment="CENTER" onMouseClicked="#pauseGame" prefHeight="25.0" prefWidth="600.0" text="Pause" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#saveGame" text="Save" />
+            <Button contentDisplay="CENTER" layoutX="459.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadGame" text="Load" />
+            <Pane fx:id="gamePanel" layoutX="41.0" layoutY="27.0" prefHeight="319.0" prefWidth="420.0" />
+            <Label fx:id="gameNameLabel" alignment="CENTER" layoutX="42.0" layoutY="6.0" prefHeight="17.0" prefWidth="415.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
