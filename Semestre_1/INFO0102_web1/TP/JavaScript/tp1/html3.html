@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>exemple 3</title>
+	<style>
+		#body{
+			background-color: #000000;
+		}
+	</style>
+	<script type="text/javascript">
+		function couleur() {
+			var objet1=document.getElementById("saisie");
+			var objet2=document.getElementById("body");
+			objet2.style.backgroundColor=objet1.value;
+		}
+		function couleur1() {
+			var objet1=document.getElementById("saisie1");
+			var objet2=document.getElementById("body");
+			objet2.style.backgroundColor=objet1.value;
+		}
+		function couleur2() {
+			var objet1=document.getElementById("saisie2");
+			var objet2=document.getElementById("body");
+			objet2.style.backgroundColor=objet1.value;
+		}
+		function couleur3() {
+			var objet1=document.getElementById("saisie3");
+			var objet2=document.getElementById("body");
+			objet2.style.backgroundColor=objet1.value;
+		}
+		/*
+		<span style="color:rgb(250,0,0)"> bonjour </span>
+								^
+								element=document.getElemId('toto'); //avec id
+		for (i=0;i<256;i++){
+			element.inerHTML +="<span style='color:rgb("+i+",0,0);'>bonjour</span>";
+		}
+
+		*/
+	</script>
+</head>
+<body id="body">
+	<div id="div1"></div>
+	Couleur hexa
+	<form>
+		<input type="button" id="saisie" onclick="couleur()" value="#FF0400">
+		<input type="button" id="saisie1" onclick="couleur1()" value="#00CC55">	
+		<input type="button" id="saisie2" onclick="couleur2()" value="#0049FF">
+		<input type="button" id="saisie3" onclick="couleur3()" value="#FF00B8">
+	</form>
+</body>
+</html>

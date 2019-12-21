@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Afficher la date du jour, l’heure et la date des dernières modifications de la page web.<br>
+<script>
+	datedujour= new Date() ;
+	document.writeln("la date du jour ainsi que l’heure " + datedujour+"<br>") ;
+	document.writeln("Cette page a été modifié le " + document.lastModified+"<br>");
+</script>
+<table border="1" solid black>
+	<tr>
+		<td><select>
+			<option value="Mois">Mois</option>
+			<option value="Janvier">Janvier</option>
+			<option value="Février">Février</option>
+			<option value="Mars">Mars</option>
+			<option value="Avril">Avril</option>
+			<option value="Mai">Mai</option>
+			<option value="Juin">Juin</option>
+			<option value="Juillet">Juillet</option>
+			<option value="Aout">Aout</option>
+			<option value="Septembre">Septembre</option>
+			<option value="Octobre">Octobre</option>				
+			<option value="Novembre">Novembre</option>
+			<option value="Décembre">Décembre</option>
+		</select></td>
+		<td><select>
+			<option value="Année">Année</option>
+			<option value="2000">2000</option>
+			<option value="2001">2001</option>
+			<option value="2002">2002</option>
+			<option value="2003">2003</option>
+			<option value="2004">2004</option>
+			<option value="2005">2005</option>
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>				
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+		</select></td>
+	</tr>
+	<table border="1" solid black>
+		<tr>
+			<td>Dim</td>
+			<td>Lun</td>
+			<td>Mar</td>
+			<td>Mer</td>
+			<td>Jeu</td>
+			<td>Ven</td>
+			<td>Sam</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+</table>
+<input type="button" value="numéro du Mois" onclick="var rep = window.prompt('saisissez le numéro du Mois : ','1:Janvier'); window.status=rep; document.write(mois(rep-1));">
+<script>
+	maDate= new Date(95,11,17,3,24,0);
+	document.write(maDate+"<br>");
+	document.write(maDate.getDay()+"<br>");
+	document.write(maDate.getDate()+"<br>");
+	document.write(maDate.getMonth());
+</script>
+<script>
+	function mois (rep){
+		switch(rep){
+			case 0:
+				return "Janvier";
+				break;
+			case 1:
+				return "Février";
+				break;
+			case 2:
+				return "Mars";
+				break;
+			case 3:
+				return "Avril";
+				break;
+			case 4:
+				return "Mai";
+				break;
+			case 5:
+				return "Juin";
+				break;
+			case 6:
+				return "Juillet";
+				break;
+			case 7:
+				return "Aout";
+				break;
+			case 8:
+				return "Septembre";
+				break;
+			case 9:
+				return "Octobre";
+				break;
+			case 10:
+				return "Novembre";
+				break;
+			case 11:
+				return "Décembre";
+				break;
+			default : 
+				return "Mois non correcte !";
+		}
+	}
+</script>
+</body>
+</html>

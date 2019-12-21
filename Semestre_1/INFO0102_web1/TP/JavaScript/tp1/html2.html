@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Exemple 2 </title>
+</head>
+<body>
+	<label><input type="radio" name="check" value="1" /> table de multiplication</label><br />
+	<label><input type="radio" name="check" value="2" /> factorielle</label><br />
+	<label><input type="radio" name="check" value="3" /> PGCD</label><br />
+	<label><input type="radio" name="check" value="4" /> équation du second degré</label>
+	<br /><br />
+	<input type="button" value="Executer le choix" onclick="check();" />
+
+	<script>
+	    function check() {
+	        var inputs = document.getElementsByTagName('input'),
+	            inputsLength = inputs.length;
+
+	        for (var i = 0; i < inputsLength; i++) {
+	            if (inputs[i].type === 'radio' && inputs[i].checked) {
+	                if (inputs[i].value=='1') {
+	                	tableMultiplication();
+	                }
+	                if (inputs[i].value=='2') {
+	                	factorielle();
+	                }
+	                if (inputs[i].value=='3') {
+	                	PGCD();
+	                }
+	                if (inputs[i].value=='4') {
+	                	eqSndDegre();
+	                }
+	            }
+	        }
+	    }
+
+		function tableMultiplication(){
+			document.write('table de multiplication:')
+			var N;
+			N=prompt('entrez un nombre :');
+			var res;
+			for (var i=0;i<=10;i++){
+				document.write(i+'*'+N+'=');
+				res=i*N;
+				document.write(res);
+				document.write('<br>');
+			}
+		}
+		function factorielle(){
+			document.write('factorielle de !N=')
+			N=prompt('entrez un nombre:');
+			var res=N;
+			document.write('!'+N+'=');
+			for (var i=1;i<res;i++){
+				N=i*N;
+			}
+			document.write(N);
+		}
+		function PGCD(){
+			var a,b;
+			a=prompt('entrez un a:');
+			b=prompt('entrez un b:');
+			document.write('PGCD de a et b= PGCD de '+a+' et '+b+'=')
+			var r;
+			r=a%b;
+			while(r!=0){
+				a=b;
+				b=r;
+				r=a%b;
+			}
+			document.write(b);
+		}
+		function eqSndDegre(){
+			var a,b,c;
+			a=prompt('entrez un a: ');
+			b=prompt('entrez un b: ');
+			c=prompt('entrez un c: ');
+			document.write(a+'x²+'+b+'x+'+c+"<br>");
+			delta=(b*b)-(4*a*c);
+			if(delta>0){
+				z1=(-b+(Math.pow(delta,0.5)))/(2*a)
+				z2=(-b-(Math.pow(delta,0.5)))/(2*a)
+				document.write('z1='+z1+' '+'z2='+z2);
+			}
+			if(delta==0){
+				z=-b/(2*a);
+				document.write(z);
+			}
+		}
+	</script>
+</body>
+</html>

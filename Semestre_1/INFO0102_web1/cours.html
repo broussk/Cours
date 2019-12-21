@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title> Commutateurs </title>
+	</head>
+	<body>
+		<h1 align="center"> Le titre</h1>
+		<p align="right">
+			Un paragraphe à <em>droite</em>.
+		</p>
+		<p align="left">
+			Un paragraphe à gauche.
+		</p>
+		<address> monsieur_exemple@univ-reims.fr</address>
+
+		<p> paragraphe <br> 1 </p>
+		<hr align="center"> width=3 size=7>
+		<p>paragraphe 2 </p> <!-- un commentaire-->
+		<body>
+			<p> paragraphe 1</p>
+			<p> paragraphe 2</p>
+		</body>
+		<body>
+			<p> paragraphe 		1 </p>
+			<p> paragraphe 2</p>
+		</body>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> le premier document</title>
+</head>
+<body>
+	<h1 align="center"> le premier document</h1>
+	<p align="left"> Voici donc un premier document HTML.</p>
+	<hr width="200" size="10" align="center">
+	<p align="right"> 
+		Voici un second paragraphe <br>
+		<em>avec un saut de ligne </em> <br>
+		<strong> et un autre saut de ligne</strong>.
+	</p>
+	<p align="center"> 
+		enfin un dernier paragraphe <br> 
+		centré <br>
+		<tt> avec du texte en télétype</tt>
+	</p>
+	<hr>
+	<address>monsieur_exemple@univ_reims.fr</address>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	...
+	<dl>
+		<dt> première entrée</dt>
+		<dd>la description de la première entrée</dd>
+		<dt>seconde entrée</dt>
+		<dd>la description de la seconde entrée</dd>
+	</dl>
+	...
+</body>
+</html>
+
+<!DOCTYPE HTML PUBLIC "-//W3c//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="centent-type" content="text/html" charset="utf-8">
+	<title>Test des listes</title>
+</head>
+<body>
+	<h2>Exemple de listes ...</h2>
+	<h3>Listes descriptives</h3>
+	<dl>
+		<dt>première entrée</dt>
+			<dd>la description de la première entrée</dd>
+		<dt>seconde entrée</dt>
+			<dd>la description de la seconde entrée</dd>
+	</dl>
+	<dl>	<!--attention à la non fermeture des balises-->
+		<dt> ONU
+			<dd> organisation des nations unies
+		<dt>SDN
+			<dd> société des nations
+	</dl>
+
+	<h3>listes énumératives</h3>
+	<ol>
+		<li>première entrée</li>
+		<li>seconde entrée</li>
+		<li>troisième entrée</li>
+	</ol>
+	<ul>
+		<li>des régions françaises :</li>
+		<ul>
+			<li>champagne-ardennes</li>
+			<li>centre</li>
+			<li>ile de france</li>
+		</ul>
+		<li>deux départements francais :</li>
+		<ul>
+			<li>marne</li>
+			<li>indre et Loire</li>
+		</ul>
+	</ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p><a href="#premier">vers le premier paragraphe</a></p>
+	<p><a href="#second">vers le second paragraphe</a></p>
+	...
+	<a name="premier"><p>le premier paragraphe</p></a>
+	<a name="second"><p>le second paragraphe</p></a>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	...
+	<p><a href="http://www.ici.fr/autrel.html"> vers autre 1 </a></p>
+	...
+	<p><a href="autre2.html">vers autre 2</a></p>
+	...
+	<p><a href=".../rep/autre3.html">vers autre 3</a></p>
+	...
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	...
+	<p><a href="http://www.ici.fr"> vers le site ici</a></p>
+	...
+	<p><a href="http://www.ici.fr/parla/tourdesuite.html">vers le site ici</a></p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	...
+	<ul>
+		<li><a href="http://www.google.fr">rechercher avec <em>Google</em></a></li>
+		<li><a href="http://www.duckduckgo.com">rechercher avec <em>DuckDuckgo</em></a></li>
+		<li><a href="http://www.qwant.com">rechercher avec <em>Qwant</em></a></li>
+		...
+	</ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>test des listes</title>
+</head>
+<body>
+	<a name="top"><h1>Voivi des exemples de liens...</h1></a>
+	<h2>Exemple 1</h2>
+	<ul>
+		<li><a href="http://www.google.fr">rechercher avec <em>Google</em></a></li>
+		<li><a href="http://www.duckduckgo.com">rechercher avec <em>DuckDuckgo</em></a></li>
+		<li><a href="http://www.qwant.com">rechercher avec <em>Qwant</em></a></li>
+	</ul>
+	<a name="top"><h2>exemple 2</h2></a>
+	<ol>
+		<li> Liens interne au document
+			<ul>
+				<li><a href="#premier">vers le premier paragraphe</a></li>
+			</ul>
+		</li>
+		<li> Liens vers l'exterieur
+			<ul>
+				<li><a href="http://www.google.fr">moteur Google</a></li>
+				<li><a href="http://www.oracle.com">chez Oracle</a></li>
+			</ul>
+		</li>
+		<li>Vers une autre page du dite
+			<ul>
+				<li><a href="../page.html">page située en ../page.html</a></li>
+				<li><a href="autre/autrepage.html">page située en autre/autrepage.html</a></li>
+			</ul>
+		</li>
+	</ol>
+	<a name="premier"><p><strong>Voici le premier paragraphe</strong><br>
+	Lorem ipsum dolo sit amet,... Sed sagittis ex et eleifend ullamcorper.</p></a>
+	<p><a href="#top">retour vers le haut de la page</a></p>
+	<hr>
+	<address>monsieur_exemple@monsite.com</address>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	...
+	<p><img src="image1.png"></p>
+	...
+	<ul>
+		<li><img src="../mesimages/image2.png"></li>
+		<li><img src="http://www.images.fr/image3.png"></li>
+	</ul>
+	...
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>alignement du texte</title>
+</head>
+<body>
+	<p><a href="http://www.google.fr"><img src="imggoogle2.png" align="top" border="0"></a></p>
+	<br><br>
+	<p><a href="http://www.google.fr"><img src="imggoogle2.png" align="middle" border="0"></a></p>
+	<br><br>
+	<p><a href="http://www.google.fr"><img src="imggoogle2.png" align="bottom" border="0"></a></p>
+	<br><br>
+	<p><a href="http://www.google.fr"><img src="imggoogle2.png" align="right" border="0"></a></p>
+	<br><br>
+	<p><a href="http://www.google.fr"><img src="imggoogle2.png" align="left" border="0"></a></p>
+	<br><br>
+</body>
+</html>
+
+
+<table border="">
+	<tr>
+		<td> case 1 </td>
+		<td> case 2 </td>
+	</tr>
+	<tr>
+		<td> case 3 </td>
+		<td> case 4 </td>
+	</tr>
+</table>
+
+<table border="">
+	<tr>
+		<td><a href="http://www.google.fr"><img src="imggoogle.png"></a></td>
+		<td><a href="http://yahoo.fr"><img src="imgyahoo.png"></a></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.bing.fr"><img src="imgbing.png"></a></td>
+	</tr>
+</table>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exemple de liens et tableau</title>
+</head>
+<body>
+	<h1>Exemple...</h1>
+	<p>
+		<table border="" width="100%">
+			<tr>
+				<td><em>Cellule 1</em></td>
+				<td>Cellule 2</td>
+			</tr>
+			<tr>
+				<td><strong>Liste 1</strong>
+					<ul>
+						<li>Item 1</li>
+						<li><a href="./item2.html"><img src="./str.png" border="0">Item 2</a></li>
+					</ul>
+				</td>
+				<td align="right">Cellule 4</td>
+			</tr>
+			<tr>
+				<td><img src="./str.png" align="left"> Left </td>
+				<td><img src="./str.png" align="right"> right </td>
+				<td><img src="./str.png" align="middle"> middle </td>
+				<td><img src="./str.png" align="top"> top </td>
+			</tr>
+		</table>
+	</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>images et tableaux</title>
+</head>
+<body>
+	<h1>Images et tableaux</h1>
+	<p><img src="hat.jpg" width="120" align="top"> voici l'image <tt> hat.jpg</tt></p>
+	<p><img src="sardines.jpg" align="right" width="75"> Le texte autour de cette image <tt> (sardine.jpg)</tt> est coulé, contrairement au texte de l'image précédente. Vous pouvez donc remarquer que l'image est à droite, comme l'indique le commutateur <tt> align</tt> et que le texte est sur plusieurs lignes</p>
+	<table border="">
+		<tr>
+			<td><img src="hat.jpg" width="75"></td>
+			<td>la case à gauche contient l'image <tt>hat.jpg</tt></td>
+		</tr>
+		<tr>
+			<td>la case à droite contient l'image <tt> sardine.jpg</tt></td>
+			<td><img src="sardines.jpg"></td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tableau</title>
+</head>
+<body>
+	<h1>Exemple...</h1>
+	<table>
+		<caption>Le titre du tableau</caption>
+		<tr>
+			<th>Entête 1</th>
+			<th>Entête 2</th>
+		</tr>
+		<tr>
+			<td>case 1</td>
+			<td>case 2</td>
+		</tr>
+		<tr>
+			<td>case 3</td>
+			<td>case 4</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encore des tableaux...</title>
+</head>
+<body>
+	<h1>Encore des tableaux</h1>
+	<table border="1" align="center">
+		<tr>
+			<td>Cellule n°1</td>
+			<td rowspan="2">Cellule n°2</td>
+			<td>Cellule n°3</td>
+		</tr>
+		<tr>
+			<td>Cellule n°4</td>
+			<td>Cellule n°6</td>
+		</tr>
+		<tr>
+			<td>Cellule n°7</td>
+			<td>Cellule n°8</td>
+			<td>Cellule n°9</td>
+		</tr>
+	</table>
+	<p>&nbsp; <br></p>
+	<table border="1" align="center">
+		<tr>
+			<td>Cellule n°1</td>
+			<td>Cellule n°2</td>
+			<td>Cellule n°3</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">Cellule n°4</td>
+			<td>Cellule n°6</td>
+		</tr>
+		<tr>
+			<td>Cellule n°7</td>
+			<td>Cellule n°8</td>
+			<td>Cellule n°9</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+...
+<br>
+un champ de saisie d'une largeur de 40 pour un maximum de 20 caractères ! <br>
+<input type="texte" name="ma_boite" size="40" maxlength="20" value="Valeur par défaut affichée ...">
+<br>
+...
+
+...
+<br>
+<form>
+	<textarea name="txtmulti" cols="35" rows="4"> Ceci est une boite à texte de 35 caractères de large et 4 lignes</textarea>
+</form>
+...
+
+...
+exemple 1 : 
+<form>
+	<input type="text" name="ma_boite" size="40" maxlength="50" value="champ de saisie d'une longueur de 40 pour un maximum de 50 caractères">
+</form>
+exemple 2 :
+<form>
+	<textarea name="txtmulti" cols="35" rows="4"> Ceci est une boite à texte de 35 caractères de large et 4 lignes</textarea>
+</form>
+...
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exemple de listes</title>
+</head>
+<body>
+	<table border="0">
+		<tr>
+			<td>
+				<form>
+					<select name="MaListe1" size="3">
+						<option value="V1">Valeur 1</option>
+						<option value="V2">Valeur 2</option>
+						<option value="V3">Valeur 3</option>
+					</select>
+				</form>
+			</td>
+			<td>
+				<form>
+					<select name="MaListe2" size="3" multiple="">
+						<option value="V1">Valeur 1</option>
+						<option value="V2">Valeur 2</option>
+						<option value="V3">Valeur 3</option>
+					</select>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<form>
+					<select name="MaListe3" size="3">
+						<option value="V1" selected="">Valeur 1</option>
+						<option value="V2" selected="">Valeur 2</option>
+						<option value="V31">Valeur 3</option>
+					</select>
+				</form>
+			</td>
+			<td>
+				<form>
+					<select name="MaListe4" size="3" multiple="">
+						<option value="V1" selected="">Valeur 1</option>
+						<option value="V2" selected="">Valeur 2</option>
+						<option value="V3">Valeur 3</option>
+					</select>
+				</form>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>formulaires ...</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>
+					exemple 1: <br>
+					<input type="radio" name="nom_bouton" value="valeur_1"> choix 1<br>
+					<input type="radio" name="nom_bouton" checked="" value="valeur_2"> choix 2 <br>
+					<input type="radio" name="nom_bouton" value="valeur_3"> choix 3 <br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					exemple 2: <br>
+					<input type="checkbox" name="nom_case_1" value="valeur_1"> choix 1<br>
+					<input type="checkbox" name="nom_case_2" checked="" value="valeur_2" checked=""> choix 2 <br>
+					<input type="checkbox" name="nom_case_3" value="valeur_3" checked=""> choix 3 <br>
+				</td>
+			</tr>
+		</table>
+		<p>
+			bouton clic : <input type="bouton" name="click" value="cliquer"> <br>
+			boutons validation/envoie : <input type="submit" name="envoie" value="envoyer"> <br>
+			bouton reset : <input type="reset" name="effacer" value="effacer"> <br>
+		</p>
+	</form>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>choix de couleurs</title>
+</head>
+<body>
+	<h2>Choix de couleur</h2>
+	<form>
+		sélectionnez la couleur : 
+		<input type="color" name="champ_couleur" value="#cc0033">
+		<imput type="submit">
+	</form>
+	<h2>Champ recherche</h2>
+	<form>
+		<label>
+			recherche :
+			<input type="search" name="champ_rech">
+		</label>
+		<input type="submit">
+	</form>
+</body>
+</html>
+
+<form oninput="resultat.value=(+nb1.value)+(+nb2.value)">
+	<input type="number" name="nb1" value="1">+
+	<input type="number" name="nb2" value="2">=
+	<output name="resultat">3</output>
+</form>
+
+
+<input list="id_liste" name="nom_liste">
+<datalist id="id_liste">
+	<option value="nom_N">...</option>
+</datalist>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test output</title>
+</head>
+<body>
+	<h2>test liste</h2>
+	<form>
+		<input list="fruits" name="fruit">
+		<datalist id="fruits">
+			<option value="pomme"></option>
+			<option value="poire"></option>
+			<option value="pêche"></option>
+			<option value="prune"></option>
+			<option value="pamplemousse"></option>
+		</datalist>
+		<input type="submit">
+	</form>
+</body>
+</html>
+
+
+<video height="..." width="..." controls="" autoplay="" loop="">
+	<source src="nom_video.mp4" type="video/mp4">
+	<source src="nom_video.ogg" type="video/ogg">
+	Votre navigateur ne supporte pas la balise video HTML 5
+</video>
+
+
+
+<h2>test video</h2>
+<video controls="" height="200" width="320" autoplay="">
+	<source src="présentation URCA.mp4" type="video/mp4">
+	<source src="présentation URCA.ogg" type="video/ogg">
+	Votre navigateur ne supporte pas la balise video HTML 5
+</video>
+
+
+<audio controls="" autoplay="">
+	<source src="460.mp3" type="audio/mp3">
+	<source src="460.wav" type="audio/wav">
+	Votre navigateur ne supporte pas la balise audio HTML 5
+</audio>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>styles</title>
+	<style>
+		<!-- 
+			p{
+				font-size :12pt;
+				text-align: justify;
+			}
+			h1{
+				font-size: 18pt;
+				text-align: center;
+				color: red;
+			}
+		-->
+	</style>
+</head>
+<body>
+	<h1> Un titre</h1>
+	<p>
+		Un paragraphe
+	</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>classes de styles</title>
+	<style type="text/css">
+		<!--
+			#rouge{color: red;}
+			#vert{color: green;}
+		-->
+	</style>
+</head>
+<body>
+	<h1 id="vert">classes de styles</h1>
+	<p>un paragraphe normal</p>
+	<p id="rouge">un paragraphe en rouge</p>
+	<p id="vert">un paragraphe en vert</p>
+	<h1 id="rouge">un titre pas en rouge !</h1>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>principe de la cascade</title>
+	<link rel="stylesheet" type="text/css" href="cascade.css">
+	<style type="text/css">
+		<!--
+			h1{color: blue;}
+			h2{color: blue;}
+			body{background-color: #C0C0C0}
+		-->
+	</style>
+</head>
+<body>
+	<h1>Principe de la cascade</h1>
+	<h2 style="color: yellow">voici un autre titre</h2>
+	<h3 style="color: yellow">voici encore 1 titre</h3>
+	<p>voici le principede la cascade.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>span</title>
+	<style type="text/css">
+		.element{
+			font-size: x-large;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<p>un exemple de <span class="element">span</span></p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>div</title>
+	<style type="text/css">
+		.element{
+			font-size: x-large;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<p>la balise div</p>
+	<div class="element">
+		<p>premier paragraphe</p>
+		<p>second paragraphe</p>
+	</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>positionner avec CSS</title>
+	<style type="text/css">
+		.banniere{
+			position: absolute;
+			top: 50px;
+			left: 20px;
+			color: blue;
+			font-size: x-large;
+			font-style: italic;
+		}
+		.image{
+			position: absolute;
+			top: 150px;
+			left: 20px;
+			height: 102px;
+			width: 154px;
+		}
+		.souligne{
+			position: absolute;
+			top: 160px;
+			left: 25px;
+			color: blue;
+			font-size: x-small;
+		}
+	</style>
+</head>
+<body>
+	<p class="banniere">positionnement HTML</p>
+	<span class="image"><img src="./str.png"></span>
+	<span class="souligne"> ville de strasbourg</span>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<style type="text/css">p,h1{color:red;}</style>
+</head>
+<body>
+	<h1>titre h1</h1>
+	<h2>titre h2</h2>
+	<p>paragraphe</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>exemple 1</title>
+	<style type="text/css">
+		body{background-color: rgb(230,230,230);}
+		p em {color: blue;}
+	</style>
+</head>
+<body>
+	<h1> un titre avec <em>de l'italique</em></h1>
+	<p> un paragraphe avec <em>un text en italique...</em></p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exemple 1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background-color: rgb(230,230,230);
+		}
+		p::after {content: "<--";
+		color: blue;}
+		p::first-letter{font-size: 24pt; 
+		color: red;}
+	</style>
+</head>
+<body>
+	<p>un paragraphe avec <em>un texte en italique...</em></p>
+	<p>Toto est beau</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		h1{
+			font-size: 14pt;
+		}
+		h1>.myclass{
+			font-style: italic;
+		}
+		h1>span>em{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>un <span class="myclass">exemple <em>très</em> important</span></h1>
+</body>
+</html>
+
+
+
+
+<head>
+	<style type="text/css">
+		p, h1 {color: red;}
+		p~h1 {color: blue;}
+	</style>
+</head>
+<body>
+	<h1>titre h1</h1>
+	<h2>titre h2</h2>
+	<p>paragraphe</p>
+	<h1>titre h1</h1>
+	<h2>test h2</h2>
+	<h1>test h1</h1>
+</body>
+
+
+<head>
+	<style type="text/css">
+		:root{background-color: yellow;}
+	</style>
+</head>
+<body>
+	<p>paragraphe...</p>
+</body>
+
+
+
+<head>
+	<style type="text/css">
+		li:nth-child(odd) {color: cyan;}
+		li:nth-child(even) {color: red;}
+	</style>
+</head>
+<body>
+	<li>toto</li>
+	<li>tata</li>
+	<li>titi</li>
+	<li>tutu</li>
+</body>
+
+
+
+
+<style type="text/css">
+body{
+	font-family: arial, helvetica, sans-serif;
+	color: red;
+	margin: 5px;
+	padding: 5px;
+	background-image: url("fond1.png");
+	background-color: rgb(154,154,154);
+	margin-left: 0;
+	margin-top: 0;
+	font-size: 12px;
+	background-attachment: fixed;
+}
+em{ color: green; }
+
+a:link {
+	color: blue;
+	font-weight: bold;
+}
+a:visited {
+	color: orange;
+	font-weight: bold;
+}
+a:active {
+	color:lime;
+	font-weight: bold;
+}
+
+table {
+	border: solid;
+	border-color: rgb(125,3,22);
+}
+
+.liste {
+	list-style-image: url("puce3.png");
+	text-align: left;
+	font-family: helvetica;
+	font-size: 12px;
+}
+ul {
+	list-style-image: url("./puce1.png");
+	text-align: left;
+	font-family: helvetica;
+	font-size: 12px;
+}
+h1{
+	font-size: 16pt;
+	color: black;
+}
+h2{
+	font-size: 14pt;
+	color: yellow;
+}
+h3{
+	font-size: 12pt;
+	color: white;
+}
+h4{
+	font-size: 10pt;
+	font-weight: bold;
+	color: green;
+}
+
+</style>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemple de monstyle.css</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="monstyle.css">
+</head>
+<body>
+	<h1>Titre h1 ! </h1>
+	<h2>Titre h2 !! </h2>
+	<h3>Titre h3 !!!</h3>
+	<h4>Titre h4 ...</h4>
+	<p>Et une combinaison avec de <em>l'italique</em> dans le texte d'un paragraphe !!!</p>
+	<br>
+	<table>
+		<tr>
+			<td>Cellule A</td>
+			<td>Cellule B</td>
+		</tr>
+		<tr>
+			<td>Cellule C</td>
+		</tr>
+		<tr>
+			<td>Cellule D</td>
+		</tr>
+	</table>
+	<p> Et une liste à puces ...</p>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>...</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DIV et style</title>
+	<style type="text/css">
+		.styledubloc{
+			position: absolute;
+			margin-left: 50%; /*centre=50% de la largeur du conteneur*/
+			left: -125px;
+			width: 250px;
+			height: 250px;
+			padding: 5px;
+			border: 1px dashed gray;
+			font-family: arial, tahoma;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<div class="styledubloc"> un exemple de bloc avec une balise div et une mise en page pour expliciter l'association d'une balise div d'un style dans un bloc</div>
+</body>
+</html>
+
+
+<head>
+	<title>2 cadres côte à côte</title>
+	<style type="text/css">
+		*{font-family: "Times New Roman";}
+	#annulefloat {clear: both; /*annuler les effets de float*/}
+	h1{
+		font-size: 14pt;
+		color: blue;
+		margin-bottom: 10px;
+	}
+	#gauche {
+		float: left;
+		border: 1px solid red;
+		height: 200px;
+		width: 200px;
+		background-color: cyan;
+	}
+	#droite{
+		float: right;
+		border: 1px solid grey;
+		height: 200px;
+		width: 200px;
+		background-color: orange;
+	}
+	</style>
+</head>
+<body>
+	<h1>deux conteneurs côte à côte</h1>
+	<div id="gauche"> du texte ...</div>
+	<div id="droite"> a droite maintenant...</div>
+	<p>Le texte suivant se place normalement en tenant compte des blocs flottants à gauche: donc, le texte se place à droite de l'élément flottant.</p>
+	<p id="annulefloat">Ce texte se place en dessous des DIV grâce à la déclaration clear:both; qui neutralise le float:left;.</p>
+</body>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+</head>
+<body>
+	<script type="text/javascript">
+		alert("Bonjour à tous");
+		//commentaire JavaScript
+		document.write("<h1>JavaScript</h1>");
+	</script>
+	<p>ici on repasse en HTML</p>
+	<script language="javascript">
+		document.write("<h1 align='center'>JavaScript</h1>");
+		document.write("<h1 align=\"center\"> JavaScript</h1>");
+	</script>
+</body>
+</html>
+
+<script language="javascript">
+	document.write(/l/.test('Hello'));
+	document.write(/^l/.test('Hello'));
+	document.write(/^h/.test('Hello'));
+	document.write(/^h/i.test('Hello'));
+	document.write(/^Hel.o/.test('Hello'));
+	document.write(/^Hel+o/.test('Hello'));
+	document.write(/^He+llo/.test('Hello'));
+	document.write(/^Hea*llo$/.test('Hello'));
+	document.write(/^He(l|o)*$/.test('Hello'));
+	document.write(/^H[leos]+/.test('Hello'));
+	document.write(/^H[^leo]+/.test('Hello'));
+	document.write(/^H[^kys]+/.test('Hello'));
+	document.write(/^H[a-z]*/.test('Hello'));
+	document.write(/^H[a-z]*$/.test('Hello'));
+</script>
+
+
+
+<script language="javascript">
+	var s = "Bienvenus à l'UFR SEN, Cours iFO0102";
+	document.write(s.replace(/i/g, 'I')+"<br>");
+	document.write(s.search(/n{1}/i)+"<br>");
+	document.write(s.slice(17)+"<br>");
+	document.write(s.split(" ")+"<br>");
+	document.write(s.substr(4,12)+"<br>");
+	document.write(s.substring(4,16)+"<br>");
+	document.write(s.toUpperCAse()+toLowerCase()+"<br>");
+</script>
+
+
+<head>
+	<title>3 colonne</title>
+	<style type="text/css">
+		*{ font-family: Arial }
+		h1{
+			font-size: 14pt;
+			color: black;
+			margin-bottom: 10px;
+		}
+		h2{
+			font-family: 14pt;
+			color: black;
+			margin-bottom: 10px;
+			margin-top: 0px;
+			text-align: center;
+			border-bottom: 2px dotted brown;
+			background-color: orange;
+		}
+		#gauche {
+			float: left;
+			border:2px dotted black;
+			height: 300px;
+			width: 20%;
+			margin-right: -2px;
+		}
+		#milieu{
+			float: left;
+			border: 2px dotted black;
+			height: 300px;
+			width: 20%;
+			margin-right: -2px;
+		}
+		#droite{
+			float: left;
+			border: 2px dotted black;
+			height: 300px;
+			width: 20%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Trois balises DIV pour 3 colonnes</h1>
+	<div id="gauche"><h2>colonne 1</h2></div>
+	<div id="milieu"><h2>colonne 2</h2></div>
+	<div id="droite"><h2>colonne 3</h2></div>
+</body>
+
+
+
+<head>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 50px;
+			border: 1px solid gray;
+			margin: 0;
+			margin-top: -1px;
+		}
+		.gauche{
+			float: left;
+			margin: 0;
+			border: 0;
+			margin-left: 1px;
+		}
+	</style>
+</head>
+<body>
+	<div class="gauche">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</div>
+	<div class="gauche">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+		<div>E</div>
+	</div>
+</body>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="monstyle.css">
+	<title>titre de la page</title>
+</head>
+<body>
+	...<!--les différents éléments-->
+</body>
+</html>
+
+
+
+
+...
+<script type="text/javascript">
+	x=5+5;
+	document.write(x);
+	document.write("<br>");
+	x="5"+"5";
+	document.write(x);
+	document.write("<br>");
+	x=5+"5";
+	document.write(x);
+	document.write("<br>");
+	x="5"+5;
+	document.write(x);
+	document.write("<br>");
+</script>
+<p>règle : addition d'un nombre et d'une chaine de caractère --> résultat une chaine</p>
+...
+
+<script type="text/javascript">
+	document.write(Math.random()+"<br>");
+	document.write(Math.min(15,4)+"<br>");
+	document.write(Math.exp(10)+"<br>");
+	document.write(Math.ceil(2.51)+"<br>");
+	document.write(Math.floor(2.51)+"<br>");
+	document.write(Math.round(2.51)+"<br>");
+	document.write(Math.pow(2,6));
+</script>
+
+
+
+<script type="text/javascript">
+	// une image
+	diapo=new Image(256,256);
+	diapo.src = 'diapo.png'; //Préchargement
+	//une autre image
+	diapo2 = new Image(256,256);
+	diapo2.src = 'diapo2.png' ; //préchargement
+
+	//modification de la 13e image de la page web
+	document.images[12].src= diapo.src;
+	//modification de la 15e image de la page web
+	document.images[14].src=diapo2.src;
+</script>
+
+
+
+<script type="text/javascript">
+	var tablo = new Array(3, "UFR SEN", 19) ; //initialisation de 3 valeurs
+	tablo[100] = 17;
+	for (i in tablo)
+		window.alert("tablo["+i+"]+tablo[i]");
+	//tablo[0] =3
+	//tablo[1]=UFR SEN
+	//tablo[2]= 19
+	//tablo[100] =17 
+</script>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test JS</title>
+	<script type="text/javascript">
+		function product (a,b) {return a*b;}
+	</script>
+</head>
+<body>
+	<p>appel d'une fonction avec 2 paramètres (4 et 3).</p>
+	<p>La fonction retourne le produit des 2 apramètres.</p>
+	<script type="text/javascript"> document.write(product(4,3));</script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test JS</title>
+	<script type="text/javascript">
+		function f() {
+			document.write("<p> hello depuis la fonction </p>");
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		a = 37;
+		b = 38;
+		e = a+b;
+		c = "hello";
+		d = "bonjour";
+		document.write("<p> a = "+a+" b = " + b + "</p>");
+		document.write("<p> e = "+e+" </p>");
+		document.write("<p>"+c+";"+d+"</p>");
+	</script>
+	<br>
+	<form name="toto">
+		<input type="button" onClick=f() value="Appuyez ici">
+	</form>
+</body>
+</html>
+
+
+
+	function f(){
+		document.write("<!DOCTYPE html><html><head><meta charset='utf-8'><title>test Js par script</title></head><body></body></html>");
+		document.write("<p>Test de fichier .js</p>");
+		document.write("<script> function g() {alert ('HTML généré par script');}</script>");
+		document.write("<form name='titi'><input type='button' onClick='g()' value='appel fonction'></form>");
+		document.write("<p> et test de mdgbox</p>");
+		document.write("</body></html>");
+	}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test Js</title>
+	<script src="test.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		a=37; b=38; e=a+b; c="hello"; d="bonjour";
+		document.write("<p> a="+a+" b = "+b+"</p>");
+		document.write("<p> e= "+e+"</p>");
+		document.write("<p>"+c+";"+d+"</p>");
+	</script>
+	<br>
+	<form name="toto">
+		<input type="button" value="Appuyez ici">
+	</form>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test Js par script</title>
+</head>
+<body>
+	<p>Test de fichier .js</p>
+	<script>
+		function g(){
+			alert('HTML généré par script');
+		}
+	</script>
+	<form name="titi">
+		<input type="button" onClick=g() value="Appel fonction">
+	</form>
+	<p>ET test de msgbox</p>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function CreerLegume(l_espece, le_nom){
+			this.nom=le_nom;
+			this.espece=l_espece;
+			this.AfficherLegume=AfficherLegume;
+		}
+		function AfficherLegume(){
+			document.write("<strong>Ce légume est un(e) "+this.nom+". C'est un(e) "+this.espece+".<br></strong>");
+		}
+		var mon_legume = new CreerLegume("Cucurbitacée","Potiron")
+	</script>
+</head>
+<body>
+	<script>
+		document.write("<strong>"+mon_legume.nom+"</strong><br>");
+		document.write("<br>");
+		document.write("<br> Mon légume : ");
+		mon_legume.AfficherLegume();
+		document.write("<br>");
+		//parcours des propriétés de l'objet navigator
+		var object=window.navigator;
+		for (i in object){
+			document.write(i+" = "+object[i]+"<br>");
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+<form method="post" action="mailto:javascript@yahoo.fr" name="monform">
+	<input type="checkbox" name="choix1" value="1"> choix 1 <br>
+	<input type="checkbox" name="choix2" value="2" checked> choix 2 <br>
+	<input type="checkbox" name="choix3" value="3"> choix 3 <br>
+	<input type="submit" name="envoi" value="envoyer">
+</form>
+<form name="titi">
+	<input type="button" onClick=g() value="afficher les valeurs cases à cocher">
+</form>
+
+
+
+<head>
+	<script>
+		function f(){
+			alert("Nom:"+document.MonFormulaire.nom.value);
+		}
+	</script>
+</head>
+<body>
+	<form name="MonFormulaire" method="post" action="javascript:f();">
+		nom:
+		<input type="text" name="nom" value="Saisie du nom">
+		<input type="submit" name="Envoyer" value="envoi">
+	</form>
+</body>
+
+
+
+
+<head>
+	<script>
+		function clic(){
+			MonLien = document.MonF.liens.selectedIndex;
+			alert("selection:"+document.MonF.liens.options[MonLien].value);
+		}
+	</script>
+</head>
+<body>
+	<form name="MonF" method="Post" action="">
+		Liens :
+		<select name="liens" onChange="clic();">
+			<option>Cliquez sur une option</option>
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+		</select>
+	</form>
+</body>
+
+
+
+
+
+<head>
+	<title>onKeyUp</title>
+	<script>
+		<!--
+			function maj(){
+				document.f.mail.value=document.f.prenom.value.toLowerCase()+"."+document.f.nom.value.toLowerCase();
+			}
+	//--></script>
+</head>
+<body>
+	<form name="f">
+		nom
+		<input type="text" name="nom" onkeyup="maj()"><br>
+		prenom
+		<input type="text" name="prenom" onkeyup="maj()"><br>
+		login
+		<input type="text" name="mail" disabled><br>
+	</form>
+</body>
+
+
+
+
+
+
+<head>
+	<title>Rollover</title>
+	<script>
+		<!--
+			function change(image, src){
+				document.images[image].src=src;
+			}
+		//-->
+	</script>
+</head>
+<body>
+	<a href="#" onMouseOver="change('image1', 'bleu.png')" onMouseOut="change('image1', rouge.png')"> <img name="image1" src="rouge.png" alt="Ellipse"></a>
+</body>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function testerRadio (radio){
+			for (var i = 0; i < radio.length; i++) {
+				if(radio[i].checked){
+					alert("système ="+radio[i].value);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="checkbox" name="majeur"> Majeur
+		<input type="checkbox" name="etudiant"> Etudiant
+		<input type="button" value="Tester" onclick="alert('Majeur : '+this.form.majeur.checked+'\nEtudiant : '+this.form.etudiant.checked);">
+	</form> <br>
+	<form>
+		<input type="radio" name="os" value="Windows 7" checked> Windows 7
+		<input type="radio" name="os" value="Windows 10"> Windows 10
+		<input type="radio" name="os" value="Linux"> Linux
+		<input type="radio" name="os" value="Autre"> Autre
+		<input type="button" value="Tester" onclick="testerRadio(this.form.os">
+	</form> <br><br>
+	<form>
+		<select name="liste" size="1">
+			<option value="valeur ligne 1">Option n°1</option>
+			<option value="valeur ligne 2">Option n°2</option>
+			<option value="valeur ligne 3">Option n°3</option>
+			<option value="valeur ligne 4">Option n°4</option>
+		</select> <br>
+		En JavaSCript, la structure d'un élément de type SELECT reprend ce schéma : <br>
+		Indice de la ligne sélectionnée(ligne 1 : indice=0)
+		<input type="button" value="Voir selectedIndex" onclick="alert('Indice de la ligne sélectionnée : '+this.form.elements['liste'].selectedIndex)">
+		<br>
+		Nombre de lignes
+		<input type="button" value="Voir options.length" onclick="alert('Nombre de lignes : '+this.form.elements['listes'].options.length)">
+		<br>
+		Valeur d'une ligne
+		<input type="button" value="Voir value" onclick="alert('Value de la ligne sélectionnée : '+ this.form.elements['liste'].options[this.form.elements['liste'].selectedIndex].value)">
+		<br>
+		Libellé d'une ligne
+		<input type="button" value="Voir libellé" onclick="alert('Value de la ligne sélectionnée : '+this.form.elements['liste'].options[this.form.elements['liste'].selectedIndex].text)">
+	</form>
+	<form name="form1">
+		<input type="texte" name="champ1">
+		<input type="button" value="<- Donne le focus" onclick="this.form.champ1.focus()">
+		<br>
+		<select name="champ2">
+			<option>Ceci est la ligne n°1</option>
+			<option>Ceci est la ligen n°2</option>
+		</select>
+		<input type="button" value="<- Donne le focus" onclick="this.form.champ2.selectedIndex=1; this.form.champ2.focus()">
+		<br>
+		<textarea rows="2" cols="15" name="champ3">Test</textarea>
+		<input type="button" value="<-donne le focus" onclick="this.form.champ3.focus()">
+	</form>
+	<br>
+	<form name="form2">
+		<input type="button" name="bouton" value="Clic !" onclick="this.value='changé!'">
+	</form>
+</body>
+</html>
+
+
+
+
+<form name="MonFormulaire3">
+	<input type="text" value="Non modifiable" name="champ" onfocus="blur()">
+</form>
+
+
+<head>
+	<script>
+		var t="";
+	</script>
+	<script>
+		function focusOn(){
+			t=document.MonFormulaire.champ.value
+			document.MonFormulaire.champ.value="Hé hop!";
+		}
+		function focusOff(){
+			document.MonFormulaire.champ.value=t;
+		}
+	</script>
+</head>
+<body>
+	<form name="MonFormulaire">
+		<input type="text" value="Tada!" name="champ" onmouseover="focusOn()" onmouseout="focusOff()">
+	</form>
+</body>
+
+
+
+
+
+
+<body>
+	<h3>Des régions françaises :</h3>
+	<ul id="gg">
+		<li id="e">Champagne-ardenne</li>
+		<li id="f">centre</li>
+		<li id="g">Ile de France</li>
+	</ul>
+	<script>
+		window.onload=function(){
+			var e=document.getElementById("f");
+			alert(e.firstChild.nodeValue);
+			alert(e.parentNode.nodeName);
+		}
+	</script>
+</body>
