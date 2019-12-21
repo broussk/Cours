@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1571903328 source:c:\users\nathan tonnelle\desktop\tp\semestre 3\info 301\tp6_exo2-1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

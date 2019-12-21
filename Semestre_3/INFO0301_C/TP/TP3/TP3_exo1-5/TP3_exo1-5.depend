@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1570532711 source:c:\users\nathan tonnelle\desktop\tp\semestre 3\info 301\tp3_exo1-5\main.c
+	<stdio.h>
+	<limits.h>
+

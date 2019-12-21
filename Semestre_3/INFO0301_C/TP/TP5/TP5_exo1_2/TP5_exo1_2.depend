@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1571301544 source:c:\users\nathan tonnelle\desktop\coding battle\tp5_exo1_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

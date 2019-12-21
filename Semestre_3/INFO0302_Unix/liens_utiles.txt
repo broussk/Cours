@@ -1,0 +1,9 @@
+TP1
+http://www.generation-linux.fr/index.php?post/2007/12/09/5-les-distributions-d-hier-et-d-aujourd-hui
+
+TP2
+https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux/42867-introduction-aux-scripts-shell
+http://www.misfu.com/commandes-bash.html
+
+TP3
+https://quick-tutoriel.com/comment-utiliser-le-ftp-en-ligne-de-commande/

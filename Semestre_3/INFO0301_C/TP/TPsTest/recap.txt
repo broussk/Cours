@@ -1,0 +1,10 @@
+tableau[4]
+tableau = pointeur
+*tableau = tableau[0]
+*(tableau +1)=tableau[1]
+printf(tableau) = adresse tableau
+envoyer un pointeur dans une fonction, on envoie son adresse avec &pointeur et on la récupère avec *pointeur dans la fonction.
+pointeur = valeur de la case nommée pointeur
+$pointeur = adresse pointeur
+*pointeur = valeur où pointe pointeur.
+une chaine s'arrete avec comme derniere nb+1 '\0' 
