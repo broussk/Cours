@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Info0402 : Projets</title></head>
+<body><h1>Info0402 Projet</h1>
+<p>Il s'agit d'écrire une classe de conteneur similaire à celle de la STL
+(voir chapitre 8) avec l'ensemble des
+fonctionnalités indiquées, et de tester cette classe de manière
+intensive.</p>
+<p>L'ensemble
+des conteneurs devront au minimum les spécifications des conteneurs de
+la STL, fournir des itérateurs permettant aux maximums d'algorithmes
+possibles de fonctionner sur le conteneur.</p>
+<ul>
+  <li>Sujet 1: list</li>
+  <li>Sujet 2: deque</li>
+  <li>Sujet 3: set</li>
+  <li>Sujet 4: map</li>
+  <li>Sujet 5: multiset</li>
+  <li>Sujet 6: multimap</li>
+</ul>
+
+<p>Ces sujets sont ordonnés par difficulté.
+La note tiendra compte cette difficulté.</p>
+
+<p>Vous devez choisir parmi l'un des sujets 1 à 4. Afin de garantir une bonne répartition des
+sujets, Ils devront être choisis un nombre équivalent de fois dans
+chaque groupe de TP.
+Il sera possible de mettre à niveau votre sujet de set à multiset
+ou map à multimap (y compris dès le commencement de votre projet).
+</p>
+
+<h2>Travail à réaliser:</h2>
+Le travail à réaliser est proposé en tâches consécutives qu'il est préférable de mener en parallèle.<br />
+<h3>Implémentation du conteneur</h3>
+En se basant sur la documentation du conteneur équivalent de la STL,
+implémenter le conteneur tel que:
+<ol>
+  <li>Il soit écrit en version
+  générique,</li>
+  <li>Il n'utilise pas d'allocateur spécifique
+    (contraitement à la version de la STL),</li>
+  <li>Les fonctionnalités suivantes sont implémentées:</li>
+<ol style="list-style-type: lower-alpha;"><li>Les
+constructeurs suivant&nbsp;: par taille, par un intervalle
+d'itérateurs, par liste d'initialisation, par copie et par déplacement
+(les autres pourront être ignorés).</li>
+<li>L'assignation par copie et par déplacement.</li>
+<li>Tous les modificateurs (sauf les emplace*) et les opérations
+  (s'il y en de définies).&nbsp;</li>
+<li>L'opérateur == permettant
+    de comparer deux conteneurs.</li>
+<li>L'opérateur swap.</li>
+</ol>
+<li>Il définit les mêmes types d'itérateurs (on pourra ne pas
+  implémenter les versions const).
+  Voir <a href="http://www.cs.northwestern.edu/%7Eriesbeck/programming/c++/stl-iterator-define.html">cette page sur la création étape par étape d'un itérateur</a>.
+</li>
+</ol>
+
+<p>Ce projet s'intéresse à la construction d'un boite C++ implémentant
+ce type de stockage de données, et non aux problèmes algorithmes associés.
+Vous êtes donc libre d'utiliser un code de base simple gérant ce type de
+stockage. Par exemple, pour set ou map, il vous est conseillé de choisir
+une implémentation d'un arbre binaire équilibré dont vous comprenez le
+fonctionnement, et l'utiliser afin de définir votre conteneur.
+</p>
+
+<p>Attention: dans le cas de list, l'ensemble des opérations (merge, splice,
+remove, remove_if, reverse, unique, sort) ne devront
+déplacer aucun élément de la liste; seuls les pointeurs seront mis à jour.
+</p>
+
+<h3>Tests du conteneur</h3>
+Pour tester la validité du conteneur, on voudrait écrire un module de test
+unitaire. A cet effet, on utilisera Catch (voir
+https://github.com/philsquared/Catch/blob/master/docs/tutorial.md).<br /><br />Dans
+un premier temps, pour tester la validité du conteneur écrit, on
+effectuera les tests de toutes les méthodes écrites en utilisant Catch.<br /><br />Exemples:&nbsp;<ul><li>après un push_back(x), back() devrait retourner x, et la taille du conteneur devrait augmenter d'un.</li><li>après une construction par copie, les deux conteneurs contiennent les mêmes éléments, ont la même taille.</li><li>...</li></ul><h3>Test des algorithmes</h3>Tester si les algorithmes de la STL pertinent pour ce conteneur fonctionnent correctement.<br />Pour
+le vérifier, on &nbsp;implémentera l'opération == entre votre conteneur
+et celui de la STL, et on vérifiera si à l'issu de l'algorithme, pour
+une initialisation identique, les deux contenus des deux conteneurs
+sont égaux.<br />Ces tests seront effectués en prenant comme type du
+conteneur&nbsp;une valeur standard (int) et avec un vecteur (initialisé
+au hasard).
+
+<h3>Tests de fuite mémoire</h3>Afin de tester les fuites
+mémoires et/ou les anomalies sur les différents composants, on écrira
+une classe spécifique Counter implémentant la construction et
+l'assignation par copie et déplacement, la construction par copie, le
+destructeur. Pour chacune de ses fonctions,&nbsp;des compteurs
+(statiques) permettront de savoir combien de fois chacun de ces
+méthodes ont été&nbsp;appelées dans les tests ci-dessus en
+utilisant&nbsp;Counter comme type stocké dans le conteneur.<br />Puis,
+on comparera les compteurs afin de vérifier que votre implémentation
+n'oublie pas de libération mémoire, et ou n'effectue pas de copies
+surnuméraires.<br />
+
+<h3>Rapport</h3>
+Le rapport sera rédigée dans une page html contenant une déclaration de toutes
+les fonctions initialisées et testées.<br />
+Un table de déclaration du travail réalisé y sera intégrée.<br />
+
+<h3>Remise des sources</h3>
+Les sources seront à remettre dans un dépot qui sera créé à cet effet
+sur moodle (cours.univ-reims.fr).<br />
+
+<h3>Réalisation et soutenance</h3>
+<p>Les trois dernières séances de TP devront être consacrés
+  à ce projet. Il requiert évidemment beaucoup plus que ce temps
+  afin d'être réalisé.
+</p>
+<p>La soutenance aura lieu lors de la semaine des examens. Un planning de soutenance
+  sera mis en place environ une dizaine de jours avant.
+</p>
+
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 11 mars 2019.</span></p>
+</body></html>

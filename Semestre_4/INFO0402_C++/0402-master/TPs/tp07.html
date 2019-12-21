@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Info0402 : TP N°7</title></head>
+<body>
+<h1>Info0402 TP N°7 : gestion avancée<br />
+</h1>
+
+Ce TP a plusieurs objectifs:<br />
+
+<ol>
+
+  <li>utiliser la sémantique de déplacement afin de stocker
+correctement les objets dans figure.</li>
+  <li>utiliser des pointeurs intelligents afin de gérer des
+objets partagés. <br />
+  </li>
+</ol>
+
+<h2>Partie 1: sémantique de déplacement</h2>
+
+Si le TP N°6 sur les
+templates vous a posé problème, vous pouvez repartir du TP N°5 (classes
+de stockage de Points, et de Geom2D*).<br />
+
+<ol>
+
+  <li>si cela n'est pas déjà fait pour toutes les classes qui ont pour membre
+     des pointeurs vers une
+zone de données externe (i.e. sur les classes de stockage écrites la
+denière fois), ajouter une constructeur par déplacement et une
+assignation par déplacement. Au final, Si cela n'est pas déjà fait, ces
+classes devront avoir un constructeur par copie, un constructeur par
+déplacement, une assignation par copie, une assignation par
+déplacement, et un destructeur.<br />
+  </li>
+  <li>vérifier que la déplacement est bien effectué lorsqu'il est
+possible. On testera: les constructions et assignations par copie à
+partir d'un objet existant, les constructions et assignations par
+déplacement à partir d'un objet temporaire ou d'un objet en fin de vie
+(move). Des traces seront placés dans les constructeurs et les
+assignations afin de voir quelles sont les fonctions effectivement
+appelée.<br />
+  </li>
+  <li>pour tous les objets géométriques concrets, implémenter le
+constructeur et l'assignation par copie. Si un gain peut être obtenu
+par un déplacement, implémenter en plus le constructeur et
+l'assignation par déplacement (ceci sera au minimum effectué sur la
+classe Polygon et la classe Figure).<br />
+  </li>
+  <li>vérifier que la déplacement est bien effectué lorsqu'il est
+possible.
+On testera: les constructions et assignations par copie à partir d'un
+objet existant, les constructions et assignations par déplacement à
+partir d'un objet temporaire ou d'un objet en fin de vie (move). Des
+traces seront placés dans les constructeurs et les assignations afin de
+voir quelles sont les fonctions effectivement appelée.</li>
+</ol>
+
+<h2>Partie 2: pointeurs intelligents uniques</h2>
+
+  Dans tous les classes qui possèdent un pointeur vers un vecteur de
+  données alloué par la classe (car par exemple les classes xxx<span style="font-family: monospace;">Array</span> ou la
+  classe Figure), utiliser à la place un pointeur intelligent unique.<br />
+
+  A noter que si vous utilisez des vecteurs template, le code ne devrait être que
+  très peu modifié (constructeurs, destructeurs, et reallocation du template).<br /><h2>Partie 3: instance</h2>
+
+On veut maintenant créer une nouvelle classe Geom2DInstance qui:<br />
+
+<ul><li>hérite de Geom2D,</li><li>contient un pointeur partagé vers un objet Geom2D déjà existant
+dans la liste des objets Geom2D de la figure.</li><li>contient
+aussi comme champs un point, un angle et une facteur d'échelle qui
+représentent respectivement&nbsp;la translation, la rotation&nbsp;et le
+facteur d'échelle qu'il faut appliquer à l'objet Geom2D pointé pour le
+dessiner.</li></ul>
+
+<ol><li>Comme phase préparatoire, ajouter la méthode virtuelle pure
+duplicate() à Geom2D qui&nbsp;copie de l'objet courant et retourne un
+Geom2D*. L'implémenter sur tous les objets concrets.</li><li>Ecrire
+la classe Geom2DInstance. Pour les méthode info (affichage des
+informations) et write (écriture dans un flux svg), on utilisera
+duplicate() pour construire l'instance concrète courante, lui appliquer
+les transformations, et affectuer l'opération demandée.</li><li>Vérifier que la modification de l'objet original modifie bien le
+rendu de l'instance.</li><li>Vérifier
+que la destruction de l'objet original permet (grâce à l'utilisation du
+pointeur partagé) à faire en sorte que les instances continuent à
+fonctionner correctement.</li></ol>
+
+<h2>Partie 4: comprendre un pointeur intelligent unique</h2>
+
+On considère l'implémentation d'un pointeur intelligent unique suivant:<br />
+
+<div style="margin-left: 10px;">
+<table style="text-align: left; width: 90%; height: 84px; margin-left: 40px;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 204, 204);">&nbsp;&nbsp;template
+&lt;typename T&gt; class uptr {<br />
+&nbsp;&nbsp;private:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *ptr;<br />
+&nbsp;&nbsp;public:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uptr() :
+ptr(nullptr) {}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uptr(const T* raw) :
+ptr(raw == nullptr ? nullptr : new T(*raw)) {}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uptr(const T
+&amp;value) : ptr(new T(value)) {}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uptr(const
+uptr&lt;T&gt; &amp;p) : ptr(p.ptr == nullptr ? nullptr :
+new T(*p.ptr)) {}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~uptr()
+{&nbsp;if (ptr) delete ptr; ptr=nullptr; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uptr
+&amp;operator=(const uptr&lt;T&gt; &amp;p) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; if (this != &amp;p) {
+uptr&lt;T&gt; temp(p);&nbsp; swap(temp);&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; return *this;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T
+&amp;operator*() const { assert(ptr != nullptr);&nbsp; return
+*ptr; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T
+*operator-&gt;() const { return ptr; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operator bool()
+const { return ptr != 0; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T *acquire() const {
+T *tmp = ptr;&nbsp; ptr = nullptr; return tmp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void
+swap(uptr&lt;T&gt; &amp;other) { std::swap(ptr, other.ptr);
+}<br />
+}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<ol>
+
+</ol>
+
+La stratégie adoptée ici est légèrement différente de celle du
+unique_ptr du C++11:<br />
+
+<ul>
+
+  <li>si un pointeur est passé au constructeur, on duplique la
+valeur pointée,</li>
+  <li>si une valeur est passée au constructeur, on alloue une
+nouvelle adresse mémoire pour y stocker une copie de la valeur.</li>
+  <li>le constructeur par copie copie le unique_ptr passé en
+paramètre; l'assignation par copie également.</li>
+</ul>
+
+On fait donc en sorte de dupliquer en mémoire l'information reçue afin
+d'être sûr que celle-ci ne sera pas modifiée par une référence
+préexistante.Sont ajoutés en plus les surcharges &nbsp;de *,
+-&gt; et bool qui permettent de manipuler le pointeur intelligent
+exactement comme si on manipulait le pointeur interne.<br />
+
+<ol>
+
+  <li>Vérifier que ce pointeur a bien les propriétés attendues
+(i.e. que
+le pointeur intelligent se comporte bien exactement comme le pointeur
+qu'il stocke, et que la mémoire qu'il contient est bien alloué en fin
+de portée).</li>
+  <li>On veut maintenant ajouter la sémantique de déplacement à
+ce pointeur. Ajouter les 4 méthodes associées, à &nbsp;savoir
+uptr(T* &amp;&amp;raw), uptr(T &amp;&amp;value),
+uptr(uptr&lt;T&gt; &amp;&amp;p) et
+operator=(uptr&lt;T&gt; &amp;&amp;p).</li>
+  <li>En exécutant le code suivant, vérifier que ce sont bien les
+méthodes adéquates qui sont appelées et que les ressources sont bien
+déplacées (en particulier que l'interaction avec la sémantique de
+déplacement de FixedArray est correct):<br />
+    <table style="text-align: left; width: 930px;" border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="background-color: rgb(204, 204, 204);">int v = 4;<br />
+int *w = new int(12);<br />
+          <br />
+uptr&lt;int&gt;&nbsp; p1;<br />
+uptr&lt;int&gt;&nbsp; p2(w);<br />
+uptr&lt;int&gt;&nbsp; p3(new int(8));<br />
+uptr&lt;int&gt;&nbsp; p4(5);<br />
+uptr&lt;int&gt;&nbsp; p5(v+5);<br />
+uptr&lt;int&gt;&nbsp; p6(p5);<br />
+uptr&lt;int&gt;&nbsp; p7( move(p2) );<br />
+p1 = p3;<br />
+p3 = uptr&lt;int&gt;(45);<br />
+          </td>
+          <td style="background-color: rgb(204, 204, 204);">FixedArray&lt;int&gt;
+*u = new&nbsp;FixedArray&lt;int&gt;({ 1,2,3 });<br />
+FixedArray&lt;int&gt;&nbsp; v({ 4,8,10,12 });<br />
+          <br />
+uptr&lt;FixedArray&lt;int&gt;&gt;&nbsp; p1;<br />
+uptr&lt;FixedArray&lt;int&gt;&gt;&nbsp;&nbsp;p2(u);<br />
+uptr&lt;FixedArray&lt;int&gt;&gt;&nbsp;
+p3(new&nbsp;FixedArray&lt;int&gt;({ 4,8,10,12 }));<br />
+uptr&lt;FixedArray&lt;int&gt;&gt;&nbsp; p4(v);<br />
+uptr&lt;FixedArray&lt;int&gt;&gt;&nbsp;
+p5(FixedArray&lt;int&gt;({ 1,3,5,7,11 }));<br />
+uptr&lt;FixedArray&lt;int&gt;&gt;&nbsp; p6(p5);<br />
+uptr&lt;FixedArray&lt;int&gt;&gt;&nbsp; p7(move(p2));<br />
+p1 = p3;<br />
+p3 =
+move(p5);</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h2>Partie 5: comprendre un pointeur intelligent partagé</h2>
+
+On veut maintenant modifier ce pointeur intelligent afin
+d'en faire un pointeur partagé sptr. A savoir, on veut que:
+<ol>
+
+  <ul>
+    <li>sptr contient deux champs: ptr = le pointeur vers la donnée
+stockée, pcnt = le pointeur vers le nombre de sptr qui partagent ptr.</li>
+    <li>deux vptr représentent donc le même pointeur si leurs champs
+ptr et pcnt pointent vers les mêmes données.</li>
+    <li>à la création, le pointeur est initialisé à 1.</li>
+    <li>il est possible de copier le pointeur partagé soit en utilisant
+le constructeur par copie, soit l'assignation par copie.</li>
+    <li>lors d'une copie, le compteur de référence est augmenté de 1.</li>
+    <li>lors
+d'une destruction, le compteur de référence est diminué de 1, l'objet
+pointé par ptr n'étant détruit que si le compteur arrive à 0.</li>
+  </ul>
+  <li>Modifier la classe uptr pour obtenir une classe sptr permettant
+de gérer un pointeur partagé.</li>
+  <li>Ecrire un code de&nbsp;test permettant de tester ces
+fonctionnalités. On affichera les traces dans les
+constructeurs/destructeurs ainsi que la valeur du compteur de référence.</li>
+  <li>Utiliser ce pointeur partagé afin de modifier la classe Figure.</li>
+  <li>Vérifier
+que l'utilisation de cette classe résoud les problèmes de libération
+mémoire potentiel (destruction des objets Geom2D pointé). A savoir, pour un code:<br />
+    <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top; background-color: rgb(204, 204, 204);">{&nbsp; <br />
+&nbsp;&nbsp;&nbsp; Figure figure("test.html"); &nbsp;  <br />
+&nbsp;&nbsp;&nbsp; sptr&lt;Geom2D*&gt; d(new Disc({100,100},50));&nbsp;&nbsp;&nbsp;&nbsp; // d pointeur partagé (compteur=1)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+figure.add(d);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// partagé dans figure (compteur=2)<br />
+&nbsp;&nbsp;&nbsp;&nbsp; d.~sptr();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // destruction d (compteur 1, existe encore dans figure)<br />
+}&nbsp; // fin de portée de figure : destructeur du Disc détenu par figure, (compteur=0).<br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+</li>
+</ol><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 6 mars 2019.</span>
+
+</body></html>

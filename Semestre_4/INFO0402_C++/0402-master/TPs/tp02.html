@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Info0402 : TP N°2</title></head>
+<body>
+<h1 style="">Info0402
+TP N°2 : encapsulation</h1><h2>Exercice 1: alignement</h2><ol>
+  <li>Avec
+une structure contenant deux doubles et deux entiers, tester les deux
+organisations suivantes: a) alternance de double et entier, b) doubles
+ensembles et entiers ensembles.</li>
+
+<li>Allouer dynamiquement (new) un
+grand nombre&nbsp;de short int (16bit), int (32bit) et long int
+(64bit), et vérifier que l'adresse obtenue est à chaque fois multiple
+du sizeof du BIT alloué.
+</li>
+<li>Pourquoi n'a-t-on pas besoin de faire la même expérience avec les classes?
+</li>
+</ol>
+
+<h2>Exercice 2: constructeurs, destructeur et opérateurs</h2>
+
+Afin de comprendre le fonctionnement automatique des constructeurs,
+destructeur et opérateurs, on va reprendre la classe Complex du cours
+permettant de manipuler des nombres complexes (chaque question devrait
+pouvoir être réalisée trés rapidement).
+<ol>
+
+  <li>Ecrire la structure Complex, et définir les méthodes
+suivantes:</li>
+  <ol style="list-style-type: lower-alpha;">
+    <li>le
+constructeur par défault (r=i=0), et les constructeurs avec un flottant
+v (r=i=v) et avec deux flottant u,v (r=u, i=v). On utilisera les listes
+d'initialisations.</li>
+    <li>un destructeur,</li>
+    <li>un constructeur par copie.</li>
+    <li>une méthode view() qui affiche le nombre complexe.</li>
+  </ol>
+On fera en sorte que chaque appel à un constructeur ou au destructeur génère une trace permettant
+d'identifier quand la méthode a été appelée. Puis,écrire un code
+permettant appel à l'ensemble de ces méthodes.
+  <li>Ecrire une fonction float norm(Complex) qui passe en
+paramètre un complexe par valeur et retourne sa norme. Faire un appel à
+cette fonction. Est-ce la seule fonction (ou méthode) appelée?
+Justifier.</li>
+  <li>On voudrait maintenant créer une surcharge de l'opérateur
+d'assignation. Cette méthode (=interne à la structure) a pour prototype
+Complex&amp;
+operator=(const Complex &amp;). L'écriture x=y est alors
+interprétée par le compilateur comme x.operator=(y).</li>
+  <ol style="list-style-type: lower-alpha;">
+    <li>On donne dans un premier temps, l'implémentation suivante:<br />
+      <table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="background-color: rgb(204, 204, 204);">
+            <p>Complex&amp; operator=(const Complex &amp;z) { <br />
+&nbsp; &nbsp; &nbsp; &nbsp; printf("Operator= (in=%p,
+out=%p)\n",&amp;z,this);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // faire ici l'affectation
+de z à l'objet courant comme indiqué dans le sujet<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return *this;<br />
+}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+Examiner l'effet de ce code en effectuant l'affectation d'un complexe à
+un autre dans votre main (par exemple avec z1=z2;)</li>
+    <li>Ce code n'effectue pas la copie. Pourquoi l'écriture
+*this=z pour recopier dans l'objet courant (*this) le contenu de z pose
+problème?</li>
+    <li>Corriger ce code afin que la copie s'effecue correctement.</li>
+    <li>Que se passe-t-il si l'on écrit z1=z1? Comment alors
+corriger le code précédent pour éviter la copie inutile?</li>
+  </ol>
+  <li>On regarde maintenant le résultat du retour par valeur
+d'une structure Complex par une fonction:</li>
+  <ol style="list-style-type: lower-alpha;">
+    <li>Ecrire la fonction (=externe à la structure) Complex
+sqr(Complex &amp;z) qui retourne le nombre complexe contenant le
+carré du nombre complexe z.<br />
+    </li>
+    <li>Quel est l'ensemble des fonctions appelées par la ligne:
+z1 = sqr(z2) où z1 et z2 sont des nombres complexes déjà déclarés?
+(faire l'expérience)</li>
+    <li>En déduire l'ensemble des fonctions qui devraient être
+appelées par la ligne: Complex zz1 = sqr(z2).</li>
+    <li>Quelles sont les fonctions qui le sont
+effectivement?&nbsp;(faire l'expérience)</li>
+    <li>Cette optimisation s'appelle une élision de copie (ou
+RVO). Rechercher sa signification afin d'expliquer
+ce phénomène (voir l'annexe du chapitre 2).</li>
+    <li>Vérifier si l'appel Complex zz2 = sqr( Complex(3.f) ) est
+possible? (faire l'expérience).&nbsp;Pourquoi la modification de la
+fonction comme suit Complex sqr(const Complex &amp;z) permet de
+résoudre le problème?</li>
+    <li>Expliquer pourquoi l'appel Complex zz2 = sqr(3.f) est
+possible.</li>
+  </ol>
+  <li>On veut maintenant regarder l'effet de l'utilisation des
+opérateurs</li>
+  <ol style="list-style-type: lower-alpha;">
+    <li>on veut surcharger l'operateur +. Cela s'effectue en
+définissant la fonction (externe à la structure): &nbsp;Complex
+operator+(const Complex &amp;, const Complex &amp;). Ecrire
+cette fonction et&nbsp; y placer une trace de son appel.</li>
+    <li>Etudier la valeur et le nombre de fonctions effectivement
+appelée par l'appel: z1 = z2 + z3 + 3.f.&nbsp;</li>
+    <li>En quoi cette écriture peut-elle amener une confusion sur
+son sens?</li>
+    <li>Ecrire maintenant les surcharges Complex operator+(const
+Complex &amp;, const float) et&nbsp;Complex operator+(const
+float, const Complex &amp;) qui effectue la somme entre un nombre
+complexe et un réel, et y placer une trace de leur appel.</li>
+    <li>Quelle est maintenant l'expression évaluée par z1 = z2 +
+z3 + 3.f?</li>
+    <li>Que peut-on en déduire de la façon dont le C++ effectue
+ses évaluations?</li>
+  </ol>
+</ol>
+
+<ol>
+
+</ol><h2>Exercice 3: Time</h2>
+
+On veut définir les classes Second, Minute, Hour et Time afin de
+manipuler des calculs sur le temps. Dans les écritures de classes, on
+devra, autant que possible réutiliser les méthodes déjà utilisées dans
+les classes précédentes. Afin de garantir cela, aucunes des classes ne
+sera déclarée&nbsp;friend l'une de l'autre, et l'ensemble des champs des
+classes seront privés.<br />
+
+<ol><li>Ecriture de la classe Second: cette classe a pour but de
+stocker un nombre de secondes.</li><ol style="list-style-type: lower-alpha;"><li>écrire le constructeur par défaut (à 0), et le
+constructeur avec un entier.</li><li>écrire le constructeur par copie. Attention, on donnera
+comme sens particulier à ce constructeur de ne copier que le nombre de
+secondes qui ne peuvent pas être converties en minutes (exemple: Second
+s1(140), s2(s1); alors s2 représente 20 secondes).</li><li>écrire les méthodes set et get qui, respectivement,
+fixe et renvoie le nombre de secondes.</li><li>écrire la surcharge de l'opérateur &lt;&lt; sur
+un stream pour la classe Second. L'affichage devra envoyer dans le flux
+(Exemple: std::cout &lt;&lt; s2; affiche 20s).</li><li>écrire la surcharge de l'opérateur &lt;
+entre&nbsp;secondes permettant de comparer des secondes entres
+elles.</li><li>écrire la surcharge de l'opérateur ==
+entre&nbsp;secondes
+permettant de vérifier si des secondes sont égales.</li><li>écrire un code permettant de tester l'ensemble des
+méthodes écrites ci-dessus.</li></ol><li>Ecriture de la classe Minute: cette classe a pour but de
+stocker un nombre de minutes.</li><ol style="list-style-type: lower-alpha;"><li>écrire le constructeur par défaut (à 0), et le
+constructeur avec un entier.</li><li>écrire
+le constructeur par copie. Attention, on donnera comme sens particulier
+à ce constructeur de ne copier que le nombre de minutes qui ne peuvent
+pas être converties en heures (exemple: Minute s1(75), s2(s1); alors
+s2 représente 15 minutes).</li><li>écrire le constructeur à partir d'une instance de
+seconde. Attention, on donnera comme sens particulier à ce constructeur
+que le nombre de minutes entières qui ne peuvent pas être converties en
+heures (exemple: Second s(3666); Minute m(s); alors m représente 1
+minute).</li><li>écrire les méthodes set et get qui, respectivement,
+fixe et renvoie le nombre de minutes.</li><li>écrire la méthode seconds() qui retourne le nombre de
+secondes correspondant au nombre de minutes (le type retourné est
+Second).</li><li>écrire
+la surcharge de l'opérateur &lt;&lt; sur un stream pour la
+classe Minute. L'affichage devra envoyer dans le flux (Exemple: std::cout
+&lt;&lt; m; affiche 1m).</li><li>écrire la surcharge de l'opérateur &lt;
+entre&nbsp;minutes permettant de comparer des minutes entres elles.</li><li>écrire la surcharge de l'opérateur
+==&nbsp;entre&nbsp;minutes
+permettant de vérifier si des minutes sont égales.</li><li>écrire un code permettant de tester l'ensemble des
+méthodes écrites ci-dessus.</li></ol><li>Ecriture de la classe Hour: cette classe a pour but de
+stocker un nombre de heures.</li><ol style="list-style-type: lower-alpha;"><li>écrire le constructeur par défaut (à 0), et le
+constructeur avec un entier.</li><li>écrire
+le constructeur par copie.&nbsp;</li><li>écrire
+le constructeur à partir d'une instance de secondes. Ce constructeur
+construit un nombre d'heures entières dans le nombre de secondes
+passées (exemple: Second s(7290); Heure h(s); alors h représente 2
+heures).</li><li>écrire
+le constructeur à partir d'une instance de minutes. Ce constructeur
+construit un nombre d'heures
+entières&nbsp;dans le nombre de minutes passées (exemple: Minute
+m(200); Heure h(m); alors h représente 3
+heures).</li><li>écrire les méthodes set et get qui, respectivement,
+fixe et renvoie le nombre d'heures.</li><li>écrire la méthode minutes() qui retourne le nombre de
+minutes correspondant au nombre d'heures ((le type retourné est Minute).</li><li>si l'on définit Heure h(3); quel est le résultat de
+h.minutes().seconds()?</li><li>écrire
+la surcharge de l'opérateur &lt;&lt; sur un stream pour la
+classe Hour. L'affichage devra envoyer dans le flux (Exemple: std::cout
+&lt;&lt; h; affiche 3h).</li><li>écrire la surcharge de l'opérateur &lt;
+entre&nbsp;minutes permettant de comparer des heures entres elles.</li><li>écrire la surcharge de l'opérateur
+==&nbsp;entre&nbsp;minutes permettant de vérifier si
+des&nbsp;heures sont égales.</li><li>écrire un code permettant de tester l'ensemble des
+méthodes écrites ci-dessus.</li></ol><li>Ecriture de la classe Time: cette classe a pour but de
+stocker soit une heure du jour, soit un temps écoulé en heures,
+minutes, secondes. Par exemple, 12h43m32s.<span style="color: red; font-weight: bold;">
+Pour la partie qui suit, placer des traces dans tous les
+constructeurs/destructeur de Second, Minute et Hour afin de vérifier
+que, dans les constructeurs/destructeur écrits ci-dessous, chaque
+constructeur n'est bien appelé qu'une seule fois (à savoir, une
+construction de Time ne devrait lancer qu'un seul constructeur pour
+Second,un seul constructeur pour Minute, et un seul constructeur pour Hour). </span>  </li><ol style="list-style-type: lower-alpha;"><li>écrire le constructeur par défaut (à 0), et le
+constructeur à partir d'heures, minutes, secondes.</li><li>écrire le constructeur par copie.</li><li>écrire le constructeur à partir d'un Second (par exemple,
+Time t1(Second(3666)); construira un t1 ayant pour valeur 1h1m6s.</li><li>écrire le constructeur à partir d'un Minute (par exemple,
+Time t2(Minute(66)); construira un t2 ayant pour valeur 1h6m0s.</li><li>écrire les méthodes set et get qui, respectivement,
+fixe et renvoie le nombre de secondes (getSeconds), minutes
+(getMinutes) et heures (getHours). Les getters devront retourner le
+type associé (Second, Minute, Hour). Pour le
+setter, on vérifiera que les valeurs passées sont cohérentes (i.e.
+t2.set(12,99,99) ne doit pas être accepté, cette condition sera traitée
+sous forme d'un assert).</li><li>écrire la méthode seconds() qui retourne le nombre de
+secondes correspondant au temps (le type retourné est Second).</li><li>écrire la méthode minutes() qui retourne le nombre de
+minutes correspondant au temps (le type retourné est Minute).</li><li>écrire la méthode hours() qui retourne le nombre d'heures
+correspondant au temps (le type retourné est Hour).</li><li>écrire
+la surcharge de l'opérateur &lt;&lt; sur un stream pour la
+classe Time.
+L'affichage devra envoyer dans le flux (Exemple: std::cout
+&lt;&lt; t1; affiche 1h01m06s).</li><li>écrire la surcharge de l'opérateur &lt;
+entre&nbsp;Time permettant de comparer des temps entres eux.</li><li>écrire la surcharge de l'opérateur
+==&nbsp;entre&nbsp;Time permettant de vérifier si des temps
+sont égaux.</li><li>écrire la surcharge de l'opérateur - permettant de
+construire un temps égal à la différence de deux temps. Cette opération
+effectuera toujours le plus grand moins le plus petit des deux temps.</li><li>écrire un code permettant de tester l'ensemble des
+méthodes écrites ci-dessus.</li></ol></ol><p>
+
+<span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 19 janvier 2019.</span></p>
+
+</body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Info0402 : TP N°6</title></head>
+<body>
+<h1>Info0402 TP N°6 : conception objet</h1>A la fin du TP précédent, la hiérarchie obtenue devrait ressembler à ceci:<br /><div style="text-align: center;"><img style="width: 747px; height: 498px;" alt="Hierarchie1" src="tp06-1.png" /></div><h2>Partie 1: approche hiérarchique ascendante</h2>
+<p>On s'aperçoit que les classes Disk et Circle, ou Polygon
+et&nbsp;Polyline présentent des traits communs qui peuvent être
+mutualisés de la manière suivante.</p><p style="text-align: center;"><img style="width: 746px; height: 498px;" alt="Hierarchie2" src="tp06-2.png" /></p>
+<ol>
+<li>Créer une classe DiskShape afin de mutualiser les traits
+communs, et l'utiliser pour Disk et Circle.</li>
+<li>Créer une classe PolyShape afin de mutualiser les traits
+communs, et l'utiliser pour Polygon et Polyline.</li>
+<li>Ecrire un code de test.&nbsp;Ecrire un code d'exemple
+(voir ci-dessous) utilisant l'ensemble des
+objets
+géométriques concrets définis ci-dessus. Les objets seront redirigés
+dans un SVGstream afin de vérifier qu'ils sont corrects. On les
+insèrera également dans une figure, et on vérifiera le bon
+fonctionnement des méthodes info, de transformation, et d'écriture dans
+un SVGstream.</li>
+</ol>
+<h2>Partie 2: héritage multiple</h2>
+Il est également possible de représenter un disque comme héritant à la
+fois FillProperty et LineProperty. Dans ce cas:<br />
+<ul>
+<li>&nbsp;les classes Surface et Curve ne sont plus
+nécessaires,</li>
+<li>on ajoute une couleur "none" pour indiquer que le couleur
+de remplissage ou la couleur du trait n'est pas définie,</li>
+<li>on hérite de FillProperty et LineProperty si l'objet peut
+être à la fois une courbe ou une surface, de FillProperty s'il peut
+être seulement une surface, et de LineProperty s'il peut être seulement
+une courbe.</li>
+</ul><div style="text-align: center;"><img style="width: 459px; height: 390px;" alt="Hierarchie3" src="tp06-3.png" />
+</div><ol>
+<li>Modifier le code afin de respecter ces nouvelles
+contraintes (voir schéma ci-dessous).</li>
+<li>Ecrire un code de test.&nbsp;Ecrire un code d'exemple
+(voir ci-dessous) utilisant l'ensemble des
+objets
+géométriques concrets définis ci-dessus. Les objets seront redirigés
+dans un SVGstream afin de vérifier qu'ils sont corrects. On les
+insèrera également dans une figure, et on vérifiera le bon
+fonctionnement des méthodes info, de transformation, et d'écriture dans
+un SVGstream.</li>
+</ol><h2>Partie 3: UML</h2>On s'intéresse dans cette partie à la description UML des approches précédentes.<ol><li>Dessiner le diagramme UML de la conception obtenue à la fin du TP précédent.</li><li>Dessiner le diagramme UML de la conception après les deux parties précédentes.</li></ol><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 26 février 2019.</span>
+</body></html>
