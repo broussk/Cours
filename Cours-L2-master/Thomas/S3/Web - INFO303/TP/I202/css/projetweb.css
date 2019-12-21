@@ -1,0 +1,375 @@
+header {
+  margin: 0;
+  background-color: rgb(25,25,25);
+}
+
+body {
+  margin: 0;
+
+}
+p{
+
+}
+
+#text-acceuil{
+	margin:50px;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+h1 {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  margin-top:-45px;
+  margin-bottom: 0;
+  color: black;
+  letter-spacing: 0.10em;
+  text-align: center;
+  background: url('../img/dbz.jpg');
+  text-decoration:underline;
+}
+
+nav {
+  margin-bottom: 25px;
+  margin-top:25px;
+}
+
+span {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+
+img {
+  border: 0;
+}
+
+#entete {
+  background-color: rgb(25,25,25);
+}
+
+#entete #img_entete {
+  height: 700px;
+  margin: auto;
+  display: block;
+}
+
+#pic {
+  background-image: url('../img/anat.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  width: 625px;
+}
+
+#hovered {
+  margin: 0;
+  height : 750px;
+  width: 625px;
+ }
+
+ form {
+     background-color:white;
+  padding:10px;
+  width:280px;
+ }
+ label {
+     float: none;
+  margin-top:10px;
+  display:block;
+  }
+  input{
+      padding:3px;
+  border:1px solid black;
+  border-radius:5px;
+  width:200px;
+  box-shadow:1px 1px 2px black inset;
+  background-color:white;
+  }
+  input[type=reset], input[type=button] {
+  width:100px;
+  margin-left:5px;
+  box-shadow:1px 1px 1px black;
+  cursor:pointer;
+  }
+
+  .footer-distributed{
+      background-color:rgb(25,25,25);
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: normal 16px sans-serif;
+
+      padding: 45px 50px;
+      margin-top: 80px;
+  }
+
+  .footer-distributed .footer-left p{
+      color:  #8f9296;
+      font-size: 14px;
+      margin: 0;
+  }
+
+
+  .footer-distributed p.footer-links{
+      font-size:18px;
+      font-weight: bold;
+      color:  #ffffff;
+      margin: 0 0 10px;
+      padding: 0;
+  }
+
+  .footer-distributed p.footer-links a{
+      display:inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color:  inherit;
+  }
+
+  .footer-distributed .footer-right{
+      float: right;
+      margin-top: 6px;
+      max-width: 180px;
+  }
+
+  .footer-distributed .footer-right a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      background-color:  #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-left: 3px;
+  }
+
+  /* If you don't want the footer to be responsive, remove these media queries */
+
+  @media (max-width: 600px) {
+
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-right{
+          text-align: center;
+      }
+
+      .footer-distributed .footer-right{
+          float: none;
+          margin: 0 auto 20px;
+      }
+
+      .footer-distributed .footer-left p.footer-links{
+          line-height: 1.8;
+      }
+  }
+  #pic {
+      margin-top: 20px;
+      margin-left: 100px;
+      background-image: url('../img/anat.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 750px;
+      width: 625px;
+  }
+
+  #hovered {
+      margin: 0;
+      height : 750px;
+      width: 625px;
+  }
+  #haut{
+      text-align:right;
+      background-repeat: no-repeat;
+      position: fixed;
+      right:0;
+      top: 50%;
+  }
+  #fleche{
+      opacity:0.5;
+      height: 50px;
+      width: auto;
+  }
+
+  #navbarre {
+	table-layout:fixed;
+	margin-left:33%;
+    margin-top: -2px;
+    border: 0;
+
+  }
+
+
+  #menu, #menu ul /* Liste */
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 40px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menu /* Ensemble du menu */
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : monospace; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 16px; /* hauteur du texte : 12 pixels */
+}
+
+#menu a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */
+      background-color: rgb(25, 25, 25);/* couleur de fond */
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 144px; /* largeur */
+}
+
+#menu li /* Elements des listes */
+{
+        float : left;
+        /* pour IE qui ne reconnaît pas "transparent" */
+        border-right : 0 /* on met une bordure blanche à droite de chaque élément */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li
+{
+        border-right: 0px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu li ul /* Sous-listes */
+{
+        position: absolute; /* Position absolue */
+        width: 144px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 0px solid #fff; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li ul li
+{
+        border-top : 0px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu li ul ul
+{
+        margin    : 0px 0 0 0px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-left     : 0px solid #fff ; /* Petite bordure à gauche pour ne pas coller ... */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu li ul ul
+{
+        border-left     : 0px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu a:hover /* Lorsque la souris passe sur un des liens */
+{
+          background: rgb(50,50,50); /* ... et au contraire, le fond en blanc */
+}
+
+#menu li:hover ul ul, #menu li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+.box-titre-sidebar {
+	margin-top: 15px;
+	margin-bottom: 0px;
+ }
+.titre-sidebar {
+	margin-right: 10px;
+	float: left;
+	}
+.bloc-rubrique {
+	display: inline-block;
+	text-align: left;
+	padding-bottom:12px;
+	padding-top:12px;
+	}
+.bloc-rubrique1 {
+	display: inline-block;
+	text-align: left;
+	padding-bottom:12px;
+	padding-top:8px;
+	}
+.sep {
+	border-bottom: 1px solid #F2F2F2;
+	}
+.titre-sidebar h2 {
+
+	font-size: 25px;
+	font-weight: normal;
+	color: rgb(74, 73, 74);
+	display: inline;
+	}
+.imgleft {
+	float:left;
+	margin-right:12px;
+	margin-left:0px;
+	border: 2px solid white;
+	width:170px;
+	height:124px;
+	}
+
+.boxshadowgrey {
+	background: white;
+	margin:100px;
+	border-radius: 1px;
+
+	box-shadow: 0 1px 3px 0 #b5b5b5;
+
+	border: 1px solid #DDD;
+	}
+.rubrique p {
+
+	font-size:13px;
+	color:#333;
+	text-align:justify;
+	margin:100px;
+	padding-top:3px;
+	line-height:17px;
+	}
+.rubrique h3 {
+
+	font-size:21px;
+	font-weight:900;
+	display:inline;
+	color:#029cbf;
+	}
+.trait {
+	background: url('../img/stripe2.jpg');
+	background-repeat: repeat-x;
+	overflow: hidden;
+	height: 19px;
+	}
+
+
+#div_imc{
+	background:white;
+	margin:100px;
+	border-radius: 1px;
+	box-shadow: 0 1px 3px 0 #b5b5b5;
+	background: url('../img/imc.jpg');
+	background-repeat: no-repeat;
+	background-position:75%;
+	border: 1px solid #DDD;
+	}

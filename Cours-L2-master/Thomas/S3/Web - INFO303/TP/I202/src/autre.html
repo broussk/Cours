@@ -1,0 +1,135 @@
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<meta charset="UTF-8">
+					<title> Projet web Info0202 </title>
+					<script src ="../js/projetweb.js">  </script>
+					<link rel="stylesheet" type="text/css" href="../css/projetweb.css">
+					<script type="text/javascript" src="menu.js"></script>
+				</head>
+
+				<body>
+					<header>
+						<div id="entete">
+							<img src="../img/img_home.jpg" id="img_entete" alt="Le logo de notre site" />
+						</div>
+					</header>
+					<div id="haut">
+					  <img alt="" id="fleche" src="../img/fleche-haut.png" onclick="scrollWindow();"/>
+					</div>
+					<table id="navbarre">
+					  <tr>
+
+						<td>
+							<ul id="menu">
+								<li>
+									<a href="index.html">Acceuil</a>
+								</li>
+								<li>
+									<a href="exercices.html">Exercices</a>
+									<ul>
+										<li>
+											<a href="exercices.html#abdominaux_droit">Abdominaux grand droit</a>
+										</li>
+										<li>
+											<a href="exercices.html#abdominaux_obliques">Abbdominaux obliques</a>
+										</li>
+										<li>
+											<a href="exercices.html#Pectoraux">Pectoraux</a>
+										</li>
+										<li>
+											<a href="exercices.html#biceps">Biceps</a>
+										</li>
+										<li>
+											<a href="exercices.html#triceps">Triceps</a>
+										</li>
+										<li>
+											<a href="exercices.html#Avantbras">Avant-bras</a>
+										</li>
+										<li>
+											<a href="exercices.html#deltoides">Deltoïdes</a>
+										</li>
+										<li>
+											<a href="exercices.html#trapezes">Trapèzes</a>
+										</li>
+										<li>
+											<a href="exercices.html#dorsaux">Dorsaux</a>
+										</li>
+										<li>
+											<a href="exercices.html#quadriceps">Quadriceps</a>
+										</li>
+										<li>
+											<a href="exercices.html#ischios-jambiers">Ischio-jambiers</a>
+										</li>
+										<li>
+											<a href="exercices.html#mollets">Mollets</a>
+										</li>
+										<li>
+											<a href="exercices.html#fessiers">Fessiers</a>
+										</li>
+
+									</ul>
+								</li>
+
+								<li>
+									<a href="autre.html">IMC</a>
+								</li>
+							</ul>
+
+					  </td>
+					  <td>
+					  </td>
+					  </tr>
+						</table>
+						<h1>IMC</h1>
+						<div id="div_imc">
+						<form name="IMC" method="get">
+							<table id="tableauIMC">
+									<tr><td>Votre poids en Kg <input type="number" name="poids" placeholder="Ex=60" value=""/></td></tr>
+									<tr><td>
+											Votre taille en Cm  <input type="number" name="taille" placeholder="Ex=165" value=""/>
+									</td></tr>
+									<tr><td>
+										<input type="button" value="Calculez" onclick="calculerImc()" name="button"/>
+									</td></tr>
+									<tr><td>
+											<label>Voici le résultat de votre IMC</label>  <label id="resultat"></label>
+									</td></tr>
+									<tr><td>
+											Avis d'un expert  <label id="avis"></label>
+											Avis d'un escroc  <label id="avisMoi"></label>
+									</td></tr>
+
+							</table>
+							<input type="reset" />
+							<p>Si vous êtes gros faites du sport. Sans oublier les étirements </p>
+						</form>
+						</div>
+
+						<footer class="footer-distributed">
+
+
+								<div class="footer-left">
+
+										<p class="footer-links">
+												<a href="index.html">Home</a>
+												·
+
+										</p>
+
+										<p>Company Tigout &copy; 2017</p>
+										<p>
+											<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			        					<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+			  							</a>
+											<a href="http://jigsaw.w3.org/css-validator/check/referer">
+												<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+			    						</a>
+										</p>
+								</div>
+
+						</footer>
+
+				</body>
+
+			</html>

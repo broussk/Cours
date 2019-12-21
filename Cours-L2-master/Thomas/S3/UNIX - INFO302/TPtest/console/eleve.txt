@@ -1,0 +1,7 @@
+Fabrice,18 / 20,Excellent travail
+Mathieu,3 / 20,Nul comme d'hab'
+Sophie,14 / 20,En nette progression
+Mélanie,9 / 20,Allez presque la moyenne !
+Corentin,11 / 20,Pas mal mais peut mieux faire
+Albert,20 / 20,Toujours parfait
+Benoît,5 / 20,En grave chute

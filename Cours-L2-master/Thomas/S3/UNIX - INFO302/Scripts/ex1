@@ -1,0 +1,13 @@
+Partie avec a : 
+a=4 a prend la valeur 4 puis on l'affichecho
+
+Partie b :
+b prend la valeur du string pim pam pom puis on l'affiche
+
+On affiche la valeur de a suivie de 6 puis la valeur de b ce qui nous donne 46 pim pam pom
+
+Partie c : 
+c prend la valeur de la date puis on l'affiche
+
+Partie d :
+Les guillemets ' sont utilisées, la chaine n'est donc pas interprétée et d prend comme valeur la chaine de caractère spécifié entre les '

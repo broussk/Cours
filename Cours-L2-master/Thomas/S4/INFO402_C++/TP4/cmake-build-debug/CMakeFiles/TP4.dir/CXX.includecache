@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Thoma/Desktop/Cours-L2/Thomas/S4/INFO402_C++/TP4/partie1/main.cpp
+iostream
+-
+tp.hpp
+C:/Users/Thoma/Desktop/Cours-L2/Thomas/S4/INFO402_C++/TP4/partie1/tp.hpp
+
+C:/Users/Thoma/Desktop/Cours-L2/Thomas/S4/INFO402_C++/TP4/partie1/tp.cpp
+tp.hpp
+C:/Users/Thoma/Desktop/Cours-L2/Thomas/S4/INFO402_C++/TP4/partie1/tp.hpp
+
+C:/Users/Thoma/Desktop/Cours-L2/Thomas/S4/INFO402_C++/TP4/partie1/tp.hpp
+iostream
+-
+fstream
+-
+ostream
+-
+string
+-
+initializer_list
+-
+vector
+-
+

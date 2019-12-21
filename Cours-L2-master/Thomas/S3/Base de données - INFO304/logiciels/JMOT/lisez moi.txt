@@ -1,0 +1,59 @@
+
+VERSION : 0.2.1
+
+DATE : 05 Décembre 2016
+
+CONTENU 
+=======
+
+JMOT.zip contient : 
+  1. JMOT.jar
+  2. Lisez moi
+  3. répertoire 'lib' qui contient : 
+	1.fichier Parametres.class
+	
+
+
+INSTALLATION 
+============
+
+1. vérifier si la date système à jour.
+2. Dezipper le fichier JMOT.zip;
+3. ne pas renommer 'JMOT.jar' et le répertoire 'lib' non plus.
+4. ne pas supprimer le fichier parametres.class du répertoire 'lib'. 
+
+
+NOUVEAUTES 
+==========
+
+01. Créer un ou plusieurs MOT avec JMOT.
+02. Fermer un MOT ou Fermer tous les MOT. 
+03. Copier/coller les éléments du MOT.
+04. Personnaliser JMOT en saisissant le nom du Développeur afin d'enrichir l'historique du MOT.
+05. Accéder aux dernières informations disponibles sur le site (dérnière version dispo, les nouveautés, ..) via une fenêtre. 
+06. Garder l'historique des modifications portées sur le MOT.
+07. Possibilité de rajouter des notes / des commentaires pour chaque MOT.
+08. Rajouter des Postits.
+09. le fond de la fenêtre MOT plus convivial.
+10. sauvegarde automatique de votre environnement de travail et le répertoire de travail. 
+11. Imprimer un MOT
+
+
+PROCHAINES VERSIONS
+===================
+- Retours arrière/ Avant (CTRL + Z/ CTRL +Y).
+- Manuel utilisateur (en cours de rédaction).
+- etc. 
+
+
+
+IMPORTANT
+=========
+
+   ---> N'oubliez pas de m'envoyer vos remarques et suggestions par mail : jmerise@jfreesoft.com 
+
+
+
+
+
+

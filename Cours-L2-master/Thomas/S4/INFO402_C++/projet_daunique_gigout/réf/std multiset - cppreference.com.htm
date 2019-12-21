@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>std::multiset - cppreference.com</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.21.2">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=edit">
+<link rel="shortcut icon" href="https://fr.cppreference.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://fr.cppreference.com/mwiki/opensearch_desc.php" title="cppreference.com (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://fr.cppreference.com/mwiki/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de cppreference.com" href="https://fr.cppreference.com/mwiki/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<link rel="stylesheet" href="std%20multiset%20-%20cppreference.com_fichiers/load.css">
+<style>
+.t-dsc span.editsection{display:inline}.t-par span.editsection{display:inline}.t-template-editlink span.editsection{display:inline}.t-navbar-menu span.editsection{display:inline}.t-page-template span.editsection{display:inline}
+/* cache key: mwiki1-mwiki_fr_:resourceloader:filter:minify-css:7:fc90305cd85442b19bddb126df09c39f */
+.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: mwiki1-mwiki_fr_:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: mwiki1-mwiki_fr_:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: mwiki1-mwiki_fr_:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="std%20multiset%20-%20cppreference.com_fichiers/load_002.css">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}#toc{display:none}.editsection{display:none}
+/* cache key: mwiki1-mwiki_fr_:resourceloader:filter:minify-css:7:ab7fc9fc5a0975fee161bb12f569e2a2 */</style>
+
+<script src="std%20multiset%20-%20cppreference.com_fichiers/load_003.php"></script><script src="std%20multiset%20-%20cppreference.com_fichiers/load_002.php"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"cpp/container/multiset","wgTitle":"cpp/container/multiset","wgCurRevisionId":49874,"wgArticleId":1782,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgSeparatorTransformTable":[",	."," 	,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv","fév","mars","avr","mai","juin","juil","août","sept","oct","nov","déc"],"wgRelevantPageName":"cpp/container/multiset","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":0,"showtoolbar":1,"skin":"cppreference2","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"gadget-ShowEditLinks":1});;},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});;},{},{});
+/* cache key: mwiki1-mwiki_fr_:resourceloader:filter:minify-js:7:5a1228fb7baa8da391ace33ec51ec798 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script><script src="std%20multiset%20-%20cppreference.com_fichiers/load_005.php"></script>
+<style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000dd;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #909090;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #008000; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #008000;}
+.cpp.source-cpp .nu0 {color: #000080;}
+.cpp.source-cpp .nu6 {color: #000080;}
+.cpp.source-cpp .nu8 {color: #000080;}
+.cpp.source-cpp .nu12 {color: #000080;}
+.cpp.source-cpp .nu16 {color:#000080;}
+.cpp.source-cpp .nu17 {color:#000080;}
+.cpp.source-cpp .nu18 {color:#000080;}
+.cpp.source-cpp .nu19 {color:#000080;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/mwiki/skins/cppreference2/csshover.min.htc")}</style><![endif]--><script async="" src="std%20multiset%20-%20cppreference.com_fichiers/load_004.php"></script><script id="_carbonads_projs" type="text/javascript" src="std%20multiset%20-%20cppreference.com_fichiers/CKYITK7M.json"></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-cpp_container_multiset skin-cppreference2 action-view cpp-navbar">
+        <!-- header -->
+        <div id="mw-head" class="noprint">
+            <div id="cpp-head-first-base">
+                <div id="cpp-head-first">
+                    <h5><a href="https://fr.cppreference.com/">
+                        cppreference.com                        </a></h5>
+                    <div id="cpp-head-search">
+                        
+<!-- 0 -->
+<div id="p-search">
+	<h5><label for="searchInput">Rechercher</label></h5>
+	<form action="/mwiki/index.php" id="searchform">
+		<input type="hidden" name="title" value="Spécial:Recherche">
+				<div id="simpleSearch">
+						<input name="search" title="Rechercher dans cppreference.com [alt-shift-f]" accesskey="f" id="searchInput" autocomplete="off" placeholder="Rechercher">						<button type="submit" name="button" title="Rechercher les pages comportant ce texte." id="searchButton"><img src="std%20multiset%20-%20cppreference.com_fichiers/search-ltr.png" alt="Rechercher"></button>					</div>
+			</form>
+</div>
+
+<!-- /0 -->
+                    </div>
+                    <div id="cpp-head-personal">
+                        
+<!-- 0 -->
+<div id="p-personal" class="">
+<span id="pt-createaccount"><a href="https://fr.cppreference.com/mwiki/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=cpp%2Fcontainer%2Fmultiset&amp;type=signup">Créer un compte</a></span>	<div class="menu">
+        <ul>
+<li id="pt-login"><a href="https://fr.cppreference.com/mwiki/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=cpp%2Fcontainer%2Fmultiset" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [alt-shift-o]" accesskey="o">Connexion</a></li>        </ul>
+    </div>
+</div>
+
+<!-- /0 -->
+                    </div>
+
+                </div>
+            </div>
+            <div id="cpp-head-second-base">
+                <div id="cpp-head-second">
+                    <div id="cpp-head-tools-left">
+                        
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Espaces de noms</h5>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="https://fr.cppreference.com/w/cpp/container/multiset" title="Voir la page de contenu [alt-shift-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk" class="new"><span><a href="https://fr.cppreference.com/mwiki/index.php?title=Discussion:cpp/container/multiset&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+		<h5><span>Variantes</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+                    </div>
+                    <div id="cpp-head-tools-right">
+                        
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Affichages</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="https://fr.cppreference.com/w/cpp/container/multiset">Lire</a></span></li>
+					<li id="ca-edit"><span><a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=edit" title="Vous pouvez modifier cette page.
+Veuillez utiliser le bouton de prévisualisation avant d'enregistrer. [alt-shift-e]" accesskey="e">Modifier</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [alt-shift-h]" accesskey="h">Historique</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+<style type="text/css">
+#carbonads {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  left: -170px;
+  max-width: 150px;
+  border-radius: 4px;
+  border: solid 1px hsla(0, 0%, 0%, .1);
+  background-color: hsl(0, 0%, 98%);
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+  Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#carbonads a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#carbonads a:hover {
+  color: inherit;
+}
+
+#carbonads span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.carbon-img {
+  display: block;
+  margin-bottom: 8px;
+  max-width: 150px;
+  line-height: 1;
+}
+
+.carbon-img img {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px !important;
+  width: 150px;
+  height: auto;
+}
+
+.carbon-text {
+  display: block;
+  padding: 0 1em 8px;
+}
+
+.carbon-poweredby {
+  display: block;
+  padding: 8px 12px;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 1;
+}
+</style>
+        <div id="cpp-content-base">
+            <div id="content">
+                <a id="top"></a>
+                <div id="mw-js-message" style="display:none;"></div>
+                                <!-- firstHeading -->
+<script async="" type="text/javascript" src="std%20multiset%20-%20cppreference.com_fichiers/carbon.js" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QMCVBIP53WCE7LYKQMCW7DKKQWCEAD4Z3JCWBI623MC6YDLKQKC6BIPKJMCYADVK3EHJNCLSIZ?segment=placement:cppreferencecom;" class="carbon-img" target="_blank" rel="noopener"><img src="std%20multiset%20-%20cppreference.com_fichiers/1552341170-clion_creative-2.png" alt="" style="max-width: 130px;" width="130" height="100" border="0"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QMCVBIP53WCE7LYKQMCW7DKKQWCEAD4Z3JCWBI623MC6YDLKQKC6BIPKJMCYADVK3EHJNCLSIZ?segment=placement:cppreferencecom;" class="carbon-text" target="_blank" rel="noopener">A C++ IDE for all platforms that ‘gets’ your code</a></span><a href="http://carbonads.net/?utm_source=cppreferencecom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a><img src="std%20multiset%20-%20cppreference.com_fichiers/B9742948" style="display: none;" width="1" height="1" border="0"></span></div>
+                <h1 id="firstHeading" class="firstHeading"><span style="font-size:0.7em; line-height:130%">std::</span>multiset</h1>
+                <!-- /firstHeading -->
+                <!-- bodyContent -->
+                <div id="bodyContent">
+                                        <!-- tagline -->
+                    <div id="siteSub">De cppreference.com</div>
+                    <!-- /tagline -->
+                                        <!-- subtitle -->
+                    <div id="contentSub"><span class="subpages">&lt; <a href="https://fr.cppreference.com/w/cpp" title="cpp">cpp</a>‎ | <a href="https://fr.cppreference.com/w/cpp/container" title="cpp/container">container</a></span></div>
+                    <!-- /subtitle -->
+                                                            <!-- bodycontent -->
+                    <div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><table class="plainlinks fmbox fmbox-system" style="font-size:0.9em; line-height: 1em">
+<tbody><tr>
+<td class="mbox-image">
+  <img alt="" src="std%20multiset%20-%20cppreference.com_fichiers/Imbox_notice.png" width="40" height="40"></td>
+<td class="mbox-text" style=""> <p>This page has been machine-translated from the English version of the wiki using <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.
+</p><p>
+</p><p>The translation may contain errors and awkward wording. Hover 
+over text to see the original version. You can help to fix errors and 
+improve the translation. For instructions click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a>.
+</p>
+<p></p>
+<p class="t-tr-note-click">
+<a href="http://en.cppreference.com/w/cpp/container/multiset" class="extiw" title="en:cpp/container/multiset"> Click here for the English version of this page</a>
+</p> </td>
+</tr>
+</tbody></table>
+<p><br>
+</p>
+<div class="t-navbar" style=""><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="https://fr.cppreference.com/w/cpp" title="cpp"> C++</a><div class="t-navbar-menu"><div><div>
+<table class="t-nv-begin" style="line-height:1.1em;" cellpadding="0">
+
+<tbody><tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/language" title="cpp/language">Langage</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/concept" title="cpp/concept">Concepts</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/utility" title="cpp/utility">Bibliothèque d'utilitaires</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/string" title="cpp/string">Bibliothèque pour les chaînes de caractères</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/container" title="cpp/container">Bibliothèque de conteneurs</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/algorithm" title="cpp/algorithm">Bibliothèque d'algorithmes</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/iterator" title="cpp/iterator">Bibliothèque d'itérateurs</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/numeric" title="cpp/numeric">Bibliothèque pour le calcul numérique</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/io" title="cpp/io">Bibliothèque pour les entrées/sorties</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/locale" title="cpp/locale">Bibliothèque pour la régionalisation</a>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/regex" title="cpp/regex">Bibliothèque pour les expressions régulières</a> <span class="t-mark"> (C++11)</span>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/atomic" title="cpp/atomic">Bibliothèque pour les opérations atomiques</a> <span class="t-mark"> (C++11)</span>
+</td></tr>
+
+<tr>
+<td colspan="5">  <a href="https://fr.cppreference.com/w/cpp/thread" title="cpp/thread">Bibliothèque pour les processus légers (threads)</a> <span class="t-mark"> (C++11)</span>
+</td></tr>
+</tbody></table>
+</div><div><span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/navbar_content&amp;action=edit">[edit]</a></span></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><a href="https://fr.cppreference.com/w/cpp/container" title="cpp/container">Bibliothèque de conteneurs</a><div class="t-navbar-menu"><div><div>
+<table class="t-nv-begin" style="" cellpadding="0">
+
+<tbody><tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/array" title="cpp/container/array">array</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/vector" title="cpp/container/vector">vector</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/deque" title="cpp/container/deque">deque</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/forward_list" title="cpp/container/forward list">forward_list</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/list" title="cpp/container/list">list</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/set" title="cpp/container/set">set</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><strong class="selflink">multiset</strong></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/map" title="cpp/container/map">map</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multimap" title="cpp/container/multimap">multimap</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/unordered_set" title="cpp/container/unordered set">unordered_set</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/unordered_multiset" title="cpp/container/unordered multiset">unordered_multiset</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/unordered_map" title="cpp/container/unordered map">unordered_map</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/unordered_multimap" title="cpp/container/unordered multimap">unordered_multimap</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/stack" title="cpp/container/stack">stack</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/queue" title="cpp/container/queue">queue</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/priority_queue" title="cpp/container/priority queue">priority_queue</a></td></tr></tbody></table>
+</td></tr>
+</tbody></table>
+</div><div><span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/navbar_content&amp;action=edit">[edit]</a></span></div></div></div></div><div class="t-navbar-sep">&nbsp;</div><div class="t-navbar-head"><strong class="selflink"><tt>std::multiset</tt></strong><div class="t-navbar-menu"><div><div>
+<table class="t-nv-begin" style="" cellpadding="0">
+
+<tbody><tr class="t-nv-h1">
+<td colspan="5"> <div class="t-tr-text"> Les fonctions membres<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Member functions</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/multiset" title="cpp/container/multiset/multiset">multiset::multiset</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/%7Emultiset" title="cpp/container/multiset/~multiset">multiset::~multiset</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/operator%3D" title="cpp/container/multiset/operator=">multiset::operator=</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/get_allocator" title="cpp/container/multiset/get allocator">multiset::get_allocator</a></td></tr></tbody></table>
+</td></tr>
+
+<tr class="t-nv-h2">
+<td colspan="5"> <div class="t-tr-text"> Les itérateurs<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Iterators</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/begin" title="cpp/container/multiset/begin">multiset::begin<br>multiset::cbegin</a></td><td><br><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/end" title="cpp/container/multiset/end">multiset::end<br>multiset::cend</a></td><td><br><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/rbegin" title="cpp/container/multiset/rbegin">multiset::rbegin<br>multiset::crbegin</a></td><td><br><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/rend" title="cpp/container/multiset/rend">multiset::rend<br>multiset::crend</a></td><td><br><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr class="t-nv-h2">
+<td colspan="5"> <div class="t-tr-text"> Capacité<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Capacity</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/empty" title="cpp/container/multiset/empty">multiset::empty</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/size" title="cpp/container/multiset/size">multiset::size</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/max_size" title="cpp/container/multiset/max size">multiset::max_size</a></td></tr></tbody></table>
+</td></tr>
+
+<tr class="t-nv-h2">
+<td colspan="5"> <div class="t-tr-text"> Modificateurs<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Modifiers</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/clear" title="cpp/container/multiset/clear">multiset::clear</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/insert" title="cpp/container/multiset/insert">multiset::insert</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/emplace" title="cpp/container/multiset/emplace">multiset::emplace</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/emplace_hint" title="cpp/container/multiset/emplace hint">multiset::emplace_hint</a></td><td><span class="t-mark"> (C++11)</span></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/erase" title="cpp/container/multiset/erase">multiset::erase</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/swap" title="cpp/container/multiset/swap">multiset::swap</a></td></tr></tbody></table>
+</td></tr>
+
+<tr class="t-nv-h2">
+<td colspan="5"> <div class="t-tr-text"> Lookup<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Lookup</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/count" title="cpp/container/multiset/count">multiset::count</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/find" title="cpp/container/multiset/find">multiset::find</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/equal_range" title="cpp/container/multiset/equal range">multiset::equal_range</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/lower_bound" title="cpp/container/multiset/lower bound">multiset::lower_bound</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/upper_bound" title="cpp/container/multiset/upper bound">multiset::upper_bound</a></td></tr></tbody></table>
+</td></tr>
+
+<tr class="t-nv-h2">
+<td colspan="5"> <div class="t-tr-text"> Des observateurs<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Observers</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/key_comp" title="cpp/container/multiset/key comp">multiset::key_comp</a></td></tr></tbody></table>
+</td></tr>
+
+<tr>
+<td colspan="5"> <table class="t-nv-ln-table"><tbody><tr><td><a href="https://fr.cppreference.com/w/cpp/container/multiset/value_comp" title="cpp/container/multiset/value comp">multiset::value_comp</a></td></tr></tbody></table>
+</td></tr>
+</tbody></table>
+</div><div><span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/multiset/navbar_content&amp;action=edit">[edit]</a></span></div></div></div></div><div class="t-navbar-sep">&nbsp;</div></div>
+<table class="t-dcl-begin"><tbody>
+<tr class="t-dsc-header">
+<td> <div>Defined in header <tt>&lt;set&gt;</tt>
+ </div></td>
+<td></td>
+<td></td>
+</tr><tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+<tr class="t-dcl">
+<td class="t-dcl-nopad"> <div><span class="mw-geshi cpp source-cpp"><span class="kw1">template</span><span class="sy1">&lt;</span><br>
+<p>&nbsp; &nbsp; <span class="kw1">class</span> Key,<br>
+&nbsp; &nbsp; <span class="kw1">class</span> Compare <span class="sy1">=</span> <a href="http://fr.cppreference.com/w/cpp/utility/functional/less"><span class="kw878">std::<span class="me2">less</span></span></a><span class="sy1">&lt;</span>Key<span class="sy1">&gt;</span>,<br>
+&nbsp; &nbsp; <span class="kw1">class</span> Allocator <span class="sy1">=</span> <a href="http://fr.cppreference.com/w/cpp/memory/allocator"><span class="kw567">std::<span class="me2">allocator</span></span></a><span class="sy1">&lt;</span>Key<span class="sy1">&gt;</span><br>
+</p>
+<span class="sy1">&gt;</span> <span class="kw1">class</span> multiset<span class="sy4">;</span></span></div></td>
+<td class="t-dcl-nopad">  </td>
+<td class="t-dcl-nopad">  </td>
+</tr>
+<tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+</tbody></table> 
+<div class="t-tr-text">Multiset est un conteneur associatif qui contient
+ un ensemble d'objets triés clé de type. Contrairement ensemble, 
+plusieurs touches avec des valeurs égales sont autorisés. Le tri est 
+fait en utilisant la fonction de comparaison Comparer clé. Opérations de
+ recherche, d'insertion et le retrait ont une complexité logarithmique .<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig">Multiset
+ is an associative container that contains a sorted set of objects of 
+type Key. Unlike set, multiple keys with equal values are allowed. 
+Sorting is done using the key comparison function Compare. Search, 
+insertion, and removal operations have logarithmic complexity.</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+<div class="t-tr-text">L'ordre des éléments qui permettent de comparer équivalente est de l'ordre d'insertion et ne change pas. <span class="t-mark"> (depuis C++11)</span><div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig">The order of the elements that compare equivalent is the order of insertion and does not change. <span class="t-mark"> (depuis C++11)</span></div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+<div class="t-tr-text"><code>std::multiset</code> répond aux exigences de <a href="https://fr.cppreference.com/w/cpp/concept/Container" title="cpp/concept/Container"><code>Container</code></a>, <a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/concept/AllocatorAwareContainer&amp;action=edit&amp;redlink=1" class="new" title="cpp/concept/AllocatorAwareContainer (page inexistante)"><code>AllocatorAwareContainer</code></a>, <a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/concept/AssociativeContainer&amp;action=edit&amp;redlink=1" class="new" title="cpp/concept/AssociativeContainer (page inexistante)"><code>AssociativeContainer</code></a> et <a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/concept/ReversibleContainer&amp;action=edit&amp;redlink=1" class="new" title="cpp/concept/ReversibleContainer (page inexistante)"><code>ReversibleContainer</code></a> .<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"><code>std::multiset</code> meets the requirements of <a href="https://fr.cppreference.com/w/cpp/concept/Container" title="cpp/concept/Container"><code>Container</code></a>, <a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/concept/AllocatorAwareContainer&amp;action=edit&amp;redlink=1" class="new" title="cpp/concept/AllocatorAwareContainer (page inexistante)"><code>AllocatorAwareContainer</code></a>, <a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/concept/AssociativeContainer&amp;action=edit&amp;redlink=1" class="new" title="cpp/concept/AssociativeContainer (page inexistante)"><code>AssociativeContainer</code></a> and <a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/concept/ReversibleContainer&amp;action=edit&amp;redlink=1" class="new" title="cpp/concept/ReversibleContainer (page inexistante)"><code>ReversibleContainer</code></a>.</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div>
+<table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Types_de_membres"><span class="tocnumber">1</span> <span class="toctext">Types de membres</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Fonctions_membres"><span class="tocnumber">2</span> <span class="toctext">Fonctions membres</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Les_it.C3.A9rateursOriginal:_IteratorsThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."><span class="tocnumber">2.1</span> <span class="toctext">Les
+ itérateursOriginal: IteratorsThe text has been machine-translated via 
+Google Translate. You can help to correct and verify the translation. 
+Click here for instructions.</span></a></li>
+<li class="toclevel-2"><a href="#Capacit.C3.A9Original:_CapacityThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."><span class="tocnumber">2.2</span> <span class="toctext">CapacitéOriginal:
+ CapacityThe text has been machine-translated via Google Translate. You 
+can help to correct and verify the translation. Click here for 
+instructions.</span></a></li>
+<li class="toclevel-2"><a href="#ModificateursOriginal:_ModifiersThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."><span class="tocnumber">2.3</span> <span class="toctext">ModificateursOriginal:
+ ModifiersThe text has been machine-translated via Google Translate. You
+ can help to correct and verify the translation. Click here for 
+instructions.</span></a></li>
+<li class="toclevel-2"><a href="#LookupOriginal:_LookupThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."><span class="tocnumber">2.4</span> <span class="toctext">LookupOriginal:
+ LookupThe text has been machine-translated via Google Translate. You 
+can help to correct and verify the translation. Click here for 
+instructions.</span></a></li>
+<li class="toclevel-2"><a href="#Des_observateursOriginal:_ObserversThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."><span class="tocnumber">2.5</span> <span class="toctext">Des
+ observateursOriginal: ObserversThe text has been machine-translated via
+ Google Translate. You can help to correct and verify the translation. 
+Click here for instructions.</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Fonctions_annexes"><span class="tocnumber">3</span> <span class="toctext">Fonctions annexes</span></a></li>
+</ul>
+</td></tr></tbody></table>
+<h3><span class="editsection">[<a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=edit&amp;section=1" title="Modifier la section : Types de membres">modifier</a>]</span> <span class="mw-headline" id="Types_de_membres">Types de membres</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc-hitem">
+<td> Type du membre
+</td>
+<td>  Définition
+</td></tr>
+
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>key_type</code>
+</td>
+<td>  <code>Key</code> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_key_type&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>value_type</code>
+</td>
+<td>  <code>Key</code> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_value_type&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>size_type</code>
+</td>
+<td> Type intégral non signé (généralement <span class="t-c"><span class="mw-geshi cpp source-cpp">size_t</span></span>)<span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_size_type&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>difference_type</code>
+</td>
+<td>  Type intégral signé (généralement <span class="t-c"><span class="mw-geshi cpp source-cpp">ptrdiff_t</span></span>) <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_difference_type&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>key_compare</code>
+</td>
+<td>  <code>Compare</code> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_key_compare&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>value_compare</code>
+</td>
+<td>  <code>Compare</code> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_value_compare2&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>allocator_type</code>
+</td>
+<td>  <code>Allocator</code> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_allocator_type&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>reference</code>
+</td>
+<td>  <code>Allocator::reference</code> <span class="t-mark"> (avant C++11)</span><br><code>value_type&amp;</code> <span class="t-mark"> (depuis C++11)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_reference&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>const_reference</code>
+</td>
+<td>  <code>Allocator::const_reference</code> <span class="t-mark"> (avant C++11)</span><br><code>const value_type&amp;</code> <span class="t-mark"> (depuis C++11)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_const_reference&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>pointer</code>
+</td>
+<td>  <code>Allocator::pointer</code> <span class="t-mark"> (avant C++11)</span><br><span class="t-c"><span class="mw-geshi cpp source-cpp"><a href="http://fr.cppreference.com/w/cpp/memory/allocator_traits"><span class="kw568">std::<span class="me2">allocator_traits</span></span></a><span class="sy1">&lt;</span>Allocator<span class="sy1">&gt;</span><span class="sy4">::</span><span class="me2">pointer</span></span></span> <span class="t-mark"> (depuis C++11)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_pointer&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>const_pointer</code>
+</td>
+<td>  <span class="t-c"><span class="mw-geshi cpp source-cpp">Allocator<span class="sy4">::</span><span class="me2">const_pointer</span></span></span> <span class="t-mark"> (avant C++11)</span><br><span class="t-c"><span class="mw-geshi cpp source-cpp"><a href="http://fr.cppreference.com/w/cpp/memory/allocator_traits"><span class="kw568">std::<span class="me2">allocator_traits</span></span></a><span class="sy1">&lt;</span>Allocator<span class="sy1">&gt;</span><span class="sy4">::</span><span class="me2">const_pointer</span></span></span> <span class="t-mark"> (depuis C++11)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_const_pointer&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>iterator</code>
+</td>
+<td> <div class="t-tr-text"> <a href="https://fr.cppreference.com/w/cpp/concept/BidirectionalIterator" title="cpp/concept/BidirectionalIterator"><code>BidirectionalIterator</code></a> <span class="t-mark"> (avant C++11)</span> <br><span class="t-mark"> (depuis C++11)</span>Constant itérateur bidirectionnel <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> <a href="https://fr.cppreference.com/w/cpp/concept/BidirectionalIterator" title="cpp/concept/BidirectionalIterator"><code>BidirectionalIterator</code></a> <span class="t-mark"> (avant C++11)</span><br>Constant bidirectional iterator <span class="t-mark"> (depuis C++11)</span> </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div><span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_iterator&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>const_iterator</code>
+</td>
+<td>  Itérateur constant bidirectionnel<span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_const_iterator&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>reverse_iterator</code>
+</td>
+<td>  <span class="t-c"><span class="mw-geshi cpp source-cpp"><a href="http://fr.cppreference.com/w/cpp/iterator/reverse_iterator"><span class="kw537">std::<span class="me2">reverse_iterator</span></span></a><span class="sy1">&lt;</span>iterator<span class="sy1">&gt;</span></span></span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_reverse_iterator&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <code>const_reverse_iterator</code>
+</td>
+<td>  <span class="t-c"><span class="mw-geshi cpp source-cpp"><a href="http://fr.cppreference.com/w/cpp/iterator/reverse_iterator"><span class="kw537">std::<span class="me2">reverse_iterator</span></span></a><span class="sy1">&lt;</span>const_iterator<span class="sy1">&gt;</span></span></span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_const_reverse_iterator&amp;action=edit">[edit]</a></span>
+</td></tr>
+</tbody></table>
+<p><br>
+</p>
+<h3><span class="editsection">[<a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=edit&amp;section=2" title="Modifier la section : Fonctions membres">modifier</a>]</span> <span class="mw-headline" id="Fonctions_membres">Fonctions membres</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div t-dsc-member-nobold-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/multiset" title="cpp/container/multiset/multiset"> (constructeur)</a></div></div>
+</td>
+<td>  Construit le <code>multiset</code> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_constructor&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div t-dsc-member-nobold-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/%7Emultiset" title="cpp/container/multiset/~multiset"> (destructeur)</a></div></div>
+</td>
+<td>  détruit le <code>multiset</code> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_destructor&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/operator%3D" title="cpp/container/multiset/operator="> operator=</a></div></div>
+</td>
+<td>   Attribue les valeurs dans le conteneur  <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_operator%3D&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/get_allocator" title="cpp/container/multiset/get allocator"> get_allocator</a></div></div>
+</td>
+<td>
+<p>Renvoie l'allocateur associé <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_get_allocator&amp;action=edit">[edit]</a></span>
+</p>
+</td></tr>
+
+
+<tr>
+<td colspan="2"> <h5> <span class="mw-headline" id="Les_it.C3.A9rateursOriginal:_IteratorsThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."> <div class="t-tr-text"> Les itérateurs<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Iterators</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> </span></h5>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/begin" title="cpp/container/multiset/begin"> begin<br> cbegin</a></div><div><br></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne un itérateur au début <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns an iterator to the beginning </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_begin&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/end" title="cpp/container/multiset/end"> end <br>cend</a></div><div><br></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne un itérateur à la fin <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns an iterator to the end </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_end&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/rbegin" title="cpp/container/multiset/rbegin"> rbegin<br> crbegin</a></div><div><br></div></div>
+</td>
+<td>  retourne un itérateur inversé au début <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_rbegin&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/rend" title="cpp/container/multiset/rend"> rend<br> crend</a></div><div><br></div></div>
+</td>
+<td>  retourne un itérateur inversé à la fin <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_rend&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+
+<tr>
+<td colspan="2"> <h5> <span class="mw-headline" id="Capacit.C3.A9Original:_CapacityThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."> <div class="t-tr-text"> Capacité<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Capacity</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> </span></h5>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/empty" title="cpp/container/multiset/empty"> empty</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> vérifie si le conteneur est vide <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> checks whether the container is empty </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_empty&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/size" title="cpp/container/multiset/size"> size</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne le nombre d'éléments <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns the number of elements </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_size&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/max_size" title="cpp/container/multiset/max size"> max_size</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne le plus grand nombre possible d'éléments <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns the maximum possible number of elements </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_max_size&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+
+<tr>
+<td colspan="2"> <h5> <span class="mw-headline" id="ModificateursOriginal:_ModifiersThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."> <div class="t-tr-text"> Modificateurs<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Modifiers</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> </span></h5>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/clear" title="cpp/container/multiset/clear"> clear</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> efface le contenu <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> clears the contents </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_clear&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/insert" title="cpp/container/multiset/insert"> insert</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> insère des éléments <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> inserts elements </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_insert&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/emplace" title="cpp/container/multiset/emplace"> emplace</a></div><div><span class="t-mark"> (C++11)</span></div></div>
+</td>
+<td>   construit des éléments en mémoire  <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_emplace&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/emplace_hint" title="cpp/container/multiset/emplace hint"> emplace_hint</a></div><div><span class="t-mark"> (C++11)</span></div></div>
+</td>
+<td>  <div class="t-tr-text"> construit éléments en place en utilisant un indice <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> constructs elements in-place using a hint </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_emplace_hint&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/erase" title="cpp/container/multiset/erase"> erase</a></div></div>
+</td>
+<td>  efface des éléments <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_erase&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/swap" title="cpp/container/multiset/swap"> swap</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> permute les contenus <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> swaps the contents </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_swap&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+
+<tr>
+<td colspan="2"> <h5> <span class="mw-headline" id="LookupOriginal:_LookupThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."> <div class="t-tr-text"> Lookup<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Lookup</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> </span></h5>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/count" title="cpp/container/multiset/count"> count</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne le nombre d'éléments correspondant à la clé spécifiée <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns the number of elements matching specific key </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_count&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/find" title="cpp/container/multiset/find"> find</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> trouve l'élément avec la clé spécifique<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> finds element with specific key</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_find&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/equal_range" title="cpp/container/multiset/equal range"> equal_range</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> rendements varient d'éléments correspondant à une clé spécifique<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns range of elements matching a specific key</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_equal_range&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/lower_bound" title="cpp/container/multiset/lower bound"> lower_bound</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne un itérateur sur le premier élément'<b> pas moins que la valeur donnée<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns an iterator to the first element <i>not less</i> than the given value</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></b></div><b> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_lower_bound&amp;action=edit">[edit]</a></span></b>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/upper_bound" title="cpp/container/multiset/upper bound"> upper_bound</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne un itérateur sur le premier élément'<b> plus grande qu'une certaine valeur<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns an iterator to the first element <i>greater</i> than a certain value</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></b></div><b> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_upper_bound&amp;action=edit">[edit]</a></span></b>
+</td></tr>
+
+
+<tr>
+<td colspan="2"> <h5> <span class="mw-headline" id="Des_observateursOriginal:_ObserversThe_text_has_been_machine-translated_via_Google_Translate._You_can_help_to_correct_and_verify_the_translation._Click_here_for_instructions."> <div class="t-tr-text"> Des observateurs<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> Observers</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> </span></h5>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/key_comp" title="cpp/container/multiset/key comp"> key_comp</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne la fonction qui compare les clés<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns the function that compares keys</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_key_comp&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/value_comp" title="cpp/container/multiset/value comp"> value_comp</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> retourne la fonction qui compare les clés dans les objets de value_type type<div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> returns the function that compares keys in objects of type value_type</div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction membre publique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_value_comp&amp;action=edit">[edit]</a></span>
+</td></tr>
+</tbody></table>
+<h3><span class="editsection">[<a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=edit&amp;section=3" title="Modifier la section : Fonctions annexes">modifier</a>]</span> <span class="mw-headline" id="Fonctions_annexes">Fonctions annexes</span></h3>
+<table class="t-dsc-begin">
+
+<tbody><tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/operator_cmp" title="cpp/container/multiset/operator cmp"> operator==<br>operator!=<br>operator&lt;<br>operator&lt;=<br>operator&gt;<br>operator&gt;=</a></div></div>
+</td>
+<td>  <div class="t-tr-text"> compare lexicographiquement les valeurs dans le multiset <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> lexicographically compares the values in the multiset </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction générique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_operator_cmp&amp;action=edit">[edit]</a></span>
+</td></tr>
+
+<tr class="t-dsc-sep">
+<td colspan="2">
+</td></tr>
+<tr class="t-dsc">
+<td>  <div class="t-dsc-member-div"><div><a href="https://fr.cppreference.com/w/cpp/container/multiset/swap2" title="cpp/container/multiset/swap2"> std::swap<span class="t-dsc-small">(std::multiset)</span></a></div></div>
+</td>
+<td>  <div class="t-tr-text"> l'algorithme spécialisé <span class="t-lc"><a href="https://fr.cppreference.com/w/cpp/algorithm/swap" title="cpp/algorithm/swap">std::swap</a></span> <div class="t-tr-dropdown"><div><div><div class="t-tr-dropdown-arrow-border"></div><div class="t-tr-dropdown-arrow"></div><div class="t-tr-dropdown-h">Original:</div><div class="t-tr-dropdown-orig"> specializes the <span class="t-lc"><a href="https://fr.cppreference.com/w/cpp/algorithm/swap" title="cpp/algorithm/swap">std::swap</a></span> algorithm </div><div class="t-tr-dropdown-notes">The text has been machine-translated via <a rel="nofollow" class="external text" href="http://translate.google.com/">Google Translate</a>.<br> You can help to correct and verify the translation. Click <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/Cppreference:MachineTranslations">here</a> for instructions.</div></div></div></div></div> <br> <span class="t-mark"> (fonction générique)</span> <span class="editsection noprint plainlinks" title="Edit this template"><a rel="nofollow" class="external text" href="https://fr.cppreference.com/mwiki/index.php?title=Mod%C3%A8le:cpp/container/dsc_swap2&amp;action=edit">[edit]</a></span>
+</td></tr>
+</tbody></table>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 8148/1000000
+Preprocessor generated node count: 13768/1000000
+Post‐expand include size: 324395/2097152 bytes
+Template argument size: 82429/2097152 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mwiki1-mwiki_fr_:pcache:idhash:1782-0!*!0!!fr!2!* and timestamp 20190119193738 -->
+</div>                    <!-- /bodycontent -->
+                                        <!-- printfooter -->
+                    <div class="printfooter">
+                    Récupérée de « <a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;oldid=49874">https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;oldid=49874</a> »                    </div>
+                    <!-- /printfooter -->
+                                                            <!-- catlinks -->
+                    <div id="catlinks" class="catlinks catlinks-allhidden"></div>                    <!-- /catlinks -->
+                                                            <div class="visualClear"></div>
+                    <!-- debughtml -->
+                                        <!-- /debughtml -->
+                </div>
+                <!-- /bodyContent -->
+            </div>
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="cpp-footer-base" class="noprint">
+            <div id="footer">
+                        <div id="cpp-navigation">
+            <h5>Navigation</h5>
+            <ul>
+<li id="n-mainpage-description"><a href="https://fr.cppreference.com/w/Accueil" title="Aller à l'accueil [z]" accesskey="z">Accueil</a></li><li id="n-portal"><a href="https://fr.cppreference.com/w/Cppreference:Accueil" title="À propos du projet">Communauté</a></li><li id="n-currentevents"><a href="https://fr.cppreference.com/w/Cppreference:Actualit%C3%A9s" title="Trouver les informations de fond sur l'actualité du moment">Actualités</a></li><li id="n-recentchanges"><a href="https://fr.cppreference.com/w/Sp%C3%A9cial:Modifications_r%C3%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://fr.cppreference.com/w/Sp%C3%A9cial:Page_au_hasard" title="Afficher une page au hasard [x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://fr.cppreference.com/w/Aide:Accueil" title="Aide">Aide</a></li>            </ul>
+        </div>
+                        <div id="cpp-toolbox">
+            <h5><span>Boîte à outils</span><a href="#"></a></h5>
+            <ul>
+<li id="t-whatlinkshere"><a href="https://fr.cppreference.com/w/Sp%C3%A9cial:Pages_li%C3%A9es/cpp/container/multiset" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://fr.cppreference.com/w/Sp%C3%A9cial:Suivi_des_liens/cpp/container/multiset" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="http://upload.cppreference.com/w/Special:Upload" title="Envoyer une image ou fichier média sur le serveur [u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://fr.cppreference.com/w/Sp%C3%A9cial:Pages_sp%C3%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;oldid=49874" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li><li id="t-info"><a href="https://fr.cppreference.com/mwiki/index.php?title=cpp/container/multiset&amp;action=info">Information sur la page</a></li>            </ul>
+        </div>
+                        <div id="cpp-languages">
+            <div><ul><li>Autres langues</li></ul></div>
+            <div><ul>
+<li class="interwiki-de"><a href="http://de.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="de" lang="de">Deutsch</a></li><li class="interwiki-en"><a href="http://en.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="en" lang="en">English</a></li><li class="interwiki-es"><a href="http://es.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="es" lang="es">Español</a></li><li class="interwiki-it"><a href="http://it.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="it" lang="it">Italiano</a></li><li class="interwiki-ja"><a href="http://ja.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="ja" lang="ja">日本語</a></li><li class="interwiki-pl"><a href="http://pl.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="pl" lang="pl">Polski</a></li><li class="interwiki-pt"><a href="http://pt.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="pt" lang="pt">Português</a></li><li class="interwiki-ru"><a href="http://ru.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="ru" lang="ru">Русский</a></li><li class="interwiki-zh"><a href="http://zh.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset" hreflang="zh" lang="zh">中文</a></li>            </ul></div>
+        </div>
+            <ul id="footer-info">
+                                    <li id="footer-info-lastmod"> Dernière modification de cette page le 9 juillet 2013 à 02:07.<br></li>
+                                    <li id="footer-info-viewcount">Cette page a été consultée 5&nbsp;278 fois.</li>
+                            </ul>
+                    <ul id="footer-places">
+                                    <li id="footer-places-privacy"><a href="https://fr.cppreference.com/w/Cppreference:Confidentialit%C3%A9" title="Cppreference:Confidentialité">Politique de confidentialité</a></li>
+                                    <li id="footer-places-about"><a href="https://fr.cppreference.com/w/Cppreference:%C3%80_propos" title="Cppreference:À propos">À propos de cppreference.com</a></li>
+                                    <li id="footer-places-disclaimer"><a href="https://fr.cppreference.com/w/Cppreference:Avertissements_g%C3%A9n%C3%A9raux" title="Cppreference:Avertissements généraux">Avertissements</a></li>
+                            </ul>
+                                    <ul id="footer-icons" class="noprint">
+                                    <li id="footer-poweredbyico">
+                                            <a href="https://www.mediawiki.org/"><img src="std%20multiset%20-%20cppreference.com_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>                                            <a href="http://qbnz.com/highlighter/"><img src="std%20multiset%20-%20cppreference.com_fichiers/powered_by_geshi_88x31.png" alt="Powered by GeSHi" width="88" height="31"></a>                                            <a href="http://www.tigertech.net/referral/cppreference.com"><img src="std%20multiset%20-%20cppreference.com_fichiers/powered_by_tigertech_88x31.png" alt="Hosted by Tiger Technologies" width="88" height="31"></a>                                        </li>
+                                </ul>
+                        <div style="clear:both">
+            </div>
+            </div>
+        </div>
+        <!-- /footer -->
+        <script>if(window.mw){
+mw.loader.state({"site":"loading","user":"missing","user.groups":"ready"});
+}</script>
+<script src="std%20multiset%20-%20cppreference.com_fichiers/load_006.php"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.hidpi","ext.gadget.ShowEditLinks"], null, true);
+}</script>
+<script src="std%20multiset%20-%20cppreference.com_fichiers/load.php"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="std%20multiset%20-%20cppreference.com_fichiers/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2828341-1']);
+_gaq.push(['_setDomainName', 'cppreference.com']);
+_gaq.push(['_trackPageview']);
+</script><!-- Served in 1.149 secs. -->
+	
+
+
+<div style="display: none; font-size: 11.2px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body><!-- Cached 20190119193739 --></html>

@@ -1,0 +1,60 @@
+//1
+class A1{
+  private int a1;
+  public :  A1():a(0){}
+            A1(int v): a1(v){}
+            A1(const A1 &v): a1(v.a1){}
+            A1 &quonsts=(const A& v){
+              if(&v!=this) u=a1.v;
+              return *this;
+            }
+            int get(){return a1;}
+            void set(int v){a1 = v;}
+            ~A1()=delete();
+}
+
+//2
+class B: public A1{
+  protected : A2 V;
+};
+
+//8
+B& opents(const B& b){
+  if(&b!=this){
+    a1 = b.a1;
+    v = b.v;
+    return *this;
+  }
+};
+
+
+
+// Exercice 3
+//1
+struct Point2D{
+  float x,y;
+  Point2D(float u, float v):x(u),y(v){}
+  Point2D():Point2D(0.1,0.1){}
+  Point2D(const Point2D &p):x(p.x),y(p.y){}
+  inline void set(float u, float v){x=u;y=v}
+};
+
+class Stroke{
+  protected : Point2D start;
+  public :  Stroke(const Point2D &c):start(c){}
+            Stroke() = default; === : start(){};
+            Stroke(const Stroke &c) = default; === start(c.start){}
+            ~Stroke() = default; === {};
+            virtual float length() = 0;
+};
+
+//d)
+class Circle : public Stroke{
+protected: float radius;
+public : Circle(const Point &c, const float x):Stroke(c),radius(r){}
+          Circle (const float r): Stroke(), radius(r){}
+          Circle(const Circle &c):Stroke(c.start),radius(c.radius){}
+          ~Circle = default;
+};
+
+//e)

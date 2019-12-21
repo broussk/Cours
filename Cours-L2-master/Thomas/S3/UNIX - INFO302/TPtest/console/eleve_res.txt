@@ -1,0 +1,12 @@
+1 Fabrice,18 / 20,Excellent travail
+2 Mathieu,3 / 20,Nul comme d'hab'
+3 Sophie,14 / 20,En nette progression
+4 Mélanie,9 / 20,Allez presque la moyenne !
+5 Corentin,11 / 20,Pas mal mais peut mieux faire
+6 Albert,20 / 20,Toujours parfait
+1 Fabrice,18 / 20,Excellent travail
+2 Mathieu,3 / 20,Nul comme d'hab'
+3 Sophie,14 / 20,En nette progression
+4 Mélanie,9 / 20,Allez presque la moyenne !
+5 Corentin,11 / 20,Pas mal mais peut mieux faire
+6 Albert,20 / 20,Toujours parfait

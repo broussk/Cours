@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="TP4" targetName="TP4" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="707d4fbf-0d48-459a-b2bc-5b74cf4753fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/css/magnific-popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/css/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/themify.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/themify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/themify.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/fonts/themify.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/actividen.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/angle-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/audiojungle.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/avatar-small-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/avatar-small-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/avatar-small-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/avatar-small-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/avatar-small-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/avatar-small-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/coadcanyon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/docean.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/graphicriver.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/location-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/mail-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/mobile2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/parallax-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/parallax-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/parallax-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/parallax-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/parallax-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/phone-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/photodone.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/portfolio-icon-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/portfolio-icon-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/portfolio-icon-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/portfolio-icon-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/portfolio-icon-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/portfolio-icon-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/screen-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/screen-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/screen-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/screen-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/screen-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/screen-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/screen-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/service-icon-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/service-icon-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/service-icon-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/service-icon-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/small1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/small2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/small3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/small4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/team-section-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/team-section-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/team-section-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/team-section-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/themeforest.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/images/videgub.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/contact-form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/jquery.parallax-1.1.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/magnific-popup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/scrollUp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/vendor/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/vendor/jquery-1.12.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/vendor/modernizr-2.8.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/process.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AN401_Anglais/Projet/colid-colorlib/colid-colorlib/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/partie1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/partie1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partie1/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/partie1/main.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partie1/pH6Q9Uit.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/partie1/tp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/partie1/tp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partie1/tp.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/partie1/tp.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../INFO403_Systemes_exploitations/TP/a.exe" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partie1/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partie1/tp.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/partie1/tp.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="210" column="18" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/partie1/tp.cpp" />
+        <option value="$PROJECT_DIR$/partie1/tp.hpp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="1073" />
+    <option name="height" value="840" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TP4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP4" type="462c0819:PsiDirectoryNode" />
+              <item name="partie1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TP4" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TP4" TARGET_NAME="TP4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TP4" RUN_TARGET_NAME="TP4">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="707d4fbf-0d48-459a-b2bc-5b74cf4753fb" name="Default Changelist" comment="" />
+      <created>1551383326429</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551383326429</updated>
+      <workItem from="1551383330590" duration="896000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="896000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16979866" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Messages" weight="0.32960895" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32960895" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/partie1/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partie1/tp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partie1/tp.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="210" column="18" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
