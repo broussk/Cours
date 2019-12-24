@@ -1,0 +1,30 @@
+//afficher("entrez taille de la matrice")
+lire (taille);
+//afficher ("entrez les valeurs de la matrice")
+pour i allant de 1 à taille faire
+    pour j allant de 1 à taille faire 
+        lire (M1[i,j]);
+    fin pour
+fin pour
+//afficher ("entrez la 2eme matrice")
+lire(M2[i,j]);
+//afficher (M1)
+pour i alant de 1 à taille faire
+    pour j allant de 1 à taille faire 
+        afficher (M1[i,j]);
+    fin pour
+fin pour
+//afficher(M2)
+afficher (M2[i,j]);
+//calcul du max des 2 images
+pour i allant de 1 à taille faire 
+    pour j allant de 1 à taille faire 
+        si(M1[i,j]=0) et (M2[i,j]=0) alors
+            M3[i,j]<-0;
+        sinon
+            M3[i,j]<-1;
+        fin si
+    fin pour
+fin pour
+//afficher M3
+afficher (M3);
