@@ -1,0 +1,14 @@
+//entrez taille matrice
+lire(taille);
+//afficher ("entrez matrice A")
+lire(A);
+//afficher ("entrez matrice B")
+lire(B);
+//affichage des 2 matrices
+afficher (A)
+afficher (B)
+//multiplication des 2
+pour i allant de 1 à taille faire
+    pour j allant de 1 à taille faire   
+        C[i,j]<-0
+        pour k allant de 1 à taille 
