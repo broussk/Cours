@@ -33,9 +33,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9874f56b-5edb-4e95-bcaf-4b0690c98396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../0402-master/TPs/tp02.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP1/Ex1a.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP1/Ex1a.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../INFO0403_Systemes_exploitations/CM/info 403.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../INFO0403_Systemes_exploitations/CM/info 403.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../INFO0401_Algorithmique/TP/dossier INFO0401.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../INFO0401_Algorithmique/TP/dossier INFO0401.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -99,6 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578936959885</updated>
       <workItem from="1578936961467" duration="5618000" />
+      <workItem from="1579014855834" duration="114000" />
     </task>
     <servers />
   </component>
@@ -106,6 +105,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1579014967166">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579014967166" />
+    <state x="849" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1579014857275">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="849" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579014857275" />
     <state x="431" y="145" key="search.everywhere.popup" timestamp="1578937105340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,0 +1,39 @@
+"C:\Users\Nathan TONNELLE\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Nathan TONNELLE\Documents\GitHub\Cours\Semestre_4\INFO0401_Algorithmique\TP"
+-- The C compiler identification is GNU 6.3.0
+-- Check for working C compiler: C:/MinGW/bin/gcc.exe
+-- Check for working C compiler: C:/MinGW/bin/gcc.exe -- broken
+CMake Error at C:/Users/Nathan TONNELLE/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.144/bin/cmake/win/share/cmake-3.15/Modules/CMakeTestCCompiler.cmake:60 (message):
+  The C compiler
+
+    "C:/MinGW/bin/gcc.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0401_Algorithmique/TP/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_3dec2/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_3dec2.dir\build.make CMakeFiles/cmTC_3dec2.dir/build
+    mingw32-make.exe[1]: Entering directory 'C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0401_Algorithmique/TP/cmake-build-debug/CMakeFiles/CMakeTmp'
+    Building C object CMakeFiles/cmTC_3dec2.dir/testCCompiler.c.obj
+    C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_3dec2.dir\testCCompiler.c.obj   -c "C:\Users\Nathan TONNELLE\Documents\GitHub\Cours\Semestre_4\INFO0401_Algorithmique\TP\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c"
+    Assembler messages:
+    Fatal error: can't create CMakeFiles\cmTC_3dec2.dir\testCCompiler.c.obj: Permission denied
+    CMakeFiles\cmTC_3dec2.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_3dec2.dir/testCCompiler.c.obj' failed
+    mingw32-make.exe[1]: *** [CMakeFiles/cmTC_3dec2.dir/testCCompiler.c.obj] Error 1
+    mingw32-make.exe[1]: Leaving directory 'C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0401_Algorithmique/TP/cmake-build-debug/CMakeFiles/CMakeTmp'
+    Makefile:120: recipe for target 'cmTC_3dec2/fast' failed
+    mingw32-make.exe: *** [cmTC_3dec2/fast] Error 2
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0401_Algorithmique/TP/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0401_Algorithmique/TP/cmake-build-debug/CMakeFiles/CMakeError.log".

@@ -1,0 +1,20 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0402_C++/TP/algo1/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_62f98/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_62f98.dir\build.make CMakeFiles/cmTC_62f98.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0402_C++/TP/algo1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_62f98.dir/testCCompiler.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_62f98.dir\testCCompiler.c.obj   -c "C:\Users\Nathan TONNELLE\Documents\GitHub\Cours\Semestre_4\INFO0402_C++\TP\algo1\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c"
+Linking C executable cmTC_62f98.exe
+"C:\Users\Nathan TONNELLE\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_62f98.dir\link.txt --verbose=1
+"C:\Users\Nathan TONNELLE\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_62f98.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_62f98.dir/objects.a @CMakeFiles\cmTC_62f98.dir\objects1.rsp
+C:\MinGW\bin\ar.exe: CMakeFiles\cmTC_62f98.dir/objects.a: Permission denied
+CMakeFiles\cmTC_62f98.dir\build.make:87: recipe for target 'cmTC_62f98.exe' failed
+mingw32-make.exe[1]: *** [cmTC_62f98.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4/INFO0402_C++/TP/algo1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:120: recipe for target 'cmTC_62f98/fast' failed
+mingw32-make.exe: *** [cmTC_62f98/fast] Error 2
+
+
+
