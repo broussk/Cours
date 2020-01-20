@@ -1,0 +1,27 @@
+﻿///////////////////////////////////////////////////////////////////////////////////////////
+//                                    FONCTIONS                                          //
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	Fichier Fonctions.sci contenant toutes les Fonctions:
+						- RESOUTRI
+						- PRODUIT
+						- MAGIQUE
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// 					SCRIPTS                                        //
+/////////////////////////////////////////////////////////////////////////////////////////
+                            ~ les script sont commentés ~
+
+  Ex0_Script.sce contient le script de l'exercice 0 du TP2
+    executant la fonction MAGIQUE
+    pour créer la matrice inverse d'une matrice
+
+  Ex1_Script.sce contient le script
+    executant les fonctions RESOUTRI & PRODUIT
+
+  Ex2_Script.sce contient le script
+    executant les fonctions RESOUTRI & PRODUIT
+    pour résoudre l'équation de Laplace
+
+  Ex7_Script.sce contient le script de l'exercice 7 du TP1
+    executant les fonctions RESOUTRI & PRODUIT

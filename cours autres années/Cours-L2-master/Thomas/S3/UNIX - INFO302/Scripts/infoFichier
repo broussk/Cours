@@ -1,0 +1,12 @@
+#!/bin/bash
+nomFichier=$1
+typeFichier=`file -b $nomFichier`
+tailleFichier=$(ls -lh $nomFichier | cut -d " " -f5)
+proprio=$(ls -lh $nomFichier | cut -d " " -f4)
+droits=$(ls -lh $nomFichier | cut -d " " -f1)
+date=$(ls -lh $nomFichier | cut -d " " -f8,6,9)
+
+for i in *.txt; do
+echo -e "Nom du fichier : $nomFichier\nType : $typeFichier\nRepertoire : $PWD\nTaille : $tailleFichier octets\nProprietaire : $proprio\nDroits : $droits\nCree le : $date"
+shift 1
+done

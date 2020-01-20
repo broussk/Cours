@@ -1,0 +1,8 @@
+C:\Users\Thoma\Desktop\Cours-L2\Thomas\S4\INFO401_Algorithmique\TP\TP5\exercices.c: In function 'ex2':
+C:\Users\Thoma\Desktop\Cours-L2\Thomas\S4\INFO401_Algorithmique\TP\TP5\exercices.c:25:9: error: expected expression before ')' token
+     for()
+         ^
+C:\Users\Thoma\Desktop\Cours-L2\Thomas\S4\INFO401_Algorithmique\TP\TP5\exercices.c:25:9: error: expected expression before ')' token
+C:\Users\Thoma\Desktop\Cours-L2\Thomas\S4\INFO401_Algorithmique\TP\TP5\exercices.c:26:3: error: expected expression before '}' token
+   }
+   ^

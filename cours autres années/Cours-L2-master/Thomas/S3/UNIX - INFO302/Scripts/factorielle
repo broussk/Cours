@@ -1,0 +1,17 @@
+#!/bin/bash 
+ 
+function fact
+{
+        res=1
+        val=$1
+ 
+        while test $val -gt 1
+        do
+            res=`expr $res \* $val`
+            val=`expr $val - 1`
+        done
+ 
+        echo $res
+}
+ 
+echo `fact $1` 

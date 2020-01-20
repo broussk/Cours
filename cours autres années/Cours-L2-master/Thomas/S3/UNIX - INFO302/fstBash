@@ -1,0 +1,13 @@
+#!/bin/bash
+a=4
+echo $a
+
+b="pim pam pom"
+echo $b
+
+echo "${a}6 $b"
+c=`date`
+echo Nous sommes le $c
+
+d="$a > $b"
+echo $d

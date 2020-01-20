@@ -1,0 +1,2541 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" id="vbulletin_html" lang="fr"><head>
+<!-- base href="https://www.developpez.net/forums/" --><!--[if IE]></base><![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="https://www.developpez.net/forums">
+
+<meta name="generator" content="vBulletin 4.2.2">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+	<link rel="Shortcut Icon" href="https://www.developpez.net/forums/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+	
+		<script src="Arbre%20Binaire%20et%20Equilibrage_fichiers/ads"></script><script src="Arbre%20Binaire%20et%20Equilibrage_fichiers/ads_002"></script><script src="Arbre%20Binaire%20et%20Equilibrage_fichiers/pubads_impl_rendering_319.js"></script><script type="text/javascript" async="" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/ga.js"></script><script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/yuiloader-dom-event.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=422"><\/script>');
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		var yuipath = 'https://forum.developpez.be/clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/connection/connection-min.js?v=422"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "https://forum.developpez.be/images/misc";
+	var IMGDIR_BUTTON = "https://forum.developpez.be/images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "422";
+	var BBURL = "https://www.developpez.net/forums";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread.php?t=1176975";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "https://www.developpez.net/forums/";
+// -->
+</script><script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/connection-min.js"></script>
+<script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/vbulletin-core.js"></script>
+<script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/jquery-1.js"></script>
+<script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/anokha_showthread.js"></script>
+<script async="" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/adsbygoogle.js"></script>
+<script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/ano_votes.js"></script>
+
+
+<script async="async" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/gpt.js"></script>
+<script>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+</script>
+
+
+	<link rel="alternate" type="application/rss+xml" title="Forum du club des développeurs et IT Pro Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2">
+	
+		<link rel="alternate" type="application/rss+xml" title="Forum du club des développeurs et IT Pro - Débuter - Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2&amp;forumids=897">
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/css.css">
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1551967632&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+	<script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/gabarit-v1549891560.js"></script>
+	<link rel="stylesheet" type="text/css" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/gabarit-v1549891560.css">
+	<link rel="stylesheet" type="text/css" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/kha_blogs.css">
+
+	<!--[if lt IE 7]>
+	<script src="https://gabarit.developpez.be/ie7/IE7.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie6.css" />
+	<![endif]-->
+
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie7.css" />
+	<![endif]-->
+
+	<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie8.css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://gabarit.developpez.be/kit/html5_ie.js"></script>
+	<![endif]-->
+	<meta name="keywords" content="Arbre,Binaire,Equilibrage,null, t_arbre, return, t_element, fichier, arbre, a-droit, a-gauche, a-hauteur, break, case, r-droit, element, r-gauche, stderr, m&amp;65533moire, free, fonction, void, fprintf, maxmot, char, include, cette, r-elt, detruire_arbre, calculer_hauteur, a-gauche-hauteur, a-droit-hauteur, struct, mots, renvoie, y-gauche, fgetsmot, strcmp, larbre, p-gauche, a-valeur, hauteur, switch, find, sizea-droit+1, binaire, fprintfstderr, disponiblen, maxsizea-gauche, define, e-elt, detruire_elt, t_noeud">
+	<meta name="description" content="Bonjour, Je dois réaliser une petite bibliothèque C articulée autour des arbres binaires, j'ai donc pondu le code suivant : Code : Sélectionner tout - ">
+
+	<title> Arbre Binaire et Equilibrage</title>
+	<link rel="canonical" href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/css_002.css">
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1551967632&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/css_004.css">
+
+	<link rel="stylesheet" type="text/css" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/css_003.css">
+
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1551967632&amp;td=ltr&amp;sheet=projecttools-ie.css" />
+<![endif]-->
+<link rel="preload" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/integrator_002.js" as="script"><script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/integrator_002.js"></script><link rel="preload" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/integrator.js" as="script"><script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/integrator.js"></script><script src="Arbre%20Binaire%20et%20Equilibrage_fichiers/pubads_impl_319.js" async=""></script></head>
+
+<body>
+
+<header>
+
+<div id="gabarit_b1">
+	<div id="gabarit-barreRecherche" style="display:none;"><form action="https://www.google.fr" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-8110924381468607:6449306375">
+    <input type="hidden" name="ie" value="ISO-8859-1">
+    <input type="text" name="q" size="12">
+    <input type="submit" name="sa" value="Rechercher">
+  </div>
+</form></div>
+<div id="gabarit-new-logo" role="gabarit-accueil">
+	<a href="https://www.developpez.com/"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/logo-dvp-h55.png" width="48" height="55"></a>
+	<a href="https://www.developpez.com/"><span class="dvp"></span></a>
+	<span class="triangle"></span>
+</div>
+<div id="gabarit_recherche"><!--<div class="gabarit-btn-menu profil" role="gabarit-profil"></div>-->
+	<div class="gabarit-btn-menu contacts" role="gabarit-contacts"></div><div class="gabarit-btn-menu recherche" role="gabarit-recherche"></div>
+</div>
+
+<div id="gabarit_superieur">
+	<nav>
+	<ul>
+		<li><a href="https://www.developpez.net/forums/" title="">Forums</a></li>
+		<li><a href="https://general.developpez.com/cours/" title="">Tutoriels</a></li>
+		<li><a href="https://magazine.developpez.com/" title="">Magazine</a></li>
+		<li><a href="https://general.developpez.com/faq/" title="">FAQ</a></li>
+		<li><a href="https://www.developpez.net/forums/blogs/" title="">Blogs</a></li>
+		<li><a href="https://chat.developpez.com/" title="">Chat</a></li>
+		<li><a href="https://www.developpez.com/newsletter/">Newsletter</a></li>
+		<li><a href="https://etudes.developpez.com/">Études</a></li>
+		<li><a href="https://emploi.developpez.com/" title="">Emploi</a></li>
+		<li><a href="https://club.developpez.com/">Club</a></li>
+	</ul>
+	</nav>
+</div></div>
+
+<nav>
+
+<div id="gabarit_mobile">
+	<div><a href="https://www.developpez.com/"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/logo-mobile.png" alt="" height="60"></a></div>
+	<div>
+		<p>Developpez.com</p>
+		<p>C</p>
+	</div>
+
+	<div class="nav nav-pills nav-justified" style="white-space: nowrap; width: calc(100% - 40px);">
+					<a href="https://c.developpez.com/" class="nav-item nav-link"> &nbsp;Rubrique C&nbsp; </a>
+			<a href="https://www.developpez.net/forums/f7/c-cpp/" class="nav-item nav-link"> &nbsp;Forum C&nbsp; </a>
+			
+	</div>
+	
+	<div class="nav nav-pills nav-justified" style="width: calc(100% - 40px); margin: 0 auto 6px;">
+		<a href="https://www.developpez.com/" class="nav-item nav-link"><i class="glyphicon glyphicon-home" style="top:0;"></i>&nbsp; Accueil</a>
+		<a href="https://www.developpez.net/forums/" class="nav-item nav-link"><i class="glyphicon glyphicon-comment" style="top:1px;"></i>&nbsp; Forums</a>
+			
+		<span class="nav-item nav-link" style="white-space:nowrap;" data-toggle="collapse" href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#gabarit_menu_mobile" role="button" aria-expanded="false"><i class="glyphicon glyphicon-th" style="top:0;"></i>&nbsp; Rubriques</span>
+	</div>
+</div>
+<div id="gabarit_mobile_fin"></div>
+
+<div class="collapse multi-collapse" id="gabarit_menu_mobile">
+	<p>Choisissez la catégorie, puis la rubrique :</p>
+	<ul>
+					<li>
+				<a href="https://www.developpez.com/" data-idrub="1" data-niv="1">Accueil</a>
+							</li>
+					<li>
+				<a href="https://alm.developpez.com/" data-idrub="42" data-niv="1">ALM</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://alm.developpez.com/" data-idrub="42" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;ALM
+							</a>
+						</li>
+													<li>
+								<a href="https://merise.developpez.com/" data-idrub="43" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Merise
+								</a>
+							</li>
+													<li>
+								<a href="https://uml.developpez.com/" data-idrub="12" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;UML
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://java.developpez.com/" data-idrub="4" data-niv="1">Java</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://java.developpez.com/" data-idrub="4" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Java
+							</a>
+						</li>
+													<li>
+								<a href="https://javaweb.developpez.com/" data-idrub="97" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Java Web
+								</a>
+							</li>
+													<li>
+								<a href="https://spring.developpez.com/" data-idrub="87" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Spring
+								</a>
+							</li>
+													<li>
+								<a href="https://android.developpez.com/" data-idrub="95" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Android
+								</a>
+							</li>
+													<li>
+								<a href="https://eclipse.developpez.com/" data-idrub="55" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Eclipse
+								</a>
+							</li>
+													<li>
+								<a href="https://netbeans.developpez.com/" data-idrub="66" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;NetBeans
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://dotnet.developpez.com/" data-idrub="20" data-niv="1">.NET</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://dotnet.developpez.com/" data-idrub="20" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Microsoft DotNET
+							</a>
+						</li>
+													<li>
+								<a href="https://dotnet.developpez.com/visual-studio/" data-idrub="84" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Visual Studio
+								</a>
+							</li>
+													<li>
+								<a href="https://dotnet.developpez.com/aspnet/" data-idrub="83" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;ASP.NET
+								</a>
+							</li>
+													<li>
+								<a href="https://dotnet.developpez.com/csharp/" data-idrub="81" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;C#
+								</a>
+							</li>
+													<li>
+								<a href="https://dotnet.developpez.com/vbnet/" data-idrub="82" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;VB.NET
+								</a>
+							</li>
+													<li>
+								<a href="https://windowsphone.developpez.com/" data-idrub="105" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Windows Phone
+								</a>
+							</li>
+													<li>
+								<a href="https://windows-azure.developpez.com/" data-idrub="107" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Microsoft Azure
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://web.developpez.com/" data-idrub="8" data-niv="1">Dév. Web</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://web.developpez.com/" data-idrub="8" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Développement Web
+							</a>
+						</li>
+													<li>
+								<a href="https://ajax.developpez.com/" data-idrub="85" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;AJAX
+								</a>
+							</li>
+													<li>
+								<a href="https://apache.developpez.com/" data-idrub="71" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Apache
+								</a>
+							</li>
+													<li>
+								<a href="https://asp.developpez.com/" data-idrub="10" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;ASP
+								</a>
+							</li>
+													<li>
+								<a href="https://css.developpez.com/" data-idrub="51" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;CSS
+								</a>
+							</li>
+													<li>
+								<a href="https://dart.developpez.com/" data-idrub="125" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Dart
+								</a>
+							</li>
+													<li>
+								<a href="https://flash.developpez.com/" data-idrub="41" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Flash / Flex
+								</a>
+							</li>
+													<li>
+								<a href="https://javascript.developpez.com/" data-idrub="45" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;JavaScript
+								</a>
+							</li>
+													<li>
+								<a href="https://nodejs.developpez.com/" data-idrub="141" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;NodeJS
+								</a>
+							</li>
+													<li>
+								<a href="https://php.developpez.com/" data-idrub="9" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;PHP
+								</a>
+							</li>
+													<li>
+								<a href="https://ruby.developpez.com/" data-idrub="53" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Ruby &amp; Rails
+								</a>
+							</li>
+													<li>
+								<a href="https://typescript.developpez.com/" data-idrub="127" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;TypeScript
+								</a>
+							</li>
+													<li>
+								<a href="https://web-semantique.developpez.com/" data-idrub="111" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Web sémantique
+								</a>
+							</li>
+													<li>
+								<a href="https://webmarketing.developpez.com/" data-idrub="80" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Webmarketing
+								</a>
+							</li>
+													<li>
+								<a href="https://xhtml.developpez.com/" data-idrub="50" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;(X)HTML
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://edi.developpez.com/" data-idrub="90" data-niv="1">EDI</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://edi.developpez.com/" data-idrub="90" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;EDI
+							</a>
+						</li>
+													<li>
+								<a href="https://4d.developpez.com/" data-idrub="39" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;4D
+								</a>
+							</li>
+													<li>
+								<a href="https://delphi.developpez.com/" data-idrub="2" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Delphi
+								</a>
+							</li>
+													<li>
+								<a href="https://eclipse.developpez.com/" data-idrub="55" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Eclipse
+								</a>
+							</li>
+													<li>
+								<a href="https://labview.developpez.com/" data-idrub="72" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;LabVIEW
+								</a>
+							</li>
+													<li>
+								<a href="https://netbeans.developpez.com/" data-idrub="66" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;NetBeans
+								</a>
+							</li>
+													<li>
+								<a href="https://matlab.developpez.com/" data-idrub="58" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;MATLAB
+								</a>
+							</li>
+													<li>
+								<a href="https://scilab.developpez.com/" data-idrub="120" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Scilab
+								</a>
+							</li>
+													<li>
+								<a href="https://dotnet.developpez.com/visual-studio/" data-idrub="84" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Visual Studio
+								</a>
+							</li>
+													<li>
+								<a href="https://wind.developpez.com/" data-idrub="74" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;WinDev
+								</a>
+							</li>
+													<li>
+								<a href="https://vb.developpez.com/" data-idrub="5" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Visual Basic 6
+								</a>
+							</li>
+													<li>
+								<a href="https://lazarus.developpez.com/" data-idrub="96" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Lazarus
+								</a>
+							</li>
+													<li>
+								<a href="https://qt-creator.developpez.com/" data-idrub="109" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Qt Creator
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://programmation.developpez.com/" data-idrub="119" data-niv="1">Programmation</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://programmation.developpez.com/" data-idrub="119" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Programmation
+							</a>
+						</li>
+													<li>
+								<a href="https://algo.developpez.com/" data-idrub="47" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Débuter - Algorithmique
+								</a>
+							</li>
+													<li>
+								<a href="https://jeux.developpez.com/" data-idrub="38" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;2D - 3D - Jeux
+								</a>
+							</li>
+													<li>
+								<a href="https://asm.developpez.com/" data-idrub="16" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Assembleur
+								</a>
+							</li>
+													<li>
+								<a href="https://c.developpez.com/" data-idrub="3" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;C
+								</a>
+							</li>
+													<li>
+								<a href="https://cpp.developpez.com/" data-idrub="59" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;C++
+								</a>
+							</li>
+													<li>
+								<a href="https://go.developpez.com/" data-idrub="124" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Go
+								</a>
+							</li>
+													<li>
+								<a href="https://objective-c.developpez.com/" data-idrub="117" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Objective C
+								</a>
+							</li>
+													<li>
+								<a href="https://pascal.developpez.com/" data-idrub="7" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Pascal
+								</a>
+							</li>
+													<li>
+								<a href="https://perl.developpez.com/" data-idrub="29" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Perl
+								</a>
+							</li>
+													<li>
+								<a href="https://python.developpez.com/" data-idrub="27" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Python
+								</a>
+							</li>
+													<li>
+								<a href="https://rust.developpez.com/" data-idrub="137" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Rust
+								</a>
+							</li>
+													<li>
+								<a href="https://swift.developpez.com/" data-idrub="128" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Swift
+								</a>
+							</li>
+													<li>
+								<a href="https://qt.developpez.com/" data-idrub="65" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Qt
+								</a>
+							</li>
+													<li>
+								<a href="https://xml.developpez.com/" data-idrub="11" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;XML
+								</a>
+							</li>
+													<li>
+								<a href="https://general.developpez.com/cours/" data-idrub="21" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Autres
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://sgbd.developpez.com/" data-idrub="13" data-niv="1">SGBD</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://sgbd.developpez.com/" data-idrub="13" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;SGBD &amp; SQL
+							</a>
+						</li>
+													<li>
+								<a href="https://4d.developpez.com/" data-idrub="39" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;4D
+								</a>
+							</li>
+													<li>
+								<a href="https://access.developpez.com/" data-idrub="19" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Access
+								</a>
+							</li>
+													<li>
+								<a href="https://big-data.developpez.com/" data-idrub="126" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Big Data
+								</a>
+							</li>
+													<li>
+								<a href="https://db2.developpez.com/" data-idrub="36" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;DB2
+								</a>
+							</li>
+													<li>
+								<a href="https://firebird.developpez.com/" data-idrub="73" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Firebird
+								</a>
+							</li>
+													<li>
+								<a href="https://interbase.developpez.com/" data-idrub="32" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;InterBase
+								</a>
+							</li>
+													<li>
+								<a href="https://mysql.developpez.com/" data-idrub="31" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;MySQL
+								</a>
+							</li>
+													<li>
+								<a href="https://nosql.developpez.com/" data-idrub="114" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;NoSQL
+								</a>
+							</li>
+													<li>
+								<a href="https://postgresql.developpez.com/" data-idrub="33" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;PostgreSQL
+								</a>
+							</li>
+													<li>
+								<a href="https://oracle.developpez.com/" data-idrub="25" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Oracle
+								</a>
+							</li>
+													<li>
+								<a href="https://sybase.developpez.com/" data-idrub="37" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Sybase
+								</a>
+							</li>
+													<li>
+								<a href="https://sqlserver.developpez.com/" data-idrub="34" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;SQL-Server
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://office.developpez.com/" data-idrub="54" data-niv="1">Office</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://office.developpez.com/" data-idrub="54" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Microsoft Office
+							</a>
+						</li>
+													<li>
+								<a href="https://access.developpez.com/" data-idrub="19" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Access
+								</a>
+							</li>
+													<li>
+								<a href="https://excel.developpez.com/" data-idrub="75" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Excel
+								</a>
+							</li>
+													<li>
+								<a href="https://word.developpez.com/" data-idrub="76" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Word
+								</a>
+							</li>
+													<li>
+								<a href="https://outlook.developpez.com/" data-idrub="77" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Outlook
+								</a>
+							</li>
+													<li>
+								<a href="https://powerpoint.developpez.com/" data-idrub="78" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;PowerPoint
+								</a>
+							</li>
+													<li>
+								<a href="https://sharepoint.developpez.com/" data-idrub="79" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;SharePoint
+								</a>
+							</li>
+													<li>
+								<a href="https://project.developpez.com/" data-idrub="99" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Microsoft Project
+								</a>
+							</li>
+													<li>
+								<a href="https://openoffice-libreoffice.developpez.com/" data-idrub="116" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;OpenOffice &amp; LibreOffice
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://solutions-entreprise.developpez.com/" data-idrub="86" data-niv="1">Solutions d'entreprise</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://solutions-entreprise.developpez.com/" data-idrub="86" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Solutions d'entreprise
+							</a>
+						</li>
+													<li>
+								<a href="https://big-data.developpez.com/" data-idrub="126" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Big Data
+								</a>
+							</li>
+													<li>
+								<a href="https://bpm.developpez.com/" data-idrub="134" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;BPM
+								</a>
+							</li>
+													<li>
+								<a href="https://business-intelligence.developpez.com/" data-idrub="61" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Business Intelligence
+								</a>
+							</li>
+													<li>
+								<a href="https://solutions-entreprise.developpez.com/erp-pgi/presentation-erp-pgi/" data-idrub="91" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;ERP / PGI
+								</a>
+							</li>
+													<li>
+								<a href="https://crm.developpez.com/" data-idrub="92" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;CRM
+								</a>
+							</li>
+													<li>
+								<a href="https://sas.developpez.com/" data-idrub="93" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;SAS
+								</a>
+							</li>
+													<li>
+								<a href="https://cloud-computing.developpez.com/" data-idrub="103" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Cloud Computing
+								</a>
+							</li>
+													<li>
+								<a href="https://sap.developpez.com/" data-idrub="106" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;SAP
+								</a>
+							</li>
+													<li>
+								<a href="https://www.developpez.net/forums/f1664/systemes/windows/windows-serveur/biztalk-server/" data-idrub="115" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Microsoft BizTalk Server
+								</a>
+							</li>
+													<li>
+								<a href="https://talend.developpez.com/" data-idrub="118" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Talend
+								</a>
+							</li>
+													<li>
+								<a href="https://ibmcloud.developpez.com/" data-idrub="135" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;IBM Cloud
+								</a>
+							</li>
+													<li>
+								<a href="https://intelligence-artificielle.developpez.com/" data-idrub="143" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Intelligence Artificielle
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://applications.developpez.com/" data-idrub="88" data-niv="1">Applications</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://applications.developpez.com/" data-idrub="88" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Applications
+							</a>
+						</li>
+													<li>
+								<a href="https://open-source.developpez.com/" data-idrub="121" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Libres &amp; Open Source
+								</a>
+							</li>
+													<li>
+								<a href="https://openoffice-libreoffice.developpez.com/" data-idrub="116" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;OpenOffice &amp; LibreOffice
+								</a>
+							</li>
+													<li>
+								<a href="https://portail-projets.developpez.com/" data-idrub="98" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Projets
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://mobiles.developpez.com/" data-idrub="94" data-niv="1">Mobiles</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://mobiles.developpez.com/" data-idrub="94" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Mobiles
+							</a>
+						</li>
+													<li>
+								<a href="https://android.developpez.com/" data-idrub="95" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Android
+								</a>
+							</li>
+													<li>
+								<a href="https://ios.developpez.com/" data-idrub="101" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;iOS
+								</a>
+							</li>
+													<li>
+								<a href="https://windowsphone.developpez.com/" data-idrub="105" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Windows Phone
+								</a>
+							</li>
+											</ul>
+							</li>
+					<li>
+				<a href="https://systeme.developpez.com/" data-idrub="30" data-niv="1">Systèmes</a>
+									<ul class="gabarit_sousmenu">
+						<li>
+							<a href="https://systeme.developpez.com/" data-idrub="30" data-niv="2">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Systèmes
+							</a>
+						</li>
+													<li>
+								<a href="https://windows.developpez.com/" data-idrub="17" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Windows
+								</a>
+							</li>
+													<li>
+								<a href="https://linux.developpez.com/" data-idrub="18" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Linux
+								</a>
+							</li>
+													<li>
+								<a href="https://arduino.developpez.com/" data-idrub="142" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Arduino
+								</a>
+							</li>
+													<li>
+								<a href="https://securite.developpez.com/" data-idrub="40" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Sécurité
+								</a>
+							</li>
+													<li>
+								<a href="https://hardware.developpez.com/" data-idrub="64" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Hardware
+								</a>
+							</li>
+													<li>
+								<a href="https://hpc.developpez.com/" data-idrub="139" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;HPC
+								</a>
+							</li>
+													<li>
+								<a href="https://mac.developpez.com/" data-idrub="57" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Mac
+								</a>
+							</li>
+													<li>
+								<a href="https://raspberry-pi.developpez.com/" data-idrub="131" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Raspberry Pi
+								</a>
+							</li>
+													<li>
+								<a href="https://reseau.developpez.com/" data-idrub="70" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Réseau
+								</a>
+							</li>
+													<li>
+								<a href="https://green-it.developpez.com/" data-idrub="104" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Green IT
+								</a>
+							</li>
+													<li>
+								<a href="https://embarque.developpez.com/" data-idrub="110" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Systèmes Embarqués
+								</a>
+							</li>
+													<li>
+								<a href="https://virtualisation.developpez.com/" data-idrub="108" data-niv="2">
+									<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Virtualisation
+								</a>
+							</li>
+											</ul>
+							</li>
+			</ul>
+</div>
+
+<ul id="gabarit_menu" style="padding-left:56px;">
+	<li><a href="https://www.developpez.com/" data-idrub="1" data-niv="1" style="padding:0;"><div id="gabarit_home"></div></a>
+			</li>
+	<li><a href="https://alm.developpez.com/" data-idrub="42" data-niv="1">ALM<!--<span class="gabarit_tooltip">Cycle de vie du logiciel</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://alm.developpez.com/" data-idrub="42" data-niv="2">ALM</a></li>
+				<li><a href="https://merise.developpez.com/" data-idrub="43" data-niv="2">Merise</a></li>
+				<li><a href="https://uml.developpez.com/" data-idrub="12" data-niv="2">UML</a></li>
+			</ul></li>
+	<li><a href="https://java.developpez.com/" data-idrub="4" data-niv="1">Java<!--<span class="gabarit_tooltip">Plateforme et langage Java</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://java.developpez.com/" data-idrub="4" data-niv="2">Java</a></li>
+				<li><a href="https://javaweb.developpez.com/" data-idrub="97" data-niv="2">Java Web</a></li>
+				<li><a href="https://spring.developpez.com/" data-idrub="87" data-niv="2">Spring</a></li>
+				<li><a href="https://android.developpez.com/" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://eclipse.developpez.com/" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://netbeans.developpez.com/" data-idrub="66" data-niv="2">NetBeans</a></li>
+			</ul></li>
+	<li><a href="https://dotnet.developpez.com/" data-idrub="20" data-niv="1">.NET<!--<span class="gabarit_tooltip">Microsoft Framework .NET</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://dotnet.developpez.com/" data-idrub="20" data-niv="2">Microsoft DotNET</a></li>
+				<li><a href="https://dotnet.developpez.com/visual-studio/" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://dotnet.developpez.com/aspnet/" data-idrub="83" data-niv="2">ASP.NET</a></li>
+				<li><a href="https://dotnet.developpez.com/csharp/" data-idrub="81" data-niv="2">C#</a></li>
+				<li><a href="https://dotnet.developpez.com/vbnet/" data-idrub="82" data-niv="2">VB.NET</a></li>
+				<li><a href="https://windowsphone.developpez.com/" data-idrub="105" data-niv="2">Windows Phone</a></li>
+				<li><a href="https://windows-azure.developpez.com/" data-idrub="107" data-niv="2">Microsoft Azure</a></li>
+			</ul></li>
+	<li><a href="https://web.developpez.com/" data-idrub="8" data-niv="1">Dév. Web<!--<span class="gabarit_tooltip">Développement Web et Webmarketing</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://web.developpez.com/" data-idrub="8" data-niv="2">Développement Web</a></li>
+				<li><a href="https://ajax.developpez.com/" data-idrub="85" data-niv="2">AJAX</a></li>
+				<li><a href="https://apache.developpez.com/" data-idrub="71" data-niv="2">Apache</a></li>
+				<li><a href="https://asp.developpez.com/" data-idrub="10" data-niv="2">ASP</a></li>
+				<li><a href="https://css.developpez.com/" data-idrub="51" data-niv="2">CSS</a></li>
+				<li><a href="https://dart.developpez.com/" data-idrub="125" data-niv="2">Dart</a></li>
+				<li><a href="https://flash.developpez.com/" data-idrub="41" data-niv="2">Flash / Flex</a></li>
+				<li><a href="https://javascript.developpez.com/" data-idrub="45" data-niv="2">JavaScript</a></li>
+				<li><a href="https://nodejs.developpez.com/" data-idrub="141" data-niv="2">NodeJS</a></li>
+				<li><a href="https://php.developpez.com/" data-idrub="9" data-niv="2">PHP</a></li>
+				<li><a href="https://ruby.developpez.com/" data-idrub="53" data-niv="2">Ruby &amp; Rails</a></li>
+				<li><a href="https://typescript.developpez.com/" data-idrub="127" data-niv="2">TypeScript</a></li>
+				<li><a href="https://web-semantique.developpez.com/" data-idrub="111" data-niv="2">Web sémantique</a></li>
+				<li><a href="https://webmarketing.developpez.com/" data-idrub="80" data-niv="2">Webmarketing</a></li>
+				<li><a href="https://xhtml.developpez.com/" data-idrub="50" data-niv="2">(X)HTML</a></li>
+			</ul></li>
+	<li><a href="https://edi.developpez.com/" data-idrub="90" data-niv="1">EDI<!--<span class="gabarit_tooltip">Environnements de Développement Intégré</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://edi.developpez.com/" data-idrub="90" data-niv="2">EDI</a></li>
+				<li><a href="https://4d.developpez.com/" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://delphi.developpez.com/" data-idrub="2" data-niv="2">Delphi</a></li>
+				<li><a href="https://eclipse.developpez.com/" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://labview.developpez.com/" data-idrub="72" data-niv="2">LabVIEW</a></li>
+				<li><a href="https://netbeans.developpez.com/" data-idrub="66" data-niv="2">NetBeans</a></li>
+				<li><a href="https://matlab.developpez.com/" data-idrub="58" data-niv="2">MATLAB</a></li>
+				<li><a href="https://scilab.developpez.com/" data-idrub="120" data-niv="2">Scilab</a></li>
+				<li><a href="https://dotnet.developpez.com/visual-studio/" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://wind.developpez.com/" data-idrub="74" data-niv="2">WinDev</a></li>
+				<li><a href="https://vb.developpez.com/" data-idrub="5" data-niv="2">Visual Basic 6</a></li>
+				<li><a href="https://lazarus.developpez.com/" data-idrub="96" data-niv="2">Lazarus</a></li>
+				<li><a href="https://qt-creator.developpez.com/" data-idrub="109" data-niv="2">Qt Creator</a></li>
+			</ul></li>
+	<li><a href="https://programmation.developpez.com/" data-idrub="119" data-niv="1" class="gabarit_selection">Programmation<!--<span class="gabarit_tooltip">Programmation et langages de programmation applicatifs</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://programmation.developpez.com/" data-idrub="119" data-niv="2">Programmation</a></li>
+				<li><a href="https://algo.developpez.com/" data-idrub="47" data-niv="2">Débuter - Algorithmique</a></li>
+				<li><a href="https://jeux.developpez.com/" data-idrub="38" data-niv="2">2D - 3D - Jeux</a></li>
+				<li><a href="https://asm.developpez.com/" data-idrub="16" data-niv="2">Assembleur</a></li>
+				<li><a href="https://c.developpez.com/" data-idrub="3" data-niv="2">C</a></li>
+				<li><a href="https://cpp.developpez.com/" data-idrub="59" data-niv="2">C++</a></li>
+				<li><a href="https://go.developpez.com/" data-idrub="124" data-niv="2">Go</a></li>
+				<li><a href="https://objective-c.developpez.com/" data-idrub="117" data-niv="2">Objective C</a></li>
+				<li><a href="https://pascal.developpez.com/" data-idrub="7" data-niv="2">Pascal</a></li>
+				<li><a href="https://perl.developpez.com/" data-idrub="29" data-niv="2">Perl</a></li>
+				<li><a href="https://python.developpez.com/" data-idrub="27" data-niv="2">Python</a></li>
+				<li><a href="https://rust.developpez.com/" data-idrub="137" data-niv="2">Rust</a></li>
+				<li><a href="https://swift.developpez.com/" data-idrub="128" data-niv="2">Swift</a></li>
+				<li><a href="https://qt.developpez.com/" data-idrub="65" data-niv="2">Qt</a></li>
+				<li><a href="https://xml.developpez.com/" data-idrub="11" data-niv="2">XML</a></li>
+				<li><a href="https://general.developpez.com/cours/" data-idrub="21" data-niv="2">Autres</a></li>
+			</ul></li>
+	<li><a href="https://sgbd.developpez.com/" data-idrub="13" data-niv="1">SGBD<!--<span class="gabarit_tooltip">Systèmes de Gestion de Bases de Données</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://sgbd.developpez.com/" data-idrub="13" data-niv="2">SGBD &amp; SQL</a></li>
+				<li><a href="https://4d.developpez.com/" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://access.developpez.com/" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://big-data.developpez.com/" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://db2.developpez.com/" data-idrub="36" data-niv="2">DB2</a></li>
+				<li><a href="https://firebird.developpez.com/" data-idrub="73" data-niv="2">Firebird</a></li>
+				<li><a href="https://interbase.developpez.com/" data-idrub="32" data-niv="2">InterBase</a></li>
+				<li><a href="https://mysql.developpez.com/" data-idrub="31" data-niv="2">MySQL</a></li>
+				<li><a href="https://nosql.developpez.com/" data-idrub="114" data-niv="2">NoSQL</a></li>
+				<li><a href="https://postgresql.developpez.com/" data-idrub="33" data-niv="2">PostgreSQL</a></li>
+				<li><a href="https://oracle.developpez.com/" data-idrub="25" data-niv="2">Oracle</a></li>
+				<li><a href="https://sybase.developpez.com/" data-idrub="37" data-niv="2">Sybase</a></li>
+				<li><a href="https://sqlserver.developpez.com/" data-idrub="34" data-niv="2">SQL-Server</a></li>
+			</ul></li>
+	<li><a href="https://office.developpez.com/" data-idrub="54" data-niv="1">Office<!--<span class="gabarit_tooltip">Bureautique pour l'entreprise</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://office.developpez.com/" data-idrub="54" data-niv="2">Microsoft Office</a></li>
+				<li><a href="https://access.developpez.com/" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://excel.developpez.com/" data-idrub="75" data-niv="2">Excel</a></li>
+				<li><a href="https://word.developpez.com/" data-idrub="76" data-niv="2">Word</a></li>
+				<li><a href="https://outlook.developpez.com/" data-idrub="77" data-niv="2">Outlook</a></li>
+				<li><a href="https://powerpoint.developpez.com/" data-idrub="78" data-niv="2">PowerPoint</a></li>
+				<li><a href="https://sharepoint.developpez.com/" data-idrub="79" data-niv="2">SharePoint</a></li>
+				<li><a href="https://project.developpez.com/" data-idrub="99" data-niv="2">Microsoft Project</a></li>
+				<li><a href="https://openoffice-libreoffice.developpez.com/" data-idrub="116" data-niv="2">OpenOffice &amp; LibreOffice</a></li>
+			</ul></li>
+	<li><a href="https://solutions-entreprise.developpez.com/" data-idrub="86" data-niv="1">Solutions d'entreprise<!--<span class="gabarit_tooltip">Autres logiciels pour l'entreprise</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://solutions-entreprise.developpez.com/" data-idrub="86" data-niv="2">Solutions d'entreprise</a></li>
+				<li><a href="https://big-data.developpez.com/" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://bpm.developpez.com/" data-idrub="134" data-niv="2">BPM</a></li>
+				<li><a href="https://business-intelligence.developpez.com/" data-idrub="61" data-niv="2">Business Intelligence</a></li>
+				<li><a href="https://solutions-entreprise.developpez.com/erp-pgi/presentation-erp-pgi/" data-idrub="91" data-niv="2">ERP / PGI</a></li>
+				<li><a href="https://crm.developpez.com/" data-idrub="92" data-niv="2">CRM</a></li>
+				<li><a href="https://sas.developpez.com/" data-idrub="93" data-niv="2">SAS</a></li>
+				<li><a href="https://cloud-computing.developpez.com/" data-idrub="103" data-niv="2">Cloud Computing</a></li>
+				<li><a href="https://sap.developpez.com/" data-idrub="106" data-niv="2">SAP</a></li>
+				<li><a href="https://www.developpez.net/forums/f1664/systemes/windows/windows-serveur/biztalk-server/" data-idrub="115" data-niv="2">Microsoft BizTalk Server</a></li>
+				<li><a href="https://talend.developpez.com/" data-idrub="118" data-niv="2">Talend</a></li>
+				<li><a href="https://ibmcloud.developpez.com/" data-idrub="135" data-niv="2">IBM Cloud</a></li>
+				<li><a href="https://intelligence-artificielle.developpez.com/" data-idrub="143" data-niv="2">Intelligence Artificielle</a></li>
+			</ul></li>
+	<li><a href="https://applications.developpez.com/" data-idrub="88" data-niv="1">Applications<!--<span class="gabarit_tooltip">Applications logicielles</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://applications.developpez.com/" data-idrub="88" data-niv="2">Applications</a></li>
+				<li><a href="https://open-source.developpez.com/" data-idrub="121" data-niv="2">Libres &amp; Open Source</a></li>
+				<li><a href="https://openoffice-libreoffice.developpez.com/" data-idrub="116" data-niv="2">OpenOffice &amp; LibreOffice</a></li>
+				<li><a href="https://portail-projets.developpez.com/" data-idrub="98" data-niv="2">Projets</a></li>
+			</ul></li>
+	<li><a href="https://mobiles.developpez.com/" data-idrub="94" data-niv="1">Mobiles<!--<span class="gabarit_tooltip">Logiciels et matériels mobiles</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://mobiles.developpez.com/" data-idrub="94" data-niv="2">Mobiles</a></li>
+				<li><a href="https://android.developpez.com/" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://ios.developpez.com/" data-idrub="101" data-niv="2">iOS</a></li>
+				<li><a href="https://windowsphone.developpez.com/" data-idrub="105" data-niv="2">Windows Phone</a></li>
+			</ul></li>
+	<li><a href="https://systeme.developpez.com/" data-idrub="30" data-niv="1">Systèmes<!--<span class="gabarit_tooltip">Logiciels et matériels systèmes</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://systeme.developpez.com/" data-idrub="30" data-niv="2">Systèmes</a></li>
+				<li><a href="https://windows.developpez.com/" data-idrub="17" data-niv="2">Windows</a></li>
+				<li><a href="https://linux.developpez.com/" data-idrub="18" data-niv="2">Linux</a></li>
+				<li><a href="https://arduino.developpez.com/" data-idrub="142" data-niv="2">Arduino</a></li>
+				<li><a href="https://securite.developpez.com/" data-idrub="40" data-niv="2">Sécurité</a></li>
+				<li><a href="https://hardware.developpez.com/" data-idrub="64" data-niv="2">Hardware</a></li>
+				<li><a href="https://hpc.developpez.com/" data-idrub="139" data-niv="2">HPC</a></li>
+				<li><a href="https://mac.developpez.com/" data-idrub="57" data-niv="2">Mac</a></li>
+				<li><a href="https://raspberry-pi.developpez.com/" data-idrub="131" data-niv="2">Raspberry Pi</a></li>
+				<li><a href="https://reseau.developpez.com/" data-idrub="70" data-niv="2">Réseau</a></li>
+				<li><a href="https://green-it.developpez.com/" data-idrub="104" data-niv="2">Green IT</a></li>
+				<li><a href="https://embarque.developpez.com/" data-idrub="110" data-niv="2">Systèmes Embarqués</a></li>
+				<li><a href="https://virtualisation.developpez.com/" data-idrub="108" data-niv="2">Virtualisation</a></li>
+			</ul></li>
+</ul>
+
+<ul id="gabarit_barre1"><li><a href="https://programmation.developpez.com/">Programmation</a></li><li><a href="https://algo.developpez.com/">Algorithmique</a></li><li><a href="https://jeux.developpez.com/">2D-3D-Jeux</a></li><li><a href="https://asm.developpez.com/">Assembleur</a></li><li class="gabarit_selection"><a href="https://c.developpez.com/">C</a></li><li><a href="https://cpp.developpez.com/">C++</a></li><li><a href="https://go.developpez.com/">Go</a></li><li><a href="https://objective-c.developpez.com/">Objective C</a></li><li><a href="https://pascal.developpez.com/">Pascal</a></li><li><a href="https://perl.developpez.com/">Perl</a></li><li><a href="https://python.developpez.com/">Python</a></li><li><a href="https://rust.developpez.com/">Rust</a></li><li><a href="https://swift.developpez.com/">Swift</a></li><li><a href="https://qt.developpez.com/">Qt</a></li><li><a href="https://xml.developpez.com/">XML</a></li><li><a href="https://general.developpez.com/cours/">Autres</a></li></ul>
+
+<div id="gabarit_barre2">
+	<a rel="nofollow" class="gabarit_social gabarit_facebook" href="http://www.facebook.com/pages/C/108584359174497" target="_blank" title="Retrouver Developpez sur Facebook"></a>
+	<a rel="nofollow" class="gabarit_social gabarit_twitter" href="http://twitter.com/C_Developpez" target="_blank" title="Retrouver Developpez sur Twitter"></a>
+	<a class="gabarit_social gabarit_rss" href="http://c.developpez.com/index/rss" target="_blank" title="Flux RSS"></a>
+	<ul>
+<li><a href="https://c.developpez.com/">Accueil C</a></li><li><a href="https://www.developpez.net/forums/f7/c-cpp/">Forums C</a></li><li><a href="https://c.developpez.com/faq/">FAQ C</a></li><li><a href="https://c.developpez.com/cours/">Tutoriels C</a></li><li><a href="https://c.developpez.com/livres/">Livres C</a></li><li><a href="https://c.developpez.com/telecharger/index/categorie/30/Outils-C-C">Compilateurs et outils C</a></li><li><a href="https://c.developpez.com/telecharger/index/categorie/149/Sources-C">Sources C</a></li><li><a href="https://c.developpez.com/telecharger/index/categorie/451/Bibliotheques-C">Bibliothèques C</a></li><li><a href="http://gtk.developpez.com/">GTK+</a></li>	</ul>
+</div>
+
+</nav>
+</header>
+<section>
+
+<div id="gabarit_pubBB">
+<div id="gabarit_pub0"></div><div id="ol3zi0o" class="dvpb0" style="display: inline-block; width: 728px; height: 90px"><style type="text/css">html, body { margin: 0; padding: 0; }</style><div id="div-gpt-ad-1407836209633-0"><div id="google_ads_iframe_/53015287/developpez.net_d_728x90_1_0__container__" style="border: 0pt none; width: 728px; height: 90px;"></div></div>
+<style type="text/css"> #gabarit_pub0 { display: inline-block; }</style></div>
+</div>
+
+<div class="contenuPage">
+
+<style type="text/css">
+	.body_wrapper { width: calc(100% - 214px) !important; }
+	#ano_colonne_droite { position: absolute; right: 20px; top: 415px; width: 160px; display: none; }
+	#ano_colonne_liens { background-color: #293a4e; border: 3px solid #293a4e; border-radius: .25rem .25rem 0 0; -webkit-border-radius: .25rem .25rem 0 0; padding-top: 20px; margin-bottom: 1rem; }
+	#ano_colonne_contenu { background: #fff; }
+	#ano_colonne_droite p { color: #5a7f97; text-align: center; padding: 4px 0.2rem; }
+	#ano_colonne_droite p:first-child { padding-top:16px; }
+	#ano_colonne_droite p:last-child { padding-bottom:16px; }
+	#ano_colonne_titre { background: none !important; height: 21px; line-height: 21px; position: absolute; top: 0; left: 0; width: 160px; color: #fff !important; padding: 0 !important; margin: 0; text-align:center !important; font-size:.8rem; text-shadow: 1px 1px 0px #385263; }
+</style>
+<div id="ano_colonne_droite" style="top: 5px; display: block; position: fixed;">
+<div id="ano_colonne_liens">
+<div id="ano_colonne_titre">Navigation</div>
+<div id="ano_colonne_contenu">
+<p style="padding-top:10px; padding-bottom:0;"><b>Inscrivez-vous gratuitement</b><br>pour
+ pouvoir participer, suivre les réponses en temps réel, voter pour les 
+messages, poser vos propres questions et recevoir la newsletter<br><br>
+<a href="https://www.developpez.net/forums/inscription/">
+<img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/inscris-bkgnone.png">
+</a></p></div></div><div id="ph3dn4v" class="dvpb4" style="display: inline-block; width: 160px; height: 600px"><style type="text/css">html, body { margin: 0; padding: 0; }</style><div id="div-gpt-ad-1407836273242-0"><div id="google_ads_iframe_/53015287/developpez.net_d_160x600_1_0__container__" style="border: 0pt none; width: 160px; height: 600px;"></div></div>
+<style type="text/css"> #gabarit_pub4 { display: block; }</style></div><div id="gabarit_pub4"></div>
+</div>
+<script type="text/javascript">
+$(function() {
+	var bloc = $("#ano_colonne_droite");
+	var intr = false;
+	var y = $("#breadcrumb").offset().top;
+	bloc.css("top", y + "px").show();
+
+	$(window).on("scroll", function() {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+		if (scrollTop < y) {
+			if (intr) {
+				bloc.css("position", "");
+				bloc.css("top", y + "px");
+				intr = false;
+			}
+		} else {
+			if (! intr) {
+				bloc.css("position", "fixed");
+				bloc.css("top", "5px");
+				intr = true;
+			}
+		}
+	});
+});
+</script>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="https://www.developpez.net/forums/inscription/" rel="nofollow">S'inscrire</a></li>
+			
+				<li><a rel="help" href="https://www.developpez.net/forums/faq.php">Aide</a></li>
+				<li>
+			<script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/vbulletin_md5.js"></script>
+			<form id="navbar_loginform" action="https://www.developpez.net/forums/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Identifiant">
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" style="display: none;">
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Mot de passe" style="display: inline;">
+					<input type="hidden" name="cookieuser" value="1">
+					<input type="submit" class="loginbutton" tabindex="104" value="S'identifier" title="Insérez votre identifiant et mot de passe dans les cases correspondantes pour vous connecter, ou cliquez sur le bouton « S'inscrire » pour créer un profil personnel." accesskey="s">
+						</div>
+					</div>
+				</fieldset>
+
+				<input type="hidden" name="s" value="">
+				<input type="hidden" name="securitytoken" value="guest">
+				<input type="hidden" name="do" value="login">
+				<input type="hidden" name="vb_login_md5password">
+				<input type="hidden" name="vb_login_md5password_utf">
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'Identifiant')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='Identifiant';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		
+		
+	</div>
+	<hr>
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li id="vbtab_whatsnew">
+			<a class="navtab" href="https://www.developpez.net/forums/activity.php">Quoi de neuf ?</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="http://www.developpez.net/forums/">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl" id="yui-gen1">Actions</a>
+							<ul class="popupbody" id="yui-gen0">
+								
+									<li id="vbalink_mfr"><a rel="nofollow" href="https://www.developpez.net/forums/forumdisplay.php?do=markread&amp;markreadhash=guest">Marquer les forums comme lus</a></li>
+								
+									<li id="link_mtg4_835"><a href="http://www.developpez.net/forums/project.php">Bugs &amp; Suggestions</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl" id="yui-gen3">Réseau social</a>
+							<ul class="popupbody" id="yui-gen2">
+								
+									<li id="vbclink_groups"><a href="https://www.developpez.net/forums/group.php">Groupes</a></li>
+								
+									<li id="vbflink_faq"><a href="https://www.developpez.net/forums/faq.php">FAQ forum</a></li>
+								
+									<li id="vbclink_members"><a href="https://www.developpez.net/forums/memberlist.php">Liste des utilisateurs</a></li>
+								
+									<li id="vbqlink_leaders"><a href="https://www.developpez.net/forums/showgroups.php">Voir l'équipe du site</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						
+							<li id="link_nde2_515"><a href="http://www.developpez.net/forums/blogs/">Blogs</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="https://www.developpez.net/forums/agenda/">Agenda</a></li>
+						
+					
+				
+					
+						
+							<li id="link_nta3_958"><a target="_blank" href="http://club.developpez.com/regles/">Règles</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li id="vbtab_blog">
+			<a class="navtab" href="https://www.developpez.net/forums/blogs/">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li id="vbtab_project">
+			<a class="navtab" href="https://www.developpez.net/forums/project.php">Projets</a>
+		</li>
+		
+		
+
+		
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="https://www.developpez.net/forums/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest">
+				<input type="hidden" name="do" value="process">
+				<span class="textboxcontainer"><span><input type="text" name="query" class="textbox" tabindex="99"></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="https://www.developpez.net/forums/search.php" accesskey="4">Recherche avancée</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="https://www.developpez.net/forums/" accesskey="1"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/navbit-home2.png" alt="Accueil" title="Accueil" width="12" height="12"></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Index du forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f7/c-cpp/">C et C++</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f18/c-cpp/c/">C</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f897/c-cpp/c/debuter/">Débuter</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Arbre Binaire et Equilibrage</span></li>
+
+	</ul>
+	<hr>
+</div>
+
+
+
+
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+			<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=6463262&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_top"><span>+</span> Répondre à la discussion</a>
+			<img style="display:none" id="progress_newreplylink_top" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/progress.gif" alt="">
+
+		
+		<div id="pagination_top" class="pagination_top">
+		
+
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Discussion: <span class="threadtitle"><a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/" title="Recharger cette page">Arbre Binaire et Equilibrage</a> <img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/icone-resolu.png" title="Question résolue" alt=""> </span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://" id="yui-gen5">Outils de la discussion</a></h6>
+				<ul class="popupbody" id="yui-gen4">
+					<li><a href="https://www.developpez.net/forums/i1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/" accesskey="3" rel="nofollow">Afficher une version imprimable</a></li>
+					
+					<li>
+						
+							<a href="https://www.developpez.net/forums/subscription.php?do=addsubscription&amp;t=1176975" rel="nofollow">S'abonner à cette discussion…</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://" id="yui-gen7">Affichage</a></h6>
+					<ul class="popupbody" id="yui-gen6">
+						<li><label>Mode linéaire</label></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/?mode=hybrid"> Choisir le mode hybride</a></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/?mode=threaded#post6462172"> Choisir le mode arborescent</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_6462172">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">20/01/2012,&nbsp;<span class="time">16h39</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post6462172" href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#post6462172" class="postcounter">#1</a><a id="postcount6462172" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction" id="yui-gen8">
+	<a rel="nofollow" class="username offline " href="https://www.developpez.net/forums/u460767/silentline/" title="SilentLine est déconnecté"><strong>SilentLine</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/user-offline.png" alt="SilentLine est déconnecté" title="SilentLine est déconnecté" border="0">
+
+			
+			</div>
+			<span class="usertitle">
+				Nouveau membre du Club
+			</span>
+			
+				<span class="rank"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/nv-carres-1.png" alt="" border=""></span>
+			
+			
+			
+			 
+			
+				<hr>
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/france.gif" title="France">   <a href="https://www.developpez.com/user/profil/460767/SilentLine"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/pro.png" alt="Profil pro" title="Profil pro"></a> </div><dt>Inscrit en</dt><dd>octobre 2011</dd><dt>Messages</dt><dd>25</dd></div><div style="float: right; margin-top: 5px"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="460767" style="cursor: pointer;"></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="460767"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/cross.gif"></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br><b>Informations forums :</b></div><div>Inscription : octobre 2011</div><div>Messages : 25</div><div>Points : 32</div></div></div><dt>Points</dt><dd><span role="points" userid="460767" style="cursor: pointer;">32</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/icon1.png" alt="Par défaut" title="Par défaut"> Arbre Binaire et Equilibrage
+				</h2>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_6462172">
+						<blockquote class="postcontent restore ">
+							Bonjour,<br>
+<br>
+Je dois réaliser une petite bibliothèque C articulée autour des arbres binaires, j'ai donc pondu le code suivant :<br>
+<br>
+<div class="bbcode_container">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></tbody></table>
+	<pre class="bbcode_code" style="height:204px;"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="40" valign="top"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br>116<br>117<br>118<br>119<br>120<br>121<br>122<br>123<br>124<br>125<br>126<br>127<br>128<br>129<br>130<br>131<br>132<br>133<br>134<br>135<br>136<br>137<br>138<br>139<br>140<br>141<br>142<br>143<br>144<br>145<br>146<br>147<br>148<br>149<br>150<br>151<br>152<br>153<br>154<br>155<br>156<br>157<br>158<br>159<br>160<br>161<br>162<br>163<br>164<br>165<br>166<br>167<br>168<br>169<br>170<br>171<br>172<br>173<br>174<br>175<br>176<br>177<br>178<br>179<br>180<br>181<br>182<br>183<br>184<br>185<br>186<br>187<br>188<br>189<br>190<br>191<br>192<br>193<br>194<br>195<br>196<br>197<br>198<br>199<br>200<br>201<br>202<br>203<br>204<br>205<br>206<br>207<br>208<br>209<br>210<br>211<br>212<br>213<br>214<br>215<br>216<br>217<br>218<br>219<br>220<br>221<br>222<br>223<br>224<br>225<br>226<br>227<br>228<br>229<br>230<br>231<br>232<br>233<br>234<br>235<br>236<br>237<br>238<br>239<br>240<br>241<br>242<br>243<br>244<br>245<br>246<br>247<br>248<br>249<br>250<br>251<br>252<br>253<br>254<br>255<br>256<br>257<br>258<br>259<br>260<br>261<br>262<br>263<br>264<br>265<br>266<br>267<br>268<br>269<br>270<br>271<br>272<br>273<br>274<br>275<br>276<br>277<br>278<br>279<br>280<br>281<br>282<br>283<br>284<br>285<br>286<br>287<br>288<br>289<br>290<br>291<br>292<br>293<br>294<br>295<br>296<br>297<br>298<br>299<br>300<br>301<br>302<br>303<br>304<br>305<br>306<br>307<br>308<br>309<br>310<br>311<br>312<br>313<br>314<br>315<br>316<br>317<br>318<br>319<br>320<br>321<br>322<br>323<br>324<br>325<br>326<br>327<br>328<br>329<br>330<br>331<br>332<br>333<br>334<br>335<br>336<br>337<br>338<br>339<br>340<br>341<br>342<br>343<br>344<br>345<br>346<br>347<br>348<br>349<br>350<br>351<br>352<br>353<br>354<br>355<br>356<br>357<br>358<br>359<br>360<br>361<br>362<br>363<br>364<br>365<br>366<br>367<br>368<br>369<br>370<br>371<br>372<br>373<br>374<br>375<br>376<br>377<br>378<br>379<br>380<br>381<br>382<br>383<br>384<br>385<br>386<br>387<br>388<br>389<br>390<br>391<br>392<br>393<br>394<br>395<br></div></td><td valign="top"><pre style="margin: 0"><span style="color: #339933;">#include &lt;stdlib.h&gt;</span>
+<span style="color: #339933;">#include &lt;math.h&gt;</span>
+<span style="color: #339933;">#include &lt;stdio.h&gt;</span>
+<span style="color: #339933;">#include &lt;string.h&gt;</span>
+<span style="color: #339933;">#include &lt;time.h&gt;</span>
+&nbsp;
+<span style="color: #339933;">#define MAXMOT 256</span>
+<span style="color: #339933;">#define MAX(x,y) (((x)&gt;(y))?(x):(y))</span>
+<span style="color: #339933;">#define SIZE(t) ((t!=NULL)?(t-&gt;hauteur):(0))</span>
+&nbsp;
+<span style="color: #0000ff;">typedef</span> <span style="color: #0000ff;">struct</span> t_element <span style="color: black;">{</span>
+  <span style="color: #0000ff;">char</span> <span style="">*</span>elt<span style="">;</span> 
+<span style="color: black;">}</span> t_element<span style="">;</span>
+&nbsp;
+<span style="color: #0000ff;">typedef</span> <span style="color: #0000ff;">struct</span> t_noeud <span style="color: black;">{</span>
+  t_element <span style="">*</span>valeur<span style="">;</span>
+  <span style="color: #0000ff;">int</span> hauteur<span style="">;</span>
+  <span style="color: #0000ff;">struct</span> t_noeud <span style="">*</span>gauche<span style="">;</span>
+  <span style="color: #0000ff;">struct</span> t_noeud <span style="">*</span>droit<span style="">;</span>
+<span style="color: black;">}</span> t_arbre<span style="">;</span>
+&nbsp;
+<span style="color: #808080;">//allocation m&amp;#65533;moire d'un t_element et initialisation par recopie de x</span>
+t_element <span style="">*</span>creer_elt_str<span style="color: black;">(</span><span style="color: #0000ff;">char</span> x<span style="color: black;">[</span>MAXMOT<span style="color: black;">]</span><span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_element <span style="">*</span>r <span style="">=</span> <span style="color: black;">(</span>t_element <span style="">*</span><span style="color: black;">)</span> malloc <span style="color: black;">(</span> <span style="color: #0000ff;">sizeof</span><span style="color: black;">(</span>t_element<span style="color: black;">)</span> <span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> r <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        fprintf<span style="color: black;">(</span><span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"Plus de m&amp;#65533;moire disponible<span style="color: #800000;">\n</span>"</span><span style="color: black;">)</span><span style="">;</span>
+        exit<span style="color: black;">(</span><span style="color: #cc66cc;">1</span><span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+&nbsp;
+    r<span style="">-</span><span style="">&gt;</span>elt <span style="">=</span> <span style="color: black;">(</span><span style="color: #0000ff;">char</span> <span style="">*</span><span style="color: black;">)</span> malloc<span style="color: black;">(</span> <span style="color: #0000ff;">sizeof</span><span style="color: black;">(</span><span style="color: #0000ff;">char</span><span style="color: black;">)</span> <span style="">*</span> MAXMOT <span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>elt <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        fprintf<span style="color: black;">(</span><span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"Plus de m&amp;#65533;moire disponible<span style="color: #800000;">\n</span>"</span><span style="color: black;">)</span><span style="">;</span>
+        exit<span style="color: black;">(</span><span style="color: #cc66cc;">2</span><span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+&nbsp;
+    r<span style="">-</span><span style="">&gt;</span>elt <span style="">=</span> strcpy<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>elt, x <span style="color: black;">)</span><span style="">;</span>
+    <span style="color: #0000ff;">return</span> r<span style="">;</span>
+<span style="color: black;">}</span>
+<span style="color: #808080;">//lib&amp;#65533;ration de la m&amp;#65533;moire occup&amp;#65533;e par un t_element</span>
+<span style="color: #0000ff;">void</span> detruire_elt <span style="color: black;">(</span>t_element <span style="">*</span>e<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> e <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">if</span><span style="color: black;">(</span> e<span style="">-</span><span style="">&gt;</span>elt <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+            free<span style="color: black;">(</span> e<span style="">-</span><span style="">&gt;</span>elt <span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+        free<span style="color: black;">(</span> e <span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// cr&amp;#65533;ation d'un arbre binaire</span>
+t_arbre <span style="">*</span>creer_arbre<span style="color: black;">(</span>t_element <span style="">*</span>e, t_arbre <span style="">*</span>g, t_arbre <span style="">*</span>d, <span style="color: #0000ff;">int</span> h<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_arbre <span style="">*</span>r <span style="">=</span> <span style="color: black;">(</span>t_arbre <span style="">*</span><span style="color: black;">)</span> malloc<span style="color: black;">(</span> <span style="color: #0000ff;">sizeof</span><span style="color: black;">(</span>t_arbre<span style="color: black;">)</span> <span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> r <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        fprintf<span style="color: black;">(</span><span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"Plus de m&amp;#65533;moire disponible<span style="color: #800000;">\n</span>"</span><span style="color: black;">)</span><span style="">;</span>
+        exit<span style="color: black;">(</span><span style="color: #cc66cc;">3</span><span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+&nbsp;
+    r<span style="">-</span><span style="">&gt;</span>valeur <span style="">=</span> e<span style="">;</span>
+    r<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> h<span style="">;</span>
+    r<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> g<span style="">;</span>
+    r<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> d<span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">return</span> r<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// destruction d'un arbre binaire</span>
+<span style="color: #0000ff;">void</span> detruire_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        detruire_elt<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>valeur <span style="color: black;">)</span><span style="">;</span>
+        detruire_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="color: black;">)</span><span style="">;</span>
+        detruire_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="color: black;">)</span><span style="">;</span>
+        free<span style="color: black;">(</span> a <span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// destruction d'un noeud de l'arbre, cette fonction renvoie l'&amp;#65533;l&amp;#65533;ment,</span>
+t_element <span style="">*</span>detruire_noeud_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_element <span style="">*</span>r <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        r <span style="">=</span> a<span style="">-</span><span style="">&gt;</span>valeur<span style="">;</span>
+        detruire_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="color: black;">)</span><span style="">;</span>
+        detruire_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="color: black;">)</span><span style="">;</span>
+        free<span style="color: black;">(</span> a <span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+&nbsp;
+    <span style="color: #0000ff;">return</span> r<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// insertion d'un t_element v dans un t_arbre a, cette fonction renvoie le nouvel arbre</span>
+t_arbre <span style="">*</span>inserer_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a, t_element <span style="">*</span>v<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_arbre <span style="">*</span>r <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    r <span style="">=</span> a<span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> r <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+        r <span style="">=</span> creer_arbre<span style="color: black;">(</span> v, <span style="color: #0080ff;">NULL</span>, <span style="color: #0080ff;">NULL</span>, <span style="color: #cc66cc;">0</span> <span style="color: black;">)</span><span style="">;</span>
+    <span style="color: #0000ff;">else</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">switch</span><span style="color: black;">(</span> strcmp<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>valeur<span style="">-</span><span style="">&gt;</span>elt, v<span style="">-</span><span style="">&gt;</span>elt <span style="color: black;">)</span> <span style="color: black;">)</span>
+        <span style="color: black;">{</span>
+            <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">1</span><span style="">:</span>
+                r<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> inserer_arbre<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>droit, v <span style="color: black;">)</span><span style="">;</span>
+                <span style="color: #0000ff;">break</span><span style="">;</span>
+            <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">-1</span><span style="">:</span>
+                r<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> inserer_arbre<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>gauche, v <span style="color: black;">)</span><span style="">;</span>
+                <span style="color: #0000ff;">break</span><span style="">;</span>
+        <span style="color: black;">}</span>
+    <span style="color: black;">}</span>
+&nbsp;
+    <span style="color: #0000ff;">return</span> r<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// creer un arbre contenant tous les mots de fichier de nom f</span>
+t_arbre <span style="">*</span>creer_arbre_fichier<span style="color: black;">(</span><span style="color: #0000ff;">char</span> <span style="">*</span>f<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">FILE</span><span style="">*</span> fichier <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    <span style="color: #0000ff;">char</span> mot<span style="color: black;">[</span>MAXMOT<span style="color: black;">]</span> <span style="">=</span> <span style="color: #FF0000;">""</span><span style="">;</span>
+    t_arbre <span style="">*</span>arbre <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    t_element <span style="">*</span>element <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    fichier <span style="">=</span> fopen<span style="color: black;">(</span>f , <span style="color: #FF0000;">"r"</span><span style="color: black;">)</span><span style="">;</span>
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>fichier <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>fgets<span style="color: black;">(</span>mot, MAXMOT, fichier<span style="color: black;">)</span> <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+        <span style="color: black;">{</span>
+            element <span style="">=</span> creer_elt_str<span style="color: black;">(</span>mot<span style="color: black;">)</span><span style="">;</span>
+            arbre <span style="">=</span> creer_arbre<span style="color: black;">(</span> element, <span style="color: #0080ff;">NULL</span>, <span style="color: #0080ff;">NULL</span>, <span style="color: #cc66cc;">0</span> <span style="color: black;">)</span><span style="">;</span>
+            <span style="color: #0000ff;">while</span> <span style="color: black;">(</span>fgets<span style="color: black;">(</span>mot, MAXMOT, fichier<span style="color: black;">)</span> <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+            <span style="color: black;">{</span>
+                element <span style="">=</span> creer_elt_str <span style="color: black;">(</span>mot<span style="color: black;">)</span><span style="">;</span>
+                arbre <span style="">=</span> inserer_arbre<span style="color: black;">(</span>arbre, element<span style="color: black;">)</span><span style="">;</span>
+            <span style="color: black;">}</span>
+        <span style="color: black;">}</span>
+        fclose<span style="color: black;">(</span>fichier<span style="color: black;">)</span><span style="">;</span>
+        <span style="color: #0000ff;">return</span> arbre<span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">else</span>
+    <span style="color: black;">{</span>
+        fprintf<span style="color: black;">(</span> <span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"Impossible d'ouvrir le fichier %s<span style="color: #800000;">\n</span>"</span>, f <span style="color: black;">)</span><span style="">;</span>
+        <span style="color: #0000ff;">return</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    <span style="color: black;">}</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// suppression d'un &amp;#65533;l&amp;#65533;ment, cette fonction renvoie le nouvel arbre (voir cours)</span>
+t_arbre <span style="">*</span>supprimer_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a, t_element <span style="">*</span>v<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_arbre <span style="">*</span>r <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    t_arbre <span style="">*</span>o <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    t_arbre <span style="">*</span>p <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    t_arbre <span style="">*</span>i <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    r <span style="">=</span> a<span style="">;</span>
+    i <span style="">=</span> p<span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> r <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+        <span style="color: #0000ff;">return</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">switch</span><span style="color: black;">(</span> strcmp<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>valeur<span style="">-</span><span style="">&gt;</span>elt, v<span style="">-</span><span style="">&gt;</span>elt <span style="color: black;">)</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">1</span><span style="">:</span>
+            p<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> supprimer_arbre<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>droit, v <span style="color: black;">)</span><span style="">;</span>
+            <span style="color: #0000ff;">break</span><span style="">;</span>
+        <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">-1</span><span style="">:</span>
+            p<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> supprimer_arbre<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>gauche, v <span style="color: black;">)</span><span style="">;</span>
+            <span style="color: #0000ff;">break</span><span style="">;</span>
+        <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">0</span><span style="">:</span>
+            <span style="color: #0000ff;">if</span><span style="color: black;">(</span> p<span style="">-</span><span style="">&gt;</span>gauche <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+                r <span style="">=</span> r<span style="">-</span><span style="">&gt;</span>droit<span style="">;</span>
+            <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span><span style="color: black;">(</span> p<span style="">-</span><span style="">&gt;</span>droit <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+                r <span style="">=</span> r<span style="">-</span><span style="">&gt;</span>gauche<span style="">;</span>
+            <span style="color: #0000ff;">else</span>
+            <span style="color: black;">{</span>
+                <span style="color: #0000ff;">while</span><span style="color: black;">(</span> i <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+                <span style="color: black;">{</span>
+                    p <span style="">=</span> i<span style="">;</span>
+                    i <span style="">=</span> i<span style="">-</span><span style="">&gt;</span>gauche<span style="">;</span>
+                <span style="color: black;">}</span>
+                p<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> r<span style="">-</span><span style="">&gt;</span>gauche<span style="">;</span>
+                detruire_elt<span style="color: black;">(</span> r<span style="">-</span><span style="">&gt;</span>valeur <span style="color: black;">)</span><span style="">;</span>
+                o <span style="">=</span> r<span style="">-</span><span style="">&gt;</span>droit<span style="">;</span>
+                free<span style="color: black;">(</span> r <span style="color: black;">)</span><span style="">;</span>
+                r <span style="">=</span> o<span style="">;</span>
+            <span style="color: black;">}</span>
+            <span style="color: #0000ff;">break</span><span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">return</span> r<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// recherche d'un t_element e dans le t_arbre a, cette fonction renvoie la r&amp;#65533;f&amp;#65533;rence du noeud dans l'arbre</span>
+t_arbre <span style="">*</span>rechercher_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a, t_element <span style="">*</span>e<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+        <span style="color: #0000ff;">return</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">switch</span><span style="color: black;">(</span> strcmp<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>valeur<span style="">-</span><span style="">&gt;</span>elt, e<span style="">-</span><span style="">&gt;</span>elt <span style="color: black;">)</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">1</span><span style="">:</span>
+        <span style="color: #0000ff;">return</span> rechercher_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit, e <span style="color: black;">)</span><span style="">;</span>
+            <span style="color: #0000ff;">break</span><span style="">;</span>
+        <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">-1</span><span style="">:</span>
+        <span style="color: #0000ff;">return</span> rechercher_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche, e <span style="color: black;">)</span><span style="">;</span>
+            <span style="color: #0000ff;">break</span><span style="">;</span>
+        <span style="color: #0000ff;">case</span> <span style="color: #cc66cc;">0</span><span style="">:</span>
+            <span style="color: #0000ff;">return</span> a<span style="">;</span>
+            <span style="color: #0000ff;">break</span><span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">return</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+<span style="color: black;">}</span>
+<span style="color: #808080;">// rechercher l'ensemble des mots du fichier de nom f</span>
+<span style="color: #0000ff;">void</span> rechercher_arbre_fichier<span style="color: black;">(</span>t_arbre <span style="">*</span>a, <span style="color: #0000ff;">char</span> <span style="">*</span>f<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">FILE</span><span style="">*</span> fichier <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    <span style="color: #0000ff;">char</span> mot<span style="color: black;">[</span>MAXMOT<span style="color: black;">]</span> <span style="">=</span> <span style="color: #FF0000;">""</span><span style="">;</span>
+    <span style="color: #0000ff;">int</span> find <span style="">=</span> <span style="color: #cc66cc;">1</span><span style="">;</span>
+    t_arbre <span style="">*</span>arbre <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+    t_element <span style="">*</span>element <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    fichier <span style="">=</span> fopen<span style="color: black;">(</span>f , <span style="color: #FF0000;">"r"</span><span style="color: black;">)</span><span style="">;</span>
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>fichier <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">while</span> <span style="color: black;">(</span>fgets<span style="color: black;">(</span>mot, MAXMOT, fichier<span style="color: black;">)</span> <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+        <span style="color: black;">{</span>
+            element <span style="">=</span> creer_elt_str <span style="color: black;">(</span>mot<span style="color: black;">)</span><span style="">;</span>
+            arbre <span style="">=</span> rechercher_arbre<span style="color: black;">(</span>a, element<span style="color: black;">)</span><span style="">;</span>
+            <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>arbre <span style="">==</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+            <span style="color: black;">{</span>
+                fprintf<span style="color: black;">(</span> <span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"%s non trouve"</span>, element<span style="">-</span><span style="">&gt;</span>elt <span style="color: black;">)</span><span style="">;</span>
+                find <span style="">=</span> <span style="color: #cc66cc;">0</span><span style="">;</span>
+            <span style="color: black;">}</span>
+            detruire_elt<span style="color: black;">(</span>element<span style="color: black;">)</span><span style="">;</span>
+        <span style="color: black;">}</span>
+        <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>find <span style="">==</span> <span style="color: #cc66cc;">1</span><span style="color: black;">)</span>
+            fprintf<span style="color: black;">(</span> <span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"Tous les mots de %s ont etes trouve<span style="color: #800000;">\n</span>"</span>, f <span style="color: black;">)</span><span style="">;</span>
+        <span style="color: #0000ff;">else</span>
+            fprintf<span style="color: black;">(</span> <span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"Des mots de %s n'ont pas ete trouve<span style="color: #800000;">\n</span>"</span>, f <span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+        fclose<span style="color: black;">(</span>fichier<span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">else</span>
+        fprintf<span style="color: black;">(</span> <span style="color: #0080ff;">stderr</span>, <span style="color: #FF0000;">"Impossible d'ouvrir le fichier %s<span style="color: #800000;">\n</span>"</span>,f <span style="color: black;">)</span><span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// calculer la hauteur des noeuds du t_arbre a</span>
+<span style="color: #0000ff;">void</span> calculer_hauteur<span style="color: black;">(</span>t_arbre <span style="">*</span>a<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+        <span style="color: black;">{</span>
+            <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+                a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> <span style="color: #cc66cc;">0</span><span style="">;</span>
+            <span style="color: #0000ff;">else</span>
+            <span style="color: black;">{</span>
+                calculer_hauteur<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="color: black;">)</span><span style="">;</span>
+                a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>hauteur <span style="">+</span> <span style="color: #cc66cc;">1</span><span style="">;</span>
+            <span style="color: black;">}</span>
+        <span style="color: black;">}</span>
+        <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+        <span style="color: black;">{</span>
+            <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+                a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> <span style="color: #cc66cc;">0</span><span style="">;</span>
+            <span style="color: #0000ff;">else</span>
+            <span style="color: black;">{</span>
+                calculer_hauteur<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="color: black;">)</span><span style="">;</span>
+                a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>hauteur <span style="">+</span> <span style="color: #cc66cc;">1</span><span style="">;</span>
+            <span style="color: black;">}</span>
+        <span style="color: black;">}</span>
+        <span style="color: #0000ff;">else</span>
+        <span style="color: black;">{</span>
+            calculer_hauteur<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="color: black;">)</span><span style="">;</span>
+            calculer_hauteur<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="color: black;">)</span><span style="">;</span>
+            a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>hauteur, a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>hauteur <span style="color: black;">)</span> <span style="">+</span> <span style="color: #cc66cc;">1</span><span style="">;</span>
+        <span style="color: black;">}</span>
+    <span style="color: black;">}</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #808080;">// afficher l'arbre et la hauteur des noeuds</span>
+<span style="color: #0000ff;">void</span> afficher_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+        afficher_arbre<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>valeur <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+        printf<span style="color: black;">(</span><span style="color: #FF0000;">"%d - %s"</span>, a<span style="">-</span><span style="">&gt;</span>hauteur, a<span style="">-</span><span style="">&gt;</span>valeur<span style="">-</span><span style="">&gt;</span>elt<span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+        afficher_arbre<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span><span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+t_arbre <span style="">*</span>rotation_droite<span style="color: black;">(</span>t_arbre <span style="">*</span>y<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_arbre<span style="">*</span> a <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>y <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="">&amp;&amp;</span> y<span style="">-</span><span style="">&gt;</span>gauche <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        a <span style="">=</span> y<span style="">-</span><span style="">&gt;</span>gauche<span style="">;</span>
+        y<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> a<span style="">-</span><span style="">&gt;</span>droit<span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> y<span style="">;</span>
+&nbsp;
+        a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        <span style="color: #808080;">//printf( "Rotation Droite effectu&amp;#65533;e \n" );</span>
+        <span style="color: #0000ff;">return</span> a<span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">else</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">return</span> y<span style="">;</span>
+    <span style="color: black;">}</span>
+<span style="color: black;">}</span>
+&nbsp;
+t_arbre <span style="">*</span>rotation_gauche<span style="color: black;">(</span>t_arbre <span style="">*</span>x<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_arbre<span style="">*</span> a <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>x <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="">&amp;&amp;</span> x<span style="">-</span><span style="">&gt;</span>gauche <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        a <span style="">=</span> x<span style="">-</span><span style="">&gt;</span>droit<span style="">;</span>
+        x<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> a<span style="">-</span><span style="">&gt;</span>gauche<span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> x<span style="">;</span>
+&nbsp;
+        a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        <span style="color: #808080;">//printf( "Rotation Droite effectu&amp;#65533;e \n" );</span>
+        <span style="color: #0000ff;">return</span> a<span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">else</span>
+        <span style="color: #0000ff;">return</span> x<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+t_arbre <span style="">*</span>equilibrer_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">int</span> hd <span style="">=</span> <span style="color: #cc66cc;">0</span><span style="">;</span>
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+        <span style="color: #0000ff;">return</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    hd <span style="">=</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span> <span style="">-</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">while</span> <span style="color: black;">(</span> hd <span style="">&lt;</span> <span style="color: #cc66cc;">-1</span> <span style="">||</span> hd <span style="">&gt;</span> <span style="color: #cc66cc;">1</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        <span style="color: #0000ff;">if</span><span style="color: black;">(</span> hd <span style="">&gt;</span> <span style="color: #cc66cc;">1</span> <span style="color: black;">)</span>
+        <span style="color: black;">{</span>
+            a <span style="">=</span> rotation_gauche<span style="color: black;">(</span>a<span style="color: black;">)</span><span style="">;</span>
+            a<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> equilibrer_arbre<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span><span style="">;</span>
+        <span style="color: black;">}</span>
+        <span style="color: #0000ff;">else</span>
+        <span style="color: black;">{</span>
+            a <span style="">=</span> rotation_droite<span style="color: black;">(</span>a<span style="color: black;">)</span><span style="">;</span>
+            a<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> equilibrer_arbre<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="">;</span>
+        <span style="color: black;">}</span>
+&nbsp;
+        hd <span style="">=</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span> <span style="">-</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+&nbsp;
+    a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+    <span style="color: #0000ff;">return</span> a<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+<span style="color: #0000ff;">int</span> main <span style="color: black;">(</span><span style="color: #0000ff;">int</span> argc, <span style="color: #0000ff;">char</span> <span style="">*</span>argv<span style="color: black;">[</span><span style="color: black;">]</span><span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #808080;">//t_arbre *a = creer_arbre_fichier("dico1.txt");</span>
+    t_arbre <span style="">*</span>a <span style="">=</span> creer_arbre_fichier<span style="color: black;">(</span>argv<span style="color: black;">[</span><span style="color: #cc66cc;">1</span><span style="color: black;">]</span><span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+  calculer_hauteur<span style="color: black;">(</span>a<span style="color: black;">)</span><span style="">;</span>
+  printf<span style="color: black;">(</span><span style="color: #FF0000;">"hauteur totale %d <span style="color: #800000;">\n</span>"</span>, a<span style="">-</span><span style="">&gt;</span>hauteur<span style="color: black;">)</span><span style="">;</span>
+  <span style="color: #808080;">//afficher_arbre(a);</span>
+&nbsp;
+<span style="color: #808080;">//  t_arbre *b = rotation_gauche(a);</span>
+    t_arbre <span style="">*</span>b <span style="">=</span> equilibrer_arbre<span style="color: black;">(</span>a<span style="color: black;">)</span><span style="">;</span>
+<span style="color: #808080;">//  rechercher_arbre_fichier(b, "a_rechercher.txt");</span>
+  calculer_hauteur<span style="color: black;">(</span>b<span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+  afficher_arbre<span style="color: black;">(</span>b<span style="color: black;">)</span><span style="">;</span>
+  printf<span style="color: black;">(</span><span style="color: #FF0000;">"hauteur totale %d <span style="color: #800000;">\n</span>"</span>, b<span style="">-</span><span style="">&gt;</span>hauteur<span style="color: black;">)</span><span style="">;</span>
+  detruire_arbre<span style="color: black;">(</span>b<span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+<span style="color: #808080;">//  char* r;</span>
+<span style="color: #808080;">//  scanf(r);</span>
+&nbsp;
+  <span style="color: #0000ff;">return</span> <span style="color: #cc66cc;">0</span><span style="">;</span>
+<span style="color: black;">}</span></pre></td></tr></tbody></table></pre>
+</div>Mon soucis se situe sur la fonction d'équilibrage qui me fait une erreur de segmentation à la ligne 314.<br>
+Mes fonctions de rotations sont correcte et je pense que mon algo à un problème mais j'ai du mal à voir où il est.<br>
+<br>
+Auriez-vous une idée,<br>
+Pour votre aide,<br>
+Par avance,<br>
+Merci
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_6462172" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/progress.gif" alt="">
+					
+					
+					
+						<a id="qrwq_6462172" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=6462172" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_6462172" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/clear.gif" alt="Répondre avec citation" title="Répondre avec citation">  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p="6462172"> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p="6462172"> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr>
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_6462523">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">20/01/2012,&nbsp;<span class="time">19h10</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post6462523" href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#post6462523" class="postcounter">#2</a><a id="postcount6462523" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction" id="yui-gen9">
+	<a rel="nofollow" class="username offline " href="https://www.developpez.net/forums/u286705/trademark/" title="Trademark est déconnecté"><strong>Trademark</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/user-offline.png" alt="Trademark est déconnecté" title="Trademark est déconnecté" border="0">
+
+			
+			</div>
+			<span class="usertitle">
+				Membre expérimenté
+			</span>
+			
+				<span class="rank"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/etoiles-3-0.png" alt="" border=""></span>
+			
+			
+			
+			
+			<a rel="nofollow" class="postuseravatar" href="https://www.developpez.net/forums/u286705/trademark/" title="Trademark est déconnecté">
+				<img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/286705-trademark.gif" alt="Avatar de Trademark" title="Avatar de Trademark">
+			</a>
+			 
+			
+				<hr>
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/france.gif" title="France">   <a href="https://www.developpez.com/user/profil/286705/Trademark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/pro.png" alt="Profil pro" title="Profil pro"></a> </div><dt>Inscrit en</dt><dd>février 2009</dd><dt>Messages</dt><dd>762</dd></div><div style="float: right; margin-top: 5px"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="286705" style="cursor: pointer;"></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="286705"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/cross.gif"></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br><b>Informations forums :</b></div><div>Inscription : février 2009</div><div>Messages : 762</div><div>Points : 1 392</div></div></div><dt>Points</dt><dd><span role="points" userid="286705" style="cursor: pointer;">1 392</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/icon1.png" alt="Par défaut" title="Par défaut"> 
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_6462523">
+						<blockquote class="postcontent restore ">
+							Salut,<br>
+<br>
+<div class="bbcode_container">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></tbody></table>
+	<pre class="bbcode_code" style="height:36px;">a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>gauche</pre>
+</div>a-&gt;gauche vaut déjà y-&gt;gauche, ce qui signifie que tu 
+demandes le petit-petit-fils du noeud initial... qui peut être NULL 
+(mais tu appelles la macro SIZE qui essaye de faire NULL-&gt;hauteur). 
+Mais le petit fils gauche gauche peut également être NULL, dans le cas 
+où c'est le petit fils gauche droite qui provoque le déséquilibre.<br>
+<br>
+Il y a plein d'erreurs de ce type, le mieux serait que tu isoles les 4 
+cas de rotation généraux (rotation droite, rotation gauche, rotation 
+gauche droite, rotation droite gauche). Ainsi ta fonction équilibrer ne 
+nécessiterait plus de récursion et de boucle while (car je ne suis pas 
+sur que tu puisses aisément généraliser comme ça), juste des if.<br>
+<br>
+Bonne chance.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_6462523" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/progress.gif" alt="">
+					
+					
+					
+						<a id="qrwq_6462523" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=6462523" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_6462523" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/clear.gif" alt="Répondre avec citation" title="Répondre avec citation">  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p="6462523"> 1</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p="6462523"> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr>
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_6463262">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">21/01/2012,&nbsp;<span class="time">13h00</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post6463262" href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#post6463262" class="postcounter">#3</a><a id="postcount6463262" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction" id="yui-gen10">
+	<a rel="nofollow" class="username offline " href="https://www.developpez.net/forums/u460767/silentline/" title="SilentLine est déconnecté"><strong>SilentLine</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/user-offline.png" alt="SilentLine est déconnecté" title="SilentLine est déconnecté" border="0">
+
+			
+			</div>
+			<span class="usertitle">
+				Nouveau membre du Club
+			</span>
+			
+				<span class="rank"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/nv-carres-1.png" alt="" border=""></span>
+			
+			
+			
+			 
+			
+				<hr>
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/france.gif" title="France">   <a href="https://www.developpez.com/user/profil/460767/SilentLine"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/pro.png" alt="Profil pro" title="Profil pro"></a> </div><dt>Inscrit en</dt><dd>octobre 2011</dd><dt>Messages</dt><dd>25</dd></div><div style="float: right; margin-top: 5px"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="460767" style="cursor: pointer;"></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="460767"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/cross.gif"></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br><b>Informations forums :</b></div><div>Inscription : octobre 2011</div><div>Messages : 25</div><div>Points : 32</div></div></div><dt>Points</dt><dd><span role="points" userid="460767" style="cursor: pointer;">32</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/icon1.png" alt="Par défaut" title="Par défaut"> 
+				</h2>
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_6463262">
+						<blockquote class="postcontent restore ">
+							Bonjour,<br>
+<br>
+Merci de ta réponse, j'ai pris de la distance grâce à elle, voilà la solution fonctionnelle :<br>
+<br>
+<div class="bbcode_container">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></tbody></table>
+	<pre class="bbcode_code" style="height:204px;"><table cellspacing="0" cellpadding="0"><tbody><tr><td width="33" valign="top"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+t_arbre <span style="">*</span>rotation_droite<span style="color: black;">(</span>t_arbre <span style="">*</span>y<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_arbre<span style="">*</span> a <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>y <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="">&amp;&amp;</span> y<span style="">-</span><span style="">&gt;</span>gauche <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        a <span style="">=</span> y<span style="">-</span><span style="">&gt;</span>gauche<span style="">;</span>
+        y<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> a<span style="">-</span><span style="">&gt;</span>droit<span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> y<span style="">;</span>
+&nbsp;
+        a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+            a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        <span style="color: #0000ff;">return</span> a<span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">else</span>
+        <span style="color: #0000ff;">return</span> y<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+t_arbre <span style="">*</span>rotation_gauche<span style="color: black;">(</span>t_arbre <span style="">*</span>x<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    t_arbre<span style="">*</span> a <span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span> <span style="color: black;">(</span>x <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="">&amp;&amp;</span> x<span style="">-</span><span style="">&gt;</span>droit <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span><span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        a <span style="">=</span> x<span style="">-</span><span style="">&gt;</span>droit<span style="">;</span>
+        x<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> a<span style="">-</span><span style="">&gt;</span>gauche<span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> x<span style="">;</span>
+&nbsp;
+        <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="">!</span><span style="">=</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+            a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+        <span style="color: #0000ff;">return</span> a<span style="">;</span>
+    <span style="color: black;">}</span>
+    <span style="color: #0000ff;">else</span>
+        <span style="color: #0000ff;">return</span> x<span style="">;</span>
+<span style="color: black;">}</span>
+&nbsp;
+t_arbre <span style="">*</span>equilibrer_arbre<span style="color: black;">(</span>t_arbre <span style="">*</span>a<span style="color: black;">)</span>
+<span style="color: black;">{</span>
+    <span style="color: #0000ff;">int</span> hd <span style="">=</span> <span style="color: #cc66cc;">0</span><span style="">;</span>
+    <span style="color: #0000ff;">int</span> hp <span style="">=</span> <span style="color: #cc66cc;">0</span><span style="">;</span>
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="color: black;">)</span>
+        <span style="color: #0000ff;">return</span> <span style="color: #0080ff;">NULL</span><span style="">;</span>
+&nbsp;
+    hd <span style="">=</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span> <span style="">-</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">while</span><span style="color: black;">(</span> <span style="color: black;">(</span> hd <span style="">&lt;</span> <span style="color: #cc66cc;">-1</span> <span style="">||</span> hd <span style="">&gt;</span> <span style="color: #cc66cc;">1</span> <span style="color: black;">)</span> <span style="">&amp;&amp;</span> hd <span style="">!</span><span style="">=</span> hp <span style="">&amp;&amp;</span> hd <span style="">!</span><span style="">=</span> <span style="color: black;">(</span> <span style="">-</span> hp <span style="color: black;">)</span> <span style="color: black;">)</span>
+    <span style="color: black;">{</span>
+        hp <span style="">=</span> hd<span style="">;</span>
+        <span style="color: #0000ff;">if</span><span style="color: black;">(</span> hd <span style="">&gt;</span> <span style="color: #cc66cc;">1</span> <span style="color: black;">)</span>
+            a <span style="">=</span> rotation_droite<span style="color: black;">(</span>a<span style="color: black;">)</span><span style="">;</span>
+        <span style="color: #0000ff;">else</span>
+            a <span style="">=</span> rotation_gauche<span style="color: black;">(</span>a<span style="color: black;">)</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> equilibrer_arbre<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span><span style="">;</span>
+        a<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> equilibrer_arbre<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+        hd <span style="">=</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span> <span style="">-</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="">;</span>
+    <span style="color: black;">}</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="">&amp;&amp;</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span> <span style="">&gt;</span> <span style="color: #cc66cc;">1</span> <span style="color: black;">)</span>
+        a<span style="">-</span><span style="">&gt;</span>droit <span style="">=</span> equilibrer_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">if</span><span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>droit <span style="">==</span> <span style="color: #0080ff;">NULL</span> <span style="">&amp;&amp;</span> SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span> <span style="">&gt;</span> <span style="color: #cc66cc;">1</span> <span style="color: black;">)</span>
+        a<span style="">-</span><span style="">&gt;</span>gauche <span style="">=</span> equilibrer_arbre<span style="color: black;">(</span> a<span style="">-</span><span style="">&gt;</span>gauche <span style="color: black;">)</span><span style="">;</span>
+&nbsp;
+    a<span style="">-</span><span style="">&gt;</span>hauteur <span style="">=</span> MAX<span style="color: black;">(</span>SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>gauche<span style="color: black;">)</span>, SIZE<span style="color: black;">(</span>a<span style="">-</span><span style="">&gt;</span>droit<span style="color: black;">)</span><span style="color: black;">)</span><span style="color: #cc66cc;">+1</span><span style="">;</span>
+&nbsp;
+    <span style="color: #0000ff;">return</span> a<span style="">;</span>
+<span style="color: black;">}</span></pre></td></tr></tbody></table></pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_6463262" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/progress.gif" alt="">
+					
+					
+					
+						<a id="qrwq_6463262" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=6463262" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_6463262" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/clear.gif" alt="Répondre avec citation" title="Répondre avec citation">  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p="6463262"> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p="6463262"> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr>
+</li>
+
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+		<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=6463262&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_bottom"><span>+</span> Répondre à la discussion</a>
+<div style="position: absolute; left: 390px; padding-top: 5px; color: green; font-weight: bold; font-size: 12pt">Cette discussion est résolue.</div>
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+<div class="above_threadlist_controls toolsmenu"><center><table style="width: 75%"><tbody><tr><td><a href="http://c.developpez.com/" target="_blank">Actualités</a></td><td><a href="http://c.developpez.com/faq/" target="_blank">FAQ C</a></td><td><a href="http://c.developpez.com/cours/" target="_blank">Tutoriels C</a></td><td><a href="http://c.developpez.com/livres/" target="_blank">Livres C</a></td><td><a href="http://c.developpez.com/telecharger/index/categorie/30/Outils-C-C" target="_blank">Compilateurs et outils C</a></td><td><a href="http://c.developpez.com/telecharger/index/categorie/149/Sources-C" target="_blank">Sources C</a></td><td><a href="http://c.developpez.com/telecharger/index/categorie/451/Bibliotheques-C" target="_blank"></a></td><td><a href="http://gtk.developpez.com/" target="_blank">GTK+</a></td></tr></tbody></table></center></div>
+<div style="clear: both"></div>
+<div class="breadcrumb breadcrumb2">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="https://www.developpez.net/forums/"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/navbit-home2.png" alt="Accueil" title="Accueil"></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Index du forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f7/c-cpp/">C et C++</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f18/c-cpp/c/">C</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f897/c-cpp/c/debuter/">Débuter</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Arbre Binaire et Equilibrage</span></li>
+
+	</ul>
+</div><div id="offresdvp" style="width: 600px; margin: 5px auto 10px auto">	<link rel="stylesheet" type="text/css" href="Arbre%20Binaire%20et%20Equilibrage_fichiers/offres.css">
+
+
+
+	<div id="banner600" class="banner c_ bx3"><div class="banniere"><div class="titreemploi"><span>Offres d'emploi IT</span></div><div class="contenu" style="background:none;">					<div class="informations bannerX3"><div><p class="banner_info" role="titre"><a href="https://emploi.developpez.com/offres/clic/a/108786/t/1/f/600/c/" target="_parent">Développeur informatique confirmé / Scrum Master E-Santé</a></p><p class="banner_info" role="societeLien">&#8627;&nbsp;<a class="" href="https://emploi.developpez.com/offres/liste/a/ANTAL+" target="_parent">ANTAL </a>&nbsp;-&nbsp;France&nbsp;-&nbsp;Montpellier</p></div><div><p class="banner_info" role="titre"><a href="https://emploi.developpez.com/offres/clic/a/117666/t/1/f/600/c/" target="_parent">Manager Groupe</a></p><p class="banner_info" role="societeLien">&#8627;&nbsp;<a class="" href="https://emploi.developpez.com/offres/liste/a/GEOMETRIC+-+An+HCL+Technologies+Company" target="_parent">GEOMETRIC - An HCL Technologies Company</a>&nbsp;-&nbsp;Midi Pyrénées&nbsp;-&nbsp;Toulouse (31000)</p></div><div><p class="banner_info" role="titre"><a href="https://emploi.developpez.com/offres/clic/a/113370/t/1/f/600/c/" target="_parent">Ingénieur développeur JAVA Back End &#150; R&amp;D</a></p><p class="banner_info" role="societeLien">&#8627;&nbsp;<a class="" href="https://emploi.developpez.com/offres/liste/a/CUBE+RH+SASU" target="_parent">CUBE RH SASU</a>&nbsp;-&nbsp;France&nbsp;-&nbsp;Lille</p></div><p class="btn"><a href="http://emploi.developpez.com/" class="boutonLien">Voir plus d'offres</a></p></div>			</div></div></div>
+</div>
+<script type="text/javascript"> $(function() { $("#offresdvp").load("/forums/anooffresdvp.php?rub=3&col=c%2B%2B"); }); </script>
+
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>«</strong>
+			<a href="https://www.developpez.net/forums/d1176975-precedent/c-cpp/c/debuter/arbre-binaire-equilibrage/" rel="nofollow">Discussion précédente</a>
+			|
+			<a href="https://www.developpez.net/forums/d1176975-suivant/c-cpp/c/debuter/arbre-binaire-equilibrage/" rel="nofollow">Discussion suivante</a>
+			<strong>»</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Discussions similaires</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="https://www.developpez.net/forums/d538296/autres-langages/autres-langages/ada/equilibrage-d-arbre-binaire-passant-tableau/" title="Bonjour, 
+ 
+J'ai un petit...">Equilibrage d'un arbre binaire en passant par un tableau</a></h6>
+    <div class="starter_forum">
+      Par Invité dans le forum Ada
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 7
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 28/04/2008, <span class="time">20h55</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="https://www.developpez.net/forums/d2099/c-cpp/c/afficher-arbre-binaire-structure/" title="Comment faire pour faire un...">Afficher un arbre binaire avec sa structure</a></h6>
+    <div class="starter_forum">
+      Par PhoneKilleR dans le forum C
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 7
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 24/04/2008, <span class="time">00h24</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="https://www.developpez.net/forums/d459800/general-developpement/algorithme-mathematiques/algorithmes-structures-donnees/equilibrage-posteriori-d-arbre-binaire/" title="(Supprimé)">Equilibrage à posteriori d'un arbre binaire</a></h6>
+    <div class="starter_forum">
+      Par Invité dans le forum Algorithmes et structures de données
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 7
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 17/12/2007, <span class="time">21h30</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="https://www.developpez.net/forums/d3292/general-developpement/algorithme-mathematiques/algorithmes-structures-donnees/arbre-binaire/" title="Je suis a la rechercher d' un..."> Arbre binaire</a></h6>
+    <div class="starter_forum">
+      Par Heaven dans le forum Algorithmes et structures de données
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 6
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 02/02/2004, <span class="time">20h01</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="https://www.developpez.net/forums/d6925/autres-langages/pascal/langage/lg-probleme-creation-arbre-binaire/" title="je n'arrive pas à créer un...">[LG]probleme de creation arbre binaire</a></h6>
+    <div class="starter_forum">
+      Par jsaviola dans le forum Langage
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 06/01/2004, <span class="time">21h57</span>
+      </div>
+  </div>
+</li>
+			</ol>
+		</div>
+	</div>
+
+
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block2">
+			<h4 class="blockhead options_correct">Partager</h4>
+			<div id="social_bookmarks_list" class="thread_info_block blockbody formcontrols floatcontainer options_correct">
+				<h5 class="blocksubhead">Partager</h5>
+				<ul class="icon_list"><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.viadeo.com/shareit/share/?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975&amp;title=Arbre+Binaire+et+Equilibrage" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_viadeo.gif" alt="Envoyer la discussion sur Viadeo" title="Envoyer la discussion sur Viadeo"></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://twitter.com/timeline/home?status=Arbre+Binaire+et+Equilibrage+https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_twitter.png" alt="Envoyer la discussion sur Twitter" title="Envoyer la discussion sur Twitter"></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975&amp;title=Arbre+Binaire+et+Equilibrage" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_google.gif" alt="Envoyer la discussion sur Google" title="Envoyer la discussion sur Google"></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_facebook.gif" alt="Envoyer la discussion sur Facebook" title="Envoyer la discussion sur Facebook"></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://digg.com/submit?phrase=2&amp;url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975&amp;title=Arbre+Binaire+et+Equilibrage" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_digg.gif" alt="Envoyer la discussion sur Digg" title="Envoyer la discussion sur Digg"></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://del.icio.us/post?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975&amp;title=Arbre+Binaire+et+Equilibrage" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_delicious.gif" alt="Envoyer la discussion sur Delicious" title="Envoyer la discussion sur Delicious"></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.myspace.com/Modules/PostTo/Pages/?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975&amp;t=Arbre+Binaire+et+Equilibrage" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_myspace.gif" alt="Envoyer la discussion sur MySpace" title="Envoyer la discussion sur MySpace"></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://bookmarks.yahoo.com/toolbar/savebm?opener=&amp;u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1176975&amp;t=Arbre+Binaire+et+Equilibrage" target="socialbookmark"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/bookmarksite_yahoo.gif" alt="Envoyer la discussion sur Yahoo" title="Envoyer la discussion sur Yahoo"></a>
+	
+</li></ul>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="/forums/" method="get" id="footer_select" class="footer_select">
+
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="https://www.developpez.net/forums/sendmessage.php" rel="nofollow" accesskey="9">Nous contacter</a></li>
+		<li><a href="http://www.developpez.com/">Developpez.com</a></li>
+		
+		
+		
+		
+		
+		
+		<li><a href="https://www.developpez.net/forums/d1176975/c-cpp/c/debuter/arbre-binaire-equilibrage/#top" onclick="document.location.hash='top'; return false;">Haut de page</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+</div>
+ 
+
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28115938-2']);
+  _gaq.push(['_setCustomVar', 1, 'rubrique', 'c', 3]);
+  _gaq.push(['_setCustomVar', 2, 'type', 'Autre', 3]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/compter-3.gif" alt="" width="1" height="1"><script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/show_i"></script><script type="text/javascript" src="Arbre%20Binaire%20et%20Equilibrage_fichiers/show_i_002"></script><script type="text/javascript">var COmplet=0;if(!document.getElementById("RLISlqbpEKnU")){COmplet=1;var c=document.createElement("img");c.src="https://compteur.developpez.com/spe-1";c.style="position: absolute; left: 3px; top: 2px";document.body.appendChild(c);}else{var c=document.createElement("img");c.src="https://compteur.developpez.com/spe-0";c.style="position: absolute; left: 3px; top: 2px";document.body.appendChild(c);}var XCOmplet=0;if(!document.getElementById("iZa4cCaP9NJh")){XCOmplet=1;var c=document.createElement("img");c.src="https://compteur.developpez.com/spea-1";c.style="position: absolute; left: 4px; top: 3px";document.body.appendChild(c);}else{var c=document.createElement("img");c.src="https://compteur.developpez.com/spea-0";c.style="position: absolute; left: 4px; top: 3px";document.body.appendChild(c);}</script><script type="text/javascript">$(function(){$("#ol3zi0o").load("/template/ol3zi0o"+COmplet+".jpg");$("#ph3dn4v").load("/template/ph3dn4v"+COmplet+".jpg");});</script>
+</div>
+</section><div id="RLISlqbpEKnU" style="display: none;"></div><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/spe-0.gif" style="position: absolute; left: 3px; top: 2px;"><img src="Arbre%20Binaire%20et%20Equilibrage_fichiers/spea-1.gif" style="position: absolute; left: 4px; top: 3px;">
+
+<footer>
+<div id="gabarit_responsable">
+		<a href="https://club.developpez.com/contacts/contribuer">Contacter</a> le responsable de la rubrique C
+	</div>
+
+<ul id="gabarit_pied">
+	<li><a href="https://club.developpez.com/contacts/">Nous contacter</a>
+	</li><li><a href="https://www.developpez.com/participez/">Participez</a>
+	</li><li><a href="https://www.developpez.com/hebergement/">Hébergement</a>
+	</li><li><a href="https://www.developpez.com/legal/">Informations légales</a>
+	</li><li>Partenaire : <a rel="nofollow" href="https://www.planethoster.com/fr/" target="_blank">Hébergement Web</a>
+</li></ul>
+
+<p id="gabarit_copyright">Copyright © 2000-2019 - www.developpez.com</p>
+<p id="gabarit_pied_mobile">Partenaire : <a rel="nofollow" href="https://www.planethoster.com/fr/" target="_blank">Hébergement Web</a></p>
+
+</footer>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost && (typeof fetch_object != 'undefined')){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('https://www.developpez.net/forums/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+
+</body></html>

@@ -1,0 +1,60 @@
+
+VERSION : 0.2.0
+
+DATE : 01 Octobre 2016
+
+CONTENU 
+=======
+
+JMCT.zip contient : 
+  1. JMCT.jar
+  2. Lisez moi
+  3. exemple.mct
+  4. répertoire 'lib' qui contient : 
+	1.fichier Parametres.class
+	
+
+
+INSTALLATION 
+============
+
+1. vérifier si la date système à jour.
+2. Dezipper le fichier JMCT.zip;
+3. ne pas renommer 'JMCT.jar' et le répertoire 'lib' non plus.
+4. ne pas supprimer le fichier parametres.class du répertoire 'lib'. 
+
+
+NOUVEAUTES 
+==========
+
+01. Créer un ou plusieurs MCT avec JMCT.
+02. Fermer un MCT ou Fermer tous les MCT. 
+03. Copier/coller les éléments du MCT.
+04. Personnaliser JMCT en saisissant le nom du Développeur afin d'enrichir l'historique du MCT.
+05. Accéder aux dernières informations disponibles sur le site (dérnière version dispo, les nouveautés, ..) via une fenêtre. 
+06. Garder l'historique des modifications portées sur le MCT.
+07. Possibilité de rajouter des notes / des commentaires pour chaque MCT.
+08. Rajouter des Postits.
+09. le fond de la fenêtre MCT plus convivial.
+10. sauvegarde automatique de votre environnement de travail et le répertoire de travail. 
+11. Imprimer un MCT
+
+
+PROCHAINES VERSIONS
+===================
+- Retours arrière/ Avant (CTRL + Z/ CTRL +Y).
+- Manuel utilisateur (en cours de rédaction).
+- etc. 
+
+
+
+IMPORTANT
+=========
+
+   ---> N'oubliez pas de m'envoyer vos remarques et suggestions par mail : jmerise@jfreesoft.com 
+
+
+
+
+
+

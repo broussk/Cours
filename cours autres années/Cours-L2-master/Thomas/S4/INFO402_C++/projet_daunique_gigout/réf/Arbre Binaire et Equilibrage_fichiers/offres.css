@@ -1,0 +1,425 @@
+/************************************************************/
+/***** BANNIERE EMPLOI BY ATOMYA RISE ***********************/
+/************************************************************/
+
+.banner { position: relative; }
+
+#banner160 { width:160px; height:600px; text-align:center; }
+#banner300 { width:298px; height:248px; }
+#banner600 { width:598px; height:198px; }
+#banner728 { width:728px; height:90px; }
+
+#banner160 .banniere,
+#banner300 .banniere, 
+#banner600 .banniere, 
+#banner728 .banniere {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	width:inherit; 
+	height:inherit; 
+	background-color:#263F4F; 
+	-webkit-border-radius: .25rem .25rem 0 0; 
+	border-radius: .25rem .25rem 0 0;
+	cursor:pointer;
+}
+#banner728 .banniere {
+	-webkit-border-radius: .25rem 0 0 .25rem; 
+	border-radius: .25rem 0 0 .25rem;
+}
+
+#banner160.bx3 .banniere, 
+#banner300.bx3 .banniere, 
+#banner600.bx3 .banniere, 
+#banner728.bx3 .banniere {
+	cursor:default;
+}
+
+/* CLIC BANNIERE */
+a.banClicTotal { 
+	position:absolute; 
+	top:-28px; 
+	left:-4px;  
+	cursor:pointer; 
+	z-index:2;
+	-webkit-border-radius: .25rem .25rem 0 0; 
+	border-radius: .25rem .25rem 0 0;
+}
+a.banClicTotal:hover { background-color: #15385c1a; }
+#banner160 a.banClicTotal { width:160px; height:600px; }
+#banner300 a.banClicTotal { width:300px; height:250px; }
+#banner600 a.banClicTotal { width:600px; height: 200px; }
+#banner728 a.banClicTotal { top:-4px; left:-28px; width:728px; height:90px; -webkit-border-radius: .25rem 0 0 .25rem; border-radius: .25rem 0 0 .25rem; }
+
+/* BANDEAU */
+.titreemploi { 
+	color:#fff; 
+	background-color:#263F4F; 
+	position: absolute; 
+	top:1px; 
+	left:4px; 
+	font: normal .7rem Tahoma,sans-serif; 
+	letter-spacing:1px; 
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+}
+#banner300.banner .titreemploi, 
+#banner160.banner .titreemploi, 
+#banner600.banner .titreemploi { height:28px; }
+.titreemploi span {
+	display:block;
+	position:relative;
+	left:-1px;
+    transform: rotate(270deg) ;
+    -webkit-transform: rotate(270deg) ;
+    -moz-transform: rotate(270deg) ;
+    -o-transform: rotate(270deg) ;
+    -ms-transform: rotate(270deg) ;
+	white-space: nowrap;
+}
+
+#banner160.banner .titreemploi span, 
+#banner300.banner .titreemploi span, 
+#banner600 .titreemploi span { 
+	top:3px; 
+	transform:none; 
+	-webkit-transform:none; 
+	-moz-transform:none; 
+	-o-transform:none; 
+	-ms-transform:none; 
+	margin:0 auto; 
+	text-align:center; 
+}
+#banner160.banner .titreemploi { width:152px; }
+#banner300.banner .titreemploi { width:290px; }
+#banner600 .titreemploi {width:calc(100% - 8px); }
+#banner728.banner .titreemploi { height:calc(100% - 2px); width:20px; line-height: calc(100% - 2px); }
+#banner728.banner .titreemploi span { top:50px; }
+
+/* CONTENU */
+.contenu { 
+	position:absolute; 
+	top: 28px;
+	left: 4px;
+	width: 152px;
+	height: 547px;
+	background-color: #E3F4FF !important;
+	color: #263F4F;
+	text-align: left;
+}
+#banner300 .contenu { width: 290px; height: 216px; }
+#banner600 .contenu { width: calc(100% - 8px); height: calc(100% - 32px); }
+#banner728 .contenu { top: 4px; left: 28px; width: calc(100% - 32px); height: calc(100% - 8px); }
+
+#banner160.bx3 .contenu { height:568px; }
+
+/* LES INFOS */
+.informations { position:relative; z-index:1;padding: 10px; }
+#banner160 .informations { width: calc(100% - 19px); height: calc(100% - 19px); }
+#banner300 .informations { width: calc(100% - 19px); height: calc(100% - 20px); }
+#banner600 .informations { width: calc(100% - 20px); height: calc(100% - 20px); }
+#banner728 .informations { width: calc(100% - 20px); height: calc(100% - 8px); padding:4px 10px; }
+
+#banner600 .bannerX3 { width: calc(100% - 19px); height: calc(100% - 19px); }
+#banner728 .bannerX3 { width: calc(100% - 19px); height: calc(100% - 8px); }
+
+#banner160 .bannerX3 div, 
+#banner300 .bannerX3 div, 
+#banner600 .bannerX3 div { display:grid; align-content:stretch; }
+
+#banner160 .bannerX3 div:nth-child(2) { border-top:1px solid #718999; border-bottom:1px solid #718999; }
+
+#banner160 .bannerX3 div { height: 177px; }
+#banner300 .bannerX3 div { height: 65px; }
+#banner600 .bannerX3 div { height: 49px; }
+
+#banner160 .bannerX3 div:nth-child(1) { align-content:stretch; }
+#banner300 .bannerX3 div:nth-child(1), 
+#banner600 .bannerX3 div:nth-child(1) { align-content:baseline; }
+
+#banner160 .bannerX3 div:nth-child(3) { align-content:stretch; }
+#banner300 .bannerX3 div:last-child, 
+#banner600 .bannerX3 div:nth-child(3) { align-content:end; }
+
+.banner_info { color:#263F4F; margin-left:12px; font: normal .75rem Arial,sans-serif; }
+p.banner_info { margin: 8px 0 10px 0; }
+.banner_info[role='lienDansTitre'] { margin-left: 4px; }
+#banner160 p.banner_info { text-align:center; margin:30px 0; }
+
+#banner160 p.banner_info { margin-bottom:40px; }
+#banner160 .bannerX3 p.banner_info { margin-bottom:20px; }
+#banner300 .bannerX3 p.banner_info span { margin-left:5px; }
+
+#banner160 .bannerX3 p[role='societeLien'] { padding-bottom:0; margin-top:0; margin-bottom:0; }
+#banner160 .bannerX3 div:last-child p[role='societeLien'] { margin-bottom:0; padding-bottom:0; }
+
+p[role='titre'] { padding: 0; margin: 5px 0 0; font: bold 13pt Arial,sans-serif; color: #263F4F; word-wrap: break-word; width: 100%;  }
+#banner160 p[role='titre'] { margin-top:20px; margin-bottom:40px; } 
+#banner300 p[role='titre'] { margin-bottom: 20px; } 
+#banner600 p[role='titre'] { margin-bottom: 20px; } 
+#banner728 p[role='titre'] { margin: 1px 0 0; padding-bottom: 0; margin-bottom: 8px; } 
+
+#banner160 .bannerX3 p[role='titre'] { margin-bottom:0; } 
+#banner728 .bannerX3 p[role='titre'] { margin: 3px 0 0; width: calc(100% + 90px); padding-bottom: 2px; }
+#banner728 .bannerX3 p[role='titre']:first-child { margin-top:-1px; }
+#banner600 .bannerX3 p[role='titre'], 
+#banner728 .bannerX3 p[role='titre'] { overflow:hidden; white-space:nowrap; width: calc(100% - 10px); } 
+#banner300 .bannerX3 p[role='titre'] { margin-bottom:0; }
+#banner600 .bannerX3 p[role='titre'] { margin-bottom:2px; }
+#banner300 .bannerX3 p[role='titre'], 
+#banner600 .bannerX3 p[role='titre'] { margin-top:0; }
+#banner300 .bannerX3 p[role='titre']:nth-child(n + 2) { margin-top: 0; }  
+#banner600 .bannerX3 p[role='titre']:nth-child(n + 2) { margin-top: 8px; } 
+
+p[role='titre'] a:link, 
+p[role='titre'] a:active, 
+p[role='titre'] a:visited { 
+	font: bold .8rem Arial,sans-serif; 
+	color:#263F4F !important; 
+	text-decoration:none !important; 
+} 
+p[role='titre'] a:hover, 
+p[role='titre'] a:hover, 
+p[role='titre'] a:hover { text-decoration:underline; } 
+
+#banner300 .bannerX3 p[role='societeLien'], #banner600 .bannerX3 p[role='societeLien'] { margin: 0 auto 0 20px; line-height:18px; }
+#banner300 .bannerX3 p[role='titre'] span a { font-weight:normal; text-decoration:underline; }
+
+#banner160 p[role='societeLien'] a:link, #banner160 p[role='societeLien'] a:active, #banner160 p[role='societeLien'] a:visited, 
+#banner300 p[role='societeLien'] a:link, #banner300 p[role='societeLien'] a:active, #banner300 p[role='societeLien'] a:visited, 
+#banner600 p[role='societeLien'] a:link, #banner600 p[role='societeLien'] a:active, #banner600 p[role='societeLien'] a:visited, 
+#banner728 p[role='societeLien'] a:link, #banner728 p[role='societeLien'] a:active, #banner728 p[role='societeLien'] a:visited, 
+#banner160 [role='lienDansTitre'] a:link, #banner160 [role='lienDansTitre'] a:active, #banner160 [role='lienDansTitre'] a:visited, 
+#banner300 [role='lienDansTitre'] a:link, #banner300 [role='lienDansTitre'] a:active, #banner300 [role='lienDansTitre'] a:visited, 
+#banner600 [role='lienDansTitre'] a:link, #banner600 [role='lienDansTitre'] a:active, #banner600 [role='lienDansTitre'] a:visited, 
+#banner728 [role='lienDansTitre'] a:link, #banner728 [role='lienDansTitre'] a:active, #banner728 [role='lienDansTitre'] a:visited { 
+	font: normal .7rem Arial,sans-serif !important; 
+	color: #4D6D81; 
+	text-decoration: underline; 
+}
+
+#banner160 .bannerX3 p[role='societeLien'] a:link, #banner160 .bannerX3 p[role='societeLien'] a:active, #banner160 .bannerX3 p[role='societeLien'] a:visited {
+	text-transform:uppercase;
+	text-decoration:none;
+	letter-spacing:1px;
+	font-weight:bold !important;
+}
+
+/* BOUTON BANNER 600 */
+.boutonLien {
+	background: #263f4f url(https://forum.developpez.be/images/buttons/newbtn_middle.png) repeat-x left top;
+	_background-image: none;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	color: rgb(255,255,255) !important;
+	text-decoration:none !important;
+	font: normal 9pt Arial,sans-serif;
+	padding: 4px 12px 3px;
+	border: 0;
+	cursor: pointer;
+}
+.boutonLien:first-child { margin-right: 5px; }
+.boutonLien:link, .boutonLien:active, .boutonLien:visited { text-decoration: none; }
+.boutonLien:hover { 
+	background: #2f4c60 url(https://forum.developpez.be/images/buttons/newbtn_middle.png) repeat-x left top; 
+	color: rgb(255,255,255) !important; 
+	text-decoration: none !important; 
+}
+p.btn { position:absolute; right:3px; bottom:10px; color:#243C47; margin: 0; font-size:1em; }
+
+/* LOCALISATION */
+#banner728 p[role='localisation'], 
+#banner728 p[role='infosPoste'], 
+#banner728 p[role='competencesRequises'] { margin:4px 0 0; }
+#banner728 p[role='localisation'] { margin-bottom: 8px; }
+#banner728 .bannerX3 p[role='localisation'], 
+#banner728 .bannerX3 p[role='infosPoste'], 
+#banner728 .bannerX3 p[role='competencesRequises'] { margin:2px 0 0; }
+#banner160 p[role='localisation'] span.u_ville, 
+#banner300 p[role='localisation'] span.u_ville, 
+#banner600 p[role='localisation'] span.u_ville, 
+#banner728 p[role='localisation'] span.u_ville { font: bold 10pt Arial,sans-serif; color:#263F4F; }
+#banner160 p[role='localisation'] span.u_ville { font-size:9pt; }
+
+/* METIER */
+#banner160 p[role='metier'] { 
+	font-size:.75rem; 
+	font-weight:bold; 
+	text-align:center; 
+	text-transform:uppercase; 
+	line-height:20px; 
+	letter-spacing:1px; 
+	word-wrap: break-word; 
+}
+
+/* DESCRIPTION PROFIL */
+#banner160 p[role='description'] { text-align:center; }
+#banner160 p[role='description'] span { font-weight:bold; display:block; margin-bottom:4px; }
+
+/* LOGO / NOM SOCIETE */
+#banner160 .u_logo, 
+#banner300 .u_logo, 
+#banner600 .u_logo, 
+#banner728 .u_logo { 
+	position:absolute; 
+	left: 0;
+	width: 100%;
+	height: 24px;
+	white-space:nowrap; 
+	font-size:.7rem; 
+	text-align:center; 
+	bottom:0; 
+	right:4px; 
+	color:#5b6f78;
+}
+#banner160 .u_logo { top: 547px; height: 22px; }
+#banner300 .u_logo { top: 190px; }
+#banner600 .u_logo { top: 140px; }
+#banner728 .u_logo { top: 52px; width: calc(100% - 5px); }
+
+#banner160 .u_logo img, 
+#banner300 .u_logo img, 
+#banner600 .u_logo img, 
+#banner728 .u_logo img { max-width:80px; max-height:80px; position:absolute; right:4px; bottom:1px; }
+#banner300 .u_logo img, 
+#banner600 .u_logo img { right:7px; bottom:2px; }
+
+#banner160 .u_logo span, 
+#banner300 .u_logo span, 
+#banner600 .u_logo span, 
+#banner728 .u_logo span { 
+	position: inherit; 
+	top:0;
+	left:0;
+	bottom:0;
+	right: 0; 
+	line-height:24px;
+	color: #263F4F;
+	background-color: none;
+	border: 0;
+	padding: 2px 5px;
+	letter-spacing:.1rem;
+	text-align:right;
+}
+#banner160 .u_logo span { color:#fff; text-align:center; line-height:20px; }
+
+/************************************************************/
+/***** THEME BLEU *******************************************/
+/************************************************************/
+
+.c_bleu .banniere, 
+.c_cbleu .banniere, 
+.c_bleu .titreemploi, 
+.c_cbleu .titreemploi { background-color:#2f72a1 !important; }
+.c_bleu .contenu { background-color:#94dcfe !important; }
+.c_bleu a, .c_cbleu a, .c_bleu a:link, .c_bleu a:active, .c_bleu a:visited, .c_bleu .banner_info, .c_bleu .u_ville { color:#15385c !important; }
+.c_cbleu a, .c_cbleu a:link, .c_cbleu a:active, .c_cbleu a:visited, .c_cbleu .banner_info, .c_cbleu .u_ville { color:#15385c !important; }
+.c_bleu a.boutonLien, .c_cbleu a.boutonLien { color: #fff !important; }
+.c_bleu a.banClicTotal:hover, .c_cbleu a.banClicTotal:hover { background-color: #428ac033 !important; }
+#banner160.c_bleu .u_logo span, #banner160.c_cbleu .u_logo span { background-color: #2f72a1 !important; }
+#banner160.c_bleu .bannerX3 div:nth-child(2), #banner160.c_cbleu .bannerX3 div:nth-child(2) { border-color:#2f72a1 !important; }
+#banner600.c_bleu .boutonLien, #banner600.c_cbleu .boutonLien { background-color: #2f72a1; }
+#banner600.c_bleu .boutonLien:hover, #banner600.c_cbleu .boutonLien:hover { background-color: #367eb1; }
+
+/************************************************************/
+/***** THEME CIEL *******************************************/
+/************************************************************/
+
+.c_ciel .banniere, 
+.c_cciel .banniere, 
+.c_ciel .titreemploi, 
+.c_cciel .titreemploi { background-color:#0096ff !important; }
+.c_ciel .contenu { background-color:#cceaff !important; }
+.c_ciel a, .c_cciel a, .c_ciel a:link, .c_ciel a:active, .c_ciel a:visited, .c_ciel .banner_info, .c_ciel .u_ville { color:#15385c !important; }
+.c_cciel a, .c_cciel a:link, .c_cciel a:active, .c_cciel a:visited, .c_cciel .banner_info, .c_cciel .u_ville { color:#15385c !important; }
+.c_ciel a.boutonLien, .c_cciel a.boutonLien { color: #fff !important; }
+.c_ciel a.banClicTotal:hover, .c_cciel a.banClicTotal:hover { background-color: #78c5ff33 !important; }
+#banner160.c_ciel .u_logo span, #banner160.c_cciel .u_logo span { background-color: #0096ff !important; }
+#banner160.c_ciel .bannerX3 div:nth-child(2), #banner160.c_cciel .bannerX3 div:nth-child(2) { border-color:#0096ff !important; }
+#banner600.c_ciel .boutonLien, #banner600.c_cciel .boutonLien { background-color: #0096ff; }
+#banner600.c_ciel .boutonLien:hover, #banner600.c_cciel .boutonLien:hover { background-color: #2691dc; }
+
+/************************************************************/
+/***** THEME JAUNE ******************************************/
+/************************************************************/
+
+.c_jaune .banniere, 
+.c_cjaune .banniere, 
+.c_jaune .titreemploi, 
+.c_cjaune .titreemploi { background-color:#ff8700 !important; }
+.c_jaune .contenu { background-color:#ffea00 !important; }
+.c_jaune a, .c_cjaune a, .c_jaune a:link, .c_jaune a:active, .c_jaune a:visited, .c_jaune .banner_info, .c_jaune .u_ville { color:#000 !important; }
+.c_cjaune a, .c_cjaune a:link, .c_cjaune a:active, .c_cjaune a:visited, .c_cjaune .banner_info, .c_cjaune .u_ville { color:#000 !important; }
+.c_jaune a.boutonLien, .c_cjaune a.boutonLien { color: #fff !important; }
+.c_jaune a.banClicTotal:hover, .c_cjaune a.banClicTotal:hover { background-color: #c1844033 !important; }
+#banner160.c_jaune .u_logo span, #banner160.c_cjaune .u_logo span { background-color: #ff8700 !important; }
+#banner160.c_jaune .bannerX3 div:nth-child(2), #banner160.c_cjaune .bannerX3 div:nth-child(2) { border-color:#ff8700 !important; }
+#banner600.c_jaune .boutonLien, #banner600.c_cjaune .boutonLien { background-color: #ff8700; }
+#banner600.c_jaune .boutonLien:hover, #banner600.c_cjaune .boutonLien:hover { background-color: #eb7d00; }
+
+/************************************************************/
+/***** THEME VERT *******************************************/
+/************************************************************/
+
+.c_vert .banniere, 
+.c_cvert .banniere, 
+.c_vert .titreemploi, 
+.c_cvert .titreemploi { background-color:#147152 !important; }
+.c_vert .contenu { background-color:#00ffac !important; }
+.c_vert a, .c_cvert a, .c_vert a:link, .c_vert a:active, .c_vert a:visited, .c_vert .banner_info, .c_vert .u_ville { color:#0c4130 !important; }
+.c_cvert a, .c_cvert a:link, .c_cvert a:active, .c_cvert a:visited, .c_cvert .banner_info, .c_cvert .u_ville { color:#0c4130 !important; }
+.c_vert a.boutonLien, .c_cvert a.boutonLien { color: #fff !important; }
+.c_vert a.banClicTotal:hover, .c_cvert a.banClicTotal:hover { background-color: #20b18033 !important; }
+#banner160.c_vert .u_logo span, #banner160.c_cvert .u_logo span { background-color: #147152 !important; }
+#banner160.c_vert .bannerX3 div:nth-child(2), #banner160.c_cvert .bannerX3 div:nth-child(2) { border-color:#147152 !important; }
+#banner600.c_vert .boutonLien, #banner600.c_cvert .boutonLien { background-color: #147152; }
+#banner600.c_vert .boutonLien:hover, #banner600.c_cvert .boutonLien:hover { background-color: #188863; }
+
+/************************************************************/
+/***** THEME ROUGE ******************************************/
+/************************************************************/
+
+.c_rouge .banniere, 
+.c_crouge .banniere, 
+.c_rouge .titreemploi, 
+.c_crouge .titreemploi { background-color:#711414 !important; }
+.c_rouge .contenu { background-color:#ffb2b2 !important; }
+.c_rouge a, .c_crouge a, .c_rouge a:link, .c_rouge a:active, .c_rouge a:visited, .c_rouge .banner_info, .c_rouge .u_ville { color:#2b0808 !important; }
+.c_crouge a, .c_crouge a:link, .c_crouge a:active, .c_crouge a:visited, .c_crouge .banner_info, .c_crouge .u_ville { color:#2b0808 !important; }
+.c_rouge a.boutonLien, .c_crouge a.boutonLien { color: #fff !important; }
+.c_rouge a.banClicTotal:hover, .c_crouge a.banClicTotal:hover { background-color: #71141433 !important; }
+#banner160.c_rouge .u_logo span, #banner160.c_crouge .u_logo span { background-color: #711414 !important; }
+#banner160.c_rouge .bannerX3 div:nth-child(2), #banner160.c_crouge .bannerX3 div:nth-child(2) { border-color:#711414 !important; }
+#banner600.c_rouge .boutonLien, #banner600.c_crouge .boutonLien { background-color: #711414; }
+#banner600.c_rouge .boutonLien:hover, #banner600.c_crouge .boutonLien:hover { background-color: #8d1818; }
+
+/************************************************************/
+/***** THEME NOIR *******************************************/
+/************************************************************/
+
+.c_noir .banniere, 
+.c_cnoir .banniere, 
+.c_noir .titreemploi, 
+.c_cnoir .titreemploi { background-color:#000 !important; }
+.c_noir .contenu { background-color:#d1d1d1 !important; }
+.c_noir a, .c_cnoir a, .c_noir a:link, .c_noir a:active, .c_noir a:visited, .c_noir .banner_info, .c_noir .u_ville { color:#000 !important; }
+.c_cnoir a, .c_cnoir a:link, .c_cnoir a:active, .c_cnoir a:visited, .c_cnoir .banner_info, .c_cnoir .u_ville { color:#000 !important; }
+.c_noir a.boutonLien, .c_cnoir a.boutonLien { color: #fff !important; }
+.c_noir a.banClicTotal:hover, .c_cnoir a.banClicTotal:hover { background-color: #00033 !important; }
+#banner160.c_noir .u_logo span, #banner160.c_cnoir .u_logo span { background-color: #000 !important; }
+#banner160.c_noir .bannerX3 div:nth-child(2), #banner160.c_cnoir .bannerX3 div:nth-child(2) { border-color:#000 !important; }
+#banner600.c_noir .boutonLien, #banner600.c_cnoir .boutonLien { background-color: #000; }
+#banner600.c_noir .boutonLien:hover, #banner600.c_cnoir .boutonLien:hover { background-color: #111; }
+
+/************************************************************/
+/***** SUPPRESSION FOND SUR THEME ***************************/
+/************************************************************/
+.c_cdefaut .contenu, 
+.c_cbleu .contenu, 
+.c_cciel .contenu, 
+.c_cjaune .contenu, 
+.c_cvert .contenu, 
+.c_crouge .contenu, 
+.c_cnoir .contenu { background-color:#fff !important; }

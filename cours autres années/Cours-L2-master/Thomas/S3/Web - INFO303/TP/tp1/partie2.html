@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Formulaires</title>
+  </head>
+  <body>
+    <form>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Entrez votre email ici" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Mot de passe</label>
+        <input type="password" minlength="8" pattern="[(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir au moins une majuscule, une minuscule et un caractère spécial. Minimum 8 de longueur" class="form-control" id="inputPassword4" placeholder="Votre mot de passe" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Confirmation mot de passe</label>
+        <input type="password" minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" class="form-control" id="inputPassword4" placeholder="Retapez votre mot de passe" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPseudo">Pseudo</label>
+        <input type="text" pattern="[A-Za-z]{3,}" title="Votre pseudo doit contenir au minimum 3 caractères" class="form-control" id="inputAddress" placeholder="Entrez votre pseudo ici" required>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Femme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Homme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked>
+        <label class="form-check-label" for="inlineRadio3">Autre</label>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
+          <label class="form-check-label" for="gridCheck">
+            Accepter les termes
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Créer un compte</button>
+    </form>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+  </body>
+</html>

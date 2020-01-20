@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Partie 3</title>
+  </head>
+  <body>
+    <h2>Partie 3 / JavaScript basique</h2>
+    <!-- https://www.abeautifulsite.net/adding-and-removing-elements-on-the-fly-using-javascript -->
+    <div class="form-group">
+      <label>Entrez le texte que vous souhaitez</label>
+      <textarea class="form-control col-md-4" id="insertText" rows="3"></textarea>
+      <button type="submit" class="btn btn-primary" onClick="pasteText();">Recopier le texte</button>
+    </div>
+
+    <div id="copyHere">
+      <button type="submit" class="btn btn-primary" onclick="removeElement(para1)"></button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+      var paraId = 0;
+      function ajouterBoite(){
+        var input= document.getElementById("insertText");
+        var dest = document.getElementById("copyHere");
+
+        dest.innerHTML += "<div"
+      }
+
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+<!-- Code pour ajouter du texte dynamiquement
+HTML
+ <div>
+  <label for="txt">Un texte quelconque</label>
+  <input type="text" id="inputText" placeholder="Entrez du texte">
+  <button type="subtmit" class="btn btn-primary" onClick="recupTexte();">Envoyer</button>
+  <button type="reset" class="btn btn-primary" onClick="ajouterTexte();">Envoyer</button>
+  <p id="ajouter"></p>
+</div>
+
+JS
+function recupTexte(){
+  var texte = document.getElementById("inputText").value;
+  alert(texte);
+
+function ajouterTexte(){
+  document.getElementById("ajouter").innerHTML = document.getElementById("inputText").value;
+}
+-->
+
+<!-- Menu déroulant pour afficher/masquer texte
+HTML
+<form>
+<select id="showOrHide" name="showOrHide" size="1" onchange="toggleDiv(this);">
+  <option value=0>Masquer</option>
+  <option value=1>Afficher</option>
+</select>
+</form>
+<div id="hidden_div" style="display: none;">
+  <p>Un texte quelconque</p>
+</div>
+
+JS
+function toggleDiv(elem){
+  if(elem.value == 1){
+    document.getElementById('hidden_div').style.display = "block";
+  }
+  else if(elem.value == 0){
+    document.getElementById('hidden_div').style .display = "none";
+  }
+}
+-->

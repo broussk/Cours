@@ -1,0 +1,5 @@
+     1	Coucou
+     2	je su     is
+     3	un
+     4	fichier
+     5	texte

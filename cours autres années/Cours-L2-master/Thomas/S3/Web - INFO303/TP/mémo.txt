@@ -1,0 +1,15 @@
+<!-- Fichier de notes utiles au dév HTML / PHP / CSS / JS -->
+
+The below will allos all Case Letters , Numbers & Special characters
+[a-zA-Z_0-9@\!#\$\^%&*()+=\-[]\\\';,\.\/\{\}\|\":<>\? ]
+
+// Only Numeric
+var pattern = /^\d{5}([\-]\d{4})?$/;
+
+// all case Characters with Special Characters & Numeric
+var pattern = /^[a-zA-Z_0-9@\!#\$\^%&*()+=\-[]\\\';,\.\/\{\}\|\":<>\? ]+$/;
+
+// Swedish Characters
+var pattern = /^[\wåäöÅÄÖ]+$/;
+
+http://html5pattern.com/

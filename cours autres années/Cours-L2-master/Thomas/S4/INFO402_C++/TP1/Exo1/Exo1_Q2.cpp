@@ -1,0 +1,1 @@
+//En deduire sur votre systeme quels sont les types de longueur varibale à utiliser entier en 8,16,32 et 64 bits

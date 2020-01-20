@@ -1,0 +1,2 @@
+ <!-- Question 2 -->
+ Si ce fichier est accessible à l'extérieur, il faudra le protéger sinon la base de donnée devient acessible partout aussi

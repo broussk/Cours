@@ -1,0 +1,31 @@
+/* Calcul de j qui réalise la distance minimale */
+Données
+  d[A] : distance
+  i, j, jG : entier
+
+Début
+  d[1] <- 0
+  Pour i allant de 2 à nbSommets Faire
+    jG <- 2;
+    d <- max;
+    Pour i allant de 2 à nbSommets Faire
+      jG <- 2;
+      Si (SA[j] =/= 1) et (d[j] < dist) alors
+        dist <- d[j];
+        jG <- j;
+      FinSi
+    FinPour
+    ia <- PP[jG]
+  /* Construction de l'arbre */
+    A[jG, ia] <- G[ia, jG];
+  /* Actualisation des réseaux */
+    Pour j allant de 1 à nbSommets Faire
+      Si(SA[j] =/= 1) & (G[j,jG] < d[J]) Alors
+        d[j] <- G[j,jG]
+        PP[j] = jG
+      FinSi
+    FinPour
+  FinPour
+Fin
+
+  

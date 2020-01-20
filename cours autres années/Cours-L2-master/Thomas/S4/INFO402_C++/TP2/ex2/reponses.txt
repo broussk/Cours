@@ -1,0 +1,31 @@
+Question 2 :
+  A la fin de la méthode, on appelle aussi le desctructeur une deuxième fois. C'est pour l'objet crée temporairement dans la fonction
+
+Question 3:
+  b:
+    l'écriture *this=z pose problème car on affecte à *this l'adresse de z, et non les valeurs.
+  d:
+    Il se passe une copie inutile puisque le compilateur voit bien que les 2 adresses comparées sont les mêmes.
+    La solution : vérifier soit les adresses, soit les valeurs, ou les deux.
+
+  Question 4:
+    b:
+      On a
+        - la génération avec 2 arguments de e3
+        - La génération par défaut de e4;
+        - Une autre génération par défaut lors de l'appelle de la fonction sqr
+        - 3 destructions d'objets dans l'ordre :
+          * Destruction de l'objet de la fonction
+          * Destruction des 2 objets déclarés dans le main
+
+    c:
+      On peut en déduire que Complex e4 = sqr(e3) appellera une génération et une destruction de moins puisqu'on ne passe pas par la case e4 = default.
+    d:
+      En effet, on a bien une génération et une destruction en moins
+    f:
+      Le rajout de const devant Complex &z permet de résoudre le problème car un objet T const T& accepte tout type d'entrée que ce soit une value, une lvalue, rvalue ou une const value.
+    g:
+      De même, le const Complex &z accepte tout type de valeurs. De ce fait, 3.f est une valeur acceptée.
+
+  Question 5:
+    

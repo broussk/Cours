@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="POSTPONE_SUITABLE_CONFIGURATIONS_SEARCH" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="partie1_1" targetName="partie1_1" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4f79b90-6e25-420b-b1f7-751546662966" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/tp.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/CMakeFiles/partie1_1.dir/tp.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/partie1_1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/partie1_1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/tp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/tp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3/partie1_1/tp.h" beforeDir="false" afterPath="$PROJECT_DIR$/TP3/partie1_1/tp.h" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/TP3/partie1_1/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/OPEN_CLASSROOM/main.cpp" />
+        <option value="$PROJECT_DIR$/OPEN_CLASSROOM/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/TP3/partie1_1/main.cpp" />
+        <option value="$PROJECT_DIR$/TP3/partie1_1/tp.h" />
+        <option value="$PROJECT_DIR$/TP3/partie1_1/tp.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="705" />
+    <option name="width" value="1225" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="partie1_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="INFO402_C++" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="partie1_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="INFO402_C++" type="462c0819:PsiDirectoryNode" />
+              <item name="OPEN_CLASSROOM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="partie1_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="INFO402_C++" type="462c0819:PsiDirectoryNode" />
+              <item name="TP3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="partie1_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="INFO402_C++" type="462c0819:PsiDirectoryNode" />
+              <item name="TP3" type="462c0819:PsiDirectoryNode" />
+              <item name="partie1_1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="partie1_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="INFO402_C++" type="462c0819:PsiDirectoryNode" />
+              <item name="TP4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="partie1_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="INFO402_C++" type="462c0819:PsiDirectoryNode" />
+              <item name="TP4" type="462c0819:PsiDirectoryNode" />
+              <item name="partie1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="partie1_1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="partie1_1" TARGET_NAME="partie1_1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="partie1_1" RUN_TARGET_NAME="partie1_1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4f79b90-6e25-420b-b1f7-751546662966" name="Default Changelist" comment="" />
+      <created>1550168823859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550168823859</updated>
+      <workItem from="1550168825266" duration="332000" />
+      <workItem from="1550591601865" duration="363000" />
+      <workItem from="1550592038473" duration="2682000" />
+      <workItem from="1551107360566" duration="687000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1550168909770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550168909770</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4064000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27233115" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32808024" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="TeamCity" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32808024" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="CMake" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="LuaJ" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27233115" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32808024" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="TeamCity" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32808024" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="CMake" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="LuaJ" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TP3/partie1_1/test.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OPEN_CLASSROOM/ZFraction.cpp" />
+    <entry file="file://$PROJECT_DIR$/OPEN_CLASSROOM/main.cpp" />
+    <entry file="file://$PROJECT_DIR$/OPEN_CLASSROOM/ZFraction.h" />
+    <entry file="file://$PROJECT_DIR$/OPEN_CLASSROOM/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/TP4/partie1/PointsArray.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP4/partie1/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP4/partie1/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP4/partie1/PointsArray.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP3/partie1_1/tp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP3/partie1_1/tp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3842">
+          <caret line="226" column="26" selection-start-line="226" selection-start-column="26" selection-end-line="226" selection-end-column="26" />
+          <folding>
+            <element signature="e#89#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TP3/partie1_1/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
