@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Nathan TONNELLE/Documents/GitHub/Cours/Semestre_4_2019_2020/INFO0402_C++/TP/test/main.cpp
+iostream
+-
+limits.h
+-
+

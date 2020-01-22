@@ -1,3 +1,0 @@
-"C:\Users\Nathan TONNELLE\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\algo1.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\algo1.dir/objects.a @CMakeFiles\algo1.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\algo1.dir/objects.a -Wl,--no-whole-archive  -o algo1.exe -Wl,--out-implib,libalgo1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\algo1.dir\linklibs.rsp
