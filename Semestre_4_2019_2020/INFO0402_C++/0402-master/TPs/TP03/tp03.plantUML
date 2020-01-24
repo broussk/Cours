@@ -1,0 +1,13 @@
+@startuml
+
+Transform <|-- Geom2D
+
+Geom2D <|-- Surface
+Fill <|-- Surface
+
+Surface <|-- Disk
+Surface <|-- Rectangle
+
+Rectangle <|-- Square
+@enduml
+
