@@ -1,8 +1,0 @@
-avec le formalisme pointeur
-exo1: copier le contenu du tableau B dans le tableau A
-exo2: calcul je la longueur de la chaine de caractères
-exo3: recherche d'une occurance de X, puis l'enlever en tassant le reste des valeurs 
-exo4: inverser les valeurs du tableau  A = 1|2|13|41    -> A = 41|13|2|1
-exo5: tester si un mot est un palundrome dans un tableau :
-    exemple : A = LAVAL
-              B = ELLE
