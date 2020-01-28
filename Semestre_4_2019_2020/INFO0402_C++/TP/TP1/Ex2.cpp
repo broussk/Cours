@@ -28,21 +28,21 @@ int main() {
 	}
 
 	{
-		int &b1 = fun3a(a);
+		//int &b1 = fun3a(a);
 		int &b2 = fun3b(a);
-		int &b3 = fun3c(a);
-		int &b4 = fun3d();
-		int &b5 = fun3e(a);
-		int &b6 = fun3f(a);
+		//int &b3 = fun3c(a);
+		//int &b4 = fun3d();
+		//int &b5 = fun3e(a);
+		//int &b6 = fun3f(a);
 	}
 
 	{
 		int &&b1 = fun3a(a);
-		int &&b2 = fun3b(a);
+		//int &&b2 = fun3b(a);
 		int &&b3 = fun3c(a);
 		int &&b4 = fun3d();
-		int &&b5 = fun3e(a);
-		int &&b6 = fun3f(a);
+		//int &&b5 = fun3e(a);
+		//int &&b6 = fun3f(a);
 	}
 
 	{
@@ -65,18 +65,18 @@ int main() {
 
 	{
 		const int &&b1 = fun3a(a);
-		const int &&b2 = fun3b(a);
+		//const int &&b2 = fun3b(a);
 		const int &&b3 = fun3c(a);
 		const int &&b4 = fun3d();
-		const int &&b5 = fun3e(a);
+		//const int &&b5 = fun3e(a);
 		const int &&b6 = fun3f(a);
 	}
 	
 	{
 		int *b1 = fun3A(&a);
-		int *b2 = fun3B(&a);
+		//int *b2 = fun3B(&a);
 		int *b3 = fun3C(&a);
-		int *b4 = fun3D(&a);
+		//int *b4 = fun3D(&a);
 	}
 
 	{
