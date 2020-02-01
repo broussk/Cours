@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <utility>
 
-// int fun(int *x)             { printf("call fun(int *x)\n"); return *x; }
+ int fun(int *x)             { printf("call fun(int *x)\n"); return *x; }
 int fun(const int *x)       { printf("call fun(const int *x)\n"); return *x; }
 // int fun(int const *x)       { printf("call fun(int const *x)\n"); return *x; }
 // int fun(const int* const x) { printf("call fun(const int* const x)\n"); return *x; }
