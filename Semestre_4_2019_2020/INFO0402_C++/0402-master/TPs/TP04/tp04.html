@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Info0402 : TP N°4</title>
+
+</head>
+<body>
+<h1>Info0402 TP N°4 : tableau d'objets, polymorphisme, héritage
+et virtualité</h1>
+
+Le but de ce TP est, dans une premier temps, d'ajouter des classes représentant
+des surfaces basées sur des tableaux de points pour obtenir la hiérarchie suivante.
+Puis, définir un objet Figure permettant de représenter un ensemble de surfaces
+géométriques.<br />
+<div style="text-align: center;"><img alt="Hierarchie1" src="tp04.png" /></div>
+
+<h2>Partie 1: stockage d'un tableau de points</h2>
+<p>On ajoute les classes de stockage suivantes:</p>
+<ul>
+<li>une classe PointsArray qui stocke et gère un tableau de
+points de taille fixe (l'ajout de points supplémentaires n'est pas
+possible). Elle contient deux champs: la taille du tableau, et le pointeur
+vers le tableau de points qui fait cette taille.</li>
+<li>une classe ReallocatablePointsArray qui hérite de
+PointsArray et qui permet de rendre le tableau de points réallouable
+(l'ajout de points supplémentaire est possible).
+Sa principale différence est qu'elle contient trois champs: le taille du tableau,
+le pointeur vers un tableau de points, et la taille allouée pour le tableau de
+points. Pour un tableau de taille variable, cela permet d'allouer un tableau
+un peu plus grand, et d'y placer de nouveaux points jusqu'à ce qu'il n'y ait
+plus de place. On alloue alors un tableau un peu plus grand, ce qui permet
+de continuer à ajouter des points.
+</li>
+<li>ces classes devront implémenter la construction et
+l'assignation par copie, </li>
+<li>la translation, changement d'échelle et la rotation devront
+être implémentés, </li>
+<li>trois constructeurs devront être disponibles: à partir de
+la taille de l'allocation (= nombre fixe de sommets&nbsp;ensuite
+pour PointsArray), à partir d'une liste de points (une
+initializer_list&lt;Point&gt;, voir en annexe ci-dessous), et à partir de: un nombre de points n, un centre c et une taille s
+qui initialise une liste de n points régulièrement répartis sur un
+cercle de centre c et de rayon r (à savoir les points Pi du PointsArray
+sont Pi(x,y) = c + r * ( cos[theta(i)], sin[theta(i)] ) où theta(i)
+=2.pi/n*i et i est dans {0,1,...,n-1}). </li>
+</ul>
+<ol>
+<li>Ecrire la définition des classes PointsArray et
+ReallocatablePointsArray. </li>
+<li>Ecrire les transformations: la position des points devra
+être modifiée dans la classe de stockage. Ces opérations ont
+généralement besoin du centre de l'objet: il sera calculé comme le
+barycentre de l'ensemble des points dans un Polypoints. Pour la
+translation, effectue une translation de tous les points. Pour la
+rotation,&nbsp;effectue la rotation des points autour de ce
+barycentre. Pour la rotation, on rappelle qu'une rotation de centre
+(0,0) et d'angle t s'écrit (x',y')=R(x,y)=( x.cos(t) - y.sin(t) ,
+x.sin(t) + y.cos(t) ). En conséquence, une rotation d'angle t et de
+centre c=(cx,cy) s'écrit (x',y')=(cx,cy) + R(x-cx,y-cy). Pour le
+changement d'échelle, effectue un changement d'échelle s centrée en c,
+à savoir (x',y') = S(x,y) = ( cx + s.(x-cx), cy + s.(y-cy) ).</li>
+<li>Ajouter une classe Polygon qui représente un polygone telle
+qu'elle hérite de Surface et de&nbsp;ReallocatablePointsArray.</li>
+<li>Redéfinir la triangle telle qu'elle hérite&nbsp;de
+Surface et de&nbsp;PointsArray.</li>
+<li>Ajouter une classe Polygon qui représente une surface
+polygonale telle qu'elle hérite au moins de Surface
+et de&nbsp;ReallocatablePointsArray.</li>
+</ol>
+<h2>Partie 2: manipulations d'objets géométriques</h2>
+<p>On veut maintenant utiliser les objets issus
+afin de créer des figures (= composition d'ensemble d'objets
+géométriques).</p>
+<ol>
+<li>Créer une classe Figure qui représente une collections
+d'objets géométriques (=tableau de Geom2D*) permettant l'insertion ou la suppression. </li>
+<li>Ajouter l'accès à n'importe quel objet de la collection en
+surchargeant l'opérateur[].</li>
+<li>Ajouter la méthode Info qui permet d'afficher la liste
+complète des éléments contenus dans la collection.</li>
+<li>Ajouter une méthode permettant d'appliquer une
+transformation à l'ensemble des objets de la collection.</li>
+<li>Ajouter à cette classe la possibilité d'écrire dans un
+fichier svg l'ensemble des objets contenus dans la collection.</li>
+<li>Ecrire un code d'exemple utilisant cette classe. L'ensemble
+des Surfaces et des Courbes définis devra permettre de générer un
+fichier svg.</li>
+</ol>
+<h2>Annexe</h2>
+<div style="margin-left: 40px;">En C++11, si l'on inclut
+le module
+&lt;initializer_list&gt;, on peut écrire un constructeur
+monvecteur(const initializer_list&lt;int&gt; list) permettant de
+passer en paramètre une liste {4, 10, 12, 43} à un constructeur.
+L'écriture du code du constructeur est alors de la forme suivante.
+Ajouter ce constructeur à votre structure.
+<table style="height: 152px; width: 689px; text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(204, 204, 204);">monvecteur(const
+std::initializer_list<INT>&lt;int&gt; &amp;list) {</INT><br />
+<INT></INT>
+<INT></INT>&nbsp; &nbsp; &nbsp;//
+list.size()
+retourne le nombre d'élément dans la liste<br />
+<INT>&nbsp; &nbsp; &nbsp;// mettre ici
+l'initialisation des champs/allocation <br />
+&nbsp; &nbsp; &nbsp;// le code ci-dessous insère les
+éléments de la liste dans l'ensemble<br />
+&nbsp; &nbsp; &nbsp;for(auto &amp;i : list) // utiliser ici l'élément i de la liste<br />
+} </INT></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+<span style="font-size: 10px;">Année
+universitaire 2019-2020 : version du 26 janvier 2020.</span>
+</body></html>

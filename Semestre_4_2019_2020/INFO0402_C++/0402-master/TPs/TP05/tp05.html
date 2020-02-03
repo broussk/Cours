@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Info0402 : TP N°5</title></head>
+<body>
+<h1>Info0402 TP N°5 : template</h1>
+
+<p>On construit des classes génériques afin de les appliquer aux
+classes déjà obtenues lors du TP N°4.</p>
+<span style="font-weight: bold;">Attention: </span>les
+templates sont des êtres étranges et délicats à écrire. Il convient:<br />
+<ol>
+<li>pour chaque méthode écrite, une construction explicite de
+l'objet générique doit être effectuée dans le main ou dans une fonction
+de votre code. On rappelle que classe/fonction générique n'est pas
+compilée tant qu'elle n'est pas effectivement instanciée pour un type
+particulier.</li>
+<li>de tester leurs fonctionnalités au fur et à mesure sinon le
+cumul des erreurs risque d'être difficilement&nbsp;compréhensible.</li>
+</ol>
+<h2>Partie 1: classe template avec stockage statique</h2>
+Le but de cette partie est d'écrire une classe template représentant un
+tableau statique et ayant pour argument template
+le type du tableau T et la taille N de ce tableau. Il devra avoir les
+fonctionnalités suivantes:<br />
+<ul>
+<li>les données de la classe devront inclure un tableau
+statique,</li>
+<li>la construction avec une liste d'initialisation devra être
+possible,</li>
+<li>la construction et l'assignation par copie devront être
+implémentées,</li>
+<li>une méthode devra retourner la taille du tableau,</li>
+<li>la surcharge de l'opérateur [] permettra d'accéder
+directement aux éléments du tableau.</li>
+<li>une surcharge de l'opérateur &lt;&lt; sur ostream
+permettra d'afficher le contenu du tableau.</li>
+</ul>
+<ol>
+<li>Ecrire la classe StaticArray</li>
+<li>Ecrire un code de test permettant de tester ces
+fonctionnalités pour les tableaux d'entiers et de points.</li>
+</ol>
+<h2>Partie 2: classes template avec stockage dynamique</h2>
+On voudrait maintenant réécrire les deux classes du TP N°4 permettant
+de stocker des tableaux de points pour écrire deux classes génériques
+équivalentes permettant de stocker des objets de tout type (entiers,
+points, ...). La première classe FixedArray sera une classe de stockage
+template permettant de stocker des tableaux de taille fixe dans le
+heap. La seconde classe DynamicArray sera une classe de stockage
+permettant de stocker des tableaux de taille variable et réallouable
+dans le heap.<br />
+Ces deux classes devront avoir les mêmes fonctionnalités que la classe
+StaticArray. <br />
+<ol>
+<li>Ecrire la classe FixedArray.</li>
+<li>Ecrire la classe DynamicArray telle qu'elle hérite de
+FixedArray, et implémente en plus les deux méthodes suivantes: Add qui
+permet d'ajouter un élément au tableau (avec réallocation si la place
+allouée est dépassée), et Remove qui permet de supprimer un élément du
+tableau à partir de son indice.</li>
+<li>Ecrire un code de&nbsp;test permettant de tester ces
+fonctionnalités pour les tableaux d'entiers et de points.</li>
+</ol>
+<h2>Partie 3: intégration dans le TP précédent</h2>
+Il s'agit maintenant de repartir de la dernière version que vous avez
+écrite du TP précédent avec les classes de tableaux de points et la
+classe Figure.<br />
+<ol>
+<li>Ecrire des fonctions templates permettant d'appliquer une
+translation, une rotation et un changement d'échelle sur n'importe quel
+tableau template de type StaticArray, FixedArray ou DynamicArray.</li>
+<li>Modifier les classes ayant un nombre fixe de points
+(Triangle, ...) afin que son tableau de points soit stocké sous forme
+d'un StaticArray&lt;Point,3&gt;. Le calcul des tranformations
+devra utiliser les fonctions écrites dans la question 1. Il est vous
+laissé le choix entre l'héritage et la composition.</li>
+<li>Modifier les classes ayant un nombre variable de points
+(Polygon, ...) afin que son tableau de points soit stocké sous forme
+d'un DynamicArray&lt;Point&gt;.&nbsp;Le calcul des
+tranformations devra utiliser les fonctions écrites dans la question 1.
+Il est vous laissé le choix entre l'héritage et la composition. A la
+fin de ces deux questions, les classes PointsArray et
+ReallocatablePointsArray devront avoir disparu du code.</li>
+<li>Modifier la classe Figure afin que le tableau de Geom2D
+soit stocké sous forme d'une DynamicArray&lt;Geom2D*&gt;.</li>
+</ol>
+
+A la fin de ce TP, la hiérarchie de classe devrait ressemble à ceci:<br>
+<img src="tp05-UML.png">
+
+<p><span style="font-size: 10px;">Année
+universitaire 2019-2020: version du 2 février 2020.</span></p>
+</body></html>
