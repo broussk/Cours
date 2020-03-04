@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Info0402 : TP N°6</title></head>
+<body>
+<h1>Info0402 TP N°6 : conception objet</h1>A la fin du TP précédent,
+la hiérarchie obtenue devrait ressembler à ceci:
+<br /><div style="text-align: center;">
+  <img alt="Hierarchie1" src="tp05.png" /></div>
+Par rapport au sujet, des objets de type Curve ont été ajoutés afin de pouvoir
+modéliser des surfaces et des courbes.
+
+  <h2>Partie 1: compréhension</h2>
+Lire avec attention la solution du TP N°5 fournit afin de bien la comprendre.
+Notamment, les modifications suivantes ont été apportées:
+<ol>
+<li>L'ensemble des objets de type Surface ont été passés dans un namespace nommé
+  Surface. La classe de base est Surface::Base.
+<li> idem pour les objets de type Curve ou Geom2D. Curve::Base ou Geom2D::base
+  sont les classes de base.
+<li> Observer comment sont construits les classes pour les tableaux. Encore une
+  fois, placé dans un namespace Array (Array::Static, Array::Fixed, et Array::Dynamic).
+  Voir aussi comment les transformations géométriques sont implémentés sur les
+  tableaux (voir namespace Array:Geometry).
+<li> Comprendre le fonctionnement de Figure dont une bonne partie des caractéristiques
+  sont héritées de Array::Dynamic.
+<li> Voir aussi que la capacité à être sauvé sous forme de SVG est aussi implémentée
+  sous forme d'une interface (héritage de SVG::Write).
+</ol>
+
+S'apercevoir ensuite que l'on génère ainsi des objets qui se ressemblent beaucoup,
+un pour les courbes et un pour les surfaces.
+
+<h2>Partie 2: héritage multiple</h2>
+
+On voudrait maintenant représenter un objet comme héritant à la
+fois de Curve::Stroke et Surface::Fill afin de modéliser dans un seul
+objet géométrique pouvoir bénéficier d'une des deux propriétés, ou des deux.
+<br />
+Dans ce but,
+<ul>
+<li>&nbsp;les classes Surface et Curve ne sont plus
+nécessaires,</li>
+<li>on ajoute une couleur "none" pour indiquer que le couleur
+de remplissage ou la couleur du trait n'est pas définie,</li>
+<li>on hérite de Fill et Stroke si l'objet peut
+être à la fois une courbe ou une surface.</li>
+</ul>
+L'idée est partiellement représentée sur la figure suivante:
+<div style="text-align: center;"><img alt="Hierarchie3" src="tp06.png" />
+</div><ol>
+<li>Modifier le code afin de respecter ces nouvelles
+contraintes (voir schéma ci-dessus).</li>
+<li>Ecrire un code de test.&nbsp;Ecrire un code d'exemple
+(voir ci-dessus) utilisant l'ensemble des
+objets géométriques concrets définis ci-dessus. Les objets seront redirigés
+dans un SVGstream afin de vérifier qu'ils sont corrects. On les
+insèrera également dans une figure, et on vérifiera le bon
+fonctionnement des méthodes info, de transformation, et d'écriture dans
+un SVGstream.</li>
+</ol><h2>Partie 3: UML</h2>
+On s'intéresse dans cette partie à la description UML des approches précédentes.
+<ol>
+  <li>Dessiner le diagramme UML complet de la conception obtenue à la fin du TP précédent.</li>
+  <li>Dessiner le diagramme UML complet de la conception après la partie précédente.</li>
+</ol>
+
+<span style="font-size: 10px;">Année
+universitaire 2019-2020 : version du 9 février 2020.</span>
+</body></html>

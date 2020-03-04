@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Info0402 : TP N°7</title></head>
+<body>
+<h1>Info0402 TP N°7 : déplacement et allocation en place<br />
+</h1>
+
+Ce TP a plusieurs objectifs:<br />
+
+<ol>
+<li>utiliser la sémantique de déplacement afin de limiter les copies.</li>
+<li>utiliser l'allocation en place afin d'éviter les constructions par défaut.</li>
+</ol>
+
+<h2>Partie 1: fonctionnement des compteurs</h2>
+<ol>
+<li>regarder le fonctionnement de la classe ObjectCounters et comprendre comment
+  ont instrumente une autre classe pour l'utiliser (voir par exemple main-static.cpp).
+</li>
+<li>pour chacun des types de tableaux, comprendre pourquoi les différents
+compteurs atteignent les valeurs indiquées.<br>
+L'affichage en sortie du code est le suivant:
+<ol type="a">
+<li> pour chaque ligne, après le label, la valeur mesurée de tous les compteurs non nuls
+  sont indiqués.
+</li>  l'indication "echec" indique que la valeur optimale n'est pas atteinte pour l'implémentation
+actuelle dans Array.h. L'indication "succès" signale que la méthode associée est optimale.
+<li>en cas d'échec, la ligne suivante indique la façon dont les compteurs sont modifiés
+  lorsque l'implémentaiton est optimale.</li>
+</ol>
+Seule l'implémentation de Array.h doit être modifiée (comme indiquée dans la partie suivante)
+afin d'atteindre la valeur optimale.
+</li>
+
+</ol>
+
+<h2>Partie 2: sémantique de déplacement</h2>
+
+<ol>
+<li>pour chacune de ces classes, prévoir l'évolution des valeurs des compteurs
+  si le déplacement est implémenté.</li>
+<li>implémenter la construction et l'assignation par déplacement pour la classe
+Array::Static. Remarquer que dans ce cas, tous les objets A doivent être déplacé.</li>
+<li>implémenter la construction et l'assignation par déplacement pour la classe
+Array::Fixed. Remarquer que dans ce cas, il est possible de récupérer directement
+les pointeurs, et donc qu'un déplacement ne doit n'engendrer ni copie, ni déplacement de A.</li>
+<li>dans l'assignation par copie à partir d'une rvalue Array, quelle est la différence entre le fait de permuter chaque
+champs avec la methode std::swap et l'utilisation de std::swap(*this,Array).
+Lire le code de std::swap pour répondre à cette question.</li>
+<li>implémenter la construction et l'assignation par déplacement pour la classe
+Array::Dynamic. Remarquer que dans ce cas, il est possible de récupérer directement
+les pointeurs, et donc qu'un déplacement ne doit n'engendrer ni copie, ni déplacement de A.</li>
+<li>implémenter les méthodes push_back et pop_back par déplacement pour la classe
+Array::Dynamic.</li>
+<li>regarder l'effet sur les compteurs d'une réallocation dynamique de la taille du tableau (écrire
+  un exemple qui provoque la réallocation d'un tableau pour un tableau plus grand).</li>
+<li> observer l'action du destructeur pour l'ensemble de ces tableaux.
+</ol>
+
+<h2>Partie 3: gestion mémoire non typée et allocation en place</h2>
+
+Dans cette partie, on n'améliorera que la classe Array::Dynamic, puisque c'est la
+seule qui permet de différentier la mémoire allouée de la mémoire effectivement utilisée avec
+ses champs Size et Allocated.
+
+<ol>
+<li>Pourquoi l'héritage de la classe Array::Fixed devient impossible à conserver dans ce cas?
+Si vous ne savez pas répondre à cette question, faire en sorte que la classe Array::Dynamic deviennent
+indépendante. Vous devriez comprendre par la suite en vous posant à chaque fois la question: que se
+passerait-il ici si j'avais hérité de Array::Fixed.
+</li>
+<li>Implémenter les méthodes allocate et destroy (cf TD avec la classe vector), et la méthode publique reserve(n)
+qui réalloue la mémoire disponible pour en augmenter la taille (ne fait rien si n < Allocated).</li>
+<li>Modifier les constructions par défaut et par taille telles qu'elle ne lance aucun constructeur de A.</li>
+<li>Optimiser la méthode privée realloc de façon à ce qu'elle déplace les éléments A de l'ancien tableau vers le nouveau.</li>
+<li>Ajouter la méthode back() et faire les surcharges des crochets n'augmentent pas le compteur de copie de A.</li>
+<li>Modifier le push_back de façon à ce qu'un push_back passant A par copie (resp. par déplacement) ne génère q'une copie (resp. qu'un déplacement) de A.</li>
+<li>Modifier le pop_back de façon à ce qu'il déplace l'élément enlevé (on vérifiera que l'élément déplacé est détruit).</li>
+<li>Modifier l'assignation par copie afin de minimiser le nombre de construction, de destruction et de copie des éléments de type A (cf le TD: on vérifiera
+  les deux cas: copie d'un tableau plus grand vers un tableau plus petit et vice-versa).</li>
+<li>Peut-on encore améliorer la performance pour la construction et l'assignation déplacement?</li>
+<li>Vérifier que le destructeur ne détruit bien que les éléments effectivements alloués dans le tableau (= autant que Size avant la destruction).</li>
+</ol>
+
+<h2>Partie 4: pointeurs intelligents</h2>
+<ol>
+<li>Manipuler un unique_ptr, et comprendre l'utilisation de chacune de ses méthodes (voir la documentation).</li>
+<li>Même questions avec un shared_ptr.</li>
+</ol>
+
+<span style="font-size: 10px;">Année universitaire 2019-2020 : version du 13 février 2020.</span>
+</body></html>

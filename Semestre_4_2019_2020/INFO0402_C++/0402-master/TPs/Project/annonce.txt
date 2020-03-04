@@ -1,0 +1,31 @@
+Dans le cadre de ce module, un projet doit être réalisé
+consistant en l'implémentation d'un conteneur C++.
+
+Vous devez choisir très rapidement votre projet parmi
+les possibilités suivantes:
+1/ deque
+2/ list
+3/ set
+4/ map
+
+Les TPs après les vacances d'hivers seront destinés à
+vous encadrer sur ce projet.
+
+Afin d'attribuer les projets et assurer leurs répartitions,
+il vous est demandé de me renvoyer par courriel la liste
+des projets par ordre de préférence. La réponse devra
+aussi contenir les noms des membres du binômes ainsi
+que votre groupe.
+
+Les règles d'attribution seront les suivantes:
+- les projets seront attribués par ordre d'arrivée.
+- un choix set ou map sera toujours exaucé,
+- le reste des projets sera attribué afin que le nombre
+de list et de deque par un groupe soit identique.
+
+A défaut de réponse avant le 1er mars, un sujet vous sera
+attribué par défaut. La liste des attributions sera mise
+à jour au fur et à mesure dans sur le site github:
+https://github.com/URCA-info/0402/blob/master/TPs/Project/attribution.md
+
+pm
