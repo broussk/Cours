@@ -1,0 +1,61 @@
+@startuml
+
+class Transform {
+  translate()
+  rotate()
+  Scale()
+}
+
+Transform <|-- Geom2D
+Geom2D <|-- Surface
+Fill <|-- Surface
+
+Surface <|-- Disk
+Surface <|-- Polygon
+Surface <|-- Rectangle
+
+Surface <|-- Triangle
+Triangle : StaticArray<Points,3>
+
+class Rectangle {
+  Point
+  Width
+  Height
+}
+
+class Surface {
+  {abstract} Area()
+}
+
+class Figure {
+  DynamicArray<Geom2D*>
+  Add(Geom2D*)
+  Remove(Geom2D*)
+}
+Transform <|-- Figure
+
+class StaticArray<class T, size_t n> {
+  T tab<N>
+}
+class FixedArray<class T> {
+  T *Array
+  Size
+}
+class DynamicArray<class T> {
+  Allocated
+}
+FixedArray <|-- DynamicArray
+
+PointsArray : DynamicArray<Points>
+Polygon : DynamicArray<Points>
+
+Disk : Point
+Disk : radius
+
+Rectangle <|-- Square
+Transform <|-- PointsArray
+
+
+
+
+@enduml

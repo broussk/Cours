@@ -1,0 +1,31 @@
+@startuml
+class Array::Static<class T,size_t n> {
+}
+
+class Array::Fixed<class T> {
+}
+class Array::Dynamic<class T> {
+}
+
+Array::Fixed <|-- Array::Dynamic
+Array::Dynamic <|-- "Figure<Geom2D*>"
+
+class SVG::stream
+Geom2D::Transform <|-- Geom2D::Base
+SVG::Write <|-- Geom2D::Base
+
+Geom2D::Base <|-- Curve::Base
+Curve::Stroke <|-- Curve::Base
+Curve::Base <|-- Curve::Circle
+Curve::Base <|-- Curve::Polyline
+Curve::Base <|-- Curve::Segment
+
+Geom2D::Base <|-- Surface::Base
+Surface::Fill <|-- Surface::Base
+Surface::Base <|-- Disk
+Surface::Base <|-- Polygon
+Surface::Base <|-- Triangle
+Surface::Base <|-- Rectangle
+Rectangle <|-- Square
+
+@enduml

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Info0402 : TP N°1</title></head>
+<body>
+<h1>Info0402 TP N°1 : tests expérimentaux</h1><h2>Remarque préliminaire:&nbsp;un sujet sera donné par
+semaine</h2>
+<ul><li>le sujet ne doit pas seulement être réalisé en TP: il
+nécessite que vous travailliez chez vous.</li><li>tous
+les programmes devront utiliser le C++ (i.e. même si le
+programme écrit pourrait compiler en C, il doit être compilé en
+utilisant un compilateur C++). Rappel: pour compiler avec les nouvelles
+fonctionnalités du C++11 avec g++, ajouter l'option -std=c++11.</li><li><span style="font-weight: bold;">Rappel:</span>
+aucun rapport ni programme ne vous sera demandé après ce TP. En
+revanche, ce que vous auriez dû apprendre suite à la réalisation de ce
+TP sera évalué la semaine prochaine lors d'un QCM rapide au cours du TD
+(10 minutes maximum).</li><li>si vous ne travaillez pas sérieusement vos TPs, vous serez dans l'incapacité de répondre au DS/ET et de faire votre projet.</li></ul>La totalité des sources nécessaires pour ce TP est <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">dans cette archive</a>.
+
+<h2>Exercice 1: passage d'arguments à une fonction</h2><ol><li>Dans le source <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">Ex1a.cpp</a>,
+&nbsp;les différents types de variable possibles sont passés à des
+fonctions prenant en paramètre les différents types d'entiers <span style="font-weight: bold; color: red;">qualifiés non constants</span> qu'il est possible de passer. Ce code contient toutes les combinaisons possibles et certaines écritures non autorisées.</li><ol style="list-style-type: lower-alpha;"><li>passer
+en commentaire tous les appels de fonction qui génèrent des erreurs.
+Pour chacun des cas, trouver une explication sur la raison pour
+laquelle cet appel n'est pas possible.</li><li>pour l'ensemble des autres cas, trouver une explication sur la raison pour laquelle cet appel&nbsp;est possible.</li><li>déterminer l'ensemble des cas où la variable passée en paramètre est modifiée par l'appel à la fonction.</li></ol><li>Dans le source <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">Ex1b.cpp</a>,
+&nbsp;les différents types de variable possibles sont passés à des
+fonctionsprenant en paramètre les différents types d'entiers <span style="color: red; font-weight: bold;">qualifiés&nbsp;constants</span>. Ce code contient toutes les combinaisons possibles et
+certaines écritures non autorisées.</li><ol style="list-style-type: lower-alpha;"><li>passer
+en commentaire tous les appels de fonction qui génèrent des erreurs.
+Pour chacun des cas, trouver une explication sur la raison pour
+laquelle cet appel n'est pas possible.</li><li>pour l'ensemble des autres cas, trouver une explication sur la raison pour laquelle cet appel&nbsp;est possible.</li><li>Existe-t-il des cas où la variable passée en paramètre est modifiée par l'appel à la fonction?</li></ol></ol>
+
+<h2>Exercice 2: retour d'une fonction</h2>
+On veut étudier&nbsp;quand les variations de
+type sont utilisées comme type de retour d'une fonction. Le source <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">Ex2.cpp</a> contient l'ensemble des combinaisons possibles pour un type de retour de fonction d'être affecté à une variation de ce type.<br /><ol style="list-style-type: decimal;"><li>passer
+en commentaire tous les appels de fonction qui génèrent des erreurs.
+Pour chacun des cas, trouver une explication sur la raison pour
+laquelle cet appel n'est pas possible.</li><li>pour l'ensemble des autres cas, trouver une explication sur la raison pour laquelle cet appel&nbsp;est possible.</li></ol>
+
+<h2>Exercice 3: surcharge de fonction<br /></h2>On
+rappelle qu'en C++, il est possible de surcharger les fonctions si les
+types sont différents, mais également dans certains cas, avec le même
+type modifié et qualifié différement (voir les tableaux page 29 du
+cours). Le but de cet exercice est de savoir quels sont les
+combinaisons de modificateurs/qualificateurs qu'il est possible
+d'utiliser.&nbsp;<br />Dans ce but, on fournit des source contenant
+l'ensemble des surcharges possibles d'une fonction fun pour un entier
+et un code qui appelle la fonction fun pour l'ensemble
+des&nbsp;modificateurs/qualificateurs possibles. Plusieurs facteurs
+peuvent éventuellement conduire au fait que le code ne compile pas: les
+surcharges sont conflictuelles, ou l'un des appels n'est pas géré par
+les surcharges.<ol><li>Trouver, pour chaque surcharge possible de la fonction sur un entier (utiliser <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">Ex3a.cpp</a>), quelles sont les autres surcharges qu'il est possible d'ajouter afin que le maximum d'appels différents soient possibles.<br />On rappelle que tous les appels de la fonction ne sont pas nécessairement possibles en fonction des surcharges définies.</li><li>Même question avec un pointeur sur un entier (utiliser <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">Ex3b.cpp</a>).</li></ol>Ce point est important à comprendre car il est ainsi possible d'appeler
+des surcharges différentes suivant que l'on passe à la fonction une
+lvalue ou une rvalue (par exemple), ou &nbsp;d'interdire certains types
+d'appels.
+
+<h2>Exercice 4: modèle de données</h2>
+<ol>
+<li>Déterminer le modèle de
+données qu'utilise le système sur lequel vous êtes en écrivant un programme.</li>
+<li>En déduire sur votre système quels sont les types de
+longueur variable à utiliser pour les types entiers en 8, 16, 32 et 64
+bits (i.e., utiliser les types char et int pour atteindre les longueurs
+voulues avec les modificateurs short, long et long long).</li><li>Utiliser
+&nbsp;std::numeric_limits (voir section 2.3) pour afficher les min et
+le max de ces types entiers. Même question en ajoutant le mot-clé
+unsigned.</li><li>En utilisant la syntaxe des littéraux (voir section
+2.2.d), initialiser des variables de chacun de ces types entiers (signé
+et non signé, 8 à 64 bits) avec des constantes entières de façon à ce
+que la valeur utilisée pour initialiser ne conviennent pas pour
+initialiser un entier sur moins de bits (exemple: pour un entier 16
+bits peut être initialisé à 512, mais pas un entier 8 bits).</li>
+</ol>
+
+<h2>Exercice 5: conversions (optionnel)</h2>On
+reprend la même approche que celle vue en TD. Dans le cadre de cet
+exercice, si cela n'est pas fait, on ajoutera le flag -Wconversion à la
+compilation afin d'être sûr que tous les warnings associés aux
+conversions apparaissent.<br /><br />&nbsp;Effectuer les expériences suivantes:<ol><li>Ecrire
+un code qui convertit entre variable 8, 16 et 32 bits et qui provoque
+des warnings de perte de précision. Puis, modifier ce code afin qu'il
+n'en produise plus aucun (utiliser static_cast).</li><li>Ecrire un code
+qui convertit entre variable 8, 16 et 32 bits et qui ne provoque aucun
+warning de conversion (= faire de la promotion numérique)</li><li>Effectuer un calcul entre variables entières&nbsp;8 bits qui démontre que les calculs numériques sont biens effectués en 32 bits</li><li>Compléter ces tests en effectuant des conversions entre types entiers signés et non signés.</li></ol>
+
+<h2>Exercice 6: compilation séparée (optionnel)</h2>Les codes <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">mod1.cpp</a>, <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">mod2.cpp</a> et <a href="https://github.com/URCA-info/0402/blob/master/TPs/tp01.zip">prog.cpp</a>
+constituent trois composants d'une même programme (prog.cpp contient le
+programme principal, mod1.cpp et mod2.cpp contiennent la définition des
+fonctions). Le but est de compiler le programme complet en écrivant les
+fichiers d'en-tête et le makefile associé.<br /><ol><li>Définir les fichiers d'en-tête (.h) associés à mod1.cpp et mod2.cpp.&nbsp;</li><li>Ajouter
+aux fichiers .cpp les #include nécessaires à la définition des objets
+qu'ils contiennent (c'est la seule modification autorisées sur le
+fichiers .cpp)</li><li>Compiler manuellement ces fichiers (g++ -c puis assemblage des liens).</li><li>Ecrire/modifier un makefile qui permet de compiler correctement et complètement ce projet.</li></ol><p><span style="font-size: 10px;">Année
+universitaire 2017-2018 : version du 4 janvier 2018.</span></p>
+</body></html>
