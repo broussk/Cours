@@ -1,0 +1,5 @@
+les fichiers : 
+	exo1.sce correspond au script de l'exercice 1
+	exo2.sce correspond au script de l'exercice 2
+	fonction.sci correspond aux fonctions des exercices 1 & 2
+	Rapport_MINF0402-TONNELLE_MACZYTA.pdf correspond au rapport à rendre avec les exercices.

@@ -1,0 +1,5 @@
+exo4.sce est le fichier contenant le script de l'exercice 4.
+exo5.sce est le fichier contenant le script de l'exercice 5.
+exo6.sce est le fichier contenant le script de l'exercice 6.
+fonctions.sci est le fichier contenant toutes les fonctions qu'utilise les fichiers scripts et il est appelé à chaque script.
+Le rapport est dans le fichier : RAPPORT_TP1_MINF0402_TONNELLE_MACZYTA.docx .
