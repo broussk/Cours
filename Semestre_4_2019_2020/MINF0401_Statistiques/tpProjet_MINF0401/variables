@@ -1,0 +1,54 @@
+Essaie 		: 	null
+
+
+Année 		: 	qualitative		nominale
+Variété 	:	qualitative		nomanale
+
+Créneau 	:	qualitative		ordinale
+Couverture 	:	qualitative		ordinale
+
+
+Plantation 	:	quantitative	discrètes
+Durée 		: 	quantitative	discrètes
+
+N 			:	quantitative	continue
+P			:	quantitative	continue
+K 			:	quantitative	continue
+
+Rdt 		:	quantitative	discrètes
+Poids 		:	quantitative	discrètes
+
+
+Vark(X) =
+var(table2D_Variete_Annee[,k],na.rm=TRUE)
+
+nk =
+dist_margin_table2D_var2[k]
+
+moyenne des variances =
+(n1*Var1(x)+n2Var2(x)+n3Var3(x)+n4Var4(x)+n5Var5(x)+n6Var6(x)+n7Var7(x)+n8Var8(x)+n9Var9(x)+n10Var10(x))/(n1+n2+n3+n4+n5+n6+n7+n8+n9+n10)
+
+som_n=table(m$Annee)[1]+table(m$Annee)[2]+table(m$Annee)[3]+table(m$Annee)[4]+table(m$Annee)[5]+table(m$Annee)[6]+table(m$Annee)[7]+table(m$Annee)[8]+table(m$Annee)[9]+table(m$Annee)[10]
+
+som_nVar=table(m$Annee)[1]*var(table2D_Variete_Annee[,1],na.rm=TRUE)+table(m$Annee)[2]*var(table2D_Variete_Annee[,2],na.rm=TRUE)+table(m$Annee)[3]*var(table2D_Variete_Annee[,3],na.rm=TRUE)+table(m$Annee)[4]*var(table2D_Variete_Annee[,4],na.rm=TRUE)+table(m$Annee)[5]*var(table2D_Variete_Annee[,5],na.rm=TRUE)+table(m$Annee)[6]*var(table2D_Variete_Annee[,6],na.rm=TRUE)+table(m$Annee)[7]*var(table2D_Variete_Annee[,7],na.rm=TRUE)+table(m$Annee)[8]*var(table2D_Variete_Annee[,8],na.rm=TRUE)+table(m$Annee)[9]*var(table2D_Variete_Annee[,9],na.rm=TRUE)+table(m$Annee)[10]*var(table2D_Variete_Annee[,10],na.rm=TRUE)
+som_nVar
+
+moyenne_vars=som_nVar/som_n
+moyenne_vars
+
+
+table2D = tableau des valeurs avec effectif
+
+
+x1=(3*table2D[3,1]+9*table2D[9,1])/table2D[13,1]
+x2=(3*table2D[3,2]+9*table2D[9,2])/table2D[13,2]
+x3=(3*table2D[3,3]+4*table2D[4,3]+9*table2D[9,3])/table2D[13,3]
+x4=(3*table2D[3,4]+4*table2D[4,4]+9*table2D[9,4])/table2D[13,4]
+x5=(3*table2D[3,5]+4*table2D[4,5]+5*table2D[5,5]+9*table2D[9,5]+10*table2D[10,5])/table2D[13,5]
+x6=(1*table2D[1,6]+3*table2D[3,6]+5*table2D[5,6]+8*table2D[8,6]+9*table2D[9,6]+10*table2D[10,6])/table2D[13,6]
+x7=(1*table2D[1,7]+2*table2D[2,7]+3*table2D[3,7]+4*table2D[4,7]+5*table2D[5,7]+6*table2D[6,7]+7*table2D[7,7]+8*table2D[8,7]+9*table2D[9,7]+10*table2D[10,7]+11*table2D[11,7]+12*table2D[12,7])/table2D[13,7]
+x8=(1*table2D[1,8]+2*table2D[2,8]+3*table2D[3,8]+4*table2D[4,8]+7*table2D[7,8]+8*table2D[8,8]+9*table2D[9,8]+10*table2D[10,8]+11*table2D[11,8]+12*table2D[12,8])/table2D[13,8]
+x9=(1*table2D[1,9]+2*table2D[2,9]+3*table2D[3,9]+4*table2D[4,9]+5*table2D[5,9]+7*table2D[7,9]+8*table2D[8,9]+9*table2D[9,9]+10*table2D[10,9]+11*table2D[11,9]+12*table2D[12,9])/table2D[13,9]
+x10=(1*table2D[1,10]+2*table2D[2,10]+3*table2D[3,10]+4*table2D[4,10]+5*table2D[5,10]+7*table2D[7,10]+8*table2D[8,10]+9*table2D[9,10]+11*table2D[11,10]+12*table2D[12,10])/table2D[13,10]
+
+x=
