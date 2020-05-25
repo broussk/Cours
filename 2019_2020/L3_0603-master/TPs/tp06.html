@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Cryptographie : TP N°6</title>
+
+<meta content="Pascal Mignot" name="author" />
+</head>
+<body>
+<h1>TP N°6/N°1 de cryptographie</h1>
+Le but de ce TP est d'implémenter les méthodes classiques de cryptographie et
+de préparer les outils statistiques pour les méthodes de cryptanalyse du
+prochain TP.
+<h2>1) Cryptographie classique</h2>
+Ecrire les méthodes de cryptage suivantes:<br />
+<ol>
+<li>Ecrire la fonction de chiffrement/déchiffrement d'un
+chiffre mono-alphabétique par décalage.</li>
+<li>Ecrire la fonction de chiffrement/déchiffrement d'un
+chiffre mono-alphabétique par substitution.</li>
+<li>Ecrire la fonction de chiffrement/déchiffrement d'un
+chiffre poly-alphabétique de Vigenère.</li>
+<li>Ecrire le fonction de chiffrement/déchiffrement d'un
+chiffre par permutation (en utilisant la méthode vue en TD pour le mot
+SANGLIER).</li>
+</ol>
+<h2>2) Préparation de la base de texte de référence</h2>
+L'ensemble des messages que nous allons crypter seront filtrés de façon
+à ne conserver que les lettres majuscules.<br />
+<ul>
+<li>Attention, la conversion des caractères accentués dépend de
+la codepage utilisée par le texte à convertir. En conséquence, faites
+attention si vous choisissez d'autres textes que ceux proposés. Dans
+certaines codepages, un caractère accentué peut être stocké sur
+plusieurs caractères. Aussi, le chargement d'un fichier texte sous
+un éditeur de texte a toutes les chances de changer la
+codepage.</li>
+<li>Afin d'effectuer des statistiques, le roman "Guerre et
+Paix" de Tolstoï sera utilisé (voir sur le serveur, environ 20000
+lignes, 478000 mots). Ce texte ne contient plus aucun accent afin
+d'éviter les problèmes liés à leurs encodages.
+</li>
+</ul>
+Ecrire une fonction convertissant les lettres minuscules en majuscule, et à retirer tous les
+autres symboles autres que {A,...,Z}, et éventuellement quelques symboles supplémentaires
+permettant de garde l'alphabet sur 5 bits. On pourra convertir les chiffres en
+texte. On vérifiera qu'après la conversion le texte conserve son sens.<br />
+<h2>3) Statistiques du texte</h2>
+<p>Dans le texte, écrire des fonctions afin de calculer les
+statistiques suivantes dans "Guerre et Paix":</p>
+<ol>
+<li>Calculer le fréquence des lettres {A,...,Z}.</li>
+<li>Utiliser GnuPlot pour afficher l'histogramme des fréquences
+(voir par
+exemple&nbsp;http://psy.swansea.ac.uk/staff/carter/gnuplot/ pour
+une introduction).</li>
+<li>Calculer le fréquence des digrammes à l'intérieur des mots
+(mot par mot). Puis,&nbsp;sur les mots concaténés (texte entier)</li>
+<li>Constituer un dictionnaire avec l'ensemble des mots ainsi
+que le nombre de leurs apparitions.</li>
+<li>Calculer la fréquence des trigrammes.</li>
+</ol>
+<h2>Remise de ce TP&nbsp;</h2>
+Mêmes conditions que les TPs précédents Le fichier devant contenir vos
+résultats et la déclaration devra s'appeler TP6.html.<br />
+Nécessaire pour le prochain TP: Partie 1; Partie 2: 1,3; Partie 3:
+1,2,3.
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 35%;">Question</td>
+<td style="width: 57%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">1</td>
+<td>1) Chiffre par décalage</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Chiffre par substitution</td>
+<td></td>
+</tr>
+<tr>
+<td>3) Chiffre de Vigenère</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Chiffre par permutation</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">2</td>
+<td>Préparation de la référence<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">3</td>
+<td>1) Fréquence des lettres<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Utilisation de gnuplot</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Fréquence des digrammes</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Constitution d'un dictionnaire</td>
+<td></td>
+</tr>
+<tr>
+<td>5) Fréquence des trigrammes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de
+ce qui fonctionne ou ne fonctionne pas, non testée (= écrit par par
+testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 26 février 2019.</span></p>
+</body></html>

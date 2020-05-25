@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Cryptographie : TP N°7</title>
+
+<meta content="Pascal Mignot" name="author" /></head>
+<body>
+<h1>TP N°7/N°2 de cryptographie</h1>
+Le but de ce TP est d'effectuer d'effectuer la cryptanalyse de méthodes
+de chiffrement classique
+<h2>1) Cryptanalyse d'un chiffre par décalage : maximum de
+l'histogramme</h2>
+On utilise la fonction de chiffrement par décalage écrite dans le TP
+précédent.<br />
+<ol>
+<li>Ecrire une fonction de cryptanalyse qui, à partir du
+maximum de l'histogramme déduit la clef de chiffrement en faisant
+l'hypothèse que le pic maximum est toujours en E.</li>
+<li>Ecrire une fonction qui permet de tirer au hasard un
+paragraphe dans Guerre et Paix.</li>
+<li>Tester la performance de cette méthode en tirant au hasard
+des paragraphes, en les chiffrant, puis en vérifiant que si la fonction
+de cryptanalyse trouve la bonne clef. <br />
+On calculera le taux de succès de cette méthode, et pour les cas où la
+méthode échoue, on observera la répartition des longueurs des messages.
+Les conclusions seront écrites dans TP7.html.</li>
+<li>Proposer une méthode permettant d'améliorer cette
+performance (par exemple, en considérant plusieurs clefs correspondant
+à des maximums, puis en&nbsp;validant une clef en utilisant les
+caractéristiques des digrammes). La méthode et ses performances seront
+décrites dans TP7.html.</li>
+</ol>
+<h2>2)&nbsp;Cryptanalyse d'un chiffre par décalage : indice
+de coïncidence de Friedman</h2>
+<ol>
+<li>Utiliser la fonction de calcul d'histogramme du TP N°6 afin
+de calculer la fréquence des lettres pour la langue française en se
+basant sur le texte Guerre et Paix (rappel: fréquence = histogramme
+renormalisé).</li>
+<li>Calculer l'indice de coïncidence de Friedman pour la langue
+française.</li>
+<li>Ecrire une fonction qui calcule l'indice de coïncidence de
+Friedman entre la langue française et la fréquence des lettres issues
+d'un histogramme particulier (rappel: la fréquence doit être
+normalisée).</li>
+<li>Calculer la moyenne et la variance de l'indice
+de&nbsp;coïncidence de Friedman pour l'histogramme des lettres
+calculé sur des paragraphes tirés au hasard sur le texte clair.</li>
+<li>Ecrire une fonction de cryptanalyse qui sélectionne comme
+clef de décodage K celle qui maximise l'indice de coïncidence de
+Friedman entre la langue française et la fréquence des lettres issues
+du cryptogramme décalée de K.</li>
+<li>Tester la performance de cette méthode en tirant au hasard
+des
+paragraphes, en les chiffrant, puis en vérifiant que si la fonction de
+cryptanalyse trouve la bonne clef. <br />
+On calculera le taux de
+succès de cette méthode, et pour les cas où la méthode échoue, on
+observera la répartition des longueurs des messages. Les conclusions
+seront écrites dans TP7.html.</li>
+</ol>
+<h2>3) Cryptanalyse d'un chiffre de Vigenère</h2>
+On utilise la fonction de chiffrement par Vigenère dans le TP
+précédent.
+<ol>
+<li>Ecrire un fonction qui calcule le PGCD d'un ensemble de
+chiffres.</li>
+<li>Ecrire un fonction qui calcule le test de Kasiski sur un
+cryptogramme. La fonction devra retourner la longueur de la clef. On se
+basera d'abord sur les motifs de plus grande largeur.</li>
+<li>Vérifier la robustesse du test de Kasiski en tirant des
+paragraphes au hasard. Le calcul sera effectué une longueur de clef
+donnée K fixe pour laquelle tous les caractères sont
+différents.&nbsp;<br />
+Lorsque le test de Kasiski échoue, est-ce-qu'augmenter la
+quantité de texte en entrée du test (par exemple en prenant
+suffisamment de paragraphes consécutifs afin que la taille du texte
+dépasse un certain volume) permet de résoudre ce problème?</li>
+<li>Utiliser la longueur de clef donnée par Kasiski afin de
+déterminer la clef en utilisant l'indice de coïncidence de Friedman sur
+chacun des symboles de clef.</li>
+<li>(optionnel) Utiliser l'indice de coïncidence de Friedman
+sur les digrammes afin de vérifier s'il peut être&nbsp;un moyen de
+valider un choix lorsqu'il y a plusieurs valeurs proches du maximum.&nbsp;</li>
+<li>(optionnel) On voudrait maintenant essayer de tester si
+l'indice de coïncidence de Friedman ne pourrait pas être utilisé pour
+trouver la clef, en testant itérativement les longueurs de clef (i.e.
+pour K=2, calculer la meilleure clef, pour recommencer en incrémentant
+K), et en ne conservant la clef qui maximise l'indice
+de&nbsp;coïncidence
+sur le texte décodé.</li>
+</ol>
+<h2>4) Cryptanalyse d'un chiffre par substitution</h2>
+Cette partie&nbsp;exploratoire (et optionnelle) vous permet
+d'essayer d'utiliser les caractèristiques des statistiques de la langue
+(digramme, trigramme, dictionnaire) afin d'effectuer la cryptanalyse
+d'un chiffre par substitution.<br />
+<ol>
+<li>Ecrire une fonction qui tire au hasard un chiffre par
+substitution et l'applique sur un bloc de texte.</li>
+<li>Calculer l'histogramme des fréquences des symboles du
+cryptogramme. Puis, trier cette histogramme par fréquence décroissante.
+Même
+chose pour l'histogramme des lettres en Français (basé sur Guerre et
+Paix).</li>
+<li>Partir des 4 à 6 symboles les plus fréquents dans le
+cryptogramme, et tester les subsitutions possibles dans le texte à
+partir des symboles les plus fréquents en Français. Pour chaque
+hypothèse, on calculera un indice mesurant la probabilité des digrammes
+(voir trigrammes) générés par cette hypothèse.</li>
+<li>Etendre ensuite le nombre de symboles, toujours en testant
+les hypothèses sur les digrammes générés, et le dictionnaire des mots
+pour completer les paquets de plusieurs lettres consécutives.</li>
+</ol>
+<h2>Remise de ce TP</h2>
+Mêmes conditions que les TPs précédents Le fichier devant contenir vos
+résultats et la déclaration devra s'appeler TP7.html.
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 43%;">Question</td>
+<td style="width: 50%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">1</td>
+<td>1) Fonction cryptanalyse<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Tirage au hasard de paragraphe</td>
+<td></td>
+</tr>
+<tr>
+<td>3) Test performance du Max</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Amélioration</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="6">2</td>
+<td>1) Fréquence lettre langue française<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Indice coïncidence Friedman français</td>
+<td></td>
+</tr>
+<tr>
+<td>3)&nbsp;Indice coïncidence Friedman fréquence</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Test coïncidence texte clair français</td>
+<td></td>
+</tr>
+<tr>
+<td>5) Fonction cryptanalyse utilisant Friedman</td>
+<td></td>
+</tr>
+<tr>
+<td>6)&nbsp;Test performance Friedman</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="6">3</td>
+<td>1) calcul PGCD<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) test Kasiski</td>
+<td></td>
+</tr>
+<tr>
+<td>3)&nbsp;robustesse du test de Kasiski</td>
+<td></td>
+</tr>
+<tr>
+<td>4) cryptanalyse Vigenère</td>
+<td></td>
+</tr>
+<tr>
+<td>5) Fréquence des trigrammes</td>
+<td></td>
+</tr>
+<tr>
+<td>6) Fréquence des trigrammes</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">4</td>
+<td>1) Chiffre par substitution aléatoire<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Tri d'histogramme</td>
+<td></td>
+</tr>
+<tr>
+<td>3) Combinaisons de base</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Extension</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de
+ce qui fonctionne ou ne fonctionne pas, non testée (= écrit par par
+testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2016-2017 : version du 12 mars 2016.</span></p>
+</body></html>

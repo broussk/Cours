@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Compression : TP N°3</title>
+
+<meta content="Pascal Mignot" name="author" />
+</head>
+<body>
+<h1>TP N°3 de compression</h1>
+<h2>Remarques:&nbsp;</h2>
+<ul>
+<li>le sujet ne doit pas seulement être réalisé en TP: il
+nécessite que vous travailliez chez vous.</li>
+<li>le travail réalisé doit être rendu dans la semaine qui suit
+le TP (sinon, note pour ce TP = 0).</li>
+<li>les sujets ont souvent des dépendances: si vous ne
+réalisez/rendez pas les TPs des semaines précédentes, vous ne pourrez
+pas rendre les TPs des semaines suivantes.</li>
+</ul>
+<h2>Introduction:</h2>
+Dans ce TP, nous utilisons maintenant un codage arithmétique.<br />
+<br />
+Rappel:
+le codage arithmétique utilise les fréquences des caractères, la
+première question de TP N°2 est donc un prérequis pour ce TP.<br />
+<h2>1) Codage arithmétique en flottant</h2>
+Dans un premier temps, on se
+propose d'utiliser les algorithmes réels (= ceux qui finissent par
+dépasser les capacités des flottants).<br />
+<ol style="list-style-type: lower-alpha;">
+<li>Déterminer sur votre machine le type flottant T avec la
+meilleure
+prévision (long double s'il existe, double sinon). On utilisera
+std::numeric_limits&lt;T&gt;::epsilon() pour connaitre le plus
+petit flottant de [0,1) représentable dans ce type T.</li>
+<li>Ecrire
+une fonction qui permet de connaître, à partir de la plus petite
+probabilité, le nombre de symboles consécutifs minimal codable en
+utilisant ces flottants (i.e. si p = probabilité minimale, trouver le
+plus grand n tel que p^n &gt; epsilon, à savoir calculer n =
+floor(log(epsilon)/log(p)).</li>
+<li>Ecrire l'algorithme de codage
+arithmétique (celui de la page 72). On mettra des traces permettant de
+valider l'algorithme avec l'exemple du cours. Cette méthode retournera
+le réel r associé au centre de l'intervalle associé à la chaine codée.</li>
+<li>Ecrire l'algorithme de décodage arithmétique (toujours page
+72). Même remarque.</li>
+<li>Ecrire un algorithme qui affiche pour un
+réel r de [0;1)&nbsp;son code binaire fractionnaire. Le nombre de
+bits
+affiché sera celui associé à la précision de la mantisse du flottant
+utilisé (ou moins si cette représentation binaire est exacte = tous les
+derniers bits sont à 0). Ce code pourra être utilisé comme référence
+pour la question suivante afin de vérifier que le codage est correct. </li>
+</ol>
+<h2>2) Codage arithmétique en flottant avec mise à l'échelle</h2>
+On se propose maintenant d'implémenter la version de cette algorithme
+permettant d'effectuer les mises à l'échelle au fur et à mesure afin
+d'éviter les pertes de précisions. Attention, voir la note dans le cours
+sur les problèmes de précision lors du décodage.
+<br />
+<ol style="list-style-type: lower-alpha;">
+<li>Ecrire l'algorithme de codage arithmétique avec mise à
+l'échelle (celui de la page 77, i.e. sans la mise à l'échelle s3). On
+mettra une condition d'arrêt qui stoppe le codage si la largeur de
+l'intervalle devient trop petite (par exemple &lt; 8 epsilon).</li>
+<li>Vérifier le code binaire obtenu avec celui de la question
+1)a) pour les mêmes symboles.</li>
+<li>Ecrire l'algorithme de décodage arithmétique avec mise à
+l'échelle associé (celui de la page 78). On validera en décodant une
+chaine codée avec l'algorithme 2)a).</li>
+<li>Ecrire une deuxième version de votre algorithme de codage
+arithmetique en utilisant la transformation d'échelle s3 (voir page
+81). Noter que l'algorithme de décodage ne change pas.</li>
+<li>Le bon fonctionnement sera vérifié sur l'ensemble
+des fichiers test. Les performances du codage seront mesurées sur
+l'ensemble des fichiers, comparées à l'entropie, et placé dans le
+fichier TP3.html</li>
+</ol>
+<h2 style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">3)
+Ecriture dans un fichier<br />
+</h2>
+<ol style="list-style-type: lower-alpha;">
+<li>Ecrire la fonction qui permet d'enregistrer des données
+compressées avec un codage arithmétique dans un fichier.</li>
+<li>Ecrire la fonction qui permet de relire des données compressées
+avec un codage arithmétique dans un fichier.</li>
+</ol>
+<ol>
+</ol>
+<h2>Remise de ce TP</h2>
+<ul>
+<li>Date limite de remise du TP: le jour de la séance de TP
+suivante, au plus tard à 8h du matin.</li>
+<li>Mêmes conditions que le TP1 et 2. Le fichier devant
+contenir vos
+résultats et la déclaration devra s'appeler TP3.html.</li>
+</ul>
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 43%;">Question</td>
+<td style="width: 50%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">1</td>
+<td>a) choix flottant.</td>
+<td></td>
+</tr>
+<tr>
+<td>b) fonction de calcul de la longueur maximale de la chaine de codage.</td>
+<td></td>
+</tr>
+<tr>
+<td>c) codage arithmétique en flottant</td>
+<td></td>
+</tr>
+<tr>
+<td>d) décodage arithmétique en flottant</td>
+<td></td>
+</tr>
+<tr>
+<td>e) affichage du code binaire fractionnaire d'un flottant</td><td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">2</td>
+<td>1) codage arithmétique binaire sans S3<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) vérification</td>
+<td></td>
+</tr>
+<tr>
+<td>3) décodage arithmétique binaire</td>
+<td></td>
+</tr>
+<tr>
+<td>4) décodage arithmétique binaire sans S3</td>
+<td></td>
+</tr>
+<tr>
+<td>5) évaluation de performance</td><td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">3</td>
+<td>a) codage et écriture dans un fichier du code arithmétique</td>
+<td></td>
+</tr>
+<tr>
+<td>b) lecture et décodage depuis un fichier d'un code arithmétique</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de ce qui fonctionne ou ne fonctionne pas, non testée (=
+écrit par par testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 26 janvier 2019.</span></p>
+</body></html>

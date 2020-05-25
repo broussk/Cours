@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Cryptographie : TP N°9</title>
+
+<meta content="Pascal Mignot" name="author" /></head>
+<body>
+<h1>TP N°9/N°4 de cryptographie<br />
+calcul avec des grands nombres</h1>
+Le but de ce TP est d'implémenter des algorithmes de base avec les
+grands nombres (bibliothèque BigInteger disponible sur webcampus).<br />
+<br />
+<h2>1) Algorithme d'Euclide</h2>
+<ol>
+<li>Implémenter le calcul du PGCD avec l'algorithme d'Euclide
+sur les BigInteger (méthode PGCD)</li>
+<li>Construire des exemples pratiques permettant de vérifier
+son bon fonctionnement, avec au moins un des nombres comportant au
+moins 20 chiffres.</li>
+<li>Implémenter le calcul&nbsp;de algorithme d'Euclide
+étendu sur les BigInteger afin de calculer de l'inverse modulaire d'un
+nombre (cas où l'on&nbsp;est seulement intéressé par l'invese de a
+modulo n).</li>
+<li>Implémenter le calcul&nbsp;de algorithme d'Euclide
+étendu sur les BigInteger afin de calculer de l'inverse modulaire d'un
+couple de nombre (cas où l'on est intéressé par l'inverse de a modulo
+b, et l'inverse de b modulo a, comme par exemple comme lorsque l'on
+souhaite utiliser après un calcul de puissance rapide).</li>
+<li>Construire des exemples pratiques permettant de vérifier
+son bon fonctionnement (notamment en vérifiant que le produit par
+l'inverse modulaire donne bien 1).</li>
+</ol>
+<h2>2) Puissance modulaire</h2>
+<ol>
+<li>Ecrire l'algorithme de calcul d'une puissance a^r modulo n.</li>
+<li>Ecrire une version améliorée permettant de réduire le base
+et l'exposant avant d'effectuer le calcul si les conditions sont
+réunies pour ces simplifications (i.e. n est premier).</li>
+<li>Ecrire une version accélérée permettant, dans le cas où n
+s'écrit sous forme du produit de deux nombres premiers p et q, de
+calculer a^r modulo p et a^r modulo q, puis d'utiliser le théorème des
+restes chinois pour obtenir le résultat du calcul.&nbsp;</li>
+<li>Utiliser l'extension c++11 std::chrono pour effectuer les
+mesures de temps, et comparer les différences de performance entre les
+méthodes de la question 1 et 3.</li>
+</ol>
+<h2>3) Codage d'un message</h2>
+On veut maintenant utiliser un nombre stocké sur p octets (= valeur de size() du BigInteger) afin
+de stocker un message. <br />
+<ol>
+<li>En supposant que l'on veut utiliser des caractères stockés
+sur 5 bits (alphabet + quelques caractères en plus), écrire la fonction
+qui permet de coder le message comme une succession
+de&nbsp;BigInteger
+de p octets. Les bits supplémentaires non utilisés seront mis à 0.</li>
+<li>Ecrire la fonction qui permet de décoder un message codé
+sur un succession de BigInteger de p octets.</li>
+</ol>
+<h2>4) Tirage de nombres aléatoires</h2>
+Le but de cette section est d'écrire une fonction permettant, lorsque
+l'on a besoin de construire un nombre&nbsp;n bits (par exemple
+n=128 bits), de le construire comme étant le produit de deux nombres
+aléatoires de respectivement p et q bits tel que p+q = n. Cette
+fonction sera utilisée pour le calcul des nombres premiers P et Q
+nécessaires au calcul de la clef privée RSA.
+<ol>
+<li>Sur quelques exemples concrets simples, s'assurer que, lorsque l'on prend deux nombres
+s'écrivant respectivement sur p+1 bits et sur q+1 bits (i.e. leurs bits de
+poids le plus fort est à 1) et que l'on effectue leurs multiplications,
+on obtient toujours un nombre dont le bit de poids le plus fort est au plus de p+q+1.
+bits.</li>
+<li>Ecrire un générateur de nombre aléatoire que permet de
+tirer un nombre aléatoire BigInteger de p bits (avec le bit de poids le
+plus fort à un). On ne demande pas que le nombre aléatoire généré soit
+cryptographiquement sûr.</li>
+<li>Vérifier en pratique la propriété énoncée à la question 1
+est vrai.</li>
+</ol>
+<h2>Remise de ce TP</h2>
+Mêmes conditions que les TPs précédents Le fichier devant contenir vos
+résultats et la déclaration devra s'appeler TP9.html.
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 48%;">Question</td>
+<td style="width: 45%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">1</td>
+<td>1) PGCD (Euclide de base) sur des BigIntegers<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Test du fonctionnement calcul PGCD</td>
+<td></td>
+</tr>
+<tr>
+<td>3) Inverse modulaire sur un BigInteger</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Inverse modulaire couplé sur BigInteger</td>
+<td></td>
+</tr>
+<tr>
+<td>5)&nbsp;fonction&nbsp;permutation/permutation
+inverse</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">2</td>
+<td>1) calcul a^r modulo n (méthode de base)<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) idem avec réduction base et puissance</td>
+<td></td>
+</tr>
+<tr>
+<td>3) accélération avec reste chinois (cas n=p.q avec p et q premiers)</td>
+<td></td>
+</tr>
+<tr>
+<td>4) mesure de performance</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="2">3</td>
+<td>1) codage message dans un BigInteger de p octets<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) décodage message depuis un BigInteger de p octets</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="3">4</td>
+<td>1) avez-vous trouvé la justification?<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) générateur de nombres aléatoires sur p bits</td>
+<td></td>
+</tr>
+<tr>
+<td>3) test produit de nombres aléatoires de p + q bits</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de
+ce qui fonctionne ou ne fonctionne pas, non testée (= écrit par par
+testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 18 mars 2019.</span></p>
+</body></html>

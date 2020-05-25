@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Cryptographie : TP N°8</title>
+
+<meta content="Pascal Mignot" name="author" /></head>
+<body>
+<h1>TP N°8/N°3 de cryptographie<br />
+chiffrement par bloc</h1>
+Le but de ce TP est d'effectuer d'effectuer du chiffrement par bloc.<br />
+<h2>1) codage par bloc</h2>
+Afin d'effectuer ces opérations, il est conseillé d'utiliser la classe
+std::bitset. Elle permet d'effectuer facilement des opérations binaires
+sur des blocs de taille fixe.<br />
+<ul>
+<li>On utilisera des paquets de 16 bits
+(std::bitset&lt;16&gt;)</li>
+<li>Les symboles seront stockés dans des paquets de 5 bits:
+2^5=32&gt;26, i.e. lettres de l'alphabets + quelques symboles
+supplémentaires (par exemple espace, virgule, point, point
+d'exclamation, point d'interrogation, dièse où les lettres A-J placées
+derrière un # représentent des chiffres).</li>
+<li>Un bloc sera constitué de 3 paquets de 5 bits,
+plus&nbsp;un bit de parité (1+5+5+5).</li>
+</ul>
+<ol>
+<li>Ecrire une fonction qui transforme un texte en un tableau
+de blocs de 16 bits.</li>
+<li>Ecrire une fonction fait l'inverse (transforme un tableau
+de blocs de 16 bits en texte).</li>
+</ol>
+<h2>2) substitution/permutation binaire</h2>
+Les substitutions travailleront sur des paquets de 4 bits. Les
+permutations sur des paquets de 16 bits.<br />
+On utilisera le fait que lorsque l'on donne à la fonction srand(n) la
+même graine n, les nombres obtenus par les rand() suivants sont
+toujours les mêmes.<br />
+<ol>
+<li>Ecrire une classe de substitution dont le constructeur par
+défaut utilise la graine qui lui est passée pour tirer une substitution
+au hasard.&nbsp;</li>
+<li>Ecrire les méthodes qui permettent d'appliquer la
+substitution ainsi que la substitution inverse sur un paquet de 16 bits
+(donc qui effectue 4 substitutions).&nbsp;</li>
+<li>Ecrire une classe de permutation dont le constructeur par
+défaut
+utilise la graine qui lui est passée pour tirer une permutation au
+hasard.&nbsp;</li>
+<li>Ecrire les méthodes qui permettent d'appliquer la
+permutation ainsi
+que la permutation inverse sur un paquet de 16 bits (donc qui effectue
+une permutation de 16 bits).</li>
+</ol>
+<h2>3) réseau de substitition-permutation</h2>
+Dans cette partie, on implémente un SPN à 4 étages sur un bloc de 16
+bits.<br />
+<ol>
+<li>Ecrire l'algorithme de diversification de la clef
+suivant:&nbsp; soit un mot C de 32 bits découpés en mots de 4 bits
+c0,...,c7. Les clefs Ki de 16 bits sont calculées comme Ki =
+ci,...,ci+3 (on reprend le même que dans le cours). On obtient ainsi
+les 5 clefs Ki.</li>
+<li>Ecrire la fonction d'encodage du SPN.</li>
+<li>Ecrire la fonction de décodage du SPN.</li>
+<li>Vérifier que le chiffrement/déchiffrement d'un message
+texte en mode ECB fonctionne correctement.</li>
+</ol>
+<h2>4) Modes opératoires</h2>
+On choisira la valeur IV comme 0.
+<ol>
+<li>Ecrire la fonction de chiffrement/déchiffrement avec le
+mode&nbsp;CBC.</li>
+<li>Ecrire la fonction de chiffrement/déchiffrement avec le
+mode OFB.</li>
+<li>Ecrire la fonction de chiffrement/déchiffrement avec le
+mode CFB.</li>
+</ol>
+<h2>Remise de ce TP</h2>
+Mêmes conditions que les TPs précédents Le fichier devant contenir vos
+résultats et la déclaration devra s'appeler TP8.html.
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 48%;">Question</td>
+<td style="width: 45%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="2">1</td>
+<td>1) codage par bloc de 16 bits<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) décodage par bloc de 16 bits</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">2</td>
+<td>1) construction substitution aléatoire<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) fonction substitution/substitution inverse</td>
+<td></td>
+</tr>
+<tr>
+<td>3) construction permutation aléatoire</td>
+<td></td>
+</tr>
+<tr>
+<td>4)&nbsp;fonction&nbsp;permutation/permutation
+inverse</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">3</td>
+<td>1) diversification de la clef SPN 16bits<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) codage d'un bloc avec un SPN</td>
+<td></td>
+</tr>
+<tr>
+<td>3) décodage d'un bloc avec un SPN</td>
+<td></td>
+</tr>
+<tr>
+<td>4) chiffrement/déchiffrement&nbsp;ECB avec SPN</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="3">4</td>
+<td>1) chiffrement/déchiffrement CBC<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2)&nbsp;chiffrement/déchiffrement OFB</td>
+<td></td>
+</tr>
+<tr>
+<td>3)&nbsp;chiffrement/déchiffrement CFB</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de
+ce qui fonctionne ou ne fonctionne pas, non testée (= écrit par par
+testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 11 mars 2019.</span></p>
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Compression : TP N°5</title>
+
+<meta content="Pascal Mignot" name="author" /></head>
+<body>
+<h1>TP N°5 de compression</h1>
+Le but de ce TP est d'effectuer de calculer la performance d'un méthode
+de
+compression par modélisation de contexte, et d'effectuer une synthèse
+de
+l'ensemble des méthodes de compression
+<h2>Exercice 1: Compression par modélisation de contexte</h2>
+On voudrait tester l'efficacité d'un codage de type PPM (sans écrire la
+méthode de compression/décompression elle-même).
+<ol>
+<li>Pour réaliser cela, écrire une fonction qui calcule les
+probabilités conditionnelles d'ordre n (=pour les n caractères
+précédents) sur une source. Cela revient, pour tous les blocs de taille
+n, à calculer l'histogramme du caractère qui suit ce bloc (exemple:
+pour (..., aaba: a=14, b=7, ...), cela signifie que dans la source
+considérée, le bloc aaba est suivi dans 14 cas d'un a, et dans 7 cas
+d'un b). L'histogramme ainsi estimé est celui de N(X<sub>p-n</sub>...X<sub>p-1</sub>,X<sub>p</sub>).</li>
+<li>Ecrire une fonction qui à partir du contexte (= la valeur
+du bloc), calcule la probabilité du caractère suivant (par exemple, si
+ce caractère est b, dans le contexte aaba, alors la probabilité de b
+dans ce contexte est 7/21). Puis, retourne la self -information
+associée (dans ce même exemple: - log(7/21)/log(2)), qui correspond au
+nombre de bits optimal pour coder un symbole ayant cette probabilité
+dans ce contexte (qui est atteinte pour un codage arithmétique).
+<p>On remarquera que la probabilité conditionnelle dans le
+contexte est estimée comme N(X<sub>p-n</sub>...X<sub>p-1</sub>,X<sub>p</sub>)
+/ Somme( N(X<sub>p-n</sub>...X<sub>p-1</sub>,X<sub>p</sub>)
+pour tous les X<sub>p</sub> existants dans ce contexte).</p>
+</li>
+<li>Calculer la somme des self-informations de chaque caractère
+sur la totalité de la source. On utilisera cette quantité comme
+estimation de la compression PPM.</li>
+<li>Calculer l'entropie pour la loi jointe (loi jointe =
+histogrammes locaux renormalisé par N-(n+1) qui est le nombre de
+contextes d'ordre de n rencontré dans une source de longueur N (taille
+du fichiers)).
+<p>La loi jointe est estimée comme Pr[X<sub>p-n</sub>...X<sub>p-1</sub>,X<sub>p</sub>]=N(X<sub>p-n</sub>...X<sub>p-1</sub>,X<sub>p</sub>)
+/ Somme( N(X<sub>p-n</sub>...X<sub>p-1</sub>,X<sub>p</sub>)
+pour tous les X<sub>p</sub> et tous les contextes (X<sub>p-n</sub>...Xp-1).</p>
+</li>
+<li>Calculer l'entropie H(X<sub>p</sub>) et
+l'entropie conditionnelle H(X<sub>p</sub>|(X<sub>p-n</sub>...X<sub>p-1</sub>).
+On rappelle que H(X<sub>p</sub>) est l'entropie de la loi
+du symbole.</li>
+</ol>
+<h2>Remise de ce TP&nbsp;</h2>
+Mêmes conditions que les TPs précédents Le fichier devant contenir vos
+résultats et la déclaration devra s'appeler TP5.html.
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 43%;">Question</td>
+<td style="width: 50%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">1</td>
+<td>1) Calcul des probabilités conditionnelles<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Calcul de la self-information associée à la probabilité contextuelle.</td>
+<td></td>
+</tr>
+<tr>
+<td>3) Estimation de la compression PPM</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Calculer l'entropie pour la loi jointe</td>
+<td></td>
+</tr>
+<tr>
+<td>5) Calcul de l'entropie et de l'entropie conditionnelle</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de
+ce qui fonctionne ou ne fonctionne pas, non testée (= écrit par par
+testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 11 février 2019</span></p>
+</body></html>

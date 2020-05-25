@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Compression : TP N°2</title>
+
+<meta content="Pascal Mignot" name="author" /></head>
+<body>
+<h1>TP N°2 de compression</h1>
+
+<h2>Introduction:</h2>
+Dans ce TP, nous utilisons maintenant un codage à taille variable. Pour
+le reste du TP, nous supposerons&nbsp;que nous chercherons toujours
+à coder des fichiers contenant du texte.<br /><br />
+
+<span style="font-weight: bold; color: red;">Attention:</span>
+pour la question 1) de ce TP, vous serez de toute façon obligé
+d'implémenter
+ces fonctions. Elles seront aussi réutilisées lors du TP suivant, ainsi
+que dans les TPs de cryptographie.
+
+<h2>1) Statistiques de l'alphabet</h2>
+Nous allons avoir besoin de
+connaître la fréquence des lettres utilisées par la source que l'on
+souhaite coder. Par ailleurs, on supposera que les lettres produites
+par cette source ne sont pas toujours constituées des premières lettres
+de l'alphabet. Donc:<br />
+<ol>
+<li>Ecrire une fonction qui calcule
+l'alphabet de la source (donc ici, à partir d'un buffer contenant une
+réalisation d'un message émis par la source).</li>
+<li>Ecrire une fonction permettant de calculer la fréquence
+empirique de chaque symbole de la source.</li>
+<li>Ecrire alors une fonction qui calcule la self-information
+pour chacun des symboles ainsi que l'entropie de la source.</li>
+</ol>
+L'ensemble de ses fonctions pourra être implémenté comme des méthodes
+d'une classe alphabet.<br />
+<h2>2) Codage de Huffman</h2>
+On veut maintenant réaliser un codage Huffman. Le codage nécessitant
+l'utilisant de la fréquence des symboles, on fera en sorte que les
+fonctions/classes écrites à la question précédente soient adaptées.<br />
+<ol>
+<li>Ecrire une fonction qui applique la méthode vue en cours de
+l'arbre de codage. Une représentation en texte devra permettre de
+confirmer que le résultat obtenu est bien conforme aux fréquences de
+répartition.</li>
+<li>Construire le code à taille variable à partir de l'arbre de
+codage.</li>
+<li>Ecrire la fonction de codage binaire. La fonction devra
+aussi retourner le taux de compression par rapport à un codage à taille
+fixe.</li>
+<li>Ecrire la fonction de décodage binaire. La fonction devra
+aussi retourner le taux d'expansion.</li>
+<li>Le bon fonctionnement sera vérifié sur un ensemble
+des fichiers test. Les performances du codage seront mesurées sur
+l'ensemble de ces fichiers, comparées à l'entropie, et placé dans le
+fichier TP2.html</li>
+</ol>
+<h2 style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">3)
+Ecriture dans un fichier</h2>
+Ajouter les fonctions d'écriture/lecture d'un codage de Huffman dans un
+fichier.<br />
+<ol>
+</ol>
+<h2>Note:</h2>
+<ul>
+<li>on pourra utiliser la fonction qsort (du C) ou std::sort
+(du C++) pour effectuer les tris.</li>
+</ul>
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 43%;">Question</td>
+<td style="width: 50%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="3">1</td>
+<td>1) calcul de l'alphabet source.</td>
+<td></td>
+</tr>
+<tr>
+<td>2) calcul de la fréquence d'une source à partir d'un
+échantillon.</td>
+<td></td>
+</tr>
+<tr>
+<td>3) calcul de la self-information et de l'entropie</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">2</td>
+<td>1) arbre de codage<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) construction du code à taille variable</td>
+<td></td>
+</tr>
+<tr>
+<td>3) codage binaire de Huffman</td>
+<td></td>
+</tr>
+<tr>
+<td>4) décodage binaire de Huffman</td>
+<td></td>
+</tr>
+<tr>
+<td>5)&nbsp;test sur les échantillons et mesure de
+performance</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ecrire/lecture codage Huffman.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de ce qui fonctionne ou ne fonctionne pas, non testée (=
+écrit par par testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 19 janvier 2019.</span></p>
+</body></html>

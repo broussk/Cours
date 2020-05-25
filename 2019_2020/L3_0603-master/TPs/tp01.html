@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Compression : TP N°1</title></head>
+<body>
+<h1>TP N°1 de compression</h1>
+<h2>Remarque préliminaire:&nbsp;un sujet sera donné par
+semaine</h2>
+<ul>
+<li>le sujet ne doit pas seulement être réalisé en TP: il
+nécessite que vous travailliez chez vous.</li>
+<li>le travail réalisé doit être rendu dans la semaine qui suit
+le TP (sinon, note pour ce TP = 0).</li>
+<li>les sujets ont souvent des dépendances: si vous ne
+réalisez/rendez pas les TPs des semaines précédentes, vous ne pourrez
+pas rendre les TPs des semaines suivantes.</li>
+</ul>
+<h2>Introduction:</h2>
+Afin d'effectuer de la compression, on doit être en mesure d'écrire les
+données sous la forme la plus compacte possible. En particulier, on
+souhaite pouvoir écrire paquet de bits par paquets de bits dans un flux
+de bits, chacun de ces paquets pouvant éventuellement avoir chacun une
+taille différente.<br />
+Le flux de bits obtenu représente alors l'information compressée.
+Inversement, lorsque l'on relit ce flux de bits, on doit être en mesure
+de lire bit à bit, ou paquet par paquet.<br />
+<br />
+On se propose dans ce premier TP de vous familiariser avec la
+bibliothèque <a href="https://github.com/URCA-info/0603/blob/master/TPs/BitStream-1.2.12.zip">BitStream</a>
+qui permet de manipuler des flux de bits, afin d'effectuer des
+entrées/sorties simples sur des flux de bits.<br />
+<h2>1) Lecture/écriture en binaire</h2>
+Dans un premier temps, il vous est demandé de comprendre l'utilisation
+de cette bibliothèque, et exécutant et en comprenant le code d'exemple
+fourni. Puis, écrire de petits programmes de test qui vous permettent:<br />
+<ol>
+<li>De tester l'écriture puis la lecture bit à bit dans un flux.</li>
+<li>De tester l'écriture puis la lecture de Bits::Block de
+taille constante.</li>
+</ol>
+L'objectif de cette bibliothèque est de pouvoir générer un flux binaire
+de taille quelconque à partir de la concaténation de blocs binaires de
+taille variable ou de bits. Par exemple, si on effectue un codage à
+taille fixe de 5 bits, l'écriture de n caractères dans ce flux doit
+produire ceil(5*n/8) octets. De même, l'écriture bit à bit de n bits
+dans le flux doit produire ceil(n/8) octets.
+<h2>2) Codage binaire à taille fixe (CTF)</h2>
+<ol>
+<li>Afin de tester des données, on considère les fichiers de
+données
+contenus dans <a href="https://github.com/URCA-info/0603/blob/master/TPs/USconstitution.txt">ce fichier texte contenant la constitution américaine</a>.
+Ecrire
+une fonction permettant permettant de lire les données dans ces
+fichiers, et de construire la table des caractères différents dans ce fichier.</li>
+<li>Ecrire une fonction de codage à taille fixe avec le plus
+petit code binaire
+possible pour ce fichier. </li>
+<li>Ecrire une fonction de décodage permettant de décoder les
+données codées avec la fonction précédente.</li>
+<li>Ecrire une fonction permettant de vérifier que les données
+avant et après codage/décodage sont identiques.</li>
+<li>Sauvegarder le résultat dans un fichier, dont vous
+construirez le format (typiquement entête de description + données). Le
+résultat en terme de taille devra être conforme à ce qui a été indiqué
+à la question 1 dans la section donnée du fichier. Le format de fichier
+adopté devra être décrit dans la page du rapport (TP1.html).</li>
+<li>Charger le fichier compressé (avec relecture de l'entête),
+puis décompressez les données contenues.</li>
+</ol>
+<h2>Contraintes en terme de programmation</h2>
+<ul>
+<li>le langage de programmation utilisé sera le C++.
+L'utilisation des fonctions C standard reste autorisé (memcpy, sprintf,
+...).</li>
+<li>chaque
+méthode de codage/décodage devra être implémentée dans une classe
+particulière (i.e. une classe CTF, CTV, CHuffman, CLZH).</li>
+<li>toutes ces classes dériveront d'une classe mère qui
+implémente les méthodes virtuelles encode et decode.</li>
+<li>tous
+les résultats des compressions seront stockés dans des fichiers
+partageant tous le même format, à savoir une entête contenant la taille
+du fichier, un magic number pour identifier le type de compression, et
+dans le cas du CTF, par exemple, le nombre de symboles à lire, la
+taille de la table des symboles/codes, puis la table des symboles/des
+codes. Cette entête sera suivie des données écrits en binaire.</li>
+</ul>
+<h2>Remise de ce TP</h2>
+
+le TP doit être remis au plus tard
+<span style="font-weight: bold; text-decoration: underline; color: red;">une semaine</span>
+après la date du TP sur
+<a href="https://cours.univ-reims.fr/course/view.php?id=1733">l'outil de remise de travaux du cours moodle</a>.
+
+
+
+<h2>Exemple modèle de déclaration de travaux</h2>
+
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 43%;">Question</td>
+<td style="width: 50%;">Déclaration (exemple)</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="2">1</td>
+<td>1)&nbsp;écriture/lecture de bit à bit</td>
+<td>fait.</td>
+</tr>
+<tr>
+<td>2) écriture/lecture bloc par bloc</td>
+<td>fait.</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="6">2</td>
+<td>1) Fonction chargement du fichier de données<br />
+</td>
+<td>fait.</td>
+</tr>
+<tr>
+<td>2) Codage à taille fixe en mémoire</td>
+<td>fait.</td>
+</tr>
+<tr>
+<td>3) Décodage à taille fixe en mémoire</td>
+<td>partiel:&nbsp;le décodage ne produit pas
+le même résultat dans tous les cas.</td>
+</tr>
+<tr>
+<td>4) Fonction de vérification&nbsp;</td>
+<td>non testée.</td>
+</tr>
+<tr>
+<td>5) Sauvegarde en format compressé</td>
+<td>non fait</td>
+</tr>
+<tr>
+<td>6) Chargement en format compressé </td>
+<td>non fait<br />
+</td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de ce qui fonctionne ou ne fonctionne pas, non testée (=
+écrit par par testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2016-2017 : version du 12 janvier 2019.</span></p>
+</body></html>

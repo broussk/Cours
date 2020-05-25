@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Compression : TP N°4</title>
+
+<meta content="Pascal Mignot" name="author" />
+</head>
+<body>
+<h1>TP N°4 de compression</h1>
+<h2>Remarques:&nbsp;</h2>
+<ul>
+<li>le sujet ne doit pas seulement être réalisé en TP: il
+nécessite que vous travailliez chez vous.</li>
+<li>le travail réalisé doit être rendu dans la semaine qui suit
+le TP (sinon, note pour ce TP = 0).</li>
+<li>les sujets ont souvent des dépendances: si vous ne
+réalisez/rendez pas les TPs des semaines précédentes, vous ne pourrez
+pas rendre les TPs des semaines suivantes.</li>
+</ul>
+<h2>Introduction:</h2>
+Dans ce TP, nous étudierons les codages basés sur un dictionnaire.<br />
+<h2>1) Dictionnaire statique</h2>
+On voudrait tester l'efficacité d'un codage avec un dictionnaire
+statique (à savoir, prendre un alphabet statique plus grand afin de
+stocker les motifs les plus courants). Les fonctions écrites devront
+permettre de choisir&nbsp; le nombre de bits à utiliser pour
+étendre la taille de l'alphabet (exemple: si un alphabet fait 3 bits, 4
+bits permet d'ajouter 8 symboles issus du dictionnaires, 5 bits 16
+symboles, ...).
+<ol>
+<li>Ecrire une fonction permettant de déterminer la fréquence
+les digrammes, afin de déterminer les plus fréquents pour la source
+considérée.</li>
+<li>Générer le code à taille fixe associé au dictionnaire
+statique (= symboles + digrammes les plus fréquents).</li>
+<li>Ecrire la fonction de codage binaire par dictionnaire
+statique. La fonction devra
+aussi retourner le taux de compression par rapport à un codage à taille
+fixe.</li>
+<li>Ecrire la fonction de décodage binaire. La fonction devra
+aussi retourner le taux d'expansion.</li>
+<li>Le bon fonctionnement sera vérifié sur l'ensemble
+des fichiers test. Les performances du codage seront mesurées sur
+l'ensemble des fichiers, comparées à l'entropie, et placé dans le
+fichier TP4.html.</li>
+</ol>
+<h2>2)&nbsp;Compression LZ78</h2>
+On veut maintenant tester la méthode de compression LZ78, et étudier
+les performances de cet algorithme dans ses différentes variations. On
+devra aussi calculer le taux de compression par rapport à un codage à
+taille fixe.
+<ol>
+<li>Ecrire une version de LZ78 en utilisant un dictionnaire
+sans taille maximale (à savoir le dictionnaire grandi indéfiniment).
+L'écriture des indices du dictionnaire devra utiliser le nombre de bits
+minimal possible au regard du nombre d'entrées déjà présentes dans le
+dictionnaire.</li>
+<li>Ecrire une première variation du LZ78 qui utilise une
+taille maximale de dictionnaire. Lorsque cette taille maximale est
+atteinte, on utilisera le dictionnaire comme un dictionnaire à taille
+fixe.</li>
+<li>Ecrire une seconde variation du LZ78 basée sur la
+précédente, qui comptabilise le nombre de fois qu'un code est utilisé
+lors des dernières entrées, et qui régulièrement (par exemple, toutes
+les 256 sorties de symboles), supprime du dictionnaire les codes moins
+fréquents (par exemple, les 16).</li>
+<li>Comparer les performances sur les fichiers de données de
+ces trois variations.</li>
+</ol>
+<h2>3) Ecriture dans un fichier</h2>
+<ol>
+<li>Ajouter les fonctions d'écriture/lecture d'un codage avec
+dictionnaire à taille fixe
+dans un fichier.</li>
+<li>Ajouter les fonctions d'écriture/lecture d'un
+codage des différentes variations de LZ78
+dans un fichier.</li>
+</ol>
+<ol>
+</ol>
+<h2>Remise de ce TP&nbsp;</h2>
+Mêmes conditions que le TP1 + TP2 + TP3. Le fichier devant contenir vos
+résultats et la déclaration devra s'appeler TP4.html.
+<ul>
+</ul>
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 5%;">Exercice</td>
+<td style="width: 60%;">Question</td>
+<td style="width: 35%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">1</td>
+<td>1) Fréquence des digrammes<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Génération code à taille fixe associé au
+dictionnaire statique</td>
+<td></td>
+</tr>
+<tr>
+<td>3) codage par dictionnaire statique</td>
+<td></td>
+</tr>
+<tr>
+<td>4) décodage&nbsp;par dictionnaire statique</td>
+<td></td>
+</tr>
+<tr>
+<td>5) Tests et étude performance.</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">2</td>
+<td>1) Codage LZ78 avec dictionnaire sans taille maximale<br />
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Codage&nbsp;LZ78 avec dictionnaire de taille maximale</td>
+<td></td>
+</tr>
+<tr>
+<td>3)&nbsp;Codage&nbsp;LZ78 avec dictionnaire de taille maximale et recyclage</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Tests et étude performance.</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="2">3</td>
+<td>1) Sauvegarde du codage à taille fixe</td>
+<td></td>
+</tr>
+<tr>
+<td>2)&nbsp;Sauvegarde du codage LZ78</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de ce qui fonctionne ou ne fonctionne pas, non testée (=
+écrit par par testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 4 février 2019.</span></p>
+</body></html>

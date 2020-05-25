@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0134)https://sead.univ-reims.fr/courses/CODAGE/document/Travaux_Pratiques/TP10.html?cidReq=CODAGE&id_session=0&gidReq=0&gradebook=0&origin= -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cryptographie : TP N°10</title>
+
+<meta content="Pascal Mignot" name="author"><style>.cip-genpw-icon.cip-icon-key-small {background-image: url(chrome-extension://dafgdjggglmmknipkhngniifhplpcldb/icons/key_16x16.png); }
+.cip-genpw-icon.cip-icon-key-big {background-image: url(chrome-extension://dafgdjggglmmknipkhngniifhplpcldb/icons/key_24x24.png); }
+</style></head>
+<body>
+<h1>TP N°10/N°5 de cryptographie<br>
+cryptographie à clef publique</h1>
+Le but de ce TP est d'implémenter des algorithmes de cryptographie à
+clef publique (bibliothèque BigInteger disponible sur webcampus + les
+fonctions du TP N°9).<br>
+<h2>1) Grands nombres premiers</h2>
+<ol>
+<li>Ecrire une fonction permettant de vérifier avec le test de
+Fermat
+si un nombre est prermier. La fonction prendre en paramètre le nombre
+de fois où le test est effectué sur le nombre n à vérifier et renverra
+la probabilité que la probabilité que le nombre ne soit pas premier
+(autrement dit, si la fonction renvoie 1, alors le nombre n'est pas
+premier).</li>
+<li>Utiliser ce test avec des nombres premiers de
+Mersenne, des nombres de Carmichael, et des nombres composites
+(construit comme produit de facteurs premiers) afin de vérifier son bon
+fonctionnement.</li>
+<li>Ecrire une fonction permettant de vérifier avec le test de
+Miller-Rabin
+si un nombre est prermier. La fonction prendre en paramètre le nombre
+de témoins utilisés lors du test sur le nombre n à vérifier et renverra
+la probabilité que la probabilité que le nombre ne soit pas premier
+(autrement dit, si la fonction renvoie 1, alors le nombre n'est pas
+premier).</li>
+<li>Utiliser ce test avec des nombres premiers de Mersenne, des
+nombres de
+Carmichael, et des nombres composites (construit comme produit de
+facteurs premiers) afin de vérifier son bon fonctionnement.&nbsp;</li>
+<li>Testera l'algorithme sur de grands nombres aléatoires (par
+exemple, 128 ou 256 bits).
+</li>
+</ol>
+<h2>2) Cryptosystème RSA</h2>
+On souhaite dans cette partie écrire une classe permettant de
+coder/décoder un cryptosystème RSA.
+<ol>
+<li>Ecrire le constructeur avec un taille de bits r
+(bitsize_t). Ce
+constructeur tirera p et q tel que le produit p.q ait une taille d'au
+moins r bits (se souvenir de la question 1 de la partie 4 du TP N°9).
+Puis tirera un a ayant les bonnes propriétés et en déduire b. <br>
+</li>
+<li>Ecrire les méthodes de chiffrement et de déchiffrement d'un
+entier.
+On les testera sur des grands entiers de r bits tirés au hasard.</li>
+<li>Ecrire les méthodes de chiffrement d'un message de texte en
+une suite d'entiers. On vérifiera le bon fonctionnement en chiffrant
+des portions de
+texte.</li>
+<li>Ecrire
+une deuxième méthode de déchiffrement accéléré utilisant les restes
+chinois. Tout ce qui peut être précalculé (par exemple les inverses)
+sera stocké dans la classe.</li>
+</ol>
+<h2>3) Attaque d'un chiffre RSA avec l'algorithme p-1 de Pollard</h2>
+<ol>
+<li>Ecrire l'algorithme de factorisation p-1 de Pollard.</li>
+<li>Déterminer
+le nombre de bits qu'il est raisonnable de factoriser avec cet
+algorithme lorsque p est de l'ordre de n^0.1, n^0.2,
+n^0.3, n^0.4 et n^0.5 quand n a 128 et 256 bits (autrement dit, si n a
+128 bits, prendre des valeurs de p sur 128*0.1 bits, 128*0.2bits, ...,
+128*0.5bits, et déterminer quand la factorisation commence à prendre
+trop de temps). </li>
+<li>Ecrire une fonction qui à partir de la
+clef publique (n,a) retourne, si la factorisation de n est trouvée, le
+cryptosystème complet. </li>
+<li>Utiliser les fonctions écrites ci-dessus afin de montrer
+l'attaque d'un chiffre RSA (exemple avec génération d'une clef, attaque
+de la clef publique)..</li>
+</ol>
+<h2>Remise de ce TP</h2>
+Mêmes conditions que les TPs précédents Le fichier devant contenir vos
+résultats et la déclaration devra s'appeler TP10.html.
+<h2>Modèle de déclaration de travaux pour ce TP</h2>
+<table style="text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 7%;">Exercice</td>
+<td style="width: 48%;">Question</td>
+<td style="width: 45%;">Déclaration</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="5">1</td>
+<td>1) test de Fermat<br>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) validation du test de Fermat sur des exemples</td>
+<td></td>
+</tr>
+<tr>
+<td>3) test de Miller-Rabin</td>
+<td></td>
+</tr>
+<tr>
+<td>4)&nbsp;validation du test de Fermat sur des
+exemples</td>
+<td></td>
+</tr>
+<tr>
+<td>5) test sur de grands nombres aléatoires</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">2</td>
+<td>1) Classe RSA : écriture du constructeur (génération
+des clefs)<br>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) Classe RSA : chiffrement et déchiffrement d'un
+entier.</td>
+<td></td>
+</tr>
+<tr>
+<td>3) Classe RSA : chiffrement et déchiffrement d'un texte.</td>
+<td></td>
+</tr>
+<tr>
+<td>4) Classe RSA : &nbsp;déchiffrement rapide avec les
+restes chinois</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="4">3</td>
+<td>1) factorisation p-1 de Pollard.<br>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>2) test rapidité de factorisation de Pollard.</td>
+<td></td>
+</tr>
+<tr>
+<td>3) fonction d'attaque d'un chiffre RSA.</td>
+<td></td>
+</tr>
+<tr>
+<td>4) démonstration d'attaque RSA.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+fait = réalisé et fonctionnel (aucun bug détecté), partiel +
+description de
+ce qui fonctionne ou ne fonctionne pas, non testée (= écrit par par
+testée).
+<p><span style="font-size: 10px;">Année
+universitaire 2018-2019 : version du 27 mars 2019.</span></p>
+</body></html>
