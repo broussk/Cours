@@ -1,0 +1,15 @@
+Le sujet du projet d'INFO0505 que vous aurez à réaliser cette année est une base de données pour gérer un camping. En INFO0505, vous ne réaliserez que la BD tout en gardant présent à l'esprit que les réservations d'emplacements se feront par la suite par Internet. Ce camping devra pouvoir accueillir des tentes, des caravanes, des campings-cars et proposer également des mobil homes et des petits pavillons ou chalets (avec des équipements offerts et/ou payants tels que : branchement électrique, connexion Internet, compteur d'eau, etc.). Il proposera également des activités (gratuites ou payantes) encadrées par des animateurs qui devront posséder un diplôme en relation avec la ou les activités qu'ils animeront. Les personnes intéressées devront s'inscrire pour participer à ces activités. C'est à vous d'imaginer l'organisation générale du camping pour lequel d'ailleurs vous inventerez un nom. Vous pouvez d'ores et déjà commencer votre étude (et donc votre dossier) et écrire le cahier des charges en vous inspirant de campings et villages vacances (Yelloh Village par exemple) qui existent sur Internet. Lors de la première séance de TP la semaine prochaine, vous devrez donc arriver avec des éléments et des pistes de réflexion.
+
+
+La BD devra permettre d'obtenir chaque matin :
+
+
+la liste des arrivées et des départs (pour pouvoir faire l'état des lieux),
+
+
+le planning des activités et les noms des personnes inscrites ainsi que les noms des animateurs,
+
+
+Elle devra également permettre de faire la facturation des séjours des vacanciers.
+
+etc., etc.
