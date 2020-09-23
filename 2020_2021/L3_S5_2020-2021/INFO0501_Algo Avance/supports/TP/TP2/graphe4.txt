@@ -1,0 +1,12 @@
+nSommets 6
+oriente 1
+value 0
+DEBUT_DEF_ARCS
+0 1
+0 3
+1 4
+2 4
+2 5
+3 1
+4 3
+FIN_DEF_ARCS
