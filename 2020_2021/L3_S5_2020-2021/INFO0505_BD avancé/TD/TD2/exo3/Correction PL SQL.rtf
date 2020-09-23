@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18260\viewh13160\viewkind0
+\deftab708
+\pard\pardeftab708\ri-386\partightenfactor0
+
+\f0\fs24 \cf2 1/\
+DECLARE\
+	TYPE numberTab IS VARRAY (10) OF NUMBER;\
+        	t numberTab;\
+BEGIN\
+	t :=numberTab();\
+	FOR i in 1..10 LOOP\
+        		t(i) := 10+i;\
+   	END LOOP;\
+  	FOR i in 1..10 LOOP\
+        		DBMS_OUTPUT.put_line(t(i));\
+   	END LOOP;\
+END;\
+\
+2/\
+\pard\pardeftab720\partightenfactor0
+\cf2 DECLARE \
+	CURSOR Req IS select NomLoc, PrenomLoc  from Locataire where regexp_like(NomLoc,\'92w.*\'92,i);\
+BEGIN\
+FOR Loc IN Req LOOP\
+	DBMS_OUTPUT.put_line(Loc.NomLoc,Loc.PrenomLoc);\
+END LOOP;\
+end;\
+\
+3/\
+DECLARE CURSOR Req IS select NumAg, NomAg  from Agence;\
+DECLARE CURSOR Veh(idA) IS select NumImmat, Modele,Marque, Couleur  from Vehicule where NumAgProp=idA ;\
+\
+BEGIN\
+FOR Ag IN Req LOOP\
+	DBMS_OUTPUT.put_line(Ag.NumAg,Ag.NomAg);\
+	FOR Vh IN Veh(Ag.NumAg) LOOP\
+		DBMS_OUTPUT.put_line(Vh.NumImmat, Vh.Modele,Vh.Marque, Vh.Couleur);\
+	END LOOP;\
+END LOOP;\
+end;\
+\
+4/\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 CREATE TRIGGER before_create_vehicule BEFORE INSERT ON Vehicule FOR EACH ROW\
+BEGIN\
+IF\
+	NEW.NumAgProp IS NULL \
+THEN\
+	SET NEW.NumAgProp = 1;\
+END IF;\
+END;}
