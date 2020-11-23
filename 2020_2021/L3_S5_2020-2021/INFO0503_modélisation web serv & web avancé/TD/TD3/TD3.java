@@ -9,6 +9,7 @@ class ThreadMessagerie
 public class ThreadMessagerie extends Thread {
     private Socket s;
     private MessageAgregation msgA;
+    private MessageAgregation msgB;
     private Vector<MessageEchangeListe> mg;
 
     public ThreadMessagerie(Socket s, MessageAgregation msgA){
@@ -25,9 +26,12 @@ public class ThreadMessagerie extends Thread {
 
         Vector<MessageEchange> reponse;
 
-        while{
-            msgA = oos.read(Object());
-            if(msgA.getlist()[0].getIdMsg() == 0){
+        while(1){
+            msgA = oos.readObject();
+
+
+
+            /*if(msgA.getlist()[0].getIdMsg() == 0){
                 mg.add(msgA.getlist[0]);
                 reponse.setID(1);
             }
@@ -39,6 +43,39 @@ public class ThreadMessagerie extends Thread {
                     reponse.setId(1);
                 }
                 oos.writeObject(reponse);
+            }*/
+            short id_msg_received = msgA.getlist()[0].getIdMsg();
+            switch(id_msg_received){
+                case 0:
+                    //conection 
+                    //haché du couple envoyé par l'utilisateur
+                    String hash = msgA.getlist()[0].getContenu();
+                    //requete a la bdd
+                    reponse = ;
+                    //reponse de la bdd
+                        if(reponse.getCode()){
+                            remplirMessageReponse(reponse.getId(),0);
+                        }
+                        else{
+                            remplirMessageReponse(reponse.getId(),1);
+                        }
+                        oos.writeObject(msgB);
+                        //ok -> ok + tocken du clien
+                        //pas ok -> pas ok
+                    break;
+                case 1:
+                    //envoi
+                    break;
+                case 2:
+                    //reception
+                    break;
+                case 3:
+                    //archivage
+                    break;
+                case 4:
+                    //effacement
+                    break;
+                default : 
             }
         }
         s.close();
