@@ -1,0 +1,193 @@
+Application de gestion d'entreposage et de transport de conteneurs de 20 pieds.
+
+--------------------------------------- OBJETS ---------------------------------------
+Entrepot :
+	- nom : chaîne de caractères
+	- hauteur : entier (entre 6 et 8)
+	- nb_rangees : entier
+	- nb_places_rangees : entier
+	- places : TABLEAU de Place
+		Place :
+		- char_rangee : caractère
+		- num_rangee : entier
+		- conteneurs : PILE de Conteneur (taille = hauteur entrepôt)
+			Conteneur (abstraite)
+				- num_id : chaîne de caractères
+				- proprietaire_conteneur : Proprietaire
+				- poids_total : réel
+				- feuille_route : TABLEAU d'Etape
+			Conteneur_Simple (hérite de Conteneur)
+				- liste_marchandises : TABLEAU de Marchandise
+			Conteneur_Refrigere (hérite de Conteneur)
+				- liste_marchandises : TABLEAU de Marchandise
+				- temperature : réel
+				- autonomie : entier (duree_max - date_mise_en_route)
+			Conteneur_Liquide (hérite de Conteneur)
+				- type_liquide : Type_Liquide (énumération : ALIMENTAIRE, PERISSABLE, TOXIQUE, ...)
+				- volume : réel
+			Conteneur_Vrac (hérite de Conteneur)
+				- type_contenant : Type_Contenant (énumération : GRAIN, POUDRE, VIVANT, ...)
+				
+				Proprietaire
+					- nom_proprietaire : chaîne de caractères
+					- adresse_proprietaire : chaîne de caractères
+				Etape
+					- date_depart : chaîne de caractères (ou Date)
+					- lieu_depart : chaîne de caractères
+					- date_arrivee : chaîne de caractères (ou Date)
+					- lieu_arrivee : chaîne de caractères
+				Marchandise
+					- id_produit : chaîne de caractères
+					- quantite : entier
+
+
+
+---------------------------------------- JSON ----------------------------------------
+UN FICHIER PAR ENTREPÔT qui est un tableau associatif contenant : 
+	- son nom (chaîne de caractères)
+	- sa hauteur (entier entre 6 et 8)
+	- son nombre de rangées (entier strictement supérieur à 0)
+	- son nombre de places par rangée (entier strictement supérieur à 0)
+	- un tableau (ses places) de N (N = nombre de places au total) tableaux associatifs (les places) contenant chacun : 
+		- sa rangée (un caractère)
+		- son numéro dans la rangée (un entier)
+		- SI LA PLACE N'EST PAS VIDE, un tableau (sa pile) d'au plus H (H = hauteur de l'entrepôt) tableaux associatifs (les conteneurs) contenant chacun : 
+			- son numéro d'identification (chaîne de caractères)
+			- son poids total (chaîne de caractères)
+			- une tableau associatifs contenant (son propriétaire) : 
+				- le nom du propriétaire (chaîne de caractères)
+				- l'adresse propriétaire (chaîne de caractères)
+			- un tableau (sa feuille de route) de tableaux associatifs (les étapes) contenant chacun : 
+					- une date de départ (chaîne de caractères)
+					- un lieu de départ (chaîne de caractères)
+					- une date d'arrivée (chaîne de caractères)
+					- un lieu d'arrivée (chaîne de caractères)
+			- UNE DES OPTIONS SUIVANTES :
+				OPTION 1 (conteneur simple)
+					- un tableau (sa liste de marchandises) de tableaux associatifs (les marchandises) contenant chacun : 
+						- son identifiant (chaîne de caractères)
+						- sa quantité (entier strictement supérieur à 0)
+				OPTION 2 (conteneur réfrigéré)
+					- sa température (réel)
+					- son autonomie (entier)
+					- un tableau (sa liste de marchandises) de tableaux associatifs (les marchandises) contenant chacun : 
+						- son identifiant (chaîne de caractères)
+						- sa quantité (entier strictement supérieur à 0)
+				OPTION 3 (conteneur liquide)
+					- son type de liquide (chaîne de caractères)
+					- son volume (réel)
+				OPTION 4 (conteneur vrac)
+					- son type de contenant (chaîne de caractères)
+
+entrepot.json
+{
+	"nom" : "Warehouse 13", 
+	"hauteur" : 7, 
+	"nb_rangee" : 12, 
+	"nb_places_rangees" : 10, 
+	"places" : [
+		{	// PLACE VIDE
+			"char_rangee" : "A", 
+			"num_rangee" : 1, 
+		}, 
+		{
+			"char_rangee" : "A", 
+			"num_rangee" : 2, 
+			"conteneurs" : [
+				{	// CONTENEUR SIMPLE
+					"num_id" : "51MPL3", 
+					"poids_total" : 314.159, 
+					"proprietaire_conteneur" : {
+						"nom_proprietaire" : "Saquet Family", 
+						"adresse_proprietaire" : "34 rue de la Boustifaille, Comté, Terre du Milieu"
+					}, 
+					"feuille_route" : [
+						{
+							"date_depart" : "18/11/20 15:00", 
+							"lieu_depart" : "Reims", 
+							"date_arrivee" : "18/11/20 19:00", 
+							"lieu_arrivee" : "Paris"
+						}, 
+						...
+					], 
+					"liste_marchandises" : [
+						{
+							"id_produit" : "AB-123-CD", 
+							"quantite" : 4
+						}, 
+						...
+					]
+				},
+				{	// CONTENEUR RÉFRIGÉRÉ
+					"num_id" : "R3FR163R3", 
+					"poids_total" : 847.349, 
+					"proprietaire_conteneur" : {
+						"nom_proprietaire" : "Wayne Enterprise", 
+						"adresse_proprietaire" : "2324 Bat Street, Gotham, USA"
+					}, 
+					"feuille_route" : [
+						{
+							"date_depart" : "14/11/20 15:00", 
+							"lieu_depart" : "Metropolis", 
+							"date_arrivee" : "15/11/20 07:00", 
+							"lieu_arrivee" : "Boston"
+						}, 
+						...
+					], 
+					"temperature" : -200, 
+					"autonomie" : 48, 
+					"liste_marchandises" : [
+						{
+							"id_produit" : "AZ-196-OT", 
+							"quantite" : 4
+						},
+						{
+							"id_produit" : "OX-198-GN", 
+							"quantite" : 4
+						}, 
+						...
+					]
+				},
+				{	// CONTENEUR LIQUIDE
+					"num_id" : "71QU1D3", 
+					"poids_total" : 1199.847, 
+					"proprietaire_conteneur" : {
+						"nom_proprietaire" : "Wayne Enterprise", 
+						"adresse_proprietaire" : "2324 Bat Street, Gotham, USA"
+					}, 
+					"feuille_route" : [
+						{
+							"date_depart" : "14/11/20 15:00", 
+							"lieu_depart" : "Chicago", 
+							"date_arrivee" : "16/11/20 07:00", 
+							"lieu_arrivee" : "Washington"
+						}, 
+						...
+					], 
+					"type_liquide" : "TOXIQUE", 
+					"volume" : 1000.000
+				},
+				{	// CONTENEUR VRAC
+					"num_id" : "VR4C", 
+					"poids_total" : 666.666, 
+					"proprietaire_conteneur" : {
+						"nom_proprietaire" : "Lucifer Corporation", 
+						"adresse_proprietaire" : "666 Downing Avenue, Sin City, USA"
+					}, 
+					"feuille_route" : [
+						{
+							"date_depart" : "31/10/20 09:00", 
+							"lieu_depart" : "Los Angeles", 
+							"date_arrivee" : "01/11/20 14:00", 
+							"lieu_arrivee" : "Las Vegas"
+						}, 
+						...
+					], 
+					"type_contenant" : "VIVANT"
+				},
+				...
+			]
+		}, 
+		...
+	]
+}
