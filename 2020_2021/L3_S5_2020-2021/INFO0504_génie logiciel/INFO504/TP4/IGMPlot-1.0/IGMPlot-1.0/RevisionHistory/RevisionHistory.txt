@@ -1,0 +1,4 @@
+01/23/2018:
+"Documentation and program now state that promolecular electron density in IGMPlot is limited to atoms of periods 1,2,3"
+
+"Bug fixed in vmd scripts generation (viewpoint management)" 
