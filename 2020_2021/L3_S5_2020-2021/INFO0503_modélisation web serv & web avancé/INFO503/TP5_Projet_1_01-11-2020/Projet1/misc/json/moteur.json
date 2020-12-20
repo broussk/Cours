@@ -1,0 +1,7 @@
+[
+    {"PuissDef":50,"Id ":1,"Carburation ":"essence","Puissance ":195},
+    {"PuissDef":50,"Id ":2,"Carburation ":"electrique","Puissance ":125},
+    {"PuissDef":50,"Id ":3,"Carburation ":"diesel","Puissance ":80},
+    {"PuissDef":50,"Id ":4,"Carburation ":"GPL","Puissance ":62},
+    {"PuissDef":50,"Id ":5,"Carburation ":"Hybride","Puissance ":100}
+]

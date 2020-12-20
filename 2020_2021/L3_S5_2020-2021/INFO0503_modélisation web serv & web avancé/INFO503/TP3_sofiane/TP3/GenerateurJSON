@@ -1,0 +1,10 @@
+{"contacts": [
+   {
+      "titre": "One piece",
+      "auteur": {"nom": "Eichiro Oda"}
+   },
+   {
+      "titre": "Naruto",
+      "auteur": {"nom": "Masashi Kishimoto"}
+   }
+]}{"media": [{}]}

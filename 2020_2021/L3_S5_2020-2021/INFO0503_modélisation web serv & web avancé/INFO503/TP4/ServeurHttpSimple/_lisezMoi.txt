@@ -1,0 +1,6 @@
+1) Compiler les classes :
+  > javac *.java
+2) Exécutez le serveur :
+  > java ServeurHttpSimple
+3) Lancez le script testServeurHttpSimple.html (dans un navigateur Internet)
+  > Testez les deux boutons
