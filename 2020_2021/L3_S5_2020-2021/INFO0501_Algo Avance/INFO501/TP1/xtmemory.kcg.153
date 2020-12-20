@@ -1,0 +1,237 @@
+# callgrind format
+version: 1
+creator: xtree-1
+pid: 153
+cmd: ./prog
+
+positions: line
+event: curB : currently allocated Bytes
+event: curBk : currently allocated Blocks
+event: totB : total allocated Bytes
+event: totBk : total allocated Blocks
+event: totFdB : total Freed Bytes
+event: totFdBk : total Freed Blocks
+events: curB  curBk  totB  totBk  totFdB  totFdBk 
+fl=(1) UnknownFile???
+fn=(1) main
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2) /build/glibc-ZN95T4/glibc-2.31/libio/ioputs.c
+cfn=(2) puts
+calls=0 40
+0 0 0 4096 1 0 0
+fl=(2)
+fn=(2)
+40
+cfi=(3) /build/glibc-ZN95T4/glibc-2.31/libio/fileops.c
+cfn=(3) _IO_file_xsputn@@GLIBC_2.2.5
+calls=0 1244
+40 0 0 4096 1 0 0
+fl=(3)
+fn=(3)
+1244
+cfi=(3)
+cfn=(4) _IO_file_overflow@@GLIBC_2.2.5
+calls=0 745
+1244 0 0 4096 1 0 0
+fl=(3)
+fn=(4)
+745
+cfi=(4) /build/glibc-ZN95T4/glibc-2.31/libio/genops.c
+cfn=(5) _IO_doallocbuf
+calls=0 347
+745 0 0 4096 1 0 0
+fl=(4)
+fn=(5)
+347
+cfi=(5) /build/glibc-ZN95T4/glibc-2.31/libio/filedoalloc.c
+cfn=(6) _IO_file_doallocate
+calls=0 101
+347 0 0 4096 1 0 0
+fl=(5)
+fn=(6)
+101 0 0 4096 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(7) afficher_liste
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(7)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(8) rechercher
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(8)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(7)
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(7)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(8)
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(8)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(9) supprimer
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(9)
+0
+cfi=(1)
+cfn=(8)
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(8)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(7)
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(7)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(7)
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(7)
+0 24 1 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(10) detruire_liste
+calls=0 0
+0 120 5 120 5 0 0
+fl=(1)
+fn=(10)
+0
+cfi=(1)
+cfn=(9)
+calls=0 0
+0 120 5 120 5 0 0
+fl=(1)
+fn=(9)
+0
+cfi=(1)
+cfn=(8)
+calls=0 0
+0 120 5 120 5 0 0
+fl=(1)
+fn=(8)
+0 120 5 120 5 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(1)
+cfn=(7)
+calls=0 0
+0 24 1 24 1 0 0
+fl=(1)
+fn=(7)
+0 24 1 24 1 0 0
+
+fl=(6) /build/glibc-ZN95T4/glibc-2.31/csu/../csu/libc-start.c
+fn=(11) (below main)
+342
+cfi=(7) /build/glibc-ZN95T4/glibc-2.31/stdlib/exit.c
+cfn=(12) exit
+calls=0 139
+342 0 0 0 0 4096 1
+fl=(7)
+fn=(12)
+139
+cfi=(7)
+cfn=(13) __run_exit_handlers
+calls=0 132
+139 0 0 0 0 4096 1
+fl=(7)
+fn=(13)
+132
+cfi=(8) /mnt/c/Users/tonne/Desktop/valgrind-3.16.1/coregrind/vg_preloaded.c
+cfn=(14) _vgnU_freeres
+calls=0 75
+132 0 0 0 0 4096 1
+fl=(8)
+fn=(14)
+75
+cfi=(1)
+cfn=(15) __libc_freeres
+calls=0 0
+75 0 0 0 0 4096 1
+fl=(1)
+fn=(15)
+0
+cfi=(1)
+cfn=(16) buffer_free
+calls=0 0
+0 0 0 0 0 4096 1
+fl=(1)
+fn=(16)
+0 0 0 0 0 4096 1
+
+totals: 456 19 4552 20 4096 1
