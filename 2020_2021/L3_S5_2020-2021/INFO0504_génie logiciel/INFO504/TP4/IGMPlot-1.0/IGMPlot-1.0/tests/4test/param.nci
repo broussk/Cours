@@ -1,0 +1,6 @@
+2
+frag1.xyz
+frag2.xyz
+LIGAND 2 4.0
+INCREMENTS 0.05  0.05  0.05 
+CUTPLOT_IGM 0.3 0.03

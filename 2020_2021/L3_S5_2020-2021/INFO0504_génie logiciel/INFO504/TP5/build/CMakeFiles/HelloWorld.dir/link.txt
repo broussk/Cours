@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/HelloWorld.dir/src/HelloWorld.cxx.o  -o HelloWorld  MyStrlen/libMyStrlen.a 
