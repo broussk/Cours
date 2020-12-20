@@ -1,0 +1,12 @@
+{"contacts": [
+   {
+      "nom": "John",
+      "prenom": "Smith",
+      "age": 30
+   },
+   {
+      "nom": "Cyril",
+      "prenom": "Rabat",
+      "age": 25
+   }
+]}

@@ -1,0 +1,1 @@
+Ce dossier comporte des classes de test pour une connexion cryptée entre client et serveur.

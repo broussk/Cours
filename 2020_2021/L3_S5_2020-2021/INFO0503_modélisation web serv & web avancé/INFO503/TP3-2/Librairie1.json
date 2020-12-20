@@ -1,0 +1,16 @@
+{"mediatheque": {
+   "0": {
+      "titre": "Licence",
+      "auteur": {
+         "dateNaissance": "18/09/1990",
+         "nom": "Cyril RABAT"
+      }
+   },
+   "1": {
+      "titre": "Licence le retour ! ",
+      "auteur": {
+         "dateNaissance": "28/11/2000",
+         "nom": "Nathan TONNELLE"
+      }
+   }
+}}

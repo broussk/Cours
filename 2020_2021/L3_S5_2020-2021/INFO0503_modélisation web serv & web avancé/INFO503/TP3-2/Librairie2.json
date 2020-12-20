@@ -1,0 +1,31 @@
+{"mediatheque": {
+   "0": {
+      "titre": "Licence 2",
+      "auteur": {
+         "dateNaissance": "28/11/2000",
+         "nom": "Nathan TONNELLE"
+      }
+   },
+   "1": {
+      "titre": "Licence 3",
+      "auteur": {
+         "dateNaissance": "28/11/2000",
+         "nom": "Nathan TONNELLE"
+      }
+   },
+   "2": {
+      "realisateur": {
+         "dateNaissance": "19/10/1990",
+         "nom": "RABAT Cyril"
+      },
+      "titre": "La terrifiante Licence !",
+      "duree": 120
+   },
+   "3": {
+      "titre": "Master 1",
+      "auteur": {
+         "dateNaissance": "28/11/2000",
+         "nom": "Nathan TONNELLE"
+      }
+   }
+}}
