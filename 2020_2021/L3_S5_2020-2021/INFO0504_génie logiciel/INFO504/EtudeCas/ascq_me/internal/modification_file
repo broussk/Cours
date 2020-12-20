@@ -1,0 +1,74 @@
+#AUTHOR : JEAN-CHARLES BOISSON (2005-2008)
+#file containing all the modifications available
+#the modifications correspond to those proposed by Mascot
+#according to the UNIMOD database (www.unimod.org)
+#
+#Modifications can be added in respecting the following syntax.
+#
+#THE SYNTAX IS : 
+#INDEX MODIF_NAME MODIF_SYMBOL MODIF_AA MODIF_TERM MODIF_CF_TO_ADD MODIF_CF_TO_REMOVE
+#
+#INDEX = just a number for finding easier the wanted modification for the reader of this file
+#(not used for the ranking !!!!!!)
+#MODIF_NAME = the full complete name of the modification
+#MODIF_SYMBOL = a smaller name used for printing
+#MODIF_AA= a string corresponding to the amino acid allowed to be modified
+#NB: if the modif only depedant of the side, put the key word NONE
+#MODIF_SIDE= indicate on which term side (C-term, N-term, Both, Independant or Protein) the modification can be put 
+#MODIF_ADDING = chemical formula to add for applying the modification
+#MODIF_REMOVING = chemical formula to remove for applying the modification
+#
+#NB : for the formula, if there is not a formula to add or to remove, put the
+#keyword NONE
+#
+#
+1 Acetylation(K) Acetyl(K) K Independant H2C2O NONE
+2 N-Acetylation Acetyl(N-term) NONE N-term H2C2O NONE
+3 Amidation Amide(C-term) NONE C-term HN O
+4 Biotinylation(K) Biotin(K) K Independant H14C10N2O2S NONE
+5 Biotinylation(N-term) Biotin(N-term) Independant N-term H14C10N2O2S NONE
+6 Iodoacetamide(C) Carbomidomethyl(C) C Independant H3C2NO NONE
+7 Carbamylation(K) Carbamyl(K) K Independant HCNO NONE
+8 Carbamylation(N-term) Carbamyl(N-term) Independant N-term HCNO NONE
+9 Iodoacetic_acid_derivative(C) Carboxymethyl(C) C Independant H2C2O2 NONE
+10 Half_of_a_disulfide_bridge(C) Cystine(C) C Independant NONE H
+11 Deamidation(NQ) Deamidation(NQ) NQ Independant O HN
+12 Ethanolation_of_Cys(C) EtOH C Independant H4C4O NONE
+13 Guanidination(K) Guanidination(K) K Independant H2CN2 NONE
+14 4-hydroxynonenal(CHK) HNE(CHK) CHK Independant H16C9O2 NONE
+15 Homoserine(C-term_M) HSe(C-term_M) M C-term O H2CO
+16 Homoserine_lactone(C-term_M) Hse_lact(C-term_M) M C-term NONE H4C1S1
+17 Applied_Biosystems_cleavable_ICAT(TM)_heavy ICAT_heavy C Independant H17CC(13)9N3O3 NONE
+18 Applied_Biosystems_cleavable_ICAT(TM)_light ICAT_light C Independant H17C10N3O3 NONE
+19 Bruker_Daltonics_SERVE-ICPL(TM)_quantification_chemistry,heavy_form(K) ICPL_heavy(K) K Independant H3C(13)6NO NONE 
+20 Bruker_Daltonics_SERVE-ICPL(TM)_quantification_chemistry,heavy_form(Protein) ICPL_heavy(Protein) NONE Protein H3C(13)6NO NONE 
+21 Bruker_Daltonics_SERVE-ICPL(TM)_quantification_chemistry,light_form_S-pyridylethylation(K) ICPL_light(K) K Independant H3C6NO NONE
+22 Bruker_Daltonics_SERVE-ICPL(TM)_quantification_chemistry,light_form_S-pyridylethylation(Protein) ICPL_light(Protein) NONE Protein H3C6NO NONE
+23 Applied_Biosystems_iTRAQ(TM)_multiplexed_quantitation_chemistry(K) iTRAQ(K) K Independant H12C4C(13)3N NONE 
+24 Applied_Biosystems_iTRAQ(TM)_multiplexed_quantitation_chemistry(N-term) iTRAQ(N-term) NONE N-term H12C4C(13)3N NONE
+25 Applied_Biosystems_iTRAQ(TM)_multiplexed_quantitation_chemistry(Y) iTRAQ(Y) Y Independant H12C4C(13)3N NONE
+26 Methyl_ester Me_ester(C-term) NONE C-term H2C NONE
+27 Methyl_ester Me_ester(DE) DE Independant H2C NONE
+28 Methyl_methanethiosulfonate(C) MMTS(C) C Independant H2CS NONE
+29 N-Acetylation(Protein) N-Acetyl(Protein) NONE Protein H2C2O NONE
+30 N-Formylation(Protein) N-Formyl(Protein) NONE Protein CO NONE
+31 N-isopropylcarboxamidomethyl(C) NIPCAM(C) C Independant H9C5NO NONE
+32 O18_label(C-term) O18(C-term) NONE C-term O(18) O
+33 Oxidation(M) Oxidation(M) M Independant O NONE
+34 Oxidation(HW) Oxidation(HW) HW Independant O NONE
+35 Biotinyl-iodoacetamidyl-3,6-dioxaoctanediamine(C) PEO-Biotin(C) C Independant H30C18N4O5S NONE
+36 Phosphorylation(ST) Phospho(ST) ST Independant HO3P NONE
+37 Phosphorylation(Y) Phospho(Y) Y Independant HO3P NONE
+38 Acrylamide(C) Propionamide(C) C Independant H5C3NO NONE
+39 S-carbamoylmethylcysteine_cyclization(N-term) Pyro-cmC(N-term) NONE N-term NONE H3N
+40 Pyro-glu(N-termQ) Pyro-glu(N-termQ) Q N-term NONE H3N
+41 Pyro-glu(N-termE) Pyro-glu(N-termE) E N-term NONE H3N 
+42 S-pyridylethylation(C) S-pyridylethyl(C) C Independant H7C7NO NONE
+43 N-Succinimidyl-3-morpholine_acetate(K) SMA(K) K Independant H9C6NO2 NONE
+44 N-Succinimidyl-3-morpholine_acetate(N-term) SMA(N-term) NONE N-term H9C6NO2 NONE
+45 Sodium_adduct(C-term) Sodiated(C-term) NONE C-term Na H 
+46 Sodium_adduct(DE) Sodiated(DE) DE Independant Na H 
+47 O-sulfonation(C-term) Sulfation(C-term) NONE C-term O3S NONE
+48 O-sulfonation(T) Sulfation(T) T Independant O3S NONE
+49 O-sulfonation(Y) Sulfation(Y) Y Independant O3S NONE
+50 Sulphone(M) Sulphone(M) M Independant O2 NONE

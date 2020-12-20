@@ -1,0 +1,5102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>aa.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>aa_8cpp</filename>
+    <includes id="aa_8h" name="aa.h" local="yes" imported="no">aa.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>init_peptid_link</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a072401b5a9c4013a4ae263c95cf11001</anchor>
+      <arglist>(element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>aa_CF_t *</type>
+      <name>get_amino_acid_table</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a38379654239d03c833a96f4753fc8903</anchor>
+      <arglist>(const char *filename, element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_amino_acid_table</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a79bc6083d58f52b3d4a9e30e3dfd241d</anchor>
+      <arglist>(aa_CF_t *aa_table)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_util_formula</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a7051accbc420772e52a6f065906ef3b0</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_peptide_link</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>afd3b9a961e51a417a1335371880ba2c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_amino_acid_table</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>ab411645090eb466fc78a2ada0fd252a0</anchor>
+      <arglist>(aa_CF_t *aa_table)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_amino_acid_table</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>ab8fb4020e5ce73359f5cdebdab5e7eaf</anchor>
+      <arglist>(FILE *file, aa_CF_t *aa_table)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_X</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>aa518c450b96b78255adbc89f2a0ba4a6</anchor>
+      <arglist>(char amino_acid)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_Z</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>af3681b4a98a8f1b0c9cc22b20162b26b</anchor>
+      <arglist>(char amino_acid)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_B</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>af95d42915a176fb102be200b4be7927f</anchor>
+      <arglist>(char amino_acid)</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_X</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>abab39ed02a3c430f2299b680678aa163</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_Z</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a1d320c9b96f1ec74863f086e79b38d3b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_B</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a9f508070c94ece19eb024817bc1c3c20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>H</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a591f0827a4ffbc9f527686d2aa462586</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>OH</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a66e9030a7cd555d5164b5f084effdf57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>NHCHCO</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>abba3fae13563a8a94dbe1a49639c69f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>H2O</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>acf079ea229de8017a38a8d80a9d3bbee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>CO</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a1275dcded32371eef2c867f7c455a0a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>NH</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>ae5fcd8ab62ad75a204ee9a05984ef3ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>NH3</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a6920a4e39ed596c854c8ca42d35211c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>NH2</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>af9f6c92a614e646b211b814cbf0b9988</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>CH</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a64c29cacdf3913a45e19eca83228bda0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>CO2H</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a189ad72500a3dba8f7f825fdc6749a35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char</type>
+      <name>X</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>ab112eba8625d23bbdd70ca78d6d2a67a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char</type>
+      <name>Z</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>aef247490aad5c557465c29194cea8ec5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char</type>
+      <name>B</name>
+      <anchorfile>aa_8cpp.html</anchorfile>
+      <anchor>a0c2e9c326e4fa45c92abddf771972f64</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>aa.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>aa_8h</filename>
+    <includes id="formula_8h" name="formula.h" local="yes" imported="no">formula.h</includes>
+    <class kind="struct">amino_acid_CF</class>
+    <member kind="typedef">
+      <type>struct amino_acid_CF</type>
+      <name>aa_CF_t</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>aefa0d63fcbe65cff3a4d42b38f035ab9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_peptid_link</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>a072401b5a9c4013a4ae263c95cf11001</anchor>
+      <arglist>(element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>aa_CF_t *</type>
+      <name>get_amino_acid_table</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>a02f042cf8135e2f2ef82c939a6007565</anchor>
+      <arglist>(const char *filename, element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_amino_acid_table</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>a79bc6083d58f52b3d4a9e30e3dfd241d</anchor>
+      <arglist>(aa_CF_t *aa_table)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_util_formula</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>a9b0323cac421a29475fdb29796a36e85</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_peptide_link</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>afd3b9a961e51a417a1335371880ba2c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_amino_acid_table</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>ab411645090eb466fc78a2ada0fd252a0</anchor>
+      <arglist>(aa_CF_t *aa_table)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_amino_acid_table</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>ab8fb4020e5ce73359f5cdebdab5e7eaf</anchor>
+      <arglist>(FILE *file, aa_CF_t *aa_table)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_X</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>aa518c450b96b78255adbc89f2a0ba4a6</anchor>
+      <arglist>(char amino_acid)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_Z</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>af3681b4a98a8f1b0c9cc22b20162b26b</anchor>
+      <arglist>(char amino_acid)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_B</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>af95d42915a176fb102be200b4be7927f</anchor>
+      <arglist>(char amino_acid)</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_X</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>abab39ed02a3c430f2299b680678aa163</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_Z</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>a1d320c9b96f1ec74863f086e79b38d3b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_B</name>
+      <anchorfile>aa_8h.html</anchorfile>
+      <anchor>a9f508070c94ece19eb024817bc1c3c20</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ascq_me.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>ascq__me_8cpp</filename>
+    <includes id="ascq__me__display_8h" name="ascq_me_display.h" local="yes" imported="no">ascq_me_display.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>ASCQ_ME_TABLE_RESULT</name>
+      <anchorfile>ascq__me_8cpp.html</anchorfile>
+      <anchor>a4692ebae4a594be87b3c17c66b8c8d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>ASCQ_ME_RESULT</name>
+      <anchorfile>ascq__me_8cpp.html</anchorfile>
+      <anchor>a443064b41a40fc0fe167bc4a30fd325e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>ASCQ_ME_PEPTIDES_SCORING</name>
+      <anchorfile>ascq__me_8cpp.html</anchorfile>
+      <anchor>aecd0bf2899d624bf0ccb32e1ea2670ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_ascq_me_usage</name>
+      <anchorfile>ascq__me_8cpp.html</anchorfile>
+      <anchor>acf37dffcf77d7b6fc65ea357fd13e4a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>ascq__me_8cpp.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ascq_me_configuration.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>ascq__me__configuration_8cpp</filename>
+    <includes id="ascq__me__configuration_8h" name="ascq_me_configuration.h" local="yes" imported="no">ascq_me_configuration.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>load_int_keyword</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>acd0ab2f4e1aeaf5291392c565932284d</anchor>
+      <arglist>(FILE *file, char *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_unsigned_int_keyword</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a412eb590eff5c204a2e8bc34e573542e</anchor>
+      <arglist>(FILE *file, char *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_boolean_keyword</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>aa197a3009632f50169aacab24774f96a</anchor>
+      <arglist>(FILE *file, char *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_string_keyword</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a33e161d910e18d86fa6b5a2c4dd0e72e</anchor>
+      <arglist>(FILE *file, const char *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_float_keyword</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>aaed1da8b1b0c7055faf3de7379062a97</anchor>
+      <arglist>(FILE *file, char *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_configuration_file_name</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a9d1353edbd3c5c90047695de41f4a68f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_configuration</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a5c887a50d8549bfccecaf3925fc62ac7</anchor>
+      <arglist>(char *configuration_file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ascq_me_configuration_cleaning</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a2270f9601d02271f50d855f6d657bbb1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_fasta_chosen</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a4415adbbeeb4e09514b3c276acc2987c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_configuration</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a65b2dadc0411e43874ec8ed7f73bc62a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_configuration</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a5c85fc24fc5120af0bd177643422a2cd</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_configuration_xml</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>afa90666305f39b14771a9437f35ef7d9</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>activate_decoy_mode</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>aa426710e30089aadcae6af01c3fdb462</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_decoy_mode_activated</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a84dc869a8a397c2a4b8474bf20811f2f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_decoy_score</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a0e991c063a8464c065b8397bf1bb06d9</anchor>
+      <arglist>(double score)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_decoy_score</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a323a10ff636140cd1d2f4d2e62b01ae9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_nb_displayed_proteins</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>ab3bd3d4a93114c7d13ac56c790d562fb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>get_base_name</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a44a702573f088b08c3cc3901d6078ce1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>base_name</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a181f6c1c3cbb32002c68c3412d923114</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>configuration_file_name</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a0b11d9c42fe6983c0ad33c176ff35596</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>fasta_format</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a45fef9b18e2906208d7f547a22408dfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>decoy_mode_activation</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>aaa3586159a8d10c4b13e1650480f4600</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>decoy_score</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a57318644d2ebd7dc2cc10f8fbfae1cca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_displayed_proteins</name>
+      <anchorfile>ascq__me__configuration_8cpp.html</anchorfile>
+      <anchor>a1f7d045fb02f4d037e1bf15ef3d70226</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ascq_me_configuration.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>ascq__me__configuration_8h</filename>
+    <includes id="isodistrib_8h" name="isodistrib.h" local="yes" imported="no">isodistrib.h</includes>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_configuration_file_name</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a39debc533bc00a3d68dcf62795757d26</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_configuration</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a5c887a50d8549bfccecaf3925fc62ac7</anchor>
+      <arglist>(char *configuration_file)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_nb_displayed_proteins</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>ab3bd3d4a93114c7d13ac56c790d562fb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ascq_me_configuration_cleaning</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a2270f9601d02271f50d855f6d657bbb1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_fasta_chosen</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a4415adbbeeb4e09514b3c276acc2987c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_configuration</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a65b2dadc0411e43874ec8ed7f73bc62a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_configuration</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a5c85fc24fc5120af0bd177643422a2cd</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_configuration_xml</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>afa90666305f39b14771a9437f35ef7d9</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>activate_decoy_mode</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>aa426710e30089aadcae6af01c3fdb462</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_decoy_mode_activated</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a84dc869a8a397c2a4b8474bf20811f2f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_decoy_score</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a0e991c063a8464c065b8397bf1bb06d9</anchor>
+      <arglist>(double score)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_decoy_score</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a323a10ff636140cd1d2f4d2e62b01ae9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>get_base_name</name>
+      <anchorfile>ascq__me__configuration_8h.html</anchorfile>
+      <anchor>a65f54af5b6fc6f949caebc55ae18afc1</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ascq_me_display.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>ascq__me__display_8cpp</filename>
+    <includes id="ascq__me__display_8h" name="ascq_me_display.h" local="yes" imported="no">ascq_me_display.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>PROGRAM_LIMITATION</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a53c3b0e730680c3820b775d3689726d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_ascq_me_display</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>afb3245c46e378e1cb3eba863871815c1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_protein</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>ae43c2670063b2326937c6b98cd56b585</anchor>
+      <arglist>(char *description, char *sequence, complex_t *spectrum, double score)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>printf_ascq_me_results</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a0bb3f9f41183de49bbd12d954b4b8975</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_results</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a69a299d4b6955e1914b82bda7904a678</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ascq_me_cleaning</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a738dc5b534babcb45161aab392062e68</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_results_table_form</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>ae76b7c857c623dd724cbb28af5928821</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>save_partial_peptide_scoring</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a566635f4777ddf88fdae7faedd6e4744</anchor>
+      <arglist>(double *peptide_scoring, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_peptide_scores</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a9aeda6435efe15476c23b3b3c57e8b01</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_peptide_score_from_indices</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a68e65deee77b6737a3959ba16918e443</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sort_and_init_with_peptide_scoring</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a939ea81b7249e09472db9e9de2690453</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_peptide_scoring</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a6fee676f2e668e4d66dbaa1524e923c3</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_results_xml</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a5248d0841151eb1e867c6c466a57dc0b</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_saved_proteins</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a7d47733257db8034fb40a7f4d9450b86</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char **</type>
+      <name>protein_descriptions</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a32e0db33f74f1642e41b44da941d865f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char **</type>
+      <name>protein_sequences</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>ac153c52e6e951bacb10fb336e6fff6cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t **</type>
+      <name>protein_spectra</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a6d696834ff7c42b7695a0c4aa8ff3821</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double *</type>
+      <name>protein_scores</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>aa00f86d20942bee3efe5d97592fc33f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double **</type>
+      <name>peptide_scores</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>abfa1bb32233f6d81248c767271045da1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char ***</type>
+      <name>peptides</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>aef2606205d6a5ba6aa4fdf20a00e75ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t **</type>
+      <name>peptide_formulae</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a90c9a9b776e4ba896f46d37bf8f4a2f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int *</type>
+      <name>peptide_number</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a59c0955b3638f2d6a2930739de4c87e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int *</type>
+      <name>link_between_score_and_others</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a5e81feb769728024d15c1072a7cd61cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char **</type>
+      <name>current_peptides</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>aa9e8b2cdd7a0783f4c82c3ebf24b6674</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>current_peptide_formulae</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>abc0589353e4677f2c2db821a93d48a31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double *</type>
+      <name>current_peptide_scores</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a048c152883519a221dbfc054700e4a74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int *</type>
+      <name>link_between_score_and_peptides</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a73316ac142d2870624cab303d7ef2468</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_current_peptides</name>
+      <anchorfile>ascq__me__display_8cpp.html</anchorfile>
+      <anchor>a44949cdafdb1958dc398d5b577ed05fe</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ascq_me_display.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>ascq__me__display_8h</filename>
+    <includes id="ascq__me__configuration_8h" name="ascq_me_configuration.h" local="yes" imported="no">ascq_me_configuration.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>init_ascq_me_display</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>afb3245c46e378e1cb3eba863871815c1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_protein</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>ae43c2670063b2326937c6b98cd56b585</anchor>
+      <arglist>(char *description, char *sequence, complex_t *spectrum, double score)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>printf_ascq_me_results</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a0bb3f9f41183de49bbd12d954b4b8975</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_results</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a69a299d4b6955e1914b82bda7904a678</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ascq_me_cleaning</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a738dc5b534babcb45161aab392062e68</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_ascq_me_display</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>aec53224e360c3cd93d56958ced727cf3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_results_table_form</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>ae76b7c857c623dd724cbb28af5928821</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>save_partial_peptide_scoring</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a566635f4777ddf88fdae7faedd6e4744</anchor>
+      <arglist>(double *peptide_scoring, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_peptide_scores</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a9aeda6435efe15476c23b3b3c57e8b01</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_peptide_score_from_indices</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a68e65deee77b6737a3959ba16918e443</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sort_and_init_with_peptide_scoring</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a939ea81b7249e09472db9e9de2690453</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_peptide_scoring</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a6fee676f2e668e4d66dbaa1524e923c3</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprintf_ascq_me_results_xml</name>
+      <anchorfile>ascq__me__display_8h.html</anchorfile>
+      <anchor>a5248d0841151eb1e867c6c466a57dc0b</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>cleavage.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>cleavage_8cpp</filename>
+    <includes id="cleavage_8h" name="cleavage.h" local="yes" imported="no">cleavage.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>cp_fprint</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>a4817d40539ea606b753c513b3f250802</anchor>
+      <arglist>(FILE *f, cp_t *cp)</arglist>
+    </member>
+    <member kind="function">
+      <type>cpl_t *</type>
+      <name>stringToCpl</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>ac58a41900496b50ee5828266870644aa</anchor>
+      <arglist>(char *s)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>cpl_isCleavage</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>aa65711eba6e79a8aeecfaaca3b386b72</anchor>
+      <arglist>(cpl_t *cpl, char c)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>cpl_isCleavage2</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>a2f9252562ba27a34ccc1d1bc3cddd238</anchor>
+      <arglist>(cpl_t *cpl, char cprev, char c, char cnext)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cpl_fprint</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>ab09bda98e63a283dbe46872fcf33c129</anchor>
+      <arglist>(FILE *f, cpl_t *cpl)</arglist>
+    </member>
+    <member kind="function">
+      <type>enztable_t *</type>
+      <name>enzym_load</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>a6ab257f135937e17b411f49ac652a932</anchor>
+      <arglist>(const char *fileToLoad)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_enzyme_number</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>a1ae68afe40226e8ceb911d9aeb7c11d5</anchor>
+      <arglist>(char *enztofind, enztable_t *enzt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_enzyme_table</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>aef9f434784a53279bd7c0d50dc0deb76</anchor>
+      <arglist>(enztable_t *enzt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_cpt</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>aa72c64491600445e412ab877f6bfc2f7</anchor>
+      <arglist>(cp_t *cpt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_cplt</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>a6cbb9dbebd384d9abf403a850fecfa55</anchor>
+      <arglist>(cpl_t *cplt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_enzt</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>adbf86fc5a884ae28fea764c08bc488fb</anchor>
+      <arglist>(enz_t *enzt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_enzym_table</name>
+      <anchorfile>cleavage_8cpp.html</anchorfile>
+      <anchor>a68f3408dd74149469201ba724f8b66c4</anchor>
+      <arglist>(enztable_t *enzyme_table)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>cleavage.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>cleavage_8h</filename>
+    <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
+    <class kind="struct">cleavePoint</class>
+    <class kind="struct">cleavePointList</class>
+    <class kind="struct">enzyme</class>
+    <class kind="struct">enzyme_list</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>N_SIDE</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a1f923926eaf56fe46ed539ce7b2f5607</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>C_SIDE</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a2a8c717cd57e7ece5b86463f9dd422b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct cleavePoint</type>
+      <name>cp_t</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a24222d21c795a8bf6ac5ce83939470b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct cleavePointList</type>
+      <name>cpl_t</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>ac08e52637d05bb03d56657d76be31384</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct enzyme</type>
+      <name>enz_t</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a2f2dcb74d3971dfc621784dfc5e42e11</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct enzyme_list</type>
+      <name>enztable_t</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a5d39e3e2850c82633a8c588c71c08a16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>cpl_t *</type>
+      <name>stringToCpl</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a04090cbb14b10e85fba40b59b70caa85</anchor>
+      <arglist>(char *s)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>cpl_isCleavage</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>aa65711eba6e79a8aeecfaaca3b386b72</anchor>
+      <arglist>(cpl_t *cpl, char c)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>cpl_isCleavage2</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a2f9252562ba27a34ccc1d1bc3cddd238</anchor>
+      <arglist>(cpl_t *cpl, char cprev, char c, char cnext)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cpl_fprint</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>ab09bda98e63a283dbe46872fcf33c129</anchor>
+      <arglist>(FILE *f, cpl_t *cpl)</arglist>
+    </member>
+    <member kind="function">
+      <type>enztable_t *</type>
+      <name>enzym_load</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>aaae9aa6e2f8316d29b50249bbf631999</anchor>
+      <arglist>(const char *fileToLoad)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_enzyme_number</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a1ae68afe40226e8ceb911d9aeb7c11d5</anchor>
+      <arglist>(char *enztofind, enztable_t *enzt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_enzyme_table</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>aef9f434784a53279bd7c0d50dc0deb76</anchor>
+      <arglist>(enztable_t *enzt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_cpt</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>aa72c64491600445e412ab877f6bfc2f7</anchor>
+      <arglist>(cp_t *cpt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_cplt</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a6cbb9dbebd384d9abf403a850fecfa55</anchor>
+      <arglist>(cpl_t *cplt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_enzt</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>adbf86fc5a884ae28fea764c08bc488fb</anchor>
+      <arglist>(enz_t *enzt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_enzym_table</name>
+      <anchorfile>cleavage_8h.html</anchorfile>
+      <anchor>a68f3408dd74149469201ba724f8b66c4</anchor>
+      <arglist>(enztable_t *enzyme_table)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>complex.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>complex_8cpp</filename>
+    <includes id="complex_8h" name="complex.h" local="yes" imported="no">complex.h</includes>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_multiplication</name>
+      <anchorfile>complex_8cpp.html</anchorfile>
+      <anchor>a0f222462fb28e0970e119cf2815a61f6</anchor>
+      <arglist>(complex_t z1, complex_t z2)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_addition</name>
+      <anchorfile>complex_8cpp.html</anchorfile>
+      <anchor>a8fc6e0fb3467c763f855031259ccb810</anchor>
+      <arglist>(complex_t z1, complex_t z2)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_subtraction</name>
+      <anchorfile>complex_8cpp.html</anchorfile>
+      <anchor>ad204013bddd31eb96b08e1fd30e77434</anchor>
+      <arglist>(complex_t z1, complex_t z2)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_power</name>
+      <anchorfile>complex_8cpp.html</anchorfile>
+      <anchor>addcae1f6c4cf2afa75032b88439e60c0</anchor>
+      <arglist>(complex_t z, int n)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_conjugate</name>
+      <anchorfile>complex_8cpp.html</anchorfile>
+      <anchor>a0d9d33f4fd7e16d73706cd867dca5b64</anchor>
+      <arglist>(complex_t z)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>complex.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>complex_8h</filename>
+    <class kind="struct">complex</class>
+    <member kind="typedef">
+      <type>struct complex</type>
+      <name>complex_t</name>
+      <anchorfile>complex_8h.html</anchorfile>
+      <anchor>a4ee837905a7f085695e81d6e1d21f026</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_multiplication</name>
+      <anchorfile>complex_8h.html</anchorfile>
+      <anchor>a0f222462fb28e0970e119cf2815a61f6</anchor>
+      <arglist>(complex_t z1, complex_t z2)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_addition</name>
+      <anchorfile>complex_8h.html</anchorfile>
+      <anchor>a8fc6e0fb3467c763f855031259ccb810</anchor>
+      <arglist>(complex_t z1, complex_t z2)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_subtraction</name>
+      <anchorfile>complex_8h.html</anchorfile>
+      <anchor>ad204013bddd31eb96b08e1fd30e77434</anchor>
+      <arglist>(complex_t z1, complex_t z2)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_power</name>
+      <anchorfile>complex_8h.html</anchorfile>
+      <anchor>addcae1f6c4cf2afa75032b88439e60c0</anchor>
+      <arglist>(complex_t z, int n)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t</type>
+      <name>complex_conjugate</name>
+      <anchorfile>complex_8h.html</anchorfile>
+      <anchor>a0d9d33f4fd7e16d73706cd867dca5b64</anchor>
+      <arglist>(complex_t z)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>digest.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>digest_8cpp</filename>
+    <includes id="digest_8h" name="digest.h" local="yes" imported="no">digest.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>digest</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>aea3db8d1e6c7164ef2b35423163aac4f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>get_result_of_digestion</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a232baf71c7e22e834a0e0dbcb7bccf44</anchor>
+      <arglist>(int *nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>get_copie_of_digestion_result</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ac105878ab24ee1b5a04e47e0e8350346</anchor>
+      <arglist>(int *nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_result_of_digestion</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a46e2f4692e76cd0c4e8a8344c8f044ee</anchor>
+      <arglist>(peptide_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_result_of_digestion</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a0945e4d5e9ff7126ed51294868724239</anchor>
+      <arglist>(FILE *file, peptide_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_result_of_digestion_table_format</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ad7079612fff45a7080c6c5559a765e1c</anchor>
+      <arglist>(FILE *file, peptide_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>copy_peptide</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a80275fa3e1e4d9b11b240cff99b42937</anchor>
+      <arglist>(peptide_t *original)</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>fusion_peptide</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a3391fe55fd7fb03a9dde992b4235fce7</anchor>
+      <arglist>(peptide_t *first, peptide_t *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>new_peptides_with_missed_cleavages</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>aee06075114a7b1530703c284e7f689b6</anchor>
+      <arglist>(int missed_cleavage, int *nb_new_peptides_total)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>real_digest</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a3ce635f2394b553629f83f0fd3f9255d</anchor>
+      <arglist>(char *seq)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>activate_full_digestion</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a371995da51113e935483196d9522446b</anchor>
+      <arglist>(int activation)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_peptides</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a0f9932b4e837de7ac9caba80bac79458</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sort_peptides</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ad4c58db84f5a8710491568a7ee2f542d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_peptide_charge</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a263ee1d3801a756de1324e3dacfd4ba1</anchor>
+      <arglist>(const char *formula)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>peptide_charge_weight</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ad6dc127f385bbc97c80f50d2f3a98678</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>default_peptide_charge</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ab35e8bce9136a8056f8ec9d10abf681f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_charge_formula</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a6347f5f049f9632f9edb4bcf88f62e51</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_util_digestion</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a6e9d5ebed70dcc6cc7de741e47e0133d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_used_enzyme</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>aaca1766b9ea71e55b9d815e2622b9139</anchor>
+      <arglist>(int chosen_enzyme)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_util_digestion</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a8f0f410adfad486dc049da631baa29f4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_nb_missed_cleavages</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a12ce39cde10ffd53c82533491b70af4c</anchor>
+      <arglist>(int missed_cleavage)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formulae_of_peptides</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a0dfb82ba8c4fee3f33c8a98b0b8fdd20</anchor>
+      <arglist>(int *nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_nb_missed_cleavages</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a5d77cfc05e381e5434ef78285c6ce5e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_activation_full_digest</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a673770bf1f0f2b0a07655fa1b2c24e1b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_used_enzyme</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a04f56b8b3aa3eaccf42a1e49d8fba8c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_formula_from_index</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ae1984146906069b73eababa0f1d782ba</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_formula</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>adc67fd380040c0c5e72b72530f7aedab</anchor>
+      <arglist>(peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_formula_from_another_protein</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a0417c3bb3f4975eee214a2adb3a771f4</anchor>
+      <arglist>(peptide_t *peptide, char *protein_sequence)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_peptide</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a11d3b212638a310c07b9ce18619d9456</anchor>
+      <arglist>(peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_peptide_modification</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>aa13a35874ea72a754db20466c5841440</anchor>
+      <arglist>(peptide_t *peptide, int amino_acid, int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compute_post_traductional_modifications_global</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a23b4e4dec54f286c4baa4d48032f4052</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>compute_post_traductional_modifications_one_peptide</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ae8afcb59ab946b107b62f56a837bb3f4</anchor>
+      <arglist>(peptide_t *peptide, int *nb_new)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_peptide_sequence</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>aae2a512344861d7bb03f3c79dd6ccc01</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_peptide</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ac5efbe31a9f5aa392b5646084ff0bca6</anchor>
+      <arglist>(peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_peptide_index</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a71b7337a25bc7e539c3e66111a7cd05f</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_peptide</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>acf55d7859c8215e2d4755cac47d044b9</anchor>
+      <arglist>(FILE *file, peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_peptide_index</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>aabee6613028740f048b9bb1fa77d4fe5</anchor>
+      <arglist>(FILE *file, int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_peptide_length_at_index</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a16c78794f089a2b244db8fa8f782b3c6</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_equivalent_to_another</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a2d45ab8d8a6f3a67d9ae0370afca50fb</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_maximum_peptide_length</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>af522006c82afda4b8b2e49db270090d6</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_maximum_peptide_length</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a0f617d41fbc06de16b28ab0de326ee0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compute_equivalent_peptides</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a40823d60d4ceac44efbaec6df588a174</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>peptide_t *</type>
+      <name>Peptides</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ac5ef10757bd8a86a200bed6ee5e93708</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>NbPeptides</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ac938c3d31ee9f067ba85a40a58cf6b71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>FULL_DIGESTION</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a21df51ec60db338921f033a84ae833f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>peptide_charge_formula</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a876ca59afbf3c0cc343622afbf7eced1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>enztable_t *</type>
+      <name>enztable</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a6415bfe8fe7f6bdb2f6c6e992f254fcf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>enzyme</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ad157c5d35566a01254cece5c3d424be2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_missed_cleavages</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>ab4566343194bad0bd8fff4cf277ed2ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>sequence</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>a5a5dd14f667524232ddc19ef0fb0807b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>maximum_peptide_length</name>
+      <anchorfile>digest_8cpp.html</anchorfile>
+      <anchor>aefe6f16f80973ec89b5c627b0992497a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>digest.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>digest_8h</filename>
+    <includes id="cleavage_8h" name="cleavage.h" local="yes" imported="no">cleavage.h</includes>
+    <includes id="modifications__for__digestion_8h" name="modifications_for_digestion.h" local="yes" imported="no">modifications_for_digestion.h</includes>
+    <class kind="struct">peptide</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>ENZFILENAME</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>ae65a0d8d37d3817361e98be8f26aaac3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct peptide</type>
+      <name>peptide_t</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a9d8911157c7eecbe18a1b63faaf9b604</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>digest</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>aea3db8d1e6c7164ef2b35423163aac4f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>get_result_of_digestion</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a357772ff2713c5a67ef23927cb5be9fe</anchor>
+      <arglist>(int *nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>get_copie_of_digestion_result</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a3209aabb5406f9b78824685d20180e66</anchor>
+      <arglist>(int *nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_result_of_digestion</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a46e2f4692e76cd0c4e8a8344c8f044ee</anchor>
+      <arglist>(peptide_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_result_of_digestion</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a0945e4d5e9ff7126ed51294868724239</anchor>
+      <arglist>(FILE *file, peptide_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_result_of_digestion_table_format</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>ad7079612fff45a7080c6c5559a765e1c</anchor>
+      <arglist>(FILE *file, peptide_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>copy_peptide</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>aae87eae47490dd9d0ab49e66fc2c086e</anchor>
+      <arglist>(peptide_t *original)</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>fusion_peptide</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a772c51b6cf6adb413481c3efe7924100</anchor>
+      <arglist>(peptide_t *first, peptide_t *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>new_peptides_by_missed_cleavage</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a0d021b4dafcded7aba407fa283576f5d</anchor>
+      <arglist>(int nb_missed_cleavages, int *nb_new_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>real_digest</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a3ce635f2394b553629f83f0fd3f9255d</anchor>
+      <arglist>(char *seq)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>activate_full_digestion</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a371995da51113e935483196d9522446b</anchor>
+      <arglist>(int activation)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_peptides</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a0f9932b4e837de7ac9caba80bac79458</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sort_peptides</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>ad4c58db84f5a8710491568a7ee2f542d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_peptide_charge</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a263ee1d3801a756de1324e3dacfd4ba1</anchor>
+      <arglist>(const char *formula)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>peptide_charge_weight</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>ad6dc127f385bbc97c80f50d2f3a98678</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_charge_formula</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>af486805ab7997a4043dbc141a5d35980</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>default_peptide_charge</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>ab35e8bce9136a8056f8ec9d10abf681f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_util_digestion</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a6e9d5ebed70dcc6cc7de741e47e0133d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_used_enzyme</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>aaca1766b9ea71e55b9d815e2622b9139</anchor>
+      <arglist>(int chosen_enzyme)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_util_digestion</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a8f0f410adfad486dc049da631baa29f4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_nb_missed_cleavages</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a12ce39cde10ffd53c82533491b70af4c</anchor>
+      <arglist>(int missed_cleavage)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formulae_of_peptides</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a71d37dff2982a47be5d9bfbe5ad2c8ec</anchor>
+      <arglist>(int *nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_nb_missed_cleavages</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a5d77cfc05e381e5434ef78285c6ce5e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_activation_full_digest</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a673770bf1f0f2b0a07655fa1b2c24e1b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_used_enzyme</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>ac56a3420dab2d3bbce629e8bfb6039c5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_peptide</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a11d3b212638a310c07b9ce18619d9456</anchor>
+      <arglist>(peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_peptide_modification</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>aa13a35874ea72a754db20466c5841440</anchor>
+      <arglist>(peptide_t *peptide, int amino_acid, int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compute_post_traductional_modifications_global</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a23b4e4dec54f286c4baa4d48032f4052</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>peptide_t *</type>
+      <name>compute_post_traductional_modifications_one_peptide</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>afa7da268ac2b901581c138de29c5ece6</anchor>
+      <arglist>(peptide_t *peptide, int *nb_new)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_peptide_sequence</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a3f5c6c6d20f50d6953dc45aaab9250bc</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_peptide</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>ac5efbe31a9f5aa392b5646084ff0bca6</anchor>
+      <arglist>(peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_peptide_index</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a71b7337a25bc7e539c3e66111a7cd05f</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_peptide</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>acf55d7859c8215e2d4755cac47d044b9</anchor>
+      <arglist>(FILE *file, peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_peptide_index</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>aabee6613028740f048b9bb1fa77d4fe5</anchor>
+      <arglist>(FILE *file, int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_formula_from_index</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>aa31fe6de22639cbfcb2bb5a2bd7a01be</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_formula</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>af0b618ba47b1af29fa9e77f186137adf</anchor>
+      <arglist>(peptide_t *peptide)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_peptide_formula_from_another_protein</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a3c97ce864cb70bd4b857765702cedae4</anchor>
+      <arglist>(peptide_t *peptide, char *protein_sequence)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_peptide_length_at_index</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a16c78794f089a2b244db8fa8f782b3c6</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_equivalent_to_another</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a2d45ab8d8a6f3a67d9ae0370afca50fb</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_maximum_peptide_length</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>af522006c82afda4b8b2e49db270090d6</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_maximum_peptide_length</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a0f617d41fbc06de16b28ab0de326ee0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compute_equivalent_peptides</name>
+      <anchorfile>digest_8h.html</anchorfile>
+      <anchor>a40823d60d4ceac44efbaec6df588a174</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>error.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>error_8cpp</filename>
+    <includes id="error_8h" name="error.h" local="yes" imported="no">error.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>error</name>
+      <anchorfile>error_8cpp.html</anchorfile>
+      <anchor>a5488d9b4d7fc51e0242d827bddd32374</anchor>
+      <arglist>(int error_code, const char *user_msg, const char *dev_msg)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>error.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>error_8h</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>PROGRAM_NAME</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>a3b6a35b8be8405a9db72cc5dea97954b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PROGRAM_VERSION</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>a2f10abd650e471fae2d7e8c63d41206a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>IO_ERROR</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>a5d4c9c7b61a0326a939f9109f96d7423</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>USAGE_ERROR</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>ae93a09c7f9bf75949657e664b0621bb4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>EXECUTION_ERROR</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>ac239a0d6195cd847a1063c16f6d7861c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>MEMORY_ALLOCATION_ERROR</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>aa6840d299f62b023f82661d31597c982</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>FREE_MEMORY_ERROR</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>a490c1e8fb303cff1758d4d1b953ff48d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>WARNING</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>a5cb439d9f933fde4cf23caa370c030e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>error</name>
+      <anchorfile>error_8h.html</anchorfile>
+      <anchor>a5488d9b4d7fc51e0242d827bddd32374</anchor>
+      <arglist>(int error_code, const char *user_msg, const char *dev_msg)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>fft4g.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>fft4g_8cpp</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>cdft</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>aa754f002152d34798514df0dcb55b561</anchor>
+      <arglist>(int n, int isgn, double *a, int *ip, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rdft</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a5cfa54c9102b120336a73ae640e1aee6</anchor>
+      <arglist>(int n, int isgn, double *a, int *ip, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ddct</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a14ba3de9295a2ad403d2b33944d580e9</anchor>
+      <arglist>(int n, int isgn, double *a, int *ip, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ddst</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>afb0d9d2aedeaa2edf3000c7e5675665c</anchor>
+      <arglist>(int n, int isgn, double *a, int *ip, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dfct</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>af9a09113fe78c41b30efeaf7abd7ff15</anchor>
+      <arglist>(int n, double *a, double *t, int *ip, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dfst</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a93291a6a3abd3f53e8f09b76eb3aa458</anchor>
+      <arglist>(int n, double *a, double *t, int *ip, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>makewt</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a7c1e1feac8c6a479cce040aae6bc80e8</anchor>
+      <arglist>(int nw, int *ip, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>makect</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a5ce6b1884a8902c7774efd882f07a887</anchor>
+      <arglist>(int nc, int *ip, double *c)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>bitrv2</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a797ab524538f313c7556d2ea04c3602a</anchor>
+      <arglist>(int n, int *ip, double *a)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>bitrv2conj</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a6ce44e550bfe817f80745375a96a70e6</anchor>
+      <arglist>(int n, int *ip, double *a)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cftfsub</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>aebb9cc2fc5808b13bbe1cf0a857a3f73</anchor>
+      <arglist>(int n, double *a, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cftbsub</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a4c1c506bae9dc84a4f6f0a8588b4c194</anchor>
+      <arglist>(int n, double *a, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cft1st</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>ad356c86d9a665e64e85e2a20254c5474</anchor>
+      <arglist>(int n, double *a, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cftmdl</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a52cfc09e3aa1db914d876ecc317e04c9</anchor>
+      <arglist>(int n, int l, double *a, double *w)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rftfsub</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a402bebf4b32bb905dc11045bcdd60226</anchor>
+      <arglist>(int n, double *a, int nc, double *c)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rftbsub</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a3f6c3ee0de85c1eda63727b47a3ae202</anchor>
+      <arglist>(int n, double *a, int nc, double *c)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dctsub</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>a9b11a41477bc500f82e6661adae4aede</anchor>
+      <arglist>(int n, double *a, int nc, double *c)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dstsub</name>
+      <anchorfile>fft4g_8cpp.html</anchorfile>
+      <anchor>af239623ac43abcf2d596043266b17306</anchor>
+      <arglist>(int n, double *a, int nc, double *c)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>formula.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>formula_8cpp</filename>
+    <includes id="formula_8h" name="formula.h" local="yes" imported="no">formula.h</includes>
+    <member kind="function">
+      <type>isotop_t *</type>
+      <name>copy_isotop</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>aa2cff9d5e8bd11bacae69d478368fde7</anchor>
+      <arglist>(isotop_t *isotop, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>element_t *</type>
+      <name>copy_one_element</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a1b353bcd70fedc65de083af2d954e594</anchor>
+      <arglist>(element_t *element)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_element</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>aa924d9fff6ed2c0d2168efc91d41e03a</anchor>
+      <arglist>(element_t *element)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_element</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a90fb951ba830f303d192e03a46da3527</anchor>
+      <arglist>(formula_t *f, composition_t *comp)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>closest_int</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a24b1ac4e1e5e074dbf381e2f5155cca9</anchor>
+      <arglist>(double mass)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>affect_atom</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a499402e9c41a7629571b9f17dee38d86</anchor>
+      <arglist>(char *symbol, int quantity, int isotop, composition_t *comp, element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>read_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>ac758acc73decf9d338119936c70f6794</anchor>
+      <arglist>(const char *c, element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>element_t *</type>
+      <name>get_element_table</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a35bf89208bc14c87016dcbbd57cbeebd</anchor>
+      <arglist>(const char *filename, int *nb_elements)</arglist>
+    </member>
+    <member kind="function">
+      <type>element_t *</type>
+      <name>get_element</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>ad07a9be85ce523599327802fa1a01210</anchor>
+      <arglist>(char *sym, element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a8e4bdf0442e08288e70dcd8f2464b77c</anchor>
+      <arglist>(formula_t *dest, formula_t *src)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>sub_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>ad2114448f547806cb41559772955f34f</anchor>
+      <arglist>(formula_t *dest, formula_t *src)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>formula_tochar</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a5447ba10b6180f5df396e0b9adf028ad</anchor>
+      <arglist>(formula_t *f)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_composition</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a6a81bdde62cda8c4d6ed43d9b16b4c26</anchor>
+      <arglist>(composition_t *composition, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a4c746199d04b732d41c72f52bb05cdd9</anchor>
+      <arglist>(formula_t *f)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_n_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a8502fa8cafb1220f0592a32d0e040117</anchor>
+      <arglist>(formula_t *formula, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_element_table</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a6081a8141b5245d522dcc8f692136ee4</anchor>
+      <arglist>(element_t *e, int tsize)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_weight</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a77a6756752caf55587c228c4e51b8c7e</anchor>
+      <arglist>(formula_t *f)</arglist>
+    </member>
+    <member kind="function">
+      <type>composition_t *</type>
+      <name>copy_composition</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a7abb70e00923aee6b3fecac10731042c</anchor>
+      <arglist>(composition_t *composition, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>copy_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>ab26f1f1f23fc5eecbf139fe58e3f310a</anchor>
+      <arglist>(formula_t *formula)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a6374090aeb9f6bfba8426dc790ada0cf</anchor>
+      <arglist>(formula_t *formula, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_formula</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a348e392ab75ee111b9dec91bbc7e0e4e</anchor>
+      <arglist>(FILE *file, formula_t *formula, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_element_table</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a8aae7ad10e65c9fb3cb099f0987ad543</anchor>
+      <arglist>(element_t *element_table, int size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_element_table</name>
+      <anchorfile>formula_8cpp.html</anchorfile>
+      <anchor>a3c91d32c2fdbae5787e5ec1671424304</anchor>
+      <arglist>(FILE *file, element_t *element_table, int size)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>formula.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>formula_8h</filename>
+    <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
+    <class kind="struct">isotop</class>
+    <class kind="struct">element</class>
+    <class kind="struct">composition</class>
+    <class kind="struct">formula</class>
+    <member kind="typedef">
+      <type>struct isotop</type>
+      <name>isotop_t</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a7994bfd475766fe2933cd0d7c544f363</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct element</type>
+      <name>element_t</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>ad6b0bd78063bf072e143937756c0e8b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct composition</type>
+      <name>composition_t</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>acfc5e70dbd193491fe5ea5d3a9f05039</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct formula</type>
+      <name>formula_t</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a251456ab86c91e5079d03a216571267d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>element_t *</type>
+      <name>get_element_table</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a2e96927511f60e9cad544aaff8bc33f1</anchor>
+      <arglist>(const char *filename, int *nb_elements)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>read_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>ace44f5524cc721837db3f1fdd2fb6997</anchor>
+      <arglist>(const char *c, element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a8e4bdf0442e08288e70dcd8f2464b77c</anchor>
+      <arglist>(formula_t *dest, formula_t *src)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>sub_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>ad2114448f547806cb41559772955f34f</anchor>
+      <arglist>(formula_t *dest, formula_t *src)</arglist>
+    </member>
+    <member kind="function">
+      <type>element_t *</type>
+      <name>get_element</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>aa6766e4963af7eef68ca7edd4b84f6ba</anchor>
+      <arglist>(char *sym, element_t *elem_table, int elem_table_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>formula_tochar</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a622db51eb89fbb00e9876f91e054005d</anchor>
+      <arglist>(formula_t *f)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_element_table</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a6081a8141b5245d522dcc8f692136ee4</anchor>
+      <arglist>(element_t *e, int tsize)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a4c746199d04b732d41c72f52bb05cdd9</anchor>
+      <arglist>(formula_t *f)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_composition</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a6a81bdde62cda8c4d6ed43d9b16b4c26</anchor>
+      <arglist>(composition_t *composition, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_n_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a8502fa8cafb1220f0592a32d0e040117</anchor>
+      <arglist>(formula_t *formula, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_weight</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a77a6756752caf55587c228c4e51b8c7e</anchor>
+      <arglist>(formula_t *f)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>copy_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>ab665718670d9107facae9751277030ef</anchor>
+      <arglist>(formula_t *formula)</arglist>
+    </member>
+    <member kind="function">
+      <type>composition_t *</type>
+      <name>copy_composition</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a6698b1c4a88266f4e0916c40944476f1</anchor>
+      <arglist>(composition_t *composition, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a6374090aeb9f6bfba8426dc790ada0cf</anchor>
+      <arglist>(formula_t *formula, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_formula</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a348e392ab75ee111b9dec91bbc7e0e4e</anchor>
+      <arglist>(FILE *file, formula_t *formula, int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_element_table</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a8aae7ad10e65c9fb3cb099f0987ad543</anchor>
+      <arglist>(element_t *element_table, int size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_element_table</name>
+      <anchorfile>formula_8h.html</anchorfile>
+      <anchor>a3c91d32c2fdbae5787e5ec1671424304</anchor>
+      <arglist>(FILE *file, element_t *element_table, int size)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>index.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>index_8h</filename>
+  </compound>
+  <compound kind="file">
+    <name>isodistrib.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>isodistrib_8cpp</filename>
+    <includes id="isodistrib_8h" name="isodistrib.h" local="yes" imported="no">isodistrib.h</includes>
+    <member kind="function">
+      <type>complex_t **</type>
+      <name>get_X_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a68d824f98b6ededcc81485dc6eb8b4a2</anchor>
+      <arglist>(char *symbol)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t *</type>
+      <name>get_t_X_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a6240ae796878a15e2a1ac6d466ccd932</anchor>
+      <arglist>(char *symbol)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cdft</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>add439be0f19853cd7568299e4e9f2043</anchor>
+      <arglist>(int, int, double *, int *, double *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init_distrib</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a2007c301010fc4d9262edfe7242bdf9d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>optimized_isotopic_distribution</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aceaafa0029b035baca9dc94264091bad</anchor>
+      <arglist>(formula_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a280ffab2d02998e01a44184845b596f0</anchor>
+      <arglist>(const char *symbol)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>integral_normalization</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a5c39c88fa3c8878e0b6b847f0bd04dad</anchor>
+      <arglist>(double integral_value, int size, complex_t *t_complex)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write_spectrum_cplx</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>afd25066aaa6f9bac326c3f3358f565ee</anchor>
+      <arglist>(FILE *f, complex_t *t_complex, char *entry)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a4ed631d1ffb3411481e66653c003b1de</anchor>
+      <arglist>(FILE *f, complex_t *t_complex, char *entry)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a37c6db29ca449b3a6f88792a6c8189e0</anchor>
+      <arglist>(const char *spectrum_file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_isodistrib</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a84bd314aa69768c30e02b712096f0061</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t *</type>
+      <name>get_exp_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a1ebe121a5cd950feafb9f822990b30b3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t *</type>
+      <name>copy_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>af876db07c66ceb45cee8a327641ef7de</anchor>
+      <arglist>(complex_t *spectrum)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_exp_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>abc823b4b4a27ec3970f9171a32d65b22</anchor>
+      <arglist>(complex_t *spectrum)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write_spectrum_peak_only</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>acd2f8223c679b9df1e38e029cedd0d0c</anchor>
+      <arglist>(FILE *file, complex_t *spectrum, char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_simulated_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a7c337dbc36b35dca41d3ca7c7d09b66f</anchor>
+      <arglist>(const char *spectrum_file)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>next_simulated_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a1db5b73f1db315b3a7f4aad7af292a6f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t *</type>
+      <name>get_theo_spectrum</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ac00cd46f88ed040300cab2ede62d9dea</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_threshold</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a71e2228db775fe3946ad8561ff9c91fe</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_threshold</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a557f7a689615e673776adb76de5a96c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_spectrum_size</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a542c05d42fd715458dd9ad0966c3c66d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_step</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a76cc0d8f9acfd53a238f9f065c0a8e63</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_spectrum_original_description</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>af32525b8ecc53ed672df8269aac9a3e4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_spectrum_original_sequence</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a032ad17e19c5297a301aeec924e51bef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_C_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ac45d49a9241f2d73d4e4dd775c990da0</anchor>
+      <arglist>(int new_quantity)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_spectrum_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a9afe717f063001dc81c4fdb96cd71b26</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_gaussian_value</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a74145f64a708f96625f7e46c90d2b823</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_precision</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a9288cdfca8bb7bda77082a96aeccdffc</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_simulated_spectra_filename</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a71e0bd8b2e384b0aed8b380aa450ff24</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_spectrum_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a5072600af7f4fb91db3b553dad5f1a97</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_gaussian_value</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a38b2baeea98ea70c204d2434b8dc31c9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_spectrum_precision</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a58be87f6a9f200f0782a96c0590c2900</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_experimental_filename</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ad0c520b64809a9197043a394f5a91210</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_simulated_wanted_protein</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a34823e33bc7a8505b63c96fa711892be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_scoring_sensitivity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a49ebf622a74b3d3d0552737f3bea487a</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_scoring_sensitivity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ab945fa5b633a6771b6000253a604a6cf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_minimum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ae5def3be3b71b0591b0e792edea41cbd</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_minimum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a59044c8d77e53bd0c22ef860fdf3501a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a18bc0989ef001e5b3db821a38738f21a</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aa5d0bbdac85d016ad27a4f529a4e692d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_peptide_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>acc24be590f61c9cd63c3370db57d5386</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_peptide_precision</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a3a73796c6c68c9a716a277ad852c2f91</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_peptide_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a5627442fd2144d785918fa5ece0be3a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_peptide_precision</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a309726b2dec37dc12d125d74111563f3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>compute_correlation</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ac209fd72bc2cade5626c088a12624a81</anchor>
+      <arglist>(int index, complex_t *spectrum)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>penalization_factor</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a568b20a29dcf5b8c763eceb09e8ff45a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_minimum_peptide_number</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a3e34ebba1c23dc688b02d93662f2b39c</anchor>
+      <arglist>(unsigned int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>get_minimum_peptide_number</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ad628b2f2734fb64109c33bfc08f0cfed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_minimum_matched_peptide_number</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a40762cc263af59ee19b2fe266e90a820</anchor>
+      <arglist>(unsigned int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>get_minimum_matched_peptide_number</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aa74882bb3f8fdc045dbbfe3816ce1970</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_peptide_score_threshold</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aa54b53cc86db402cb7fa07ab12a0327f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_distribution_activation</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a276facbe926ddf3d1fb564a5c0377b36</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double *</type>
+      <name>get_current_peptide_score_save</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a7b6ec235abcb9ef2b45adadd4f73c219</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>get_current_peptide_score_size</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aef9016cced894bb6f1c473a38f0662ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>is_distribution_initialised</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a1ee8e036c60c6ebc07404383c3beab79</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a6067f7e2d5ba17528c57079da5a4ee44</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>result</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a4b922a3ea1c05189f7c085174b811cbe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>gauss</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ade9f86083859fc1f4c1a512d85b915a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_peptide</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aebc97ab067689dcbd5d31b35ae328c98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_shifted_peptide</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a2d5fda6c7afa9ae0c3e10e96b55c39eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_exp_spec</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a8030604eb6fa28814dd78588b40f9e87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gaussian</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a89bbbc276db41d1c78209093ab95dbf4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>N_SPEC</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a1c4e4c76935bf27b39257837e5f6952f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>N_PEPT</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a639f379ee08efaa41f65b75c4a7df8d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>spectrum_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a61a8752e91d64bc923e493dc94dda749</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>peptide_maximum_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a89bf5e755d6b0fa4499c2b56e1223b97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>peptide_precision</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aca5086929cd9aaa87aba0e68d5b65f97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>minimum_peptide_number</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a1e4ef0ceb80e0774ed5ffedcf35b6f1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>minimum_matched_peptide_number</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a6556faeaf48b0e14d08e66eb4093db28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>min_experimental_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a74ae0a79ef1e419dd2e93f333f470884</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>max_experimental_mass</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ab969a95f443f5a477b20a7c20b73b169</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>threshold</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>afcfbedec6ebde62c6a091ce335836ef1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>sensitivity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a3db15570a79682b98819ebfded08596b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>variation_threshold</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a8fcb95d3063c78f8f020e5591d05ab28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>experimental_file</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a31703737283c6aa2ba1b98365d6d2d08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>spectrum_original_description</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a9aed5f0f2d38ced36857eecc73e60509</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>spectrum_original_sequence</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a722655b72d4a7194fc1927b4a9efaf61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>simulated_spectra_file</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a6264098ddda63baaa7a73a3f2f7b5d1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>FILE *</type>
+      <name>simulated_spectra</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a8759b3c0a848539e5abe5e5f40ad54cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>step</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>abc16e65f240ed0c8f3e876e8732c0a33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>atom_step</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a661596f2f29b4b946ff0d8f485530c0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gauss_param</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ad8edf1f1b44041359328b6efe79e51ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_data_amu</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a30bcabed76a0072fc648661db24d3d24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>atom_nb_data_amu</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a6aa7c428218fe589d0c167bde6c7b218</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>peptide_score_threshold</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aa6d8e56293fb34cf361b6d3bd25bc6d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int *</type>
+      <name>ip</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aa8edb34792a7f912fa1d51904941b7e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double *</type>
+      <name>w</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ad0d8550e9536fb0765f01846ce1c59b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>C_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a158cbe28e4567195b1a9ce1d5a9c047e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>H_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a0ed7f52c5ef53dbe7678373633a06e7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>O_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a7e321eea538bd6cb6e94ac65df653ef5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>S_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a42958990f2676e4da5b7449a9a3d6573</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>N_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ac164701707f108ea3db13cf90cb24c1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>Se_atom_quantity</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a90af8d0835ad37556858d036e4d5d689</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t **</type>
+      <name>C_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>af2da0133f587e75eda3570849c675515</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t **</type>
+      <name>H_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aa45ae7fb1afd6be6e384224fdf226598</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t **</type>
+      <name>O_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ad0b70d229a426ea28900bc4206b18028</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t **</type>
+      <name>S_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a6b52c8ef208dc8a7b0c42bd532d70572</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t **</type>
+      <name>N_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>aae8b1579fe1057b65e2d88b767cf3cd0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t **</type>
+      <name>Se_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a876e8c563ba176193c69e8234894d6d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_C_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a6215d7210bd095107c16080ef40d726b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_H_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a009f782f57c6be0ccd947457b56b3b4c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_O_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a4b68af9147f8c9fd67dfce87b852f010</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_S_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>abe0bd7770183c0381b593cce22392b4f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_N_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>ae139bd6ecb14362c5c69cab908048dc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>complex_t *</type>
+      <name>t_Se_atom</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a55ecfdd90cbba522c7a2c25410ee9f4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double *</type>
+      <name>current_peptide_score_save</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>afa42bfa872c3fe07b93489110fdebef0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>current_peptide_score_size</name>
+      <anchorfile>isodistrib_8cpp.html</anchorfile>
+      <anchor>a693c3913e270ffb9a514a55cfc0a7359</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>isodistrib.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>isodistrib_8h</filename>
+    <includes id="complex_8h" name="complex.h" local="yes" imported="no">complex.h</includes>
+    <includes id="digest_8h" name="digest.h" local="yes" imported="no">digest.h</includes>
+    <includes id="seqio_8h" name="seqio.h" local="yes" imported="no">seqio.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>init_distrib</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a2007c301010fc4d9262edfe7242bdf9d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>element_convolution</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a12d790420f2955d610402dcaf17524c8</anchor>
+      <arglist>(composition_t *comp)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>optimized_isotopic_distribution</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>aceaafa0029b035baca9dc94264091bad</anchor>
+      <arglist>(formula_t *peptides, int nb_peptides)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_isodistrib</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a84bd314aa69768c30e02b712096f0061</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>integral_normalization</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a5c39c88fa3c8878e0b6b847f0bd04dad</anchor>
+      <arglist>(double integral_value, int size, complex_t *t_complex)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a4ed631d1ffb3411481e66653c003b1de</anchor>
+      <arglist>(FILE *f, complex_t *t_complex, char *entry)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a37c6db29ca449b3a6f88792a6c8189e0</anchor>
+      <arglist>(const char *spectrum_file)</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t *</type>
+      <name>get_exp_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a90e99fe0d82063be33773dc23462ddcb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t *</type>
+      <name>get_theo_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>aba24bb15637667705608eb4b3a059f9c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>complex_t *</type>
+      <name>copy_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a43fecb0359d0c65c328de03d824b1611</anchor>
+      <arglist>(complex_t *spectrum)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_exp_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>abc823b4b4a27ec3970f9171a32d65b22</anchor>
+      <arglist>(complex_t *spectrum)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write_spectrum_peak_only</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>acd2f8223c679b9df1e38e029cedd0d0c</anchor>
+      <arglist>(FILE *file, complex_t *spectrum, char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_simulated_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a7c337dbc36b35dca41d3ca7c7d09b66f</anchor>
+      <arglist>(const char *spectrum_file)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>next_simulated_spectrum</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a1db5b73f1db315b3a7f4aad7af292a6f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_threshold</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a71e2228db775fe3946ad8561ff9c91fe</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_threshold</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a557f7a689615e673776adb76de5a96c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_spectrum_size</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a542c05d42fd715458dd9ad0966c3c66d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_step</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a76cc0d8f9acfd53a238f9f065c0a8e63</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_spectrum_original_description</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a4b66ee0cc2def8aedfc52a96f46e3b99</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_spectrum_original_sequence</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a82a9db07d5a53f52014cc1ba6d64ea92</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_C_atom_quantity</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>ac45d49a9241f2d73d4e4dd775c990da0</anchor>
+      <arglist>(int new_quantity)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_atom_quantity</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a280ffab2d02998e01a44184845b596f0</anchor>
+      <arglist>(const char *symbol)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_spectrum_maximum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a9afe717f063001dc81c4fdb96cd71b26</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_spectrum_maximum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a5072600af7f4fb91db3b553dad5f1a97</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_gaussian_value</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a74145f64a708f96625f7e46c90d2b823</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_gaussian_value</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a38b2baeea98ea70c204d2434b8dc31c9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_precision</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a9288cdfca8bb7bda77082a96aeccdffc</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_spectrum_precision</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a58be87f6a9f200f0782a96c0590c2900</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_simulated_spectra_filename</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a7ec5070468212f547cca1cdb987112b4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_experimental_filename</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>aa435218d3540c506a90181ff60e8f75a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_simulated_wanted_protein</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a34823e33bc7a8505b63c96fa711892be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_scoring_sensitivity</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a49ebf622a74b3d3d0552737f3bea487a</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_scoring_sensitivity</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>ab945fa5b633a6771b6000253a604a6cf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_minimum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>ae5def3be3b71b0591b0e792edea41cbd</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_minimum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a59044c8d77e53bd0c22ef860fdf3501a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_maximum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a18bc0989ef001e5b3db821a38738f21a</anchor>
+      <arglist>(double new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_maximum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>aa5d0bbdac85d016ad27a4f529a4e692d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_peptide_maximum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>acc24be590f61c9cd63c3370db57d5386</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_peptide_precision</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a3a73796c6c68c9a716a277ad852c2f91</anchor>
+      <arglist>(int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_peptide_maximum_mass</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a5627442fd2144d785918fa5ece0be3a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_peptide_precision</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a309726b2dec37dc12d125d74111563f3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_minimum_peptide_number</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a3e34ebba1c23dc688b02d93662f2b39c</anchor>
+      <arglist>(unsigned int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>get_minimum_peptide_number</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>ad628b2f2734fb64109c33bfc08f0cfed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_minimum_matched_peptide_number</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a40762cc263af59ee19b2fe266e90a820</anchor>
+      <arglist>(unsigned int new_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>get_minimum_matched_peptide_number</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>aa74882bb3f8fdc045dbbfe3816ce1970</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>compute_correlation</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>ac209fd72bc2cade5626c088a12624a81</anchor>
+      <arglist>(int index, complex_t *spectrum)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>penalization_factor</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a568b20a29dcf5b8c763eceb09e8ff45a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_peptide_score_threshold</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>aa54b53cc86db402cb7fa07ab12a0327f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_distribution_activation</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a276facbe926ddf3d1fb564a5c0377b36</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double *</type>
+      <name>get_current_peptide_score_save</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>a3081f95bc942c482285954c556dc8616</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>get_current_peptide_score_size</name>
+      <anchorfile>isodistrib_8h.html</anchorfile>
+      <anchor>aef9016cced894bb6f1c473a38f0662ad</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>modification_table.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>modification__table_8cpp</filename>
+    <includes id="modification__table_8h" name="modification_table.h" local="yes" imported="no">modification_table.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>free_all_modifications</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a77ed906e0193a72368a688acd69bef9e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_modification_formula_to_add</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a3bb84e5eaf57eab66caa099b72dccc41</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_modification_formula_to_sub</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a733ba0b9c0ace432aed7d832818e5271</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_modification_symbol</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a6ce6acbbd00aa09dc3cf98e25773626e</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_modification_amino_acids</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>adff87cf3126b0297ad461742eaa4aeb1</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_total_number_of_modifications</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a560a3281a425d851c2a80054aca5a05c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_modification_name</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a74b9c8c72706e191ac373ddf1cde0557</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_modification_side</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a0eface3fd76ae3afa21919d0d7f37040</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>can_be_used_on</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a2d2aebfd756a3421cb0ad046fd099206</anchor>
+      <arglist>(int modif, char amino_acid, int place, int size, int first)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_modifications</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a80736596142ca74133cdad9e0517a621</anchor>
+      <arglist>(const char *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>apply_global_modification</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>ac79881e5aa87409d878a06c96a3a57c4</anchor>
+      <arglist>(formula_t *formula, int modif)</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_total_modif</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a565b3da11681710469aae59cd67e8dce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char **</type>
+      <name>modifications_name</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a69f4ca4f16815b11a708e6277bf22f85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char **</type>
+      <name>symbol</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>acc606bdadc63adb439a810cbdbc7cfa7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int *</type>
+      <name>side</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a06a0f5fb426a59d9f03f8742502d3a16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char **</type>
+      <name>modifications_on_amino_acids</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a5c6d15b0dc77406025eba088c62f8244</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>formula_to_add</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>ac74cc047cbc298fd74771836567a1d82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>formula_to_sub</name>
+      <anchorfile>modification__table_8cpp.html</anchorfile>
+      <anchor>a9d1af073cf5cf53e43b5cea74d68ce1d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>modification_table.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>modification__table_8h</filename>
+    <includes id="tables_8h" name="tables.h" local="yes" imported="no">tables.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>MODIFICATION_FILENAME</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a73e209604405858c1e7a673b00c49014</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>C_TERM</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a586a90f98bfeaee387a423f19f4297e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>N_TERM</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>ab8670cc301037f3ef7155f35e671f27c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>BOTH_TERM</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>ae30e396af1fa1c8899c2f896ae886e5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>INDEPENDANT_TERM</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a2bdbf6113dd152ee783f77bd2ea3650d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>PROTEIN</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a15e5af02dda15aed44659f41a8579a42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_all_modifications</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a77ed906e0193a72368a688acd69bef9e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_modification_formula_to_add</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a850b2a79e023d1d979f6cc4c26fcfacf</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_modification_formula_to_sub</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>aba646f6f85ed365f229f046b3dfcd568</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_modification_symbol</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a127d92501b1fadaa59c4ebb89cf4f1e7</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_modification_amino_acids</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a144cc966bd1d7d3c1ca3f532062837eb</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_total_number_of_modifications</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a560a3281a425d851c2a80054aca5a05c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_modifications</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a80736596142ca74133cdad9e0517a621</anchor>
+      <arglist>(const char *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_modification_name</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a2033f5c347fcf58f8897cf4f9de9bf56</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_modification_side</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a0eface3fd76ae3afa21919d0d7f37040</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>can_be_used_on</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>a2d2aebfd756a3421cb0ad046fd099206</anchor>
+      <arglist>(int modif, char amino_acid, int place, int size, int first)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>apply_global_modification</name>
+      <anchorfile>modification__table_8h.html</anchorfile>
+      <anchor>ac79881e5aa87409d878a06c96a3a57c4</anchor>
+      <arglist>(formula_t *formula, int modif)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>modifications_for_digestion.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>modifications__for__digestion_8cpp</filename>
+    <includes id="modifications__for__digestion_8h" name="modifications_for_digestion.h" local="yes" imported="no">modifications_for_digestion.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>print_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>aa0dc64862ddff506cde8b2bed5ec6bd6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>af49932c8b1833d9e7972ec51007e9349</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_xml_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a8eb7bb7e14b2280bb2c83722cb5826ea</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a6630b925e5a988c5316512880bc461cb</anchor>
+      <arglist>(char *configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_modification</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a4520167f17e7368561c7f1329724c0a4</anchor>
+      <arglist>(int type, int id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_activated_modification</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>af3256d6b6d6fba6e4a7e92378af20148</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_number_of_activated_modifications</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a0e4b90ffeeaa3e701529e856321c0481</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>can_be_used_on_for_digestion</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a2db7b6970689413aaf3424cd4d9db80e</anchor>
+      <arglist>(int modif, char amino_acid, int place, int size, int first)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formula_to_add</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a1607af4467c9e19848d32d6b99247186</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formula_to_sub</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>af72c53394a9c35b8d1961e49ae1b919a</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_modification_type</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a980d6e7e28f52d68cb0750812b604217</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>apply_modification</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a746cf71b9979cbdad3b15746b7687d7e</anchor>
+      <arglist>(formula_t *formula, int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_activated_modification_symbol</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>aaf9be7fbd847dcce77377aa9f3c19bcb</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_activated_modification_name</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>ae41393555e5ebbf67da96fdc940eab5a</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>digestion_modification_initialization</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a4307635ff93c2e96f41b9b97354709a8</anchor>
+      <arglist>(const char *configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_global_modification_index</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a35933eff4c52eb4672e4ca6c4eff77f0</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_modifications</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a9071e7d1b82b5c122f455979b7123915</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>post_translational_modification_t *</type>
+      <name>modifications</name>
+      <anchorfile>modifications__for__digestion_8cpp.html</anchorfile>
+      <anchor>a78828a2653db21b72c21eefd48118b72</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>modifications_for_digestion.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>modifications__for__digestion_8h</filename>
+    <includes id="modification__table_8h" name="modification_table.h" local="yes" imported="no">modification_table.h</includes>
+    <class kind="struct">post_traductional_modification</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>FIXED</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a20207ffc8e6f0bdcefb5c42a5b5c3fb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>VARIABLE</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a86626d4d161f4c3958ce1cd99c5b974e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct post_traductional_modification</type>
+      <name>post_translational_modification_t</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>ac3ec42a46b7bd5d0192a9ed3a8bd30c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>aa0dc64862ddff506cde8b2bed5ec6bd6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>af49932c8b1833d9e7972ec51007e9349</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fprint_xml_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a8eb7bb7e14b2280bb2c83722cb5826ea</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load_modification_configuration</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a6630b925e5a988c5316512880bc461cb</anchor>
+      <arglist>(char *configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_modification</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a4520167f17e7368561c7f1329724c0a4</anchor>
+      <arglist>(int type, int id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_activated_modification</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>af3256d6b6d6fba6e4a7e92378af20148</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_number_of_activated_modifications</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a0e4b90ffeeaa3e701529e856321c0481</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>can_be_used_on_for_digestion</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a2db7b6970689413aaf3424cd4d9db80e</anchor>
+      <arglist>(int modif, char amino_acid, int place, int size, int first)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formula_to_add</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a84b6ed9c61d01949851a3e604f86c9fd</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formula_to_sub</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a4345d817329fcc4866b055d7ff49f800</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_modification_type</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a980d6e7e28f52d68cb0750812b604217</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>apply_modification</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a746cf71b9979cbdad3b15746b7687d7e</anchor>
+      <arglist>(formula_t *formula, int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_activated_modification_symbol</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>af952fe27d5adf9a8dc045ce553004a79</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_activated_modification_name</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>ae671251468dff74f527aff299f86aa9e</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>digestion_modification_initialization</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a4307635ff93c2e96f41b9b97354709a8</anchor>
+      <arglist>(const char *configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_global_modification_index</name>
+      <anchorfile>modifications__for__digestion_8h.html</anchorfile>
+      <anchor>a35933eff4c52eb4672e4ca6c4eff77f0</anchor>
+      <arglist>(int modif)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>seqio.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>seqio_8cpp</filename>
+    <includes id="seqio_8h" name="seqio.h" local="yes" imported="no">seqio.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>MALLOC_STEP_SEQ</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>ab8ba1929671a672a65c0cf866b717e81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>getSeq</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a4dd0696a9a653b576a2d53e15ee6394c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_reversed_sequence</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>ad56f711f56b0ab99c4af12e90910cfa6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>getDesc</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>ab7dd62e540606441ea33ec0f4a387bc1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>is_parsing_started</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>ae9f48d8632a96ba0e506432cbd61d6bc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>nextEntry</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>acade74b2655f64a81053c1a9c43b5c00</anchor>
+      <arglist>(long *offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>fastafclose</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a420c0356f13787969c2c52079f2831be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FILE *</type>
+      <name>fastafopen</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a6679b5ee017c65db150d6737b14d916f</anchor>
+      <arglist>(const char *filename, long *size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fastafwrite</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a68e682655601585e24ab415add078a7c</anchor>
+      <arglist>(FILE *f, char *desc, char *seq)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fastafwrite_way</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a3506ae51d21a79aa7950313873c7ae76</anchor>
+      <arglist>(FILE *f, char *desc, char *seq, int way)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getEntry</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>ab04508ecec4dfe6c89e78d3e632d9c37</anchor>
+      <arglist>(long *offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_specie</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>aee4efb3e23624a4bcbea642252118ea2</anchor>
+      <arglist>(const char *wanted_specie)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_a_wanted_protein</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a33ab640d1f19b1908102537797086c37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_fasta_filename</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a5653dd37557036382709fcaa32ff212b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_specie</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>af5fcc2c674e929dd732e159e9a3a148e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_exp_protein_mass</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>ac5f6ed3fcfd606b6df425aaff112c368</anchor>
+      <arglist>(double mass)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_exp_protein_mass</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a8349401ac581f6f77c7f922a006367a4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_exp_protein_mass_activated</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>ab5e43691be6ed6edc601afb8b0692ade</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>SeqBuffer</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>af6ec39f9b6cf0a7e1a57debbb788e5a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>DescBuffer</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a675b6c12a94ab8885c3b695f5abf928b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>FILE *</type>
+      <name>DbFile</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>abbf6566158960c721a845e91c9b9d524</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>Offset</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>aad7df986191652e206d6f1bce4ef209b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>specie</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a4a5bfd4f777eb441388447a53ca03c3b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>file</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>af993bf542d3537edb15accc11e00759e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>protein_mass</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a4e928f5bd2ca6f62d165281898fb5e69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>protein_mass_given</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a45154c6d3fac374fa4d820eed43319bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>mass_tolerance</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>a1e5a62d26f7c6a6732fc640e45b6b794</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned</type>
+      <name>parsing_is_started</name>
+      <anchorfile>seqio_8cpp.html</anchorfile>
+      <anchor>af4f0479d4b1d74dba5956ebb4ba7aa3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>seqio.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>seqio_8h</filename>
+    <includes id="tables_8h" name="tables.h" local="yes" imported="no">tables.h</includes>
+    <member kind="function">
+      <type>char *</type>
+      <name>getSeq</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a496748130d05517066dc92a03a7d3006</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_reversed_sequence</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a963172d0f458c8bff297f38e42fda365</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>getDesc</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a8e3080538bf28c0e058b38035d9affb8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>is_parsing_started</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>ae9f48d8632a96ba0e506432cbd61d6bc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>nextEntry</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>acade74b2655f64a81053c1a9c43b5c00</anchor>
+      <arglist>(long *offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getEntry</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>ab04508ecec4dfe6c89e78d3e632d9c37</anchor>
+      <arglist>(long *offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>FILE *</type>
+      <name>fastafopen</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>aba35fdb3cc93aeeddba57a2ba61cdecc</anchor>
+      <arglist>(const char *filename, long *size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fastafwrite</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a68e682655601585e24ab415add078a7c</anchor>
+      <arglist>(FILE *f, char *desc, char *seq)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fastafwrite_way</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a3506ae51d21a79aa7950313873c7ae76</anchor>
+      <arglist>(FILE *f, char *desc, char *seq, int way)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>fastafclose</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a420c0356f13787969c2c52079f2831be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_specie</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>aee4efb3e23624a4bcbea642252118ea2</anchor>
+      <arglist>(const char *wanted_specie)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_specie</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a2a897519ecfffe349e6582386272fbf0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_a_wanted_protein</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a33ab640d1f19b1908102537797086c37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>get_fasta_filename</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>af2089929bdee1875e0252dce1516efce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_exp_protein_mass</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>ac5f6ed3fcfd606b6df425aaff112c368</anchor>
+      <arglist>(double mass)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_exp_protein_mass_activated</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>ab5e43691be6ed6edc601afb8b0692ade</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_exp_protein_mass</name>
+      <anchorfile>seqio_8h.html</anchorfile>
+      <anchor>a8349401ac581f6f77c7f922a006367a4</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>tables.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>tables_8cpp</filename>
+    <includes id="tables_8h" name="tables.h" local="yes" imported="no">tables.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>tables_initialisation</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a0d7c4affa06d618641099bd35047add6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_tables</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a3f632028de13b6c9bceb17d214404fa7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>element_t *</type>
+      <name>get_element_table</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>ad707e99dbc884266e4ebacc80bd17709</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_element_table_size</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a36cb3093f11f7c112626c4668380a974</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>aa_CF_t</type>
+      <name>get_amino_acid</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>ab1e4cb89e0628c675a7127e6d3618320</anchor>
+      <arglist>(char aa)</arglist>
+    </member>
+    <member kind="function">
+      <type>aa_CF_t *</type>
+      <name>get_amino_acid_table</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>ae5700d8a171b1898a6377e5cb40d31da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formula_from_sequence</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a7aa087903aacb16af4019233225c2a0d</anchor>
+      <arglist>(char *sequence)</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_amino_acid_at_index</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a6979cd45d329baf9bb8b684816f71ae8</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="variable">
+      <type>element_t *</type>
+      <name>element_table</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a853de4224957674eef36c50e50bacc49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_elements</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a80731b0fd32ef05faecf70ae1f475433</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>aa_CF_t *</type>
+      <name>amino_acid_table</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>a53e39daba98dbbfffe8cefc5d1eca450</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char</type>
+      <name>sorted_amino_acid_table</name>
+      <anchorfile>tables_8cpp.html</anchorfile>
+      <anchor>afacf67fe06850571447793ef4e05e621</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>tables.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>tables_8h</filename>
+    <includes id="aa_8h" name="aa.h" local="yes" imported="no">aa.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>ELEMENT_TABLE</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a0e8d250cb29fa6f5d106c0eb22f9a2cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>AMINO_ACID_TABLE</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>ac624bbc9433f359192377c2041ec85b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>AMINO_ACID_NUMBER</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a1514a5b2265819079d1faf52593412cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>tables_initialisation</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a0d7c4affa06d618641099bd35047add6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>free_tables</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a3f632028de13b6c9bceb17d214404fa7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>element_t *</type>
+      <name>get_element_table</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a41e01f78d000a631f9c60196a922eb72</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_element_table_size</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a36cb3093f11f7c112626c4668380a974</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>aa_CF_t</type>
+      <name>get_amino_acid</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>ab1e4cb89e0628c675a7127e6d3618320</anchor>
+      <arglist>(char aa)</arglist>
+    </member>
+    <member kind="function">
+      <type>aa_CF_t *</type>
+      <name>get_amino_acid_table</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a51213dd7071ce1d17803ede11f2da159</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>formula_t *</type>
+      <name>get_formula_from_sequence</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a28f97cf51868c8d3d4bc3a53a0124e8f</anchor>
+      <arglist>(char *sequence)</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_amino_acid_at_index</name>
+      <anchorfile>tables_8h.html</anchorfile>
+      <anchor>a6979cd45d329baf9bb8b684816f71ae8</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>util.cpp</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/</path>
+    <filename>util_8cpp</filename>
+    <includes id="util_8h" name="util.h" local="yes" imported="no">util.h</includes>
+    <member kind="function">
+      <type>int</type>
+      <name>jump_commentaries</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a9ce39f0e4832bfdd973a4715b42df3b3</anchor>
+      <arglist>(FILE *file, char commentary)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>jump_a_line</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a0a8fd6188fa02e1d59178d8e88c235c4</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>jump_blanks</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a8deed219368df958f27871ec0d0d45e8</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>read_line</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a83ce385bf93ce5b1861d7715561913ce</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>read_until</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>ae77d8b2f8e8bfec6dd7dbb836f5ee2f3</anchor>
+      <arglist>(FILE *file, char separator)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>delete_final_blanks</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a72ef49ed93a3dc2408f04266ebe1ba09</anchor>
+      <arglist>(char *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>activate_verbose_mode</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a6de04158f24c407b7c0183ed22795120</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_verbose_mode_activated</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>aeecaa6e13d0fc8e0fdf90adefed0ef92</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>add_chains</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>adb5b6fec1bc8c54f00bcaa86774fe593</anchor>
+      <arglist>(const char *first, const char *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>equals</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a4325fbfaf09d660ad4441d3587690b59</anchor>
+      <arglist>(double value1, double value2, double delta)</arglist>
+    </member>
+    <member kind="function">
+      <type>double *</type>
+      <name>copy_double_array</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>ac73707c2cde7dd3245e959dadcaf290f</anchor>
+      <arglist>(double *src, int src_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_doubles</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a3ca2ef6c1ec0eab576b41543cf7e07f3</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>verbose_activation</name>
+      <anchorfile>util_8cpp.html</anchorfile>
+      <anchor>a556bbbfc8495f833af8320c37a8faee8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>util.h</name>
+    <path>/home/jc/repositories/ascq-me/trunk/src/include/</path>
+    <filename>util_8h</filename>
+    <includes id="error_8h" name="error.h" local="yes" imported="no">error.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>TRUE</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>aa8cecfc5c5c054d2875c03e77b7be15d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>FALSE</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a82ea2c0413b9e4cbae090b1a4164bc8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>EOL</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a5931210976f27acb3a8b8a740e6781f8</anchor>
+      <arglist>(c)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>SEPARATOR</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>aecfb00f35261030af3090f14f42db5f2</anchor>
+      <arglist>(c)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>jump_commentaries</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a9ce39f0e4832bfdd973a4715b42df3b3</anchor>
+      <arglist>(FILE *file, char commentary)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>jump_a_line</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a0a8fd6188fa02e1d59178d8e88c235c4</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>read_line</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a1d08e0f99bc95efbc389136a48eac477</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>read_until</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a58b9836425eb912a8bbcd5e040e28349</anchor>
+      <arglist>(FILE *file, char separator)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>jump_blanks</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a8deed219368df958f27871ec0d0d45e8</anchor>
+      <arglist>(FILE *file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>delete_final_blanks</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a72ef49ed93a3dc2408f04266ebe1ba09</anchor>
+      <arglist>(char *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>activate_verbose_mode</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a6de04158f24c407b7c0183ed22795120</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>is_verbose_mode_activated</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>aeecaa6e13d0fc8e0fdf90adefed0ef92</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>add_chains</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a167a93fe068c953a0ef5e4f6b193ac11</anchor>
+      <arglist>(const char *first, const char *second)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>equals</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a4325fbfaf09d660ad4441d3587690b59</anchor>
+      <arglist>(double value1, double value2, double delta)</arglist>
+    </member>
+    <member kind="function">
+      <type>double *</type>
+      <name>copy_double_array</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>af48dc351470d751f358e70e8fd462bcb</anchor>
+      <arglist>(double *src, int src_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>compare_doubles</name>
+      <anchorfile>util_8h.html</anchorfile>
+      <anchor>a3ca2ef6c1ec0eab576b41543cf7e07f3</anchor>
+      <arglist>(const void *first, const void *second)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>amino_acid_CF</name>
+    <filename>structamino__acid___c_f.html</filename>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>form</name>
+      <anchorfile>structamino__acid___c_f.html</anchorfile>
+      <anchor>a3107b0d351f1598436bea3aeca13ee1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>add_modif</name>
+      <anchorfile>structamino__acid___c_f.html</anchorfile>
+      <anchor>ae382306e7f036cd7b5e923a163e15923</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>formula_t *</type>
+      <name>sub_modif</name>
+      <anchorfile>structamino__acid___c_f.html</anchorfile>
+      <anchor>ae38410dad14f775702eb63e6fbfcf510</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cleavePoint</name>
+    <filename>structcleave_point.html</filename>
+    <member kind="variable">
+      <type>char</type>
+      <name>letter</name>
+      <anchorfile>structcleave_point.html</anchorfile>
+      <anchor>a1588e657635eb9a53ed0af94e53f77d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nbexceptbefore</name>
+      <anchorfile>structcleave_point.html</anchorfile>
+      <anchor>aa341ec01c18c36a076fbdecf98d7f5c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>exceptbefore</name>
+      <anchorfile>structcleave_point.html</anchorfile>
+      <anchor>ac858b09b9d2f7c254039ab76accc6393</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nbexceptafter</name>
+      <anchorfile>structcleave_point.html</anchorfile>
+      <anchor>a1f82b627928f6b35bfe4a3927f306d7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>exceptafter</name>
+      <anchorfile>structcleave_point.html</anchorfile>
+      <anchor>a1a8e45d8fe8fbe260f71f6f4b151f0f7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cleavePointList</name>
+    <filename>structcleave_point_list.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>size</name>
+      <anchorfile>structcleave_point_list.html</anchorfile>
+      <anchor>a74ad0ece10f3309e20c49cedc5ed00cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cp_t *</type>
+      <name>cp</name>
+      <anchorfile>structcleave_point_list.html</anchorfile>
+      <anchor>a1b7e361eacfbaaa60a8fe6716defcba3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>complex</name>
+    <filename>structcomplex.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>Re</name>
+      <anchorfile>structcomplex.html</anchorfile>
+      <anchor>aa871fc4d3814fd8379dab9b856f8c5cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>Im</name>
+      <anchorfile>structcomplex.html</anchorfile>
+      <anchor>a11de41d1a7cc5a102c59ea2c151d729d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>composition</name>
+    <filename>structcomposition.html</filename>
+    <member kind="variable">
+      <type>element_t *</type>
+      <name>element</name>
+      <anchorfile>structcomposition.html</anchorfile>
+      <anchor>ab4b65bd877a9f3f38bb82551eef36b09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>quantity</name>
+      <anchorfile>structcomposition.html</anchorfile>
+      <anchor>ab845000a3fbcebbf52358276bf90e5fd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>element</name>
+    <filename>structelement.html</filename>
+    <member kind="variable">
+      <type>char</type>
+      <name>symbol</name>
+      <anchorfile>structelement.html</anchorfile>
+      <anchor>aff521fff3239c45261445dc53be62995</anchor>
+      <arglist>[3]</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_isotops</name>
+      <anchorfile>structelement.html</anchorfile>
+      <anchor>a8e834ff5b0efca06c8dcddd9925dec15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>isotop_t *</type>
+      <name>isotops</name>
+      <anchorfile>structelement.html</anchorfile>
+      <anchor>a4c0188b600402cd314008f4a16658948</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>enzyme</name>
+    <filename>structenzyme.html</filename>
+    <member kind="variable">
+      <type>char *</type>
+      <name>name</name>
+      <anchorfile>structenzyme.html</anchorfile>
+      <anchor>aa162caec0a82c9e60651a4dc4cee6c4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>side</name>
+      <anchorfile>structenzyme.html</anchorfile>
+      <anchor>a204ab5c3c75d3373635a32a616a13dbb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cpl_t *</type>
+      <name>cpl</name>
+      <anchorfile>structenzyme.html</anchorfile>
+      <anchor>af6bef69620e94d2bc4e80ec08cf37c0d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>enzyme_list</name>
+    <filename>structenzyme__list.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>size</name>
+      <anchorfile>structenzyme__list.html</anchorfile>
+      <anchor>af69980113353be5fb566f519efbee6ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>enz_t *</type>
+      <name>enz</name>
+      <anchorfile>structenzyme__list.html</anchorfile>
+      <anchor>ad32ff7a09524ac7511f83ad870aa2d82</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>formula</name>
+    <filename>structformula.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_comp</name>
+      <anchorfile>structformula.html</anchorfile>
+      <anchor>ab57b9b09b0c9f41b642809885257e56a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>composition_t *</type>
+      <name>comps</name>
+      <anchorfile>structformula.html</anchorfile>
+      <anchor>a9cdcf9f0c8a01cb0e6587bd1605a6011</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>isotop</name>
+    <filename>structisotop.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>relative_mass</name>
+      <anchorfile>structisotop.html</anchorfile>
+      <anchor>aaa5f0201fd3f9efb4ca2378fc0c43293</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>isotopic_composition</name>
+      <anchorfile>structisotop.html</anchorfile>
+      <anchor>a86c8040fc2f9245e9a243676d264a6cf</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>peptide</name>
+    <filename>structpeptide.html</filename>
+    <member kind="variable">
+      <type>long</type>
+      <name>startOff</name>
+      <anchorfile>structpeptide.html</anchorfile>
+      <anchor>a4a41a40d6bd3a64f03a667408b848c9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>endOff</name>
+      <anchorfile>structpeptide.html</anchorfile>
+      <anchor>ae2766b5c65aa2a45585298d8ff95a268</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>weight</name>
+      <anchorfile>structpeptide.html</anchorfile>
+      <anchor>aff801c76b891f3d02c5c9d71543941dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>nb_missed_cleavages</name>
+      <anchorfile>structpeptide.html</anchorfile>
+      <anchor>aaa2005501294d4fb879175283d3799e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int *</type>
+      <name>nb_modif</name>
+      <anchorfile>structpeptide.html</anchorfile>
+      <anchor>a812ce6e0b660774ea0c7f4fc499211c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int **</type>
+      <name>modifications</name>
+      <anchorfile>structpeptide.html</anchorfile>
+      <anchor>ad365b2729cf9d3f51a677fdf9ce05571</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>equivalent_to_another</name>
+      <anchorfile>structpeptide.html</anchorfile>
+      <anchor>ab966d6d88fbf431e2c8f3816207e605f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>post_traductional_modification</name>
+    <filename>structpost__traductional__modification.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>type</name>
+      <anchorfile>structpost__traductional__modification.html</anchorfile>
+      <anchor>a87ab05ac0ff40e97668372e769372f86</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>modification</name>
+      <anchorfile>structpost__traductional__modification.html</anchorfile>
+      <anchor>a28137b68904b2f11f67207b40b5549a3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>post_translational_modification</name>
+    <filename>structpost__translational__modification.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title>Welcome to ASCQ_ME (Villeneuve d&apos;ASCQ Mass Engine)</title>
+    <filename>index</filename>
+    <docanchor file="index" title="Licence">licence</docanchor>
+  </compound>
+</tagfile>

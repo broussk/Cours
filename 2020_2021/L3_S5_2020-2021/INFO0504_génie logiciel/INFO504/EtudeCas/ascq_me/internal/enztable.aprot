@@ -1,0 +1,54 @@
+# This file contains enzymes that could be use by ASCQ-ME
+#
+# lines started by "#" are ignored ! 
+# ONE enzyme by line...
+# default enzyme is the first of the list !
+#
+# syntax : [name] [side] [description]
+#
+# name 		: 	the name for the enzyme (a continuous string e.g. without space and use only once...)
+# side 		: 	C-side or N-side
+# description 	: 	place where the enzyme cuts protein
+# 	syntax 	: 
+#
+#	The expression must respect the following BNF grammar:
+#
+#		letter ::= A | B | C | ... | Z
+#		letter_list ::= letter { letter }
+#		cp ::= letter | letter+letter_list | letter-letter_list | letter+letter_list-letter_list
+#		description ::= cp { ; cp }
+#
+#		letter is the cleavage point
+#		+letter_list is the list of following caracters exceptions for the cleavage point 
+#		-letter_list is the list of preceding caracters exceptions for the cleavage point 
+#
+#	Example for the trypsin, the description expression is 
+#				"K+KP-K;R+F" 
+#   	and means :
+#		"cleave on K if not following by K or P and not preceding by K 
+#			 and cleave on R if not following by F"  
+#
+#  	Trypsin.dft		C-side 		K;R
+#  	Trypsin.real    	C-side 		K+KP-K;R+F
+#  	Trypsin.I       	C-side 		K+P;R+P
+#  	Trypsin.II 		C-side 		R+P
+#  	Chymotrypsin    	C-side 		F;Y;T
+#  	Pro-Endopeptidase 	C-side 		P
+#	CNBr 			C-side 		M
+#	Aureus.V8I 		C-side 		E+P
+#	Aureus.V8II 		C-side 		E+P;K+P
+#	Trypsin.V8II 		C-side 		K+P;R+P;D+P
+#	Asp-N			N-side  	D
+#	Glu-N			N-side  	E
+
+Trypsin      		C-side 		K+P;R+P
+Endoproteinase_Arg_C	C-side		R+P;R+P
+Endoproteinase_Asp_N	N-side 		D
+Endoproteinase_Glu_C	C-side		E+P
+Endoproteinase_Lys_C	C-side		K+P
+CNBr			C-side		M
+V8_(D,E)		C-side		D+P;E+P
+V8_(E)			C-side		E+P
+
+# add
+#Chymotryspin            C-side          F+P;Y+P;W+P;L+P;K+P;R+P

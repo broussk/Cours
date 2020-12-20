@@ -1,0 +1,8 @@
+.*.sw?
+*.dot
+*.egg-info
+*.orig
+*.png
+*.pyc
+dist
+!sample.png
