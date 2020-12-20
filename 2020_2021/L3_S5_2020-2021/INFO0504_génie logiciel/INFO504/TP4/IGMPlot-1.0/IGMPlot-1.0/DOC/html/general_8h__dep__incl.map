@@ -1,0 +1,12 @@
+<map id="general.h" name="general.h">
+<area shape="rect" id="node2" href="$LocalData_8h.html" title="Class designed to store Gradient related values and provide some utilities concerning those /!\ No co..." alt="" coords="34,80,126,107"/>
+<area shape="rect" id="node11" href="$ProgData_8h.html" title="Class designed to store the program&#39;s main dataprovide some utilities concerning those /!\ No copy co..." alt="" coords="139,155,227,181"/>
+<area shape="rect" id="node3" href="$Results_8h.html" title="Class designed to store all results that can be used as output by the program. " alt="" coords="35,155,114,181"/>
+<area shape="rect" id="node4" href="$output_8h.html" title="output&#39;s header. " alt="" coords="187,229,256,256"/>
+<area shape="rect" id="node9" href="$reader_8h.html" title="reader&#39;s header. " alt="" coords="93,229,163,256"/>
+<area shape="rect" id="node10" href="$Node_8h.html" title="Class used to handle every node data storage and processing ; implemented for multiprocessing impleme..." alt="" coords="5,229,69,256"/>
+<area shape="rect" id="node5" href="$NCISolver_8h.html" title="Class designed to manage the entire problem solving concerning the processing of molecular interactio..." alt="" coords="70,304,165,331"/>
+<area shape="rect" id="node8" href="$output_8cpp.html" title="files writing functions. " alt="" coords="189,304,272,331"/>
+<area shape="rect" id="node6" href="$main_8h_source.html" title="main.h" alt="" coords="87,379,148,405"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="main. " alt="" coords="80,453,155,480"/>
+</map>

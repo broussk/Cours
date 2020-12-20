@@ -1,0 +1,9 @@
+<map id="ProgData.h" name="ProgData.h">
+<area shape="rect" id="node2" href="$output_8h.html" title="output&#39;s header. " alt="" coords="187,80,256,107"/>
+<area shape="rect" id="node7" href="$reader_8h.html" title="reader&#39;s header. " alt="" coords="5,80,75,107"/>
+<area shape="rect" id="node8" href="$Node_8h.html" title="Class used to handle every node data storage and processing ; implemented for multiprocessing impleme..." alt="" coords="99,80,163,107"/>
+<area shape="rect" id="node3" href="$NCISolver_8h.html" title="Class designed to manage the entire problem solving concerning the processing of molecular interactio..." alt="" coords="71,155,166,181"/>
+<area shape="rect" id="node6" href="$output_8cpp.html" title="files writing functions. " alt="" coords="191,155,273,181"/>
+<area shape="rect" id="node4" href="$main_8h_source.html" title="main.h" alt="" coords="88,229,149,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="main. " alt="" coords="81,304,156,331"/>
+</map>
