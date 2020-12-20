@@ -1,0 +1,317 @@
+Premiers pas et généalogieLivre
+
+1. Utilisation de SWI-Prolog
+La version actuelle de Prolog utilisé pour ces TPs est SWI-Prolog 8.2.1 (compilateur et interpréteur). SWI-Prolog est maintenu par l’Université de Psychologie d’Amsterdam et peut être téléchargé gratuitement (licence GPL) ici. Il est disponible sous Unix, MacOS et Windows. Il est aussi généralement proposé dans les dépôts de la plupart des distributions Linux (il peut être appelé ppl-swiprolog ou simplement swi-prolog). A défaut, vous pouvez utiliser GProlog (G pour GNU).
+
+Un programme Prolog (contenant des faits) est décrit dans un fichier source d’extension .pl ou encore .prolog pour ne pas le confondre avec du Perl suivant votre éditeur (dans mes exemples, j'utiliserai l'extension .prolog). On peut tester un programme soit en l’interprétant interactivement, soit en le compilant au préalable (comme en C/C++), soit encore par interfaçant avec du C, C++ ou JAVA :
+
+Solution compilée : je crée mon programme (xxx.prolog) et je le compile par swipl -o xxx -c xxx.prolog (-c en dernier !). Puis j’appelle xxx, il me propose d'écrire des requêtes (je dois les terminer par .), je quitte par halt, (le point compris !) ou CTRL+D ;
+
+Solution interactive : Le programme s’utilise dans l’interpréteur SWI-Prolog, qu’on lance avec la commande swipl (ou gprolog pour GProlog).
+
+En TP, nous utiliserons plutôt l'approche interactive.
+
+Dans l’interpréteur, le fichier est chargé par la commande consult(’fichier.prolog’). ou par le raccourci équivalent [’fichier.prolog’]. (il ne faut pas oublier le point, l’extension de fichier peut être ignorée et on peut mette des " " au lieu des ' ').
+
+Il est ensuite possible d’effectuer une requête dans l’interpréteur (par exemple requete(X).) Prolog affiche la première solution qu’il trouve (par exemple X = 3). Pour voir la prochaine solution, tapez ;. Pour terminer (c’est-à-dire accepter la solution), taper sur la touche Entrée.
+
+Ces détails seront rappelés au fur et à mesure.
+
+Un dernier lien utile d'un site très complet à propos sur language Prolog (en anglais) : http://www.learnprolognow.org.
+
+Sinon, pour la documentation, on prendra directement le site de référence : https://www.swi-prolog.org/ en utilisant le champs de recherche en haut à droite.
+
+2. Faits, Règles et Requêtes
+La programmation en Prolog est déclarative : cela signifie que l’on ne décrit pas un algorithme qui résout un problème, mais plutôt les données et les relations qui décrivent le problème lui-même. Les données sont décrites dans une base de faits et les relations dans une base de règles. La résolution elle-même est réalisée par l’interpréteur Prolog lorsque l’on fait une requête i.e. lorsqu’on lui pose une question.
+
+2. Faits, Règles et Requêtes
+2.1. Les faits
+Les faits sont considérés comme des axiomes c’est à dire des hypothèses considérées comme vraies. Un fait peut être vu comme la simple déclaration d’une fonction avec ou sans paramètre(s) constant(s) le tout écrit en minuscule et surtout finissant par un point. Voici un exemple de fait sans paramètre (il n'y a pas de parenthèses dans ce cas):
+
+vivant.
+Notez le "." à la fin de déclaration. Toute déclaration de faits et de règles se finit toujours par un point. Si vous l'omettez, l'interpréteur attendra une suite.
+
+Dans la base (de faits) associée, si on demande (Le "?-" représente le prompte de l'interpréteur prolog. ) :
+
+?- vivant.
+Vous obtiendrez la réponse :
+
+true.
+Voici maintenant un exemple de fait avec un paramètre (en minuscule c’est à dire constant) :
+
+est_contente(lily).
+Dans la base associée, si on demande :
+
+?- est_contente(lily).
+La réponse sera :
+
+true.
+Si on cherche à savoir qui "est_contente", il faut utiliser une variable, c'est à dire un nom commençant par une majuscule ou le caractère spécial "_".
+
+Si on demande :
+
+?- est_contente(Qui).
+La réponse sera :
+
+Qui = lily.
+Afin de tester les exemples ci-dessus, télécharger le fichier lily.prolog.
+
+Pour le "charger", vous avez deux possibilités :
+
+l'ouvrir dans l'éditeur SWI-Prolog (on parle de consulter un fichier Prolog) sous Windows/MacOS notamment;
+
+dans un terminal :
+
+allez à l'endroit où le fichier se trouve;
+
+démarrez l'interpréteur SWI-Prolog via la commande swipl;
+
+tapez au choix (avec des " ou des ') : consult("lily"). ou ["lily"].
+
+Notez que vous pouvez aussi faire directement dans un terminal : swipl lily.prolog, cela ouvrira l'interpréteur avec le fichier chargé une première fois. Si vous changez le fichier lily.prolog pendant que l'interpréteur est ouvert, il est important de le relancer ou simplement de faire reconsult('lily'). pour mettre à jour la base de faits.
+
+Vérifiez que tout fonctionne et passez à la suite.
+
+Notez que pour arrêter l'interpréteur Prolog, le prédicat halt suffit avec un point à la fin (un CTRL+D fait aussi l'affaire).
+
+
+2. Faits, Règles et Requêtes
+2.2. Les faits : exemple pratique
+Le fichier paint_ball.prolog contient les faits suivant :
+
+assure_au_paint_ball(arnaud).
+assure_au_paint_ball(christophe).
+a_battu_au_paint_ball(arnaud, cyril).
+a_battu_au_paint_ball(christophe, cyril).
+a_battu_au_paint_ball(florent, cyril).
+a_battu_au_paint_ball(olivier, cyril).
+Il faut se rappeler que l'analyse de la base de faits (BF) respecte l'ordre du fichier. Par conséquent, si on fait la requête suivante dans l'interpréteur Prolog :
+
+?- assure_au_paint_ball(X).
+On s'attend qu'il y ait 2 réponses : une pour arnaud et une pour christophe. Est-ce le cas ?
+
+Si vous faites une requête qui accepte au moins une réponse (on parle d'unification), Prolog va attendre votre réaction pour continuer ou s'arrêter. Si vous appuyez sur "entrée", il estimera que vous êtes content de la réponse et s'arrêtera là. Si vous appuyez sur ";", il comprendra que vous voulez avoir la prochaine unification qui valide votre requête. En Prolog, le ";" signifie OU. 
+
+Par conséquent, si vous faites les actions suivantes à la requête précédente (votre intervention est mise en évidence en rouge) :
+
+X = arnaud ;
+X = christophe.
+Cette réponse pourra se lire : "Votre requête est vraie si X est unifié à arnaud ou si X est unifié à Christophe".
+
+Expérimentez les 3 requêtes suivantes et dites-moi ce que vous obtenez (en mettant ";" autant que nécessaire) :
+
+?- a_battu_au_paint_ball(arnaud,X).
+?- a_battu_au_paint_ball(cyril,Y).
+?- assure_au_paint_ball(arnaud).
+Lors d'une requête, il est possible de combiner plusieurs faits. Si vous les séparez par le caractère ",", Prolog comprendre que vous voulez, de gauche à droite, que tous les faits soient validés en même temps. Le ',' est donc interprété comme un ET.
+
+Testez maintenant les requêtes suivantes :
+
+?- assure_au_paint_ball(X), a_battu_au_paint_ball(X, cyril).
+?- a_battu_au_paint_ball(W, Z), assure_au_paint_ball(W).
+
+2. Faits, Règles et Requêtes
+2.3. Les données
+En Prolog, c'est la logique des prédicats qui est utilisé (on ne parle pas de fonctions quand vous appelez des méthodes qui sont disponibles dans Prolog). Même si vous ne l'avez pas abordé et/ou compris, il faut juste admettre que toutes les donnés sont des termes.
+
+Il y a 4 types de termes : les atomes, les nombres, les variables et les termes complexes (prédicats donc). Les atomes représentent la famille des chaînes de caractères commençant par une minuscule ou qui sont entourées par des " " ou des ' '. Les variables ont des noms commençant forcément par une majuscule ou un "_". Des variables non encore instanciées
+(unifiées) sont qualifiées de libres. Les prédicats sont quand à eux formés d’un nom suivi de parenthèses comportant un ou plusieurs arguments.
+
+Quand vous consulterez de la documentation Prolog, il est donc normal d'avoir à faire au vocabulaire atome et/ou terme.
+
+2. Faits, Règles et Requêtes
+2.4. Fait et requêtes avec les dieux (1/2)
+Vous allez faire quelques exercices autour de la généalogie des dieux Grecs. Pour ce faire, vous allez utiliser la généalogie ci-dessous (l'image viendrait de http://sites.arte.tv/ et aurait été récupéré par pinterest.fr mais la source initiale n'est plus trouvable ...). Pour la suite, vous pouvez enregistrez localement l'image pour la consulter tranquillement (cliquez-droit puis "enregistrez l'image sous").
+
+Généalogie des dieux Grecs
+
+Vous allez maintenant écrire une base de faits (c'est à dire une liste de faits, un par ligne) dans un fichier nommé divinites.prolog. Dans ce fichier, vous allez différencier les divinités primordiales, des titans, des dieux, des demi-dieux et des humains. On précisera aussi le sexe de tous les personnages présents ainsi que les liens de parenté directs qui existent. on ne va utiliser que les personnages ayant un nom (on ne mettra pas "cyclopes", "autres titans", ...).
+
+Attention de ne pas mettre de majuscule aux noms des personnages. Sinon Prolog interprétera cela comme des variables (et non des constantes). Vous ne mettrez pas d'accent non plus.
+
+Vous pouvez mettre des commentaires dans votre fichier Prolog, il suffit de commencer la ligne correspondante par le caractère %.
+
+Je vais vous imposer le nom des faits.
+
+Pour les entités primordiales (jusqu'à Ouranos inclus sans Eris), on utilisera le fait divinite_primordiale comme par exemple avec Chaos :
+
+divinite_primordiale(chaos).
+Pour les titans cela sera titan (même pour les titanides), par exemple avec Cronos :
+
+titan(cronos).
+On ne mettra pas les noms Hékatonchires, Cyclopes et autres titans.
+
+Pour les dieux, cela sera divinite, par exemple avec Zeus :
+
+divinite(zeus).
+Pour les demi-dieux (fruit d'une union entre une divinité et un personnage qui n'est pas un dieu), le fait sera demi_divinite, par exemple (en fait c'est le seul) :
+
+demi_divinite(heracles).
+Reste un seul personnage, humain, c'est Alcmène. Le fait sera donc humaine(alcmène).
+
+Concernant le sexe des personnages, on mettra simplement male ou femelle. Ainsi pour Zeus et Héra, cela donnerait :
+
+male(zeus).
+femelle(hera).
+Concernant les relations de parentalité, vous utiliserez le fait fruit_de pouvant avoir deux ou trois paramètres (suivant que l'on connaisse ou non les deux parents du personnage indiqué en premier paramètre). Vous penserez à mettre les 2 permutations possibles pour les parents. Ainsi pour Ilithye, sera donnerait :
+
+fruit_de(ilithye, hera, zeus).
+fruit_de(ilithye, zeus, hera).
+Pour Rhéa, cela donnera :
+
+fruit_de(rhea, ouranos).
+Complétez maintenant votre fichier divinites.prolog et vérifiez qu'il est fonctionnel. Pour vous aider, vous pouvez utiliser 2 prédicats Prolog :
+
+listing : prédicat qui permet d'afficher la base de faits actuellement chargée. Attention, cela implique aussi les faits systèmes inclus par défaut.
+findall : prédicat qui permet en un seul appel de mettre tous les résultats d'une requête dans une liste. Par exemple, findall(X,male(X),ListeDesMales) remplira la variable ListeDesMales avec toutes les valeurs de X validant le fait male(X). Pour avoir un affichage complet de la liste, il suffira de rajouter un appel au prédicat print pour afficher cette liste.
+
+
+2. Faits, Règles et Requêtes
+2.5. Fait et requêtes avec les dieux (2/2)
+Maintenant que votre fichier divinites.prolog est prêt, vous allez maintenant vérifier les réponses que renvoie l'interpréteur Prolog aux questions suivantes. 
+
+Quels sont les enfants de Chaos ?
+
+Qui a eu des enfants avec Zeus ?
+
+Quelles sont les divinités primordiales de sexe féminin ?
+
+Afficher les paires de personnage mère / fils.
+
+Qui sont les frères de Tartare ?
+
+Qui est le grand-père de Héra ?
+
+Qui sont les petits-enfants de Gaïa ?
+
+Qui sont les demi-frères et les sœurs de Perséphone.
+
+Affichez les divinités qui ont une tante qui est elle aussi une divinité.
+
+Retrouvez le demi-dieu Héracles sans utiliser le prédicat demi-dieu.
+
+Avez-vous eu des problèmes pour obtenir tous ces résultats ?
+
+Normalement, vous avez du faire fasse à différents soucis :
+
+la redondance de certaines réponses;
+
+la gestion difficile du prédicat fruit_de (vu qu'il en existe une version avec 2 paramètres et une version avec trois paramètres);
+
+l'affichage de toutes les variables intermédiaires lors des traitements;
+
+la difficulté à faire des requêtes pour lesquelles il y a plusieurs manières d'obtenir les solutions attendues;
+
+la lourdeur et la lecture difficile de certaines requêtes;
+
+...
+
+Nous allons maintenant appréhender la notion de règle pour faciliter notre gestion des divinités.
+
+2. Faits, Règles et Requêtes
+2.6. Définir des règles
+De la même manière que l'on a défini des faits, il est possible de définir des règles. La différence avec les faits est qu'une règle n'est pas considéré comme un axiome. Un ensemble de fait/règle doit être validé pour valider la règle. Une règle correspond donc au résultat d'un raisonnement.
+
+Par exemple, si on souhaite définir une règle permettant de dire si un personnage est une divinité masculine, il suffit d'écrire :
+
+divinite_male(X) :- divinite(X), male(X).
+On rappellera que le symbole "," équivaut à un "ET".
+
+Concernant les règles pouvant avoir différentes possibilités de résolution, il y a deux manières de les écrire soit en utilisant le symbole ";" qui signifie "OU" ou en écrivant plusieurs fois la règle en changeant la partie droite. En effet, Prolog va essayez de rendre vrai toutes les faits demandés, si un de ces faits est une une règle, il testera toutes les règles qui ont la même signature que le fait demandé.
+
+Par exemple, pour définir une règle pere(X,Y), on pourrait écrire :
+
+pere(X,Y) :- male(X), fruit_de(Y,X,Z);male(X), fruit_de(Y,X).
+Mais cela peut être difficile à lire (sachant qu'on peut encore condenser l'écriture). L'écriture suivante donne les mêmes résultats :
+
+pere(X,Y) :- male(X), fruit_de(Y,X,Z).
+pere(X,Y) :-male(X), fruit_de(Y,X).
+Si on souhaite comprendre réellement comment le raisonnement Prolog se déroule, il est possible d'activer le mode trace en appelant le prédicat du même nom. Après l'appel à trace, l'interpréteur devient "[trace] ?-" et tous les détails de fonctionnement de Prolog sont affichés. Pour sortir du mode trace, il suffit d'appeler successivement les prédicats notrace et nodebug.
+
+Lorsque vous suivez le raisonnement de Prolog, vous verrez que cela représente une arborescence. C'est pour cela qu'on parle de l'arbre de raisonnement Prolog (en tout cas, c'est comme cela que je le désigne). A chaque fois qu'une règle vous semblera réagir de manière non prévue, imaginer et vérifier l'arbre de raisonnement Prolog vous permettra de comprendre d'où vient le problème.
+
+Avec l'ajout des règles, un warning peut apparaître : le singleton. Cela signifie que vous avez nommé une variable dont vous ne vous servez pas. C'est soit une erreur qu'il faut corriger, soit c'est tout à fait normal car la variable ne vous sert pas. Dans ce dernier cas, il suffit de remplacer la variable incriminée par la variable anonyme "_" pour lever le warning. 
+
+2. Faits, Règles et Requêtes
+2.7. Un mot sur l'unification
+En Prolog, le symbole = est celui de l’unification, l’écriture X=Y signifie que l’on cherche à rendre les deux termes identiques. Le résultat d'une telle expression dépend de l'état de X et Y au moment de son évaluation :
+
+Si X et Y déjà liées (déjà unifié avec une expression), l’interpréteur répondra ”Yes” si elles sont égales, ”No” sinon.
+
+Si X est libre et Y déjà liée, l’interpréteur proposera comme solution X prenant la valeur de Y.
+
+Si X est liée et Y est libre, l’interpréteur proposera comme solution Y prenant la valeur de X.
+
+Si X et Y sont libres, on ne peut rien dire d'autres que X=Y mais cela représente aucun contenu réel.
+
+L'unification n'est pas forcément explicite pour l'utilisateur notamment lors de l'utilisation de règles. Cependant, Prolog le comprend très bien. Ainsi, si vous définissez une règle identiques (ici sans partie droite car l'unification suffit), vous pouvez écrire :
+
+identiques(X,X).
+Prolog comprendra que les deux paramètres doivent être unifiables de manière identique pour valider la règle. Par contre, si on voulait mettre une règle différents, l'écriture suivante ne suffirait pas :
+
+differents(X,Y).
+En effet, rien n'empêche X et Y de ne pas représenter le même contenu. Dans ce dernier cas, il faut donc préciser que X et Y ne doivent pas être unifiable. Il suffit donc d'utiliser \= (la non unification). On obtiendrait ainsi :
+
+differents(X,Y) :- X\=Y.
+De manière plus général, on peut aussi avoir envie d'utiliser la négation d'une règle/fait, c'est possible de deux manières :
+
+le prédicat not qui prend en paramètre la règle/fait à nier. Il est là pour des questions pratiques mais ce n'est pas la méthode officielle (c'est noté deprecated).
+
+le prédicat \+ qui prend en paramètre la règle/fait à nier. C'est la méthode officielle mais c'est peut-être moins lisible. Vous trouverez plus d'informations ici.
+
+Pensez à tout cela pour les sections suivantes.
+
+2. Faits, Règles et Requêtes
+2.8. Des règles avec les dieux (1/2)
+Vous allez écrire un nouveau fichier regles_divinites.prolog qui aura pour première ligne :
+
+:- include('divinites').
+Cette ligne n'est pas une règle (il n'y a pas de partie gauche). C'est une directive. Cette directive permet de charger un autre fichier Prolog dans le fichier courant. Cela va nous permettre de nous concentrer sur les règles.
+
+Vous allez commencer par écrire une règle enfant(X,Y) qui permet d'indiquer que X et l'enfant de Y. Vous allez donc devoir gérer les différents appels possibles à fruit_de.
+
+Une fois votre règle écrite, analysez son fonctionnement en mode trace, comprenez-vous ce qui se passe ?
+
+Notez les différentes étapes importantes du raisonnement Prolog.
+
+2. Faits, Règles et Requêtes
+2.9. Des règles avec les dieux (2/2)
+Vous allez maintenant enrichir le fichier regles_divinites.prolog des règles suivantes en faisant attention qu'elles soient pleinement fonctionnels (sans warning) :
+
+pere et mere basées sur la règle enfant;
+
+grandmere et grandpere en se basant sur les règles pere et mere;
+
+frere et soeur;
+
+oncle et tante;
+
+cousin et cousine;
+
+parent et grandparent (doit-on passer par pere et mere ? grand-pere et grand-mere ?)
+
+Les appels récursifs
+On souhaite faire la règle ancetre qui permet d'afficher tous les ancêtre d'un individu donné (parents, grand-parents, ...). On va donc faire deux versions de ce prédicat : avec un seul paramètre pour l'appel initial et deux paramètres pour la génération des ancêtres. 
+
+Il faut réaliser que pour trouver des ancêtres, il faudra donc appeler le prédicat ancetre au sein même du prédicat ancetre. Pour que la règle se finalise correctement, il faut prévoir un cas d'arrêt à la récursion et un cas d'exclusion qui permet de couper l'appel récursif si l'utilisateur demande une suite de réponse (avec ";").
+
+Prédicat famille et affichage de messages
+On souhaiterait réaliser un prédicat famille qui permet d'afficher toutes les relations d'un personnage avec les autres. Il faudra donc mettre en place deux versions de ce prédicats : avec un paramètre (pour le lancement initial) et avec deux paramètres (pour énumérer les cas). On voudrait que les relations trouvées amènent à des affichages à l'écran du genre :
+
+heracles est l'enfant de zeus.
+Pour écrire des informations à l'écran, il y a plusieurs manières :
+
+le prédicat print : on peut l'utiliser pour afficher "brutalement" le contenu d'une variable liée mais cela ne servira a rien d'autre (c'est pour faire du debuggage).
+le prédicat write : c'est l'ancienne manière de faire (c'est indiqué comme deprecated) mais c'est facile à utiliser.
+le prédicat format : c'est la version actuelle pour faire de l'affichage. Cela demande un peu de pratique mais c'est assez flexible.
+Par exemple, si vous désirez écrire que deux variables X et Y sont liées par une relation frère, vous allez pouvoir écrire avec write :
+
+write(X), write(" est le frère de "), write(Y), nl.
+Notez la gestion des espaces (sinon tout est collé) et l'appel à nl (new line) pour ajouter un retour chariot.
+
+Avec format, cela donnerait :
+
+format('~a est le frère de ~a~n',[X,Y]).
+Le premier paramètre du prédicat est la chaîne formatée qui va s'afficher, le second paramètre est la liste des variables à utiliser. Dans notre cas, ~a signifie que l'argument est un atome (une variable) et ~n signifie un retour chariot. Pour plus d'information, regarder ici.
+
+Je conseille, dans un premier temps, d'utiliser le prédicat write pour sa simplicité.
