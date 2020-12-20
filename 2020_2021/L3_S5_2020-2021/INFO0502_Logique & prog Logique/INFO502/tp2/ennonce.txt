@@ -1,0 +1,212 @@
+Raisonnements, calculs et listes
+Ressource dédiée à la résolution des problèmes logiques et calculatoires en ajoutant la manipulation des listes.
+
+1. Rappels et complémentes sur l'unification
+Comme vous le savez déjà, en Prolog le symbole = représente l’unification. L’écriture X=Y doit être compris comme l'essai de rendre identique les deux termes X et Y. Cette action peut avoir différents résultats :
+
+Si X et Y sont déjà unifiés (à une valeur donnée), l’interpréteur répondra Yes si elles sont égales, No sinon.
+
+Si X est libre et Y déjà liée, l’interpréteur proposera comme solution d'unifier X avec la valeur de Y.
+
+Si X est liée et Y est libre, l’interpréteur proposera comme solution d'unifier Y avec la valeur de X.
+
+Si X et Y sont libres, l'interpréteur ne dira rien de particuliers car unifier deux variables libres est toujours possible.
+
+Par contre, une écriture faisant intervenir un opérateur arithmétique  dans un unification pourra avoir un comportement qui peut sembler bizarre. Par exemple, si vous écrivez X=Y+1 (qui est équivalent à Y+1=X). On a l'impression que si Y est lié, cela amènera à la valeur Y+1 pour X. Ce n'est pas le cas. Il n'y a pas d'interprétation par défaut en Prolog. Si vous écrivez X = Y + 1 est que Y est lié avec toto par exemple, X sera unifié avec toto + 1 et c'est tout.
+
+L'opérateur is
+Il y a de nombreuses situations (on en verra justement) où l'on désire vraiment une opérateur arithmétique. Dans ce cas, on voudra effectivement faire un calcul qui ressemblerait à X = Y + 1. Vous avez compris que ce n'est pas avec le symbole de l'unification (=) que l'on fera cela. Il faut utiliser l'opérateur is.
+
+Regardons d'abord la documentation de ce prédicat (et oui c'est aussi un prédicat). Je mets une capture d'écran ici ce que j'ai trouvé sur la page officielle de swi-prolog :
+
+Documentation officielle du prédicat is
+
+On notera deux choses :
+
+à gauche de l'opérateur is, il y a un nombre (Number). is est donc réservé aux opérations arithmétiques;
+
+à droite, il y a une expression (dont le résultat de l'interprétation est nombre) dont le résultat est comparé au nombre présent en partie gauche (si c'est une variable, cela unifie le résultat).
+
+Comme cela est évoqué dans la documentation, il faut cependant faire attention quand on manipule différents types numériques notamment les réels. Dans notre cas, la question ne se posera pas vraiment car nous travaillerons en nombres entiers (mais on reparlera de la différence entre = et =:= un peu plus loin).
+
+Par exemple, écrire X is 20 + 2 amènera à unifier X avec 22. L'expression 22 is 20 + 2 amènera à la réponse Yes.
+
+Mise à part l'égalité qui s'écrit différemment, les opérateurs arithmétiques classiques (comparaison et opérations) sont utilisables : <, >, =<, >=, −, +, /, ∗, mod (modulo).
+
+On peut aussi rajouter les fonctions mathématiques standards : sin, cos, tan, log, exp, ...
+
+2. Les tests d'égalité
+Il reste possible de faire des tests d'égalité en Prolog mais il faut avoir conscience des différences suivant les opérateurs utilisés. 
+
+L'opérateur ==
+Quand il s'agit de faire un test d'égalité entre deux informations quelques soient (constante, variable libre ou lié), c'est le == qui permettra d'avoir une réponse de type true/false :
+
+?- 3 == 2. 
+Donnera false.
+
+?- X == 2. 
+Donnera false.
+
+?- 2 == X. 
+Donnera false.
+
+?- 2 == 2. 
+Donnera true.
+
+Pour tester la non-égalité, on devrait normalement utiliser le prédicat \+ avec en argument le test à nier (on peut aussi utiliser le not mais c'est deprecate) et écrire ceci :
+
+?- \+(2==3).
+Qui donnera donc true.
+
+Mais on peut utiliser un raccourci qui est \== et l'utiliser ainsi :
+
+?- 2 \== 3.
+Qui donnera donc true aussi.
+
+L'opérateur =:=
+L'opérateur =:= est similaire à == à la différence qu'il est dédié aux comparaisons numériques surtout qu'il interprète les expressions qui sont de chaque côté. Ainsi si vous faites :
+
+?- X =:= 2.
+Donnera une erreur : Arguments are not sufficiently instantiated.
+
+?- 1+1 =:= 2.
+Donnera true.
+
+Par contre, il n'y a pas de manière plus rapide de nier l'opérateur =:=. Donc pour nier une telle égalité, c'est l'opérateur \+ (ou de manière déprécié not) qu'il faudra utiliser : 
+
+?- \+( 1+1 =:= 2+3 ).
+Ce qui donnera true car 2 et différent de 5.
+
+3. Quelques calculs
+Pour mettre en oeuvre ce qui a été évoqué dans les pages précédentes, nous allons procéder à quelques calculs simples : le plus grand commun diviseur (PGCD) entre 2 nombres et le calcul du nième terme de Fibonnaci.
+
+Exemple 1 : PGCD
+Nous allons produire un prédicat qui aura pour but de calculer le plus grand commun diviseur entre 2 entiers. Il faut se rappeler qu'en Prolog, on ne retourne pas de valeur mais on procède à des unifications successives pour répondre true à la requête de l'utilisateur. Par conséquent, il faudra écrire le calcul du PGCD sous forme d'une règle à 3 arguments (pgcd/3). Les deux premiers arguments seront les 2 entiers concernés par le calcul et le dernier argument sera le résultat du calcul. On pourra donc appeler ce prédicat de deux manières :
+
+avec 2 nombres et une variable (en dernière position) pour avoir le résultat du calcul du PGCD.
+
+avec 3 nombres (pas de variables) pour avoir une réponse de type true/false.
+
+Afin de produire le prédicat PGCD sous forme d'une règle pgcd à 3 arguments, vous allez :
+
+écrire en pseudo-code un algorithme récursif pour calculer le PGCD entre 2 nombres;
+
+adapter votre pseudo-code en Prolog.
+
+Exemple 2 : Fibonacci
+Comme vous le savez certainement, calculer un terme de la suite de Fibonacci est quelque chose qui est relativement simple à faire puisque :
+
+Pour tout n>1, Un=Un-1+Un-2 avec U0=0 et U1=1
+Par contre, il est aussi reconnu qu'implémenter le calcul du Nième terme de la suite de Fibonacci de manière récursive est simple mais largement sous-efficace (à la différence de l'approche itérative). 
+
+Vous allez donc produire 3 versions du calcul du Nième terme de la suite de Fibonacci :
+
+Une première version récursive facile à écrire mais coûteuse fibo/2.
+
+Une seconde version basée sur la première en utilisant la directive dynamic et le prédicat asserta (voir avec l'intervenant :-) ) 
+
+Une troisième version itérative fiboI (à vous de trouver le nombre d'arguments ...)
+
+4. Quelques problèmes logiques
+Comme vous l'avez déjà bien compris, Prolog permet aisément d'écrire des algorithmes qui font un parcours arborescent à un détail près que le développeur ne s'occupera pas du parcours à proprement parler.
+
+Pour résoudre un problème en Prolog, l'utilisateur doit être capable de répondre à 3 questions :
+
+Quelle est l'état initial de mon problème ?
+
+Quelle(s) est (sont) l' (les) état(s) final (aux) recherché(s) ?
+
+Comment passer d'un état intermédiaire à un autre état intermédiaire (i vers i+1) ?
+
+De là Prolog sera capable de faire le parcours arborescent associé.
+
+Pour s'en convaincre, vous allez résoudre deux petits problèmes.
+
+Le jeu de pièces
+Soit 3 pièces de monnaie posées sur n’importe quelle face. Il faut en 3 coups exactement avoir les pièces de monnaie sur le même côté (face ou pile) sachant qu’à chaque coup, 2 pièces sont retournées simultanément. On fera en sorte que les différentes étapes de la résolution soient affichées.
+
+Un exemple d’exécution pourrait être le suivant :
+
+?- jeuDePieces(pile,face,pile).
+pile face pile
+pile pile face
+pile face pile
+face face face
+Pour commencer, vous pouvez faire une version à 6 arguments du prédicat jeuDePieces pour faciliter l'écriture de votre prédicat.
+
+Les tours de Hanoï
+soit trois tours. La première comporte N disques mis les uns sur les autres de manière à ce que chacun ne repose que sur un disque d’un diamètre plus grand qui lui-même. Le but est de déplacer les N disques sur une seconde tour tout en faisant en sorte que la contrainte sur les diamètres soit respectées à tout moment. On fera en sorte que les différentes étapes de la résolution soient affichées.
+
+Un exemple d’exécution pourrait être le suivant :
+
+?-hanoi(3).
+1 vers 3
+1 vers 2
+3 vers 2
+1 vers 3
+2 vers 1
+2 vers 3
+1 vers 3
+Une fois votre prédicat fonctionnel, faites-en une autre version qui en plus de faire l'affichage attendu fait le calcul du nombre de déplacements de disques effectués.
+
+Pouvez-vous aussi en faire un extrêmement simple sans affichage ?
+
+5. Les listes
+Vous avez déjà eu à faire aux listes depuis le 1er TP au travers de l'utilisation du prédicat findall. C'est une structure de donnée native en Prolog et dont la nature récursive le rend très facile à être utilisée.
+
+Voici des informations pour mieux comprendre ce qu'est une liste en Prolog :
+
+une liste vide est noté [ ];
+
+une liste avec un seul élément a est noté [a];
+
+une liste avec deux éléments (ou plus) verra ses éléments constitutifs séparés par des virgules. Par exemple : [ a, b, toto, 2, X];
+
+une liste peut contenir des éléments de types hétérogènes (même des listes).
+
+Pour les listes, il existe un opérateur spécial noté | qui permet d'isoler un ou plusieurs éléments en tête de liste du reste de la liste. Dans une expression avec un | , à gauche il y a forcément des éléments, à droite le reste de la liste. C'est utile pour gérer les unifications fonctionnement sur les listes.
+
+Voici quelques exemples, si vous écrivez :
+
+[ ] : uniquement la liste vide pourra s'unifier.
+
+[ X ] : uniquement la liste à un seul élément pourra s'unifier. Par exemple, si vous faites [ X ] = [ a ] alors Prolog proposera X = a
+
+[ X | L ] : l'unification fonctionnera avec toute liste non vide :
+
+si vous avez [ a, b, c], l'unification donnera : X = a et L = [b,c]
+
+si vous avez [ a ], l'unification donnera : X = a et L = [ ]
+
+[X,Y | L ] : l'unification fonctionnera avec toute liste de taille supérieure ou égale à 2 :
+
+si vous avez [ a, b, c], l'unification donnera : X = a, Y =  et L = [ ]
+
+si vous avez [ a, b ], l'unification donnera : X = a, Y= b et L = [ ]
+
+Quelques prédicats pour démarrer
+Même si la plupart des prédicats que vous allez faire existent déjà (en jetant un œil à la documentation Prolog), vous allez les faire à la main pour mieux comprendre comment les listes fonctionnent.
+
+Mettez en place les prédicats suivant :
+
+affiche/1 qui affiche le contenu d'une liste (élément par élément);
+
+afficheR/1 qui affiche le contenu d'une liste à l'envers (élément par élément);
+
+compte/2 qui permet de récupérer la taille d'une liste;
+
+somme/2 qui permet de faire la somme des éléments numériques présents dans une liste. Au passage, on peut tester qu'une variable contient un type numérique via le prédicat number;
+
+appartient/2 qui permet de savoir si le premier argument est présent dans la liste fournie en deuxième argument;
+
+minimum/2 qui pour une liste (1er argument) permet de récupérer le plus petit élément (2ème argument). Pour ce prédicat, on partira du principe que tous les éléments sont bien des nombres (sans les tester);
+
+concatener/3 qui permet de récupérer en 3ème argument une liste qui est la concaténation des arguments 1 et 2 qui sont aussi des listes;
+
+concatUnique/3 qui permet de récupérer en 3ème argument une liste qui est la concaténation des arguments 1 et 2 qui sont aussi des listes mais sans qu'il y ait des doublons;
+
+estTriee/1 qui indique si une liste de valeurs numériques est triée;
+
+concatTrie/3 qui permet de récupérer en 3ème argument une liste dont les éléments sont triées qui est la concaténation des arguments 1 et 2 qui sont aussi des listes déjà triées;
+
+En piochant dans les prédicats précédents, mettez en place un prédicat tri/2 qui permet de trier de manière croissante une liste de valeurs numériques.
