@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20201015-0748-Experimental"
+	Name="LAPTOP-DDTE0A1B"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="9.3.0"
+	OSName="Linux"
+	Hostname="LAPTOP-DDTE0A1B"
+	OSRelease="4.19.104-microsoft-standard"
+	OSVersion="#1 SMP Wed Feb 19 06:37:35 UTC 2020"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ProcessorCacheSize="4096"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="2048"
+	TotalPhysicalMemory="6254"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2904"
+	>
+	<Testing>
+		<StartDateTime>Oct 15 09:48 CEST</StartDateTime>
+		<StartTestTime>1602748118</StartTestTime>
+		<TestList>
+			<Test>./tests/test_01_size_14</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_01_size_14</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/test_01_size_14</FullName>
+			<FullCommandLine>/mnt/c/Users/tonne/Desktop/L3-TP/INFO504/TP5/build/tests/test_01</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0083729</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/mnt/c/Users/tonne/Desktop/L3-TP/INFO504/TP5/build/tests/test_01</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value></Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Oct 15 09:48 CEST</EndDateTime>
+		<EndTestTime>1602748118</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

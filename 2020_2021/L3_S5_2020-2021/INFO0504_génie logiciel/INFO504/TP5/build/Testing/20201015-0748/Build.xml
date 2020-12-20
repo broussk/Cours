@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20201015-0748-Experimental"
+	Name="LAPTOP-DDTE0A1B"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="9.3.0"
+	OSName="Linux"
+	Hostname="LAPTOP-DDTE0A1B"
+	OSRelease="4.19.104-microsoft-standard"
+	OSVersion="#1 SMP Wed Feb 19 06:37:35 UTC 2020"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ProcessorCacheSize="4096"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="2048"
+	TotalPhysicalMemory="6254"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2904"
+	>
+	<Build>
+		<StartDateTime>Oct 15 09:48 CEST</StartDateTime>
+		<StartBuildTime>1602748110</StartBuildTime>
+		<BuildCommand>/usr/bin/cmake --build . --config "Release" -- -i</BuildCommand>
+		<Log Encoding="base64" Compression="bin/gzip"/>
+		<EndDateTime>Oct 15 09:48 CEST</EndDateTime>
+		<EndBuildTime>1602748117</EndBuildTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Build>
+</Site>

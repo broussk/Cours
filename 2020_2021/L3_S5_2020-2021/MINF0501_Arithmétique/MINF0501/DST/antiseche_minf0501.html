@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>MINFO0501</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<style>
+			div { margin-left : 25px; }
+			table, th, tr, td {
+				border: solid black 1px;
+				text-align: center;
+				padding: 4px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>⇔ ⇒ ∧ ∨ ∀ ∃ ∈ ≡ ≤ ≥ ± ≠</h1>
+		<h4>Divisibilité dans Z</h4>
+		<div>
+				<b>Définition :</b> Soient (a, b)∈(Z×Z), on dit que b|a si et seulement si ∃k∈Z tel que : a = bk.</br>
+				<b>Propriétés :</b> Soient (a, b, c)∈(Z×Z×Z) alors :
+				<ul>
+					<li>b|a ⟺ b|-a ⟺ -b|a ⟺ -b|-a <i>(réflexivité)</i></li>
+					<li>c|b et b|a ⟺ c|a <i>(transitivité)</i></li>
+					<li>c|a et c|b ⟺ c|(na+mb) avec (n, m)∈Z <i>(combinaison linéaire)</i></li>
+					<li>a ≠ 0 et b|a ⟺ |b| ≤ |a|</li>
+					<li>b|a et a|b ⟺ a = ±b <i>(on dit que a et b sont associés)</i></li>
+				</ul>
+				<b>Définition :</b> Soit a∈Z, on note D(a) l'ensemble des diviseurs de a.</br>
+				<b>Remarque :</b> D(0) = Z
+		</div>
+		</br>
+		<h4>Division euclidienne</h4>
+		<div>
+			<b>Propriétés :</b>
+			<ul>
+				<li>Soient (a, b)∈(N×N*), ∃!(q, r)∈(N×N) tel que : a = bq+r et 0 ≤ r &lt; b.
+				</br>Effectuer la division euclidienne de a par b, c'est trouver ces nombres q et r (quotient et reste).</li>
+				<li>Soient (a, b)∈(Z×Z*), ∃!(q, r)∈(Z×N) tel que : a = bq+r et 0 ≤ r &lt; |b|.</li>
+			</ul>
+			<b>Remarques :</b>
+			<ul>
+				<li>Si r = 0 alors b|a</li>
+				<li>∀a∈N, a = bq ou a = bq+1 ou ... a = bq+b-1</li>
+			</ul>
+			<b>Application :</b> écriture en base b</br>
+			<i style='margin-left:30px'>ex. : 13=6*2+1 et 6=3*2+0 et 3=1*2+1 et 1=0*2+1 alors 13 en décimal = 1101 en binaire.</i>
+		</div>
+		</br>
+		<h4>PGCD et algorithme d'Euclide</h4>
+		<div>
+			<b>Définition :</b> Soient (a, b)∈(Z×Z) et non-simulanéments nuls, alors le plus grand élément de D(a)∩D(b) est appelé le PGCD de a et b. On note PGCD(a, b) ou a∧b.</br>
+			<b>Remarque :</b> Si (a, b)≠(0, 0), ainsi D(a) ou D(b) est un ensemble fini et dans tous les cas D(a)∩D(b) est fini. D(a)∩D(b) est une partie finie de Z, elle admet donc un plus grand élément.</br>
+			<b>Propriétés :</b> Soient (a, b)∈(N*×N*) alors :
+			<ul>
+				<li>b|a alors a∧b = b</li>
+				<li>a∧1 = 1, a∧0 = a</li>
+				<li>(q, r)∈(N×N) tel que a = bq+r alors a∧b = b∧r</li>
+			</ul>
+			<b>Méthode :</b> Soient (a, b)∈(N*×N*)
+			<ul>
+				<li>On effectue la division euclidienne de a par b.</li>
+				<li>On remplace ensuite a par b et b par le reste.</li>
+				<li>On répète jusqu'à ce que le reste soit nul.</li>
+				<li>Alors a∧b sera égale au dernier reste non-nul.</li>
+			</ul>
+			<b>Propriété :</b> Soient (a, b, D)∈(Z*×Z*×Z*), si D|a et D|a alors D|PGCD(a, b).</br>
+			<b>Définition :</b> Soient (a, b)∈(Z*×Z*), si a∧b = d alors ∃(a', b')∈(Z×Z) tel que : a = a'd, b = b'd et a'∧b' = 1.
+		</div>
+		</br>
+		<h4>Théorèmes</h4>
+		<div>
+			<b>Théorème de Bézout :</b> Soient (a, b)∈(Z×Z), alors a∧b = 1 si et seulement si ∃(u, v)∈(Z×Z) tel que au+bv = 1.</br>
+			<b>Théorème de Bachet-Bézout :</b> Soient (a, b)∈(Z×Z) tel que a∧b = d, alors ∃(u, v)∈(Z×Z) tel que au+bv = d.</br>
+			<b>Théorème de Gauss :</b> Soient (a, b, c)∈(Z*×Z*×Z*), si a|bc et a∧b = 1, alors a|c.</br>
+		</div>
+		</br>
+		<h4>Nombres premiers</h4>
+		<div>
+			<b>Définition :</b> Soit p∈N*\{1}, p est premier si et seulement ses seuls diviseurs positifs sont 1 et p.</br>
+			<b>Remarque :</b> On note P l'ensemble des nombres premiers et |P| = +∞.</br>
+			<b>Propriétés :</b> Soit p∈P, a∈Z*, x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>∈Z* et n∈N*\{1}
+			<ul>
+				<li>p|a ou p∧a = 1</li>
+				<li>si p|x<sub>1</sub>x<sub>2</sub>...x<sub>n</sub> alors ∃k∈[[0; n]] tel que p|x<sub>i</sub>k (où 1 ≤ i &lt; n)</li>
+				<li>si n n'admet pas de diviseur premier entre 2 et √n alors n est premier</li>
+			</ul>
+			<b>Crible d'Ératosthène :</b>
+			<ul>
+				<li>On écrit tous les entiers</li>
+				<li>On raye 0 et 1.</li>
+				<li>On garde 2 et on raye ses multiples.</li>
+				<li>On garde les prochains entiers non rayés, puis on raye ses multiples et on recommence.</li>
+			</ul>
+			<b>Théorème fondamental de l'arithmétique :</b> ∀n∈N et n ⩾ 2, ∃!p<sub>1</sub>, p<sub>2</sub>, ..., p<sub>n</sub>∈P et ∃!e<sub>1</sub>, e<sub>2</sub>, ..., e<sub>n</sub>∈N* tels que : n = p<sub>1</sub><sup>e<sub>1</sub></sup>*p<sub>2</sub><sup>e<sub>2</sub></sup>*...*p<sub>n</sub><sup>e<sub>n</sub></sup>.</br>
+			<b>Propriété :</b> Soit n = p<sub>1</sub><sup>x<sub>1</sub></sup>*p<sub>2</sub><sup>x<sub>2</sub></sup>*...*p<sub>n</sub><sup>x<sub>n</sub></sup>
+			<ul>
+				<li>n possède exactement : (x<sub>1</sub>+1)*(x<sub>2</sub>+1)*...*(x<sub>n</sub>+1) diviseurs positifs</li>
+				<li>de plus, si m = p<sub>1</sub><sup>y<sub>1</sub></sup>*p<sub>2</sub><sup>y<sub>2</sub></sup>*...*p<sub>n</sub><sup>y<sub>n</sub></sup>
+				</br>alors PGCD(m, n) s'obtient en multipliant les nombres premiers apparaissant dans les deux décompositions à la puissance du plus petit exposant apparu.
+				</br>alors PPCM(m, n) s'obtient en multipliant les nombres premiers apparaissant dans les deux décompositions à la puissance du plus grand exposant apparu.</li>
+			</ul>
+		</div>
+		</br>
+		<h4>Congruence</h4>
+		<div>
+			<b>Définition :</b> Soient a,b∈Z et n∈N. On dit que a et b sont congrus modulo n si n|a+b. Dans ce cas on note a ≡ b [n]</br>
+			<b>Définition :</b> a ≡ b [n] ⇔ ∃k∈Z tel que : k*n + b = a.</br>
+			<b>Remarques :</b>
+			<ul>
+				<li>a ≡ 0 [n] si et seulement si n|a</li>
+				<li>a ≡ r [n] si r est le reste de la division euclidienne de a par n (r est l'unique vérifiant)</li>
+				<li>a ≡ r [n] et 0 ≤ r &lt; n</li>
+			</ul>
+			<b>Propriétés :</b> Si a ≡ a' [n] et b ≡ b' [n] alors
+			<ul>
+				<li>a+b ≡ a'+b' [n]</li>
+				<li>a*b ≡ a'*b' [n]</li>
+				<li>a<sup>k</sup> ≡ a'<sup>k</sup> [n]</li>
+			</ul>
+			<b>Petit théorème de Fermet :</b> Soit p∈P, alors ∀a∈Z a<sup>p</sup> ≡ a [p].</br>
+			<b>Petit théorème de Fermet :</b> Si p ne divise pas, alors ∀a∈Z a<sup>p-1</sup> ≡ 1 [p].</br>
+			
+			</br>
+			<b>Tableau de congruence</b> <i>(ex. : n(n-1)(n+1) ≡ [3])</i>
+			<div>
+				<table>
+					<tbody>
+						<tr><th>n ≡ [3]</th><th>0</th><th>1</th><th>2</th></tr>
+						<tr><th>n-1 ≡ [3]</th><td>2</td><td>0</td><td>1</td></tr>
+						<tr><th>n+1 ≡ [3]</th><td>1</td><td>2</td><td>0</td></tr>
+						<tr><th>n(n-1) ≡ [3]</th><td>0</td><td>0</td><td>2</td></tr>
+						<tr><th>n(n-1)(n+1) ≡ [3]</th><td>0</td><td>0</td><td>0</td></tr>
+					</tbody>
+				</table>
+				Conclusion : ∀n∈N, n(n-1)(n+1) est divisible par 3
+			</div>
+			</br>
+			<b>Système de congruences</b> <i>(Théorème des restes chinois)</i>
+			<div>
+				On cherche n tel que : { n ≡ 5 [7] / n ≡ 2 [11]</br>
+				⇔ { 7|n-5 / 11|n-2</br>
+				⇔ { ∃k∈Z, n-5=7k / ∃k'∈Z, n-2=11k'</br>
+				⇔ { ∃k∈Z, n=7k+5 / ∃k'∈Z, n=11k'+2</br>
+				⇔ ∃k,k'∈Z { n=7k+5 / 7k+5=11k'+2</br>
+				⇔ ∃k,k'∈Z { n=7k+5 / 3=11k'-7k</br>
+				Reste à résoudre 3 = 11k'-7k <i>(équation diophantienne)</i></br>
+				Pour déterminer les valeurs de k, et en déduire les valeurs de n</br>
+				<sub>Les couples solutions de 11k'-7k = 3 sont (-7x+6; -11x+9).
+				Donc n = 7k+5 = 7(-11x+9)+5 = -77x + 68.
+				</sub>
+			</div>
+			</br>
+			<b>Application :</b> Exponentiation modulaire <i>(ex. : calculer 453<sup>70</sup> [1137])</i>
+			<div>
+				<table>
+					<thead><th>Méthode naïve</th><th>Méthode élégante</th></thead>
+					<tbody>
+						<tr><td>453 ≡ 453 [1137]</td><td>70 = 64+4+2 = 2<sup>6</sup>+2<sup>2</sup>+2<sup>1</sup></td></tr>
+						<tr><td>453<sup>2</sup> ≡ 453<sup>2</sup> [1137]</td><td>453<sup>70</sup> = 453<sup>2<sup>6</sup>+2<sup>2</sup>+2<sup>1</sup></sup></td></tr>
+						<tr><td>453<sup>3</sup> ≡ 453<sup>3</sup> [1137]</td><td>453<sup>70</sup> = 453<sup>2<sup>6</sup></sup>*453<sup>2<sup>2</sup></sup>*453<sup>2<sup>1</sup></sup></td></tr>
+						<tr><td>...</td><td>453<sup>70</sup> ≡ 453<sup>2<sup>6</sup></sup>*453<sup>2<sup>2</sup></sup>*453<sup>2<sup>1</sup></sup> [1137]</td></tr>
+						<tr><td>453<sup>69</sup> ≡ 453<sup>69</sup> [1137]</td><td>453<sup>70</sup> ≡ 774*96*549 [1137]</td></tr>
+						<tr><td>453<sup>70</sup> ≡ 453<sup>70</sup> [1137]</td><td>453<sup>70</sup> ≡ 747 [1137]</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		</br>
+		<h4>Relation d'équivalence et Z/nZ</h4>
+		<div>
+				<b>Définition :</b> Une relation xRy est dite équivalente si :
+				<ul>
+					<li>elle est réflexive (xRx)</li>
+					<li>elle est symétrique (xRy ⇔ yRx)</li>
+					<li>elle est transitive (xRy et yRz ⇒ xRz)</li>
+					<i>exemple : "être inférieur à" n'est pas symétrique, ce n'est pas une relation d'équivalence.</i></br>
+				</ul>
+				<b>Propriétés :</b> Soit n∈N*. La relation de congruence modulo n est une relation d'équivalence.</br>
+				<b>Définition :</b> On définit l'ensemble <span style="text-decoration:overline">a</span> comme la classe d'équivalence d'un entier a : <b><span style="text-decoration:overline">a</span> = {k∈Z, k≡a[n]}</b></br>
+				On définit alors Z/nZ comme l'ensemble des classes d'équivalences modulo n : <b>Z/nZ = {<span style="text-decoration:overline">0</span>, <span style="text-decoration:overline">1</span>, <span style="text-decoration:overline">2</span>, ...,<span style="text-decoration:overline">n-1</span>}</b>
+		</div>
+		</br>
+		<h4>Arithmétique des polynômes</h4>
+		<div>
+			On appelle K (= R ou C)</br>
+			K[X] = { a<sub>0</sub> + a<sub>1</sub>x + a<sub>2</sub>x<sup>2</sup> + ... + a<sub>n</sub>x<sup>n</sup></br>
+			<b>Définition :</b> Soient A,B∈K[X]. On dit que B divise A s'il existe Q∈K[X] tel que A = BQ. On note alors B|A.</br>
+			<i>exemple : X²-1 = (X-1)(X+1) donc X-1 | X²-1</i></br>
+			<b>Remarque :</b> Les polynômes de degré 0 sont les seuls inversibles de K[X]. A est inversible s'il existe B tel que AB = 1.</br>
+			<b>Propriété :</b> Soient A,B∈K[X]. Si A|B et B|A alors A = aB avec a∈K, et A et B sont dits associés.</br>
+			<b>Remarque :</b> Dans Z on aurait a = ±b.</br>
+			<b>Théorème :</b> Soient A,B∈K[X] et B ≠ 0, il existe un unique couple (Q,R)∈K[X]² tel que : A = BQ+R et d°R &lt; d°B.</br>
+			<i>exemple : Division de X<sup>5</sup>+2X<sup>3</sup>+3 par X²+1
+			<div>
+				(X<sup>5</sup>+2X<sup>3</sup>+3) / (X²+1)</br>
+				(X²+1)*X<sup>3</sup> = (X<sup>5</sup> + X<sup>3</sup>)</br>
+				(X<sup>5</sup>+2X<sup>3</sup>+3) = (X²+1)*X<sup>3</sup> + X<sup>3</sup>+3</br>
+				Q = X<sup>3</sup> et R = X<sup>3</sup>+3
+			</div>
+			</i>
+			<b>Corollaire :</b> Soient P∈K[X] et a∈K. P(a) = 0 ⇔ X-a | P.</br>
+			<b>Remarque :</b> La division euclidienne existe dans K[X] mais pas dans Z[X] <i>(division euclidienne de X² par 2X)</i>.</br>
+			<b>Définition :</b> Soient A,B∈K[X]. On note PGCD(A, B) <u>un</u> polynôme vérifiant : (D|A et D|B) et si (D'|A et D'|B) alors D'|D.</br>
+			<b>Remarque :</b> Ici le PGCD n'est pas unique. Il l'est si on impose que son coefficient dominant doit être égal à 1.</br>
+		</div>
+		</br>
+		<h4>Irréductibilité d'un polynôme</h4>
+		<div>
+			<b>Définition :</b> Un polynôme P est dit irréductible si ses seuls diviseurs sont les inversibles et les polynômes qui lui sont associés.</br>
+			<b>Remarque :</b> Les polynômes irréductibles sont l'équivalent dans K[X] des nombres premiers dans Z.</br>
+			<b>Propriétés :</b>
+			<ul>
+				<li>Si P est irréductible et A∈K[X], P|A ou PGCD(P, A) = 1.</li>
+				<li>Si P divise un produit de polynôme, alors P divise l'un d'entre eux.</li>
+				<i>exemple : X²-1 est irréductible dans R[X] &nbsp;&nbsp;&nbsp;&nbsp; <u>/!\ X²-1 = (X+1)(X-1) et X²-1 est réductible dans C[X]</u></i>
+				<li>Les polynômes de degré 1 sont toujours irréductibles</li>
+				<li>Les irréductibles de R[X] sont les polynômes de degré <u>ET</u> les polynômes de degré 2 tels que Δ &lt; 0</li>
+				<li>Les irréductible de C[X] sont exactement les polynômes de degré 1 (d'Alembert Gauss)</li>
+			</ul>
+			<b>Théorème :</b> Soit P∈K[X]. ∃!(P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>n</sub>)∈K[X] irréductibles et ∃!(a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>)∈N<sup>n</sup> tels que P = P<sub>1</sub><sup>a<sub>1</sub></sup> * P<sub>2</sub><sup>a<sub>2</sub></sup> * ... * P<sub>n</sub><sup>a<sub>n</sub></sup></br>
+			<b>Remarque :</b> Tout polynôme se décompose en produit de polynômes irréductibles. Ce produit est unique (à l'ordre des facteurs près).</br>
+			<b>Corollaire :</b> Avec les notations précédentes : Q|P ⇔ Q = P<sub>1</sub><sup>b<sub>1</sub></sup> * P<sub>2</sub><sup>b<sub>2</sub></sup> * ... * P<sub>n</sub><sup>b<sub>n</sub></sup>, avec b<sub>i</sub> ≤ a<sub>i</sub></br>
+			<i>exemple : P(X) = X<sup>5</sup> - 4X<sup>4</sup> + 6X<sup>3</sup> - 6X<sup>2</sup> +5 X - 2 = (X-1)²(X-2)(X²+1), alors Q(X) = (X-1)(X²+1) est un diviseur de P</i></br>
+		</div>
+	</body>
+</html>

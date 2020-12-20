@@ -1,0 +1,20 @@
+make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 0.38 s in the future
+Scanning dependencies of target MyStrlen
+make[2]: Warning: File 'MyStrlen/CMakeFiles/MyStrlen.dir/depend.make' has modification time 0.65 s in the future
+[ 16%] Building CXX object MyStrlen/CMakeFiles/MyStrlen.dir/myStrlen.cxx.o
+[ 33%] Linking CXX static library libMyStrlen.a
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 33%] Built target MyStrlen
+Scanning dependencies of target HelloWorld
+make[2]: Warning: File 'CMakeFiles/HelloWorld.dir/depend.make' has modification time 0.65 s in the future
+[ 50%] Building CXX object CMakeFiles/HelloWorld.dir/src/HelloWorld.cxx.o
+[ 66%] Linking CXX executable HelloWorld
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 66%] Built target HelloWorld
+Scanning dependencies of target test_01
+make[2]: Warning: File 'tests/CMakeFiles/test_01.dir/depend.make' has modification time 0.27 s in the future
+[ 83%] Building CXX object tests/CMakeFiles/test_01.dir/Test_01.cxx.o
+[100%] Linking CXX executable test_01
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target test_01
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.

@@ -1,0 +1,40 @@
+SELECT * FROM (
+    SELECT ENAME, JOB, SAL FROM SCOTT.EMP WHERE SAL > (
+        SELECT AVG(SAL) FROM SCOTT.EMP
+    ) ORDER BY SAL
+) WHERE rownum = 1;
+//tout les employés gagnant plus que le salaire moyen ordonné par salaire croissant
+
+SELECT DEPTNO,COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO 
+//nombre des employés par dpt
+
+SELECT MIN(DEPTNO) FROM (
+    SELECT DEPTNO,COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO
+)
+//dpt dans lequel il y a le minimum d'employé
+
+SELECT ENAME,HIREDATE FROM SCOTT.EMP WHERE DEPTNO = (
+    SELECT MIN(DEPTNO) FROM (
+        SELECT DEPTNO,COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO
+    )
+) ORDER BY HIREDATE
+//employés du département ayant le minimum d'employés
+
+SELECT * FROM (
+    SELECT ENAME,HIREDATE FROM SCOTT.EMP WHERE DEPTNO = (
+        SELECT MIN(DEPTNO) FROM (
+            SELECT DEPTNO,COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO
+        )
+    ) ORDER BY HIREDATE
+) WHERE rownum = 1;
+//premier employé embauché dans le dpt ayant le min d'employés
+
+SELECT ENAME FROM SCOTT.EMP WHERE HIREDATE < (
+    SELECT HIREDATE FROM (
+        SELECT ENAME,HIREDATE FROM SCOTT.EMP WHERE DEPTNO = (
+            SELECT MIN(DEPTNO) FROM (
+                SELECT DEPTNO,COUNT(EMPNO) FROM SCOTT.EMP GROUP BY DEPTNO
+            )
+        ) ORDER BY HIREDATE
+    ) WHERE rownum = 1
+);

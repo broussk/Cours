@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test_01.dir/Test_01.cxx.o  -o test_01  ../MyStrlen/libMyStrlen.a 

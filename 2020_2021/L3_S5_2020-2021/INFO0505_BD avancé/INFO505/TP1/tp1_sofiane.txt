@@ -1,0 +1,124 @@
+/* Exercice 1 */
+
+/* requete 1 */
+
+SELECT * FROM (SELECT  ENAME, JOB, SAL FROM SCOTT.emp
+               WHERE SAL > (SELECT AVG(SAL) FROM SCOTT.emp)
+               ORDER BY SAL)
+WHERE rownum = 1;
+
+/* requete 2 */
+
+SELECT ENAME FROM SCOTT.emp
+WHERE DEPTNO = (SELECT DEPTNO FROM (SELECT DEPTNO, COUNT(ENAME)
+                        FROM SCOTT.emp
+                        GROUP BY DEPTNO
+                        HAVING COUNT(ENAME) = (SELECT MAX(COUNT(*)) FROM SCOTT.emp GROUP BY DEPTNO)));
+
+/* requete 3 */
+SELECT ENAME
+FROM SCOTT.EMP
+WHERE HIREDATE > (SELECT MIN(HIREDATE)
+                  FROM SCOTT.EMP
+                  WHERE DEPTNO = (SELECT DEPTNO
+                                  FROM (SELECT COUNT(*) AS c,d.DEPTNO
+                                  FROM SCOTT.EMP e , SCOTT.DEPT d
+                                  WHERE d.DEPTNO = e.DEPTNO GROUP BY d.DEPTNO)
+                                  WHERE C=(SELECT MIN(c)
+                                           FROM(SELECT COUNT(*) as c,d.DNAME
+                                                FROM SCOTT.EMP e , SCOTT.DEPT d
+                                                WHERE d.DEPTNO = e.DEPTNO
+                                                GROUP BY d.DNAME))));
+
+/* requete 4 */
+
+SELECT ENAME, EMPNO
+FROM SCOTT.EMP e
+WHERE NOT EXISTS (SELECT MGR
+                  FROM SCOTT.EMP
+                  WHERE e.EMPNO = MGR);
+
+/* requete 5 */
+
+
+SELECT COUNT(*) FROM SCOTT.EMP
+WHERE MONTHS_BETWEEN(TO_DATE('31/12/1999','DD/MM/YYYY'),hiredate)>222;
+
+/*Exercice 2*/
+/* requete 1*/
+SELECT  ROUND(MAX(salary),0) "Salaire_Maximum",
+	ROUND(MIN(salary),0) "Salaire_Minimum",
+	ROUND(SUM(salary),0) "Salaire_Cummulé",
+	ROUND(AVG(salary),0) "Salaire_Moyen"
+FROM HR.EMPLOYEES;
+/*requete 2*/
+SELECT  JOB_ID,
+	ROUND(MAX(SALARY),0) "Salaire_Maximum",
+	ROUND(MIN(SALARY),0) "Salaire_Minimum",
+	ROUND(SUM(SALARY),0) "Salaire_Cummulé",
+	ROUND(AVG(SALARY),0) "Salaire_Moyen"
+FROM HR.EMPLOYEES
+GROUP BY JOB_ID;
+/* requete 3*/
+SELECT  MANAGER_ID,MIN(SALARY) FROM HR.EMPLOYEES WHERE SALARY is not null AND MANAGER_ID is not null AND SALARY > 6000
+GROUP BY MANAGER_ID
+ORDER BY MIN(SALARY) DESC;
+
+/* requete 4*/
+
+SELECT last_name,TO_CHAR(hire_date, 'DD-MON-YY') HIRE_DATE, TO_CHAR(hire_date, 'DAY') DAY 
+FROM HR.EMPLOYEES;
+
+/* requete  5 */
+
+SELECT 	COUNT(HIRE_DATE) as "Nombre_total_d'employés",
+		SUM(DECODE(EXTRACT (year FROM HIRE_DATE),'2005',1,0)) as "2005",
+		SUM(DECODE(EXTRACT (year FROM HIRE_DATE),'2006',1,0)) as "2006",
+		SUM(DECODE(EXTRACT (year FROM HIRE_DATE),'2007',1,0)) as "2007",
+		SUM(DECODE(EXTRACT (year FROM HIRE_DATE),'2008',1,0)) as "2008"             
+FROM HR.EMPLOYEES; 
+
+/* requete 6*/
+SELECT 
+   e.LAST_NAME,
+   e.HIRE_DATE
+FROM HR.EMPLOYEES e
+WHERE
+e.HIRE_DATE > (SELECT HIRE_DATE FROM HR.EMPLOYEES WHERE LAST_NAME = 'Davies');
+
+/* requete 7*/
+
+SELECT
+	e.LAST_NAME,
+	e.HIRE_DATE,
+	m.LAST_NAME,
+	m.HIRE_DATE
+FROM HR.EMPLOYEES e
+JOIN HR.EMPLOYEES m ON e.MANAGER_ID = m.EMPLOYEE_ID
+WHERE e.HIRE_DATE < m.HIRE_DATE;
+
+/* requete 8*/
+
+SELECT LAST_NAME, FIRST_NAME FROM HR.EMPLOYEES WHERE LAST_NAME LIKE 'Ki%' OR LAST_NAME LIKE 'Ko%';
+
+/* requete 9*/
+
+SELECT REPLACE(STREET_ADDRESS, ' ', '') AS STREET_ADDRESS_TRIM
+FROM HR.LOCATIONS;
+
+/* requete 10*/
+
+SELECT REPLACE(STREET_ADDRESS, 'St', 'Street') "Street ADDRESS"
+FROM HR.LOCATIONS
+WHERE STREET_ADDRESS LIKE '%St%'
+AND STREET_ADDRESS NOT LIKE '%Street%';
+
+/* requete 11*/
+
+CREATE TABLE Contact(
+
+    l_name varchar(30),
+    p_number varchar(30),
+    CONSTRAINT valid_phone_number
+    CHECK (REGEXP_LIKE(p_number, '^0d{9}|d{10}$'))
+);

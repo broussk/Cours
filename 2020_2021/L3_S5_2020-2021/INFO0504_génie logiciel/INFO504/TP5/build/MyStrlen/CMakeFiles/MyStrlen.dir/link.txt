@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMyStrlen.a  CMakeFiles/MyStrlen.dir/myStrlen.cxx.o
+/usr/bin/ranlib libMyStrlen.a

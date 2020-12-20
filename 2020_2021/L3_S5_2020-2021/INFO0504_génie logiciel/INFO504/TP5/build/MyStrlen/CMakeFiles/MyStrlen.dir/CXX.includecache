@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/tonne/Desktop/L3-TP/INFO504/TP5/exemple_08/MyStrlen/myStrlen.cxx
+myStrlen.h
+-
+
+/mnt/c/Users/tonne/Desktop/L3-TP/INFO504/TP5/exemple_08/MyStrlen/myStrlen.h
+cstddef
+-
+

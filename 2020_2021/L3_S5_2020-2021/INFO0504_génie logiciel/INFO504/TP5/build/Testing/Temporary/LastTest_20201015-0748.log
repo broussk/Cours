@@ -1,0 +1,18 @@
+Start testing: Oct 15 09:48 CEST
+----------------------------------------------------------
+1/1 Testing: test_01_size_14
+1/1 Test: test_01_size_14
+Command: "/mnt/c/Users/tonne/Desktop/L3-TP/INFO504/TP5/build/tests/test_01"
+Directory: /mnt/c/Users/tonne/Desktop/L3-TP/INFO504/TP5/build/tests
+"test_01_size_14" start time: Oct 15 09:48 CEST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_01_size_14" end time: Oct 15 09:48 CEST
+"test_01_size_14" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 15 09:48 CEST
