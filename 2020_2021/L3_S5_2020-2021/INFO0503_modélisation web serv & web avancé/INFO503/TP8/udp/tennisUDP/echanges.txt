@@ -1,0 +1,41 @@
+Client 1 commence le match
+
+Client1:
+    do{
+        choix du tir
+        envoie du tir à C2
+
+        attend result attrapé de C2 (C2.attrapé)
+        attend echange en cours de C2
+        si (scoreGagnant(C1, C2) = true || scoreGagnant(C2, C1) = true){break}
+
+        si C2.attrapé = true{
+            do{
+                attend echange de C2
+                si (scoreGagnant(C1, C2) = true || scoreGagnant(C2, C1) = true){break}
+
+                choix position
+                envoie result attrapé à C2 (C1.attrapé)
+                envoie echange en cours à C2
+            }while C1.attrapé = true
+        }
+    }while (scoreGagnant(C1, C2) = true || scoreGagnant(C2, C1) = true)       //faire ... tant que scoreGagnant n'est pas égal à true
+
+
+Client2:
+    do{
+        attend echange de C1
+        si (scoreGagnant(C1, C2) = true || scoreGagnant(C2, C1) = true){break}
+        choix position
+        envoie result attrapé à C1 (C2.attrapé)
+        envoie echange en cours à C1
+        si C2.attrapé = true{
+            do{
+                choix tir
+                envoyer tir à C1
+                attend result attrapé de C1 (C1.attrapé)
+                attend echange en cours de C1
+                si (scoreGagnant(C1, C2) = true || scoreGagnant(C2, C1) = true){break}
+            }while C1.attrapé = true 
+        }
+    }while (scoreGagnant(C1, C2) = true || scoreGagnant(C2, C1) = true)
