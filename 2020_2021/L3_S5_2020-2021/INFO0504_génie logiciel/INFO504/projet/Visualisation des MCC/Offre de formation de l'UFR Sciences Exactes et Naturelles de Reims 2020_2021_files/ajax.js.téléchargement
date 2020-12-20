@@ -1,0 +1,55 @@
+function getXHR()
+{
+	var newReq = null;
+	if(window.XMLHttpRequest) 
+	{
+		try 
+		{
+			newReq = new XMLHttpRequest();
+		}
+		catch(e) 
+		{
+			newReq = false;
+		}
+	}
+	else if(window.ActiveXObject) 
+	{
+		try 
+		{
+			newReq = new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch(e) 
+		{
+			try 
+			{
+				newReq = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch(e) 
+			{
+				newReq = false;
+			}
+		}
+	}
+return newReq;
+}
+
+
+function loadXHR(url,methode,id,fBack,tt)
+{
+	var req = getXHR();
+	req_global = req;
+	
+	if(tt==undefined) tt = true;
+	req.open(methode,url,tt);
+	req.send(null);
+	
+	req.onreadystatechange = function()
+	{
+		if (req.readyState == 4)
+		{
+			rhttp = req.responseText;
+			if(document.getElementById(id)) document.getElementById(id).innerHTML = rhttp;
+			if(fBack != "") eval(fBack);
+		}
+	}
+}

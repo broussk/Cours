@@ -1,0 +1,139 @@
+
+<!--
+.focus {
+	background: #e3e8a6;
+	color: black;
+}
+
+.normal {
+	background: white;
+	color: black;
+}
+
+html {
+	margin: 0px;
+	padding: 0px;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+body {
+	font-family: Arial,Helvetica,sans-serif;
+	background-color: #91847b;
+	/*background-size:cover;
+	background-attachment:fixed;*/
+}
+
+/* Images */
+img {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Image de fond */
+#background {
+	height: 100%;
+	left: 0;
+	top: 0;
+	min-height: 416px;
+	min-width: 970px;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	z-index: -200;
+}
+
+#header-top {
+	/*margin: 30px 0 0 30px;*/
+    min-height: 70px;
+    padding: 0;
+    position: absolute;
+}
+
+/* Bandeau UFR Sciences */
+#header {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin: 10px 0px 0px 11px;
+	padding: 0px;
+}
+
+#header a {
+	outline-style: none;
+	text-decoration: none;
+}
+
+#header a:hover {
+	background: none;
+}
+
+.classaerafiche {
+	border-width: 0px;
+	font-size: 13px;
+	font-family: arial;
+}
+
+.classtimebox {
+	position: fixed;
+	right: 25px;
+	top: 3px;
+	color: black;
+	background-color: transparent;
+	border-width: 0px;
+	text-align: right;
+	-moz-opacity: 0.85;
+	opacity: 0.85;
+	filter: alpha(opacity = 85);
+}
+
+.classannee {
+	color: black;
+	font-size: small;
+	font-weight: bold;
+	background-color: transparent;
+	border-width: 0px;
+	text-align: left;
+	-moz-opacity: 0.85;
+	opacity: 0.85;
+	filter: alpha(opacity = 85);
+}
+
+.ajoutfavoris {
+	position: fixed;
+	right: -5px;
+	top: -5px;
+	background-color: transparent;
+	border-width: 0px;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+}
+
+#contener {
+	border: none;
+	margin: auto;
+	padding: 5px;
+	width: 1200px;
+}
+
+#content {
+	width: 81%;
+	float: left;
+	font-size: 1em;
+	margin: 10px 0px 10px 10px;
+	padding: 5px;
+	border: 1px solid black;
+	background-color: white;
+	-moz-border-radius: 5px; /* Mozilla Firefox */
+	-webkit-border-radius: 5px; /* Safari */
+	border-radius: 5px; /* CSS 3 - non reconnu par IE8 */
+	overflow: auto;
+}
+
+#footer {
+	text-align: center;
+	clear: both;
+}
+-->

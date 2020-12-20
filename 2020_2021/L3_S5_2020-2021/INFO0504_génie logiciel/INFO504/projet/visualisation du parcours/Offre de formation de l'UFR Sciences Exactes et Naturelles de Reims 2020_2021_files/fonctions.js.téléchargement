@@ -1,0 +1,545 @@
+function makeListOptions(table, cle, col, val, cible)
+{
+	// Modif LG le 07/04/14 : Récupération de l'année universitaire - Correction d'un bug lié à la perte de session en Ajax
+	annee = $("#anneeCouranteUniv").val().substring(0,4);         // année 2014/2015 ramenée à 2014
+	//annee = document.forms[0].elements['annee'].value;
+	//console.log(annee);
+	loadXHR("exec.php?type=list&table="+table+"&cle="+cle+"&col="+col+"&cible="+cible+"&anneeUniv="+annee,"GET",cible,"selectOption('"+cible+"','"+val+"')");
+}
+
+// Fonction identique à la précédente qui ramène 2 valeurs de la table (exemple : Nom Prénom du personnel enseignant)
+// Les paramètres texte1, 2, 3 servent à la mise en forme de la liste déroulante (= permet de séparer les 2 colonnes)
+function makeListOptions2(table, cle, col, col2, val, cible, texte1, texte2, texte3)
+{ 
+	// Modif LG le 07/04/14 : Récupération de l'année universitaire - Correction d'un bug lié à la perte de session en Ajax
+	annee = $("#anneeCouranteUniv").val().substring(0,4);         // année 2014/2015 ramenée à 2014
+	if(texte1==undefined) texte1 ="";
+	if(texte2==undefined) texte2 ="";
+	if(texte3==undefined) texte3 ="";
+	loadXHR("exec.php?type=list2&table="+table+"&cle="+cle+"&col="+col+"&col2="+col2+"&texte1="+texte1+"&texte2="+texte2+"&texte3="+texte3+"&cible="+cible+"&anneeUniv="+annee,"GET",cible,"selectOption('"+cible+"','"+val+"')");
+}
+
+function makeListCaseOptions(table, cle, col, val, cible)
+{
+	// Modif LG le 07/04/14 : Récupération de l'année universitaire - Correction d'un bug lié à la perte de session en Ajax
+	annee = $("#anneeCouranteUniv").val().substring(0,4);         // année 2014/2015 ramenée à 2014
+	loadXHR("exec.php?type=list_case&table="+table+"&cle="+cle+"&col="+col+"&cible="+cible+"&anneeUniv="+annee,"GET",cible,"");
+}
+
+function showSelectCase(id)
+{
+	disp = document.getElementById(id).style.display;
+	if(disp!="block") document.getElementById(id).style.display = "block";
+	else document.getElementById(id).style.display = "none";
+}
+
+function selectOption(id, val)
+{
+	nb = document.forms[0].elements[id].options.length;
+	for(i=0;i<nb;i++)
+	{
+		if(document.forms[0].elements[id].options[i].value==val)
+		{
+			document.forms[0].elements[id].selectedIndex = i;
+			i=nb;
+		}
+	}
+}
+
+function getInfo(table, cle, col, cible, id)
+{
+	// Modif LG le 07/04/14 : Récupération de l'année universitaire - Correction d'un bug lié à la perte de session en Ajax
+	if(isNaN($("#anneeCouranteUniv").val().substring(0,4))) {
+		annee = new Date().getFullYear();
+	} else {
+		annee = $("#anneeCouranteUniv").val().substring(0,4);         // année 2014/2015 ramenée à 2014
+	}
+	if(id!="0") loadXHR("exec.php?type=info&table="+table+"&cle="+cle+"&col="+col+"&id="+id+"&anneeUniv="+annee,"GET",cible, "");
+}
+
+function zipzap(id)
+{
+	obj = document.getElementById(id).className;
+	if(obj=="zap") zip(id);
+	else zap(id);
+}
+
+function zap(id)
+{
+	if(document.getElementById(id))
+		document.getElementById(id).className = "zap";
+}
+
+function zip(id)
+{
+	if(document.getElementById(id))
+		document.getElementById(id).className = "zip";
+}
+
+function createUE(formu, semestre_type_id, semestre, numero)
+{
+	formu.action = "?action=modif&type=table&view=semestre_type&prev=3&next=4&id="+semestre_type_id+"&semestre="+semestre+"&numero="+numero;
+	formu.submit();
+}
+
+function editUE(formu, semestre_type_id, ue)
+{
+	formu.action = "?action=modif&type=table&view=semestre_type&id="+semestre_type_id+"&prev=3&next=7&ue_id="+ue;
+	formu.submit();
+}
+
+function deleteEC(formu, semestre_type_id, id)
+{
+	formu.action = "?action=modif&type=table&view=semestre_type&id="+semestre_type_id+"&prev=7&next=8&ec_id="+id;
+	formu.submit();
+}
+
+function goBackUE(formu, semestre_type_id, etape)
+{
+	formu.action = "?action=modif&type=table&view=semestre_type&id="+semestre_type_id+"prev=3&next="+etape;
+	formu.submit();
+}
+
+function sendForm(formu, act)
+{
+	formu.action = act;
+	formu.submit();
+}
+
+function calcTotalVH(compteur)
+{
+	total = 0;
+	for(i=1;i<=compteur;i++)
+	{
+		//on sépare les heures et minutes
+		duree = document.forms[0].elements["nature_enseignement_id["+i+"]"].value;
+		
+		h=duree.split("h");
+		h[0]=eval(h[0]);
+		h[1]=eval(h[1]);
+		
+		if(typeof(h[0]) != 'undefined') // on ajoute les heures (converties en minutes)
+		{
+			total += h[0] * 60;
+		}
+		if(typeof(h[1]) != 'undefined') // on ajoute les minutes au total
+		{
+			total += h[1];
+		}
+		
+	}
+	if(total != 0)
+	{
+		//affichage au format heures / minutes
+		hh = Math.floor(total/60);
+		mm = total%60;
+		if (mm == 0)
+			tot_affich = hh +"h";
+		else if (mm < 10)
+			tot_affich = hh + "h0" + mm; //on ajoute un zéro devant la minute
+		else
+			tot_affich = hh + "h" + mm;
+		document.getElementById("totalvh").value = tot_affich;
+		document.getElementById("btn_activate").disabled = false;
+	}
+	else
+	{
+		document.getElementById("totalvh").value = 0;
+		document.getElementById("btn_activate").disabled = true;
+	}
+}
+
+// function changelistenature()
+// {
+	// var Nature = document.formTemp.mcc[1][nature_epreuve_id].value;
+	// getInfo("nature_epreuve", "abv", "nom", "nature[1]", Nature);
+// }
+
+function changeliste()
+{
+	var leNom = document.formTemp.personnel_id.value;
+	getInfo("personnel", "personnel_id", "prenom", "prenom_personnel", leNom);
+}
+
+function changeliste2()
+{
+	// Nombre de Parcours-type dans un Parcours
+	var nbreParcours = document.formTemp.parcours_id.value;
+	getInfo("parcours_type", "parcours_id", "count(*)", "nbre_parcours", nbreParcours);
+}
+
+function changelistedouble()
+{
+	var leNom = document.formTemp.responsable_id.value;
+	getInfo("personnel", "personnel_id", "prenom", "prenom_responsable", leNom);
+	
+	var leNom2 = document.formTemp.coresponsable_id.value;
+	getInfo("personnel", "personnel_id", "prenom", "prenom_coresponsable", leNom2);
+}
+
+function changelistedouble2()
+{
+	var leNom = document.formTemp.responsable_id.value;
+	getInfo("personnel", "nom", "prenom", "prenom_responsable", leNom);
+	
+	var leNom2 = document.formTemp.coresponsable_id.value;
+	getInfo("personnel", "nom", "prenom", "prenom_coresponsable", leNom2);
+}
+
+var isNN = (navigator.appName.indexOf("Netscape")!=-1);
+
+function dlTabulation(input,len, e)
+{
+	var keyCode = (isNN) ? e.which : e.keyCode;
+	var filter = (isNN) ? [0,8,9] : [0,8,9,16,17,18,37,38,39,40,46];
+	if(input.value.length >= len && !ldElement(filter,keyCode))
+	{
+		input.value = input.value.slice(0, len);
+		input.form[(ldIndex(input)+1) % input.form.length].focus();
+	}
+	return true;
+}
+
+function ldElement(arr, ele)
+{
+	var found = false, index = 0;
+	while(!found && index < arr.length)
+		if(arr[index] == ele)	found = true;
+		else index++;
+	return found;
+}
+
+function ldIndex(input)
+{
+	var index = -1, i = 0, found = false;
+	while (i < input.form.length && index == -1)
+		if (input.form[i] == input)index = i;
+		else i++;
+	return index;
+}
+
+var keylist="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()-_+=~`[]{}|:;<>,.?"
+var temp=''
+
+function generatepass(plength)
+{
+	temp=''
+	for (i=0;i<plength;i++)
+		temp+=keylist.charAt(Math.floor(Math.random()*keylist.length))
+	return temp
+}
+
+function populateform(enterlength)
+{
+	document.pgenerate.mdp.value=generatepass(enterlength)
+}
+
+function ChangerAnnee()
+{
+	var tempannee = 0; var tempannee2 = 0;
+	var tempannee = parseInt(document.boutonannee.selectannee.value);
+	var tempannee2 = tempannee + 1;
+	
+	alert("Vous travaillez maintenant dans l'année scolaire " + tempannee + "/"	+ tempannee2);
+}
+
+var time=3  //Changer ici le temps en seconde
+time2=time*100
+
+function CountDown()
+{
+	if(time>0)
+	{
+		if(time>1)
+		{
+			window.status="Dans "+time+" secondes vous aurez atteint votre destination"
+			document.s.Time.value="Dans "+time+" secondes vous aurez atteint votre destination"
+		}
+		else
+		{
+			window.status="Dans "+time+" seconde vous aurez atteint votre destination"
+			document.s.Time.value="Dans "+time+" seconde vous aurez atteint votre destination"
+		}
+		time=time-1
+		setTimeout("CountDown()", time2)
+	}
+	else
+	{
+		url="index.php"  // Changer ici l'url
+		Go(url)
+	}
+}
+
+function Go(url)
+{
+	window.status="Go !"
+	document.s.Time.value="Go !"
+	setTimeout("window.location=url", 500)
+}
+
+function imprime_zone(titre, obj)
+{
+	// Définie la zone à imprimer
+	var zi = document.getElementById(obj).innerHTML;
+  
+	// Ouvre une nouvelle fenetre
+	var f = window.open("", "_blank", "height=800, width=800, hotkeys=no, toolbar=no, menubar=no, scrollbars=yes, resizable=no, status=no, location=no, left=100, top=100");
+
+	// Définit le Style de la page
+	f.document.body.style.color = '#000000';
+	f.document.body.style.backgroundColor = '#FFFFFF';
+	f.document.body.style.padding = "10px";
+
+	// Ajoute les Données
+ 	f.document.title = titre;
+//	f.document.body.innerHTML += " " + zi + " ";
+  f.document.write("<html><head><style type=\"text/css\"><!--  --></style></head><body>");
+  f.document.write(zi);
+  f.document.write("</body></html>");
+  f.document.close();
+  
+	// Imprime et ferme la fenetre
+	f.window.print();
+	return true;
+}
+
+ // fonction impression en mode paysage pour les MCC - ajout du 03-03-2010 
+ // ----------------------------------------------------------------------
+function imprime_zone_paysage(titre, obj)
+{
+	
+	// Mis en commentaire - car il est possible d'imprimer en mode "portrait" sans perte des colonnes de droite
+	//alert("Attention : Imprimer en mode paysage");
+	
+	// Définie la zone à imprimer
+	var zp = document.getElementById(obj).innerHTML;
+  
+ 	// Ouvre une nouvelle fenetre
+	var fp = window.open("", "_blank", "height=800, width=1200, hotkeys=no, toolbar=no, menubar=no, scrollbars=yes, resizable=no, status=no, location=no, left=100, top=100");
+
+	/* Définit le Style de la page
+	fp.document.body.style.color = '#000000';
+	fp.document.body.style.backgroundColor = '#FFFFFF';
+	fp.document.body.style.padding = "0px"; */
+
+	// Ajoute les Données
+ 	fp.document.title = titre;
+ 	//fp.document.write("<html><head><style type=\"text/css\"><!-- #obj_non_imprime{display:none;}  --></style></head><body>");
+ 	fp.document.write("<html><head>");
+ 	fp.document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"./skins/gris/styles/texte.css\" />");
+ 	fp.document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"./skins/gris/styles/tableau.css\" />");
+ 	fp.document.write("<link rel=\"stylesheet\" type=\"text/css\" media=\"print\" href=\"./skins/gris/styles/print.css\" />");
+ 	fp.document.write("</head><body>");
+ 	fp.document.write(zp);
+ 	fp.document.write("</body></html>");
+ 	fp.document.close();
+  
+	// Imprime et ferme la fenetre
+ 	fp.window.print();
+ 	fp.window.close();
+	return true;
+}
+
+/* Ajout du 05/04/2011 :
+ * Fonctions utilisées dans skins/gris/templates/modif/matiere.html et admin/modif/modif_table.php
+ *  Elles permettent un accès rapide à une matière par liste déroulante.
+ *  Fct "maj_id" permet de sélectionner l'identifiant de la liste déroulante sur l'évènement onchange
+ *  Fct "acces_rapide" permet d'afficher la fenêtre demandée à partir des paramètres :
+ *    - action (view, modif, copy ou del)
+ *    - contenu (ici view=matiere)
+ *    - page_en_cours (utile pour le retour dans la liste des matières)
+ *    - Variable "select_id" qui est l'identifiant sélectionné dans la liste
+ *    
+ *    NB : Ces deux fonctions peuvent être employées dans d'autes listes (mentions, parcours, ...)
+ */
+
+function maj_id(sel)
+{
+	select_id = sel.options[sel.selectedIndex].value;
+	select_text = sel.options[sel.selectedIndex].text;
+}
+function acces_rapide(action, contenu, page_en_cours)
+{
+	if (select_id == 0) // cas où aucune matière n'est saisie dans la liste déroulante
+		alert('Merci de renseigner la liste déroulante');
+	else
+	{
+		if (action == "del") // cas de la suppression : demande de confirmation
+		{
+			if(confirm('Etes vous sur de vouloir supprimer '+select_text+' ?'))
+					document.location="?action=del&view="+contenu+"&id="+select_id+"&page="+page_en_cours;
+		}
+		else if (action == "view") // cas visualisation
+		{
+			document.location = "?action=view&type=fiche&view="+contenu+"&id="+select_id+"&page="+page_en_cours;
+		}
+		else  // cas copie ou modif
+		{
+			document.location = "?action="+action+"&type=table&view="+contenu+"&id="+select_id+"&page="+page_en_cours;
+		}
+	}
+}
+
+/*---------------------------------------------------------
+Nom de la fonction : TriTableau
+Description : Tri les colonnes d'un Tableau
+en ordre croissant ou décroissant
+Entrées : indice du tri (négatif ou positif) */
+
+ // Variable qui permet de conserver la trace de la colonne et de l'ordre en fonction
+ // desquels le tableau est trié.
+ var dernier_tri = -2;
+
+ // Permet de tester si une chaine de caractères est une date au format JJ.MM.AAAA
+ // ------------------------------------------------------------------------------
+ function TestDate(chaine) {
+	 if (chaine.length < 10){return false};
+	 var jour = chaine.substring(0,2);
+	 var mois = chaine.substring(3,5);
+	 var annee = chaine.substring(6);
+	 jour = parseInt(jour);
+	 mois = parseInt(mois)-1;
+	 annee = parseInt(annee);
+	 var rDate = new Date(annee,mois,jour,0,0);
+	 if(rDate.toString() == "NaN"){return false};
+	 return true;
+ }
+
+ // Permet de convertir une date du format JJ.MM.AAAA en un entier AAAAMMJ
+ // ----------------------------------------------------------------------
+ function ConvDate(chaine){
+	 var jour = chaine.substring(0,2)
+	 var mois = chaine.substring(3,5)
+	 var annee = chaine.substring(6)
+	 var intdate = parseInt(annee + mois + jour);
+	 return(intdate)
+ }
+
+ // Permet de tester si une chaine de caractères est un entier
+ // ----------------------------------------------------------
+ function TestEntier(chaine){
+	 if(isNaN(chaine))
+	 	{return false;}
+	 else
+	 	{return true}
+ }
+
+
+ // Fonctions "critères" de tri pour le tableau javascript
+ // ------------------------------------------------------
+
+ // Tri croissant en fonction d'une colonne date
+ function EvalOrdreCroissantDate(x1,x2) {
+	 return (ConvDate(x1[indice_glob]) < ConvDate(x2[indice_glob]))? -1 : 1;
+ }
+
+ // Tri décroissant en fonction d'une colonne date
+ function EvalOrdreDecroissantDate(x1,x2) {
+	 return (ConvDate(x1[indice_glob]) > ConvDate(x2[indice_glob]))? -1 : 1;
+ }
+
+ // Tri croissant en fonction d'une colonne numérique
+ function EvalOrdreCroissantNum(x1,x2) {
+	 return (parseInt(x1[indice_glob]) < parseInt(x2[indice_glob]))? -1 : 1;
+ }
+
+ // Tri décroissant en fonction d'une colonne numérique
+ function EvalOrdreDecroissantNum(x1,x2) {
+	 return (parseInt(x1[indice_glob]) > parseInt(x2[indice_glob]))? -1 : 1;
+ }
+
+ // Tri croissant en fonction d'une colonne texte
+ function EvalOrdreCroissantTxt(x1,x2) {
+	 return (x1[indice_glob].toLowerCase() < x2[indice_glob].toLowerCase())? -1 : 1;
+ }
+
+ // Tri décroissant en fonction d'une colonne texte
+ function EvalOrdreDecroissantTxt(x1,x2) {
+	 return (x1[indice_glob].toLowerCase() > x2[indice_glob].toLowerCase())? -1 : 1;
+ }
+
+
+ // Fonctions qui trie un tableau javascript
+ // ------------------------------------------------------
+ function Trie_tableau_js(tab_js,indice,sens) {
+	 var nb_ligne = tab_js.length;
+	 var nb_colonne = tab_js[0].length;
+	 var Nom_Fct_Eval = null;
+	 indice_glob = indice; // on récupère l'indice de la colonne sélectionnée
+	 // et on le passe en variable globale pouvant être
+	 // utilisée par la suite par toutes les fonctions
+	 // "critères" de tri.
+	 // Dans la suite, en fonction du sens de tri et de la nature de la colonne
+	 // en fonction de laquelle on trie, on détermine le nom de la fonction "critère"
+	 // utilisé.
+	 if (sens>0) {
+		 if (TestDate(tab_js[0][indice])) { // si c'est une date
+			 Nom_Fct_Eval = EvalOrdreCroissantDate
+		 }
+		 else { // si ce n'est pas une date
+			 if (TestEntier(tab_js[0][indice])) {
+				 Nom_Fct_Eval = EvalOrdreCroissantNum
+			 }
+			 else { // si ce n'est ni une date ni un nombre, c'est une chaine de caractères
+				 Nom_Fct_Eval = EvalOrdreCroissantTxt
+			 }
+		 }
+	 }
+	 else {
+		 if (TestDate(tab_js[0][indice])) {
+			 Nom_Fct_Eval = EvalOrdreDecroissantDate
+		 }
+		 else {
+			 if (TestEntier(tab_js[0][indice])) {
+				 Nom_Fct_Eval = EvalOrdreDecroissantNum
+			 }
+			 else {
+				 Nom_Fct_Eval = EvalOrdreDecroissantTxt
+			 }
+		 }
+	 }
+	 // On trie le tableau javascript grâce à la méthode .sort et au critère retenu.
+	 tab_js.sort(Nom_Fct_Eval);
+	 return tab_js;
+ }
+
+
+ function TriTableau(indice_tri){ // 1: Croissant, -1: Décroissant
+	 //On détermine le tableau à trier.
+	 var tableau_document = document.getElementsByTagName("table")[0];
+	 var tableau_javasc = new Array()
+	 for (i=0; i<tableau_document.rows.length-2; i++){
+		 tableau_javasc[i] = new Array();
+	 }
+
+	 // On détermine l'indice de la colonne considérée
+	 var indice_colonne = Math.abs(indice_tri);
+
+	 // On vérifie que le tableau ne soit pas déjà trié comme demandé
+	 if (dernier_tri==indice_colonne*indice_tri) {return}
+
+	 // On copie le contenu du tableau HTML dans un tableau javascript
+	 // (on ne récupère pas les 2 premières lignes d'entête ni la 1ère colonne
+	 // (qui correspond au numéro) parce que ces données n'interviennent pas dans
+	 // le tri (ce qui explique les length-1 ou -2 et les j+1 i+2)
+	 for (j=0; j<tableau_document.rows[0].cells.length-1; j++){
+		 for (i=0; i<tableau_document.rows.length-2; i++) {
+			 tableau_javasc[i][j] = tableau_document.rows[i+2].cells[j+1].innerHTML;
+		 }
+	 }
+
+	 // On trie le tableau suivant le sens voulu et la colonne considérée
+	 tableau_javasc=Trie_tableau_js(tableau_javasc,indice_colonne-1,indice_tri);
+
+	 // On met à jour le tableau HTML
+	 //tableau_document.style.fontFamily="Arial, Helvetica, sans-serif";
+	 //tableau_document.style.fontSize="10";
+	 for (i=0; i<tableau_document.rows.length-2; i++){
+		 for (j=0; j<tableau_document.rows[0].cells.length-1; j++){
+			 tableau_document.rows[i+2].cells[j+1].innerHTML=tableau_javasc[i][j];
+		 }
+	 }
+
+	 // On renseigne la variable globale définissant le dernier tri effectué
+	 dernier_tri=indice_tri
+ }

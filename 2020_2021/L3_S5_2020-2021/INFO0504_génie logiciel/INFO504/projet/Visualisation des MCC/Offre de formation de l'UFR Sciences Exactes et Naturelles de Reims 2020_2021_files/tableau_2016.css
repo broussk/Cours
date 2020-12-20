@@ -1,0 +1,188 @@
+
+<!-- /* Apparence des tableaux de listage */
+.tabnormal {
+	background-color: white;
+	color: black;
+}
+
+.tabover {
+	background-color: #d8d8e0;
+	color: black;
+}
+
+table.listage {
+	font-size: 10pt;
+	width: 90%;
+	margin: auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.listage th {
+	background-color: #E0E0D8;
+}
+
+table.listage td,table.listage th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 3px;
+}
+
+table.listage2 {
+	font-size: 8pt;
+	width: 80%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.listage2 th {
+	background-color: #E0E0D8;
+}
+.rotation {
+	transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);  /* FF3.5+ */
+    -o-transform: rotate(270deg);  /* Opera 10.5 */
+  	-webkit-transform: rotate(270deg);  /* Saf3.1+, Chrome */
+    /*writing-mode: tb-rl; */ /* IE tb-lr fait pivoter le texte de 90° */
+    /*filter: flipv fliph;*/ /* IE le filtre permet de retourner verticalement et horizontalement - cad 270° => KO */
+    /*-ms-writing-mode: tb-rl; */ /* IE */
+    top:0.7em;
+    width:2em;
+    line-height:2ex;
+    position: relative;
+}
+
+table.listage2 td,table.listage2 th {
+	border: 1px solid black;
+	text-align: center;
+}
+
+table.listage3 {
+	font-size: 10pt;
+	width: 90%;
+	margin: auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.listage3 thead {
+	background-color: #E0E0D8; /* #5b5b5b; */
+	font-size: 120%;
+}
+
+table.listage3 tbody {
+	background-color: #f7f7f4; /* #9d9d9d; */
+}
+
+table.listage3 th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 3px;
+	font-weight: normal;
+}
+
+table.listage3 td {
+	border: 1px solid black;
+	text-align: left;
+	padding: 3px;
+}
+
+table.legende {
+	font-size: 8pt;
+	/*	width: 80%;*/
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.legende th {
+	background-color: #E0E0D8;
+}
+
+table.legende td,table.legende th {
+	border: 1px solid black;
+	text-align: left;
+}
+
+/* Apparence des tableaux "simple" */
+table.simple {
+	font-size: 10pt;
+	width: 90%;
+	margin: auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.simple th {
+	background-color: #E0E0D8;
+	border: 1px solid black;
+}
+
+table.simple td.simple {
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+}
+
+/* Styles divers */
+table.cadre {
+	width: 100%;
+	border: 1px solid silver;
+	padding: 5px;
+}
+
+/* Affichage des parcours */
+table.tableauParcours {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+table.tableauEc {
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table.tableauEc td {
+	width: 50%;
+	border: 1px dashed black;
+	text-align: center;
+	font-size: 7pt;
+}
+
+td.caseSemestre {
+	border: none;
+	text-align: center;
+	width: 20px;
+}
+
+td.caseVide {
+	background-color: transparent;
+	border: 1px solid black;
+	width: 100px;
+	height: 60px;
+}
+
+td.casePleine {
+	background-color: transparent;
+	border: none;
+	width: 100px;
+	height: 60px;
+}
+
+td.caseVide:hover,td.casePleine:hover {
+	background-color: #E0E0D8;
+	cursor: pointer;
+}
+
+td.anomalie {
+	background-color: #008800;
+}
+-->

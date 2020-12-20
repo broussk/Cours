@@ -1,0 +1,115 @@
+@font-face{
+	font-family:museo300;
+	src:url(fonts/museo300-regular-webfont.eot);
+	src:url(fonts/museo300-regular-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/museo300-regular-webfont.woff2) format('woff2'),url(fonts/museo300-regular-webfont.woff) format('woff'),url(fonts/museo300-regular-webfont.ttf) format('truetype'),url(fonts/museo300-regular-webfont.svg#museo300) format('svg');
+	font-weight:400;
+	font-style:normal
+}
+
+@font-face{font-family: 'museo500';
+	src:url(fonts/museo500-regular-webfont.eot);
+	src:url(fonts/museo500-regular-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/museo500-regular-webfont.woff2) format('woff2'),url(fonts/museo500-regular-webfont.woff) format('woff'),url(fonts/museo500-regular-webfont.ttf) format('truetype'),url(fonts/museo500-regular-webfont.svg#museo500) format('svg');
+	font-weight:400;
+	font-style:normal
+}
+@font-face{
+	font-family:museo700;
+	src:url(fonts/museo700-regular-webfont.eot);
+	src:url(fonts/museo700-regular-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/museo700-regular-webfont.woff2) format('woff2'),url(fonts/museo700-regular-webfont.woff) format('woff'),url(fonts/museo700-regular-webfont.ttf) format('truetype'),url(fonts/museo700-regular-webfont.svg#museo700) format('svg');
+	font-weight:400;
+	font-style:normal
+}
+
+h1 {
+	font-size: 2.4em;
+	color: #181334;
+	font-weight: bold;
+	text-align: center;
+	font-family: museo700;
+}
+
+h1 a:link {
+text-decoration:none;
+}
+
+/* Titre de page */
+h2 {
+	color: #60883C;
+    font-size: 1.4em;
+	/*font-weight: bold;*/
+	text-align: center;
+	font-family: museo500;
+}
+
+/* Titre de paragraphe */
+h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+	font-family: museo300;
+	padding: 0px;
+	margin: 0px;
+	color: #800084;
+}
+
+/* Tailles de police */
+span.xsmall,p.xsmall {
+	font-size: 8pt;
+}
+
+span.small,p.small {
+	font-size: 10pt;
+}
+
+span.medium,p.medium {
+	font-size: 12pt;
+}
+
+/* Description des liens */
+a {
+	color: #181334;
+}
+
+a:hover {
+	color: #220E46;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+
+/* Description des paragraphes */
+p {
+	text-align: justify;
+	font-size: 0.85em;
+}
+
+p.warning {
+	background-color: red;
+	border: 1px solid white;
+}
+
+/* Styles divers */
+span.copyright {
+	font-size: 7pt;
+	font-weight: bold;
+}
+
+span.exemple {
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: tahoma, Arial;
+}
+
+span.champs {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+/* Tabulation de 2 espaces */
+span.tabulation {
+	margin-left: 2em;
+}
+
+/* Texte barré */
+.barre {
+text-decoration:line-through;
+}
+-->

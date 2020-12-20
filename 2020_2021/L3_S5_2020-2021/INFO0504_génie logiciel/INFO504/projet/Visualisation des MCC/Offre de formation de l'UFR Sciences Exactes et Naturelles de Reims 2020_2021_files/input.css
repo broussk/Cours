@@ -1,0 +1,61 @@
+
+<!--
+hr {
+	border: 1px solid black;
+}
+
+/* Apparence des list-case déroulantes */
+div.select_case {
+	border: 1px solid silver;
+	width: 170px;
+	margin: auto;
+}
+
+table.select_case_entete {
+	width: 170px;
+	background-color: white;
+}
+
+table.select_case_entete td {
+	width: 50%;
+}
+
+div.select_case_content {
+	position: absolute;
+	display: none;
+	width: 400px;
+	height: 200px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: scroll;
+	text-align: left;
+}
+
+td.select_case_img {
+	text-align: right;
+}
+
+/* Styles divers */
+/*ul
+{
+	list-style-type: circle;
+}*/
+div.display_inline {
+	vertical-align: top;
+	display: inline;
+}
+
+div.display_none {
+	vertical-align: middle;
+	display: none;
+}
+
+div.display_block {
+	vertical-align: middle;
+	display: block;
+}
+
+fieldset {
+	padding: 10px;
+}
+-->
