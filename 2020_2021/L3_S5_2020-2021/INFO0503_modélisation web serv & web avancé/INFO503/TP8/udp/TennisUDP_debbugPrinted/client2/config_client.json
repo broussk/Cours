@@ -1,0 +1,6 @@
+{
+    "addressServeur":"127.0.0.1",
+    "portServeur":"9876",
+    "addressClient":"127.0.0.4",
+    "portClient":"40111"
+}
