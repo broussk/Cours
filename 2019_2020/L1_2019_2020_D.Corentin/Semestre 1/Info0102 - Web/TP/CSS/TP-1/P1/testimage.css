@@ -1,0 +1,9 @@
+body{
+	background-color: rgb(72, 206, 101); 
+	background-image: url("imagetext.png");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: right top;
+
+
+}

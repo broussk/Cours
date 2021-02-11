@@ -1,0 +1,22 @@
+body {
+	background-color: blue; 
+    color: white;
+    width: 400px;
+    border-color: white;
+    border: solid;
+    padding: 10px;
+}
+
+h2 {
+	color: yellow; 
+background-color: red; 
+font-family: Arial; 
+font-style: Italic;
+text-underline-position: 10px;
+background-attachment: fixed;
+	text-decoration: blink;
+	display: inline
+
+}
+
+

@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Exercice 3 </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+function facto() {
+	var	n = prompt("Entrée une valeur");
+	var r = 1;
+	var i;		
+	
+		for (i = 1; i<=n; i++) {
+				r=r*i;
+		}
+		alert("La factorielle de " +n+ " est " +r);
+}
+
+
+
+
+
+
+function pgcd() {
+
+	var a = prompt("Entrer une premier valeur");
+	var b = prompt("Entrer une seconde valeur");
+	var r;
+
+		while (a*b!=0) {
+				if (a>b){
+					a = a-b;
+				} 
+				else{
+					b = b-a; 
+				}
+
+			    if (a==0) {
+				   	r = b; 
+				}
+				else{
+					r = a;;
+				}
+		}    
+		alert("PGCD = " +r); 
+}
+
+
+function table() {
+	nombre = window.prompt("Entrer un chiffre");
+	var i;
+
+		for (i = 0; i <= 10; i++) {
+			document.write(nombre+ " x " +i+ " = "+nombre*i+"<br>");
+		} 
+}
+
+
+
+function SecondDegre() {
+
+	var r;
+	var r2;
+	alert("Resolution de ax²+bx+c");
+	var a = prompt("Entrer la valeur de a = ");
+	var b = prompt("Entrer la valeur de b = ");
+	var c = prompt("Entrer la valeur de c = ");
+	var d = (b*b)-4*a*c;
+	document.write("Delta vaut : " +d+ "<br>");
+
+		if (d == 0 ) {
+   
+   			r = -b/2*a;
+   			document.write("Cette équation admet une solution x0 : " +r);
+
+		}else if (d > 0 ) {
+   
+   			r = (-b-Math.sqrt(d))/(2*a);
+   			r2 = (-b+Math.sqrt(d))/(2*a);
+   			document.write("Cette equation admet deux solutions: "+"<br>"+" x1: " +r+"<br>"+"x2: "+r2);
+
+		} else {
+			document.write("Cette equation n'admet aucune solutions car delta est negatif.");
+
+		}	
+}
+
+
+</script>
+
+
+</head>
+
+<body>
+<input type="button" onclick="table();" value="Table">	
+<input type="button" onclick="facto();" value="Factorielle">
+<input type="button" onclick="pgcd();" value="PGCD">
+<input type="button" onclick="SecondDegre();" value="Second degres">
+
+
+
+
+
+</body>

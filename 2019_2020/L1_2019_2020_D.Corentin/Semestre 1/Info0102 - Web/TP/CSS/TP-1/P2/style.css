@@ -1,0 +1,84 @@
+body {
+	font-family: arial,helvetica,sans-serif;
+	color: red;
+	margin: 5px;
+	padding: 5px;
+	background-image: url("fond2.png");
+	margin-left:0;
+	margin-top:0;
+	font-size: 12px;
+	background-attachment: fixed;
+}
+
+strong { 
+	color: green;
+}
+
+table {
+	border:  2px solid;
+	border-color: rgb(125,3,22);
+}
+
+h1 { 
+	font-size : 16pt;
+	color : black; 
+}
+h2 { 
+	font-size : 14pt;
+	color : black; 
+}
+h3 { 
+	font-size : 12pt;
+	color : black; 
+}
+h4 { 
+	font-size : 10pt;
+	font-weight : bold;
+	color : black; 
+}
+
+ul li.i1{
+	list-style-image: url("puce1.png");
+	text-align: left;
+	font-family : Helvetica;
+	font-size : 12px;
+	margin-left: 10px;
+}
+
+ul li.i2{
+	list-style-image: url("puce2.png");
+	text-align: left;
+	font-family : Helvetica;
+	font-size : 12px;
+	margin-left: 10px;
+}
+
+ul li.i3{
+	list-style-image: url("puce3.png");
+	text-align: left;
+	font-family : Helvetica;
+	font-size : 12px;
+	margin-left: 10px;
+}
+
+ul li.i4{
+	list-style-image: url("puce4.png");
+	text-align: left;
+	font-family : Helvetica;
+	font-size : 12px;
+	margin-left: 10px;
+}
+
+
+a:link {
+	color : green;
+	font-weight: bold;
+}
+a:visited {
+	color : purple;
+	font-weight: bold;
+}
+a:active{
+	color : blue;
+	font-weight: bold;
+}

@@ -1,0 +1,24 @@
+iframe {
+  position: relative;
+  top: -530px;
+  right: -500px;
+}
+
+.text {
+  position: relative;
+  top: -590px;
+  text-align: center;
+  font-family: Oswald;
+}
+
+.twitter {
+  position: relative;
+  top: -500px;
+  text-align: center;
+}
+
+.btntwitter {
+  position: relative;
+  top: 30px;
+  text-align: center;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../CSS/principale.css">
+  <link rel="stylesheet" href="../CSS/credit.css">
+  <link rel="stylesheet" href="../CSS/videos.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+  <script src="../JS/journuit.js"></script>
+  <script src="../JS/changevod.js"></script>
+
+  <title>GoldHawk | Vidéos</title>
+
+</head>
+
+<body id="mode">
+
+  <div class="wrapper">
+
+    <header id="htdpage">
+
+      <nav>
+
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <div class="logo">
+          <img class="imglogo" src="../Fichiers/gh.jpg" alt="Logo">
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a class="m-link" href="../index.html" onfocus="this.blur()"><i class="fas fa-home"></i> Live</a></li>
+            <li><a class="m-link" href="videos.html" onfocus="this.blur()"><i class="fas fa-video"></i> Vidéos</a></li>
+            <li><a class="m-link" href="commu.html" onfocus="this.blur()"><i class="fas fa-users"></i> Communautée</a></li>
+            <li><a class="m-link" href="contact.html" onfocus="this.blur()"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><input id="nommode" type="button" onclick="changermode()" value="Nuit"></li>
+          </ul>
+        </div>
+
+      </nav>
+
+
+    </header>
+
+    <div class="txtvod">
+      <p>Tu veux te détendre ? C'est par ici : </p>
+    </div>
+
+
+    <select name="select" onchange="choix(this)">
+      <option value="1">Minecraft SSP I </option>
+      <option value="2">Minecraft SSP II</option>
+      <option value="3">Alfard</option>
+      <option value="4">Archelia</option>
+      <option value="5">Ragnablöc III</option>
+      <option value="6">Ragnablöc IV</option>
+      <option value="7">Agrarian Skies</option>
+      <option value="8">Agrarian Skies II</option>
+      <option value="9">Minecraft - Let's Build V - Amplified</option>
+      <option value="10">Terraria</option>
+      <option value="11">Terraria Expert</option>
+      <option value="12">Shovel Knight : Shovel of Hope</option>
+      <option value="13">Shovel Knight : Specter of Torment</option>
+      <option value="14">Uncharted Territory III</option>
+      <option value="15">Shards of the Void</option>
+      <option value="16">Remote District</option>
+      <option value="17">Remote District II</option>
+      <option value="18">Animosity</option>
+      <option value="19">Overload</option>
+      <option value="20">Ragecraft III</option>
+      <option value="21">Myriad Caves</option>
+      <option value="22">Goliath</option>
+      <option value="23">Corona Trials</option>
+      <option value="24">Calamity Canyon</option>
+    </select>
+
+
+  </div>
+
+  <embed id="vod" src="https://www.youtube.com/embed/qNuxIop5Fzw" width="1000" height="550">
+  <a onfocus="this.blur()" href="#htdpage">
+    <p class="hautpage">Haut de page</p>
+  </a>
+  <div class="bug">
+    <a class="m-link" onfocus="this.blur()" id="credit">
+      <p>Bug & Crédits</p>
+    </a>
+  </div>
+  <div id="popup" class="modal">
+    <div id="textpopup" class="modal-content">
+      <span class="close">&times;</span>
+      <p>Crédit</p>
+      <a href="https://twitter.com/Eowalim" target="_blank"><img id="coco" src="../Fichiers/coco.jpg" alt="Corentin"></a>
+      <a href="https://twitter.com/BuretteQ" target="_blank"><img id="quentin" src="../Fichiers/quentin.jpg" alt="Quentin"></a>
+      <p id="nomcoco">Corentin Dupont</p>
+      <p id="nomquentin">Quentin Burette</p>
+
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('popup');
+    var btn = document.getElementById("credit");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+  <div id="footer">
+    <p>Copyright© goldhawk.fr<br> 2018-Tous droits réservés</p>
+    <a target="_blank" class="rs" href="https://twitter.com/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-twitter"></i></a>
+    <a target="_blank" class="rs" href="https://www.youtube.com/user/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-youtube"></i></a>
+
+  </div>
+
+</body>
+
+</html>

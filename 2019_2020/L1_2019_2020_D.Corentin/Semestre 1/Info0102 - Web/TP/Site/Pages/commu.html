@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GoldHawk | Communautée</title>
+  <link rel="stylesheet" href="../CSS/principale.css">
+  <link rel="stylesheet" href="../CSS/commu.css">
+  <link rel="stylesheet" href="../CSS/credit.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+  <script async src="https://platform.twitter.com/widgets.js"></script>
+  <script src="../JS/journuit.js"></script>
+
+</head>
+
+<body id="mode">
+
+  <div class="wrapper">
+
+    <header id="htdpage">
+
+      <nav>
+
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <div class="logo">
+          <img class="imglogo" src="../Fichiers/gh.jpg" alt="Logo">
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a class="m-link" href="../index.html" onfocus="this.blur()"><i class="fas fa-home"></i> Live</a></li>
+            <li><a class="m-link" href="videos.html" onfocus="this.blur()"><i class="fas fa-video"></i> Vidéos</a></li>
+            <li><a class="m-link" href="commu.html" onfocus="this.blur()"><i class="fas fa-users"></i> Communautée</a></li>
+            <li><a class="m-link" href="contact.html" onfocus="this.blur()"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><input id="nommode" type="button" onclick="changermode()" value="Nuit"></li>
+          </ul>
+        </div>
+
+      </nav>
+
+
+    </header>
+
+    <div class="text">
+      <h1>Rejoint nous c'est gratuit ;)</h1>
+      <h2>Un serveur minecraft est mis a disposition pour la communautée.</h2>
+      <h3>
+        <i>Psst si tu veux me tweete c'est juste là \/ ;)</i>
+      </h3>
+      <div class="btntwitter">
+        <a href="https://twitter.com/intent/tweet?screen_name=DatgoldHawk&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-show-count="true">Tweet to @DatgoldHawk</a>
+      </div>
+
+    </div>
+
+    <iframe class="discord" src="https://discordapp.com/widget?id=339864231040122880&theme=dark" width="700" height="700"></iframe>
+    <div class="twitter">
+      <a class="twitter-timeline" data-width="500" data-height="700" data-theme="dark" data-link-color="#FAB81E" href="https://twitter.com/DatGoldHawk?ref_src=twsrc%5Etfw">Tweets by DatGoldHawk</a>
+    </div>
+
+    <a onfocus="this.blur()" href="#htdpage">
+      <p class="hautpage">Haut de page</p>
+    </a>
+    <div class="bug">
+      <a class="m-link" href="#" onfocus="this.blur()" id="credit">
+        <p>Bug & Crédits</p>
+      </a>
+    </div>
+    <div id="popup" class="modal">
+      <div id="textpopup" class="modal-content">
+        <span class="close">&times;</span>
+        <p>Crédit</p>
+        <a href="https://twitter.com/Eowalim" target="_blank"><img id="coco" src="../Fichiers/coco.jpg" alt="Corentin"></a>
+        <a href="https://twitter.com/BuretteQ" target="_blank"><img id="quentin" src="../Fichiers/quentin.jpg" alt="Quentin"></a>
+        <p id="nomcoco">Corentin Dupont</p>
+        <p id="nomquentin">Quentin Burette</p>
+
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById('popup');
+      var btn = document.getElementById("credit");
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+
+    <div id="footer">
+      <p>Copyright© goldhawk.fr<br> 2018-Tous droits réservés</p>
+      <a target="_blank" class="rs" href="https://twitter.com/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" class="rs" href="https://www.youtube.com/user/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-youtube"></i></a>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

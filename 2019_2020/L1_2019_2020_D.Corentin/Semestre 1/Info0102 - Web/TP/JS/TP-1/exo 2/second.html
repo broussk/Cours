@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<script type="text/javascript">
+alert("Resolution de ax²+bx+c");
+	var a = prompt("Entrer la valeur de a = ");
+	var b = prompt("Entrer la valeur de b = ");
+	var c = prompt("Entrer la valeur de c = ");
+	var solution = SecondDegre(a,b,c); 
+    document.write(solution);
+
+function SecondDegre(a,b,c) {
+
+	
+	
+	var d = (b*b)-4*a*c;
+	document.write("Delta vaut : " +d+ "<br>");
+
+		if (d == 0 ) {
+   
+   			r = -b/2*a;
+   			var cf = "Cette équation admet une solution x0 : " +r;
+   			
+
+		}else if (d > 0 ) {
+
+   			var r = (-b-Math.sqrt(d))/(2*a);
+   			var r2 = (-b+Math.sqrt(d))/(2*a);
+   			var cf = "Cette équation admet deux solutions: "+"<br>"+" x1: " +r+"<br>"+"x2: "+r2;
+   			
+
+
+		} else {
+			var cf = "Aucune solution car delta est négatif";
+			
+       }
+      return(cf)	
+}
+
+
+
+
+	
+</script>
+<body>
+
+</body>
+</html>

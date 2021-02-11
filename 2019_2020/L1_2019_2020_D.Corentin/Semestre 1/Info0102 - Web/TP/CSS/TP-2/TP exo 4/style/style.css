@@ -1,0 +1,67 @@
+div.sommaire {
+	float:left;
+	width: 20%;
+	height: 100%;
+	margin: 0;
+	padding: 0 3% 0 10px;
+
+}
+
+div.contenu {
+	height: 100%;
+	margin: 0 0 0 23%;
+	padding-left: 1%;
+	border-left: 1px solid #FFFFFF;
+	border-bottom: 1px solid #ccc;
+	overflow: auto;
+
+}
+
+
+nav ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+nav li {
+	display: inline-block;
+	display: inline-block;
+	width: 111px;
+	height: 45px;
+	margin: 0px;
+	padding:0px;
+	border-right: 1px solid #eeeeee;
+	text-align: center;
+	line-height: 45px;
+	font-family: tahoma;
+}
+
+nav li a {
+	text-decoration: none;
+	background-color : orange;
+	display: block;
+	text-decoration: none;
+	background-color : orange;
+}
+
+nav li :hover {
+background-color: blue;
+}
+
+
+/*Dernier exercice*/
+
+
+header {
+	background-color: grey;
+	text-align: center;
+}
+
+
+footer {
+	background-color: black;
+	text-align: left;
+	color: white;
+	
+}

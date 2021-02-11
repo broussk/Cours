@@ -1,0 +1,29 @@
+.txtvod {
+  position: relative;
+  top: -615px;
+  font-size: 35px;
+  font-family: Oswald;
+  text-align: center;
+}
+
+embed {
+  position: relative;
+  top: -600px;
+  left: 330px;
+  
+}
+
+select {
+  position: relative;
+  top: -640px;
+  font-size: 35px;
+  left: 600px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0932b;
+  color: white;
+  font-family: Oswald;
+  text-align: center;
+  width: 500px;
+  display: inline-block;
+}

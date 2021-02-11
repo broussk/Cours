@@ -1,0 +1,131 @@
+body{
+  background-color: white;
+}
+
+
+
+
+.stream {
+  position: absolute;
+  height: 530px;
+  width: 1345px;
+  top: 130px;
+}
+
+.lecteur {
+  position: absolute;
+  left: 20px;
+  width: 1006px;
+  height: 200px;
+}
+
+.chat {
+  position: relative;
+  right: -1020px;
+  margin-right: 980px;
+}
+
+iframe{
+  position: relative;
+  left: 20px;
+}
+
+.soutien button {
+  font-family: Oswald;
+  bottom: -100px;
+  position: relative;
+  color: white;
+}
+
+.soutient button[type=button] {
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  padding-left: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 35px 2px;
+  cursor: pointer;
+  font-family: Oswald;
+  bottom: -5px;
+  right: -38px;
+  position: relative;
+}
+
+.soutient button i {
+  padding-right: 6px;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+button:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+  text-decoration: none;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+  text-decoration: none;
+}
+
+button {
+  border-radius: 4px;
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  text-decoration: none;
+}
+
+#follow {
+  background-color: #ec3636;
+  transition: all 0.3s ease-in-out;
+}
+
+#follow:hover {
+  background-color: #bc2b2b;
+}
+
+#tips {
+  background-color: #48b9e8;
+  transition: all 0.3s ease-in-out;
+}
+
+#tips:hover {
+  background-color: #3994b9;
+}
+
+#sub {
+  background-color: #2ecc71;
+  transition: all 0.3s ease-in-out;
+}
+
+#sub:hover {
+  background-color: #27ae60;
+}

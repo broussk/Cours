@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulaire</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2>Exercice 1:</h2><br><br>
+	<table border="" bgcolor="orange" align="center">
+		<tr>
+			<td>
+				<form method="post" action="mailto:benjamincornec@sfr.fr" enctype="text/plain"><h3>Formulaire de saisie</h3>
+				<table border="" bgcolor="orange">
+					<tr>
+						<td>Nom :</td>
+						<td colspan="3"><input type="text" name="nom" placeholder="Votre nom"></td>
+					</tr>
+					<tr>
+						<td>Prénom :</td>
+						<td colspan="3"><input type="text" name="prenom" placeholder="Votre prénom"></td>
+					</tr>
+					<tr>
+						<td>Date de naissance :</td>
+						<td colspan="3"><input type="date" name="datenais" ></td>
+					</tr>
+					<tr>
+						<td>Lieu de Naissance :</td>
+						<td colspan="3"><input type="text" name="lieunais" placeholder="Ville de naissance"></td>
+					</tr>
+					<tr>
+						<td>Sexe :</td>
+						<td colspan="3"><input type="radio" name="masc">Masculin <input type="radio" name="fem">Féminin <input type="radio" name="ind">Indéterminé</td>
+					</tr>
+					<tr>
+						<td>Adresse (Numero / Rue) :</td>
+						<td><input type="text" name="numerorue" placeholder="19"></td>
+						<td><select name="typerue" size="1">
+								<option>rue</option>
+								<option>avenue</option>
+								<option>bd</option>
+								<option>allée</option>
+								<option>impasse</option>
+								<option>place</option>
+								<option>square</option>
+								<option>lieu-dit</option>
+							</select></td>
+						<td><input type="text" name="typerue" placeholder="Victor Hugo"></td>
+					</tr>
+					<tr>
+						<td>Code Postal :</td>
+						<td colspan="3"><input type="text" name="cp" maxlength="5" size="5" placeholder="Ex: 51000"></td>
+					</tr>
+					<tr>
+						<td>Ville :</td>
+						<td colspan="3"><input type="text" name="ville" placeholder="Ville"></td>
+					</tr>
+					<tr>
+						<td>Adresse éléctronique :</td>
+						<td colspan="3"><input type="email" name="email" placeholder="Email"></td>
+					</tr>
+					<tr>
+						<td colspan="3">Envoyer le formulaire : &nbsp;  &nbsp;<input type="submit"></td>
+						<td  colspan="3" align="center">Effacer le formulaire : <input type="reset"></td>
+					</tr>
+				</table>
+			</form>
+			</td>
+		</tr>
+	</table><br><br>
+	<h2>Exercice 2:</h2>
+	<textarea name="test" cols="50" rows="3">
+		Avec l'attribut "mailto", quand on envoie le formulaire, la boite mail configurer nous renvoie
+		les informations saisie par l'utilisateur.		
+	</textarea><br><br>
+	<h2>Exercice 3:</h2>
+	<iframe name="PDF" src="tp.pdf" frameborder="1" scrolling="auto" height="390" width="650">monfichier.htm</iframe>
+	<object data="tp.pdf" type="text/html" height="390" width="650"></object>
+</body>
+</html>

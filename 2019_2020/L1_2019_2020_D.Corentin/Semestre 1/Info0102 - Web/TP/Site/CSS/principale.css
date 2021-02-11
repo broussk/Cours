@@ -1,0 +1,243 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Oswald;
+}
+
+body {
+  font-family: Oswald;
+  font-weight: lighter;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+}
+
+
+
+#footer {
+  text-align: center;
+  display: block;
+  background-color: black;
+  height: 100px;
+  font-family: Oswald;
+  color: white;
+}
+
+.hautpage {
+  font-family: Oswald;
+  color: white;
+  position: relative;
+  text-align: right;
+  padding-right: 15px;
+  margin-right: 750px;
+  bottom: -158px;
+  text-decoration: underline;
+}
+
+#nommode {
+  color: white;
+  background-color: #222f3e;
+  text-decoration: none;
+}
+
+#footer p {
+  position: relative;
+  bottom: -10px;
+}
+
+#footer i {
+  margin: 0px;
+  padding: 1px 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+#footer i:hover {
+  color: orange;
+}
+
+.hautpage {
+  position: relative;
+  right: -750px;
+}
+
+.bug {
+  position: relative;
+  bottom: -110px;
+  color: white;
+  padding-left: 10px;
+  font-size: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.rs i {
+  text-decoration: none;
+  color: white;
+  height: 10px;
+}
+
+.content {
+  width: 94%;
+  margin: 4em auto;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.logo {
+  line-height: 60px;
+  position: absolute;
+  float: left;
+  margin: 16px 46px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-family: Oswald;
+}
+
+.logo img {
+  position: absolute;
+  height: 70px;
+  border-radius: 10px;
+}
+
+.logo img:hover {
+  position: absolute;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #FFD700;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  line-height: 60px;
+}
+
+nav ul {
+  line-height: 60px;
+  list-style: none;
+  background: black;
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+  padding-right: 220px;
+  transition: 1s;
+}
+
+nav ul input {
+  position: relative;
+  right: -200px;
+  resize: none;
+}
+
+input[type=button] {
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Oswald;
+  font-size: 20px;
+  display: block;
+}
+
+input[type=button]:hover {
+  background-color: #10171e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Oswald;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #FFD700;
+  display: block;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 16px 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-family: Oswald;
+}
+
+.menu-icon {
+  line-height: 60px;
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+  font-family: Oswald;
+}
+
+.menu i {
+  margin-right: 3px;
+}
+
+.m-link {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+  font-family: Oswald;
+  border-bottom: 2px solid transparent;
+}
+
+.m-link:hover {
+  color: orange;
+  border-bottom: 2px solid orange;
+}
+
+@media(max-width: 786px) {
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
+
+  nav ul {
+    max-height: 0px;
+    background: #000;
+  }
+
+  nav.black ul {
+    background: #000;
+  }
+
+  .showing {
+    max-height: 34em;
+  }
+
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

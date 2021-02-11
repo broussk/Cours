@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="CSS/principale.css">
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet" href="CSS/credit.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+  <script src="JS/journuit.js"></script>
+  <script src="http://player.twitch.tv/js/embed/v1.js"></script>
+
+  <title>GoldHawk | Stream</title>
+
+
+</head>
+
+
+<body id="mode">
+
+
+    <div class="wrapper">
+
+      <header id="htdpage">
+
+        <nav>
+
+          <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+          </div>
+
+          <div class="logo">
+            <img class="imglogo" src="Fichiers/gh.jpg" alt="Logo">
+          </div>
+
+          <div class="menu">
+            <ul>
+              <li><a class="m-link" href="index.html" onfocus="this.blur()"><i class="fas fa-home"></i> Live</a></li>
+              <li><a class="m-link" href="Pages/videos.html" onfocus="this.blur()"><i class="fas fa-video"></i> Vidéos</a></li>
+              <li><a class="m-link" href="Pages/commu.html" onfocus="this.blur()"><i class="fas fa-users"></i> Communautée</a></li>
+              <li><a class="m-link" href="Pages/contact.html" onfocus="this.blur()"><i class="fas fa-envelope"></i> Contact</a></li>
+              <li><input id="nommode" type="button" onclick="changermode()" value="Nuit" onfocus="this.blur()"></li>
+            </ul>
+          </div>
+
+        </nav>
+
+
+      </header>
+      <div class="stream">
+        <div class="lecteur">
+
+          <div id="SamplePlayerDivID"></div>
+          <script>
+            var options = {
+                    width: 1006,
+                    height: 500,
+                    channel: "drfeelgood",
+                };
+                var player = new Twitch.Player("SamplePlayerDivID", options);
+                player.setVolume(0.5);
+
+            </script>
+        </div>
+
+        <div class="chat">
+
+          <iframe id="chat_embed" src="https://www.twitch.tv/embed/drfeelgood/chat?popout" scrolling="no" width="470" height="500" frameborder="0">
+          </iframe>
+        </div>
+
+        <div class="soutient">
+
+          <a href="https://www.twitch.tv/datgoldhawk" onfocus="this.blur()" target="_blank"><button type="button" id="follow"><i class="far fa-heart"></i></button></a>
+          <a href="https://www.twitch.tv/datgoldhawk" onfocus="this.blur()" target="_blank"><button type="button" id="tips"><i class="fab fa-paypal"></i>Faire un don</button></a>
+          <a href="https://www.twitch.tv/datgoldhawk" onfocus="this.blur()" target="_blank"><button type="button" id="sub"><i class="fas fa-plus"></i>S'abonner</button></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <a onfocus="this.blur()" href="#htdpage">
+      <p class="hautpage">Haut de page</p>
+    </a>
+    <div class="bug">
+      <a class="m-link" onfocus="this.blur()" id="credit">
+        <p>Bug & Crédits</p>
+      </a>
+
+    </div>
+
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--Modal: Contact form-->
+<div class="modal-dialog cascading-modal" role="document">
+
+    <!--Content-->
+    <div class="modal-content">
+
+        <!--Header-->
+        <div class="modal-header primary-color white-text">
+            <h4 class="title">
+                <i class="fa fa-pencil-alt"></i> Contact form</h4>
+            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+
+            <!-- Material input name -->
+            <div class="md-form form-sm">
+                <i class="fa fa-envelope prefix"></i>
+                <input type="text" id="materialFormNameModalEx1" class="form-control form-control-sm">
+                <label for="materialFormNameModalEx1">Your name</label>
+            </div>
+
+            <!-- Material input email -->
+            <div class="md-form form-sm">
+                <i class="fa fa-lock prefix"></i>
+                <input type="password" id="materialFormEmailModalEx1" class="form-control form-control-sm">
+                <label for="materialFormEmailModalEx1">Your email</label>
+            </div>
+
+            <!-- Material input subject -->
+            <div class="md-form form-sm">
+                <i class="fa fa-tag prefix"></i>
+                <input type="text" id="materialFormSubjectModalEx1" class="form-control form-control-sm">
+                <label for="materialFormSubjectModalEx1">Subject</label>
+            </div>
+
+            <!-- Material textarea message -->
+            <div class="md-form form-sm">
+                <i class="fa fa-pencil-alt prefix"></i>
+                <textarea type="text" id="materialFormMessageModalEx1" class="md-textarea form-control"></textarea>
+                <label for="materialFormMessageModalEx1">Your message</label>
+            </div>
+
+            <div class="text-center mt-4 mb-2">
+                <button class="btn btn-primary">Send
+                    <i class="fa fa-send ml-2"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!--/.Content-->
+</div>
+<!--/Modal: Contact form-->
+</div>
+
+    <script>
+      var modal = document.getElementById('modalContactForm');
+      var btn = document.getElementById("credit");
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+    <div id="footer">
+
+      <p>Copyright© goldhawk.fr<br> 2018-Tous droits réservés</p>
+
+      <a target="_blank" class="rs" href="https://twitter.com/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" class="rs" href="https://www.youtube.com/user/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-youtube"></i></a>
+
+
+    </div>
+
+</body>
+
+</html>

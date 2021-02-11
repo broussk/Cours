@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	var a = prompt("Entrer une premier valeur");
+	var b = prompt("Entrer une seconde valeur");
+	var r = pgcd(a,b);
+    document.write("PGCD = " +r);
+	function pgcd() {
+
+	
+		while (a*b!=0) {
+				if (a>b){
+					a = a-b;
+				} 
+				else{
+					b = b-a; 
+				}
+
+			    if (a==0) {
+				   	r = b; 
+				}
+				else{
+					r = a;;
+				}
+		}    
+		return(r); 
+}
+
+</script>
+<body>
+
+</body>
+</html>

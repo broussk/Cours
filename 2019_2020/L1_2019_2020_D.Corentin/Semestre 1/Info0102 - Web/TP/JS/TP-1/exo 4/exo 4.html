@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LValidation formulaire</title>
+        <meta charset="utf-8">
+            
+        <style>
+            label{display: inline-block;min-width: 200px;}
+        </style>
+    </head>
+    
+    <body>
+        <h1>Validation formulaire</h1>
+        
+        <form method="post">
+
+                   <label for='prenom'>Prénom : </label>
+            <input type='text' name='prenom' id='prenom' maxlength='20' required="" >
+            <span id='missPrenom'></span><br>
+            
+            <label for='nom'>Nom : </label>
+            <input type='nom' name='nom' id='nom' required="">
+            <span id='missNom'></span><br>
+            
+            <label for='email'>Email :</label>
+            <input type='email' name='email' id='email' required="">
+            <span id='missEmail'></span><br>
+            
+            <label for='age'>Age :</label>
+            <input type='age' name='age' id='age' required="">
+            <span id='missAge'></span><br>
+
+
+            <input type='submit' value='Valider' id='bouton_envoi' style="border-radius: 3px; cursor: pointer;">
+        </form>
+        
+        <script>
+            
+            var formValid = document.getElementById('bouton_envoi');
+            var prenom = document.getElementById('prenom');
+            var missPrenom = document.getElementById('missPrenom');
+            var nom = document.getElementById('nom');
+            var missNom = document.getElementById('missNom');
+            var email = document.getElementById('email');
+            var missEmail = document.getElementById('missEmail');
+            var age = document.getElementById('age');
+            var missAge = document.getElementById('missAge');
+            var emailValid = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+            var ageValid = /^[1-9][0-9]?$|^100$/;
+            
+            formValid.addEventListener('click', validation;
+            
+            function validation(event){
+                
+                if (prenom.validity.valueMissing){
+                    event.preventDefault();
+                    missPrenom.placeholder = 'Prénom manquant';
+                    missPrenom.style.color = 'red';
+                    prenom.style.backgroundColor = 'red';
+                
+                }
+                 if (nom.validity.valueMissing){
+                    event.preventDefault();
+                    missNom.textContent = 'Nom manquant';
+                    missNom.style.color = 'red';
+                    nom.style.backgroundColor = 'red';
+                
+                }
+
+                if (email.validity.valueMissing){
+                    event.preventDefault();
+                    missEmail.textContent = 'Email manquant';
+                    missEmail.style.color = 'red';
+                    email.style.backgroundColor = 'red';
+                
+                  }else if (emailValid.test(email.value) == false){
+                    event.preventDefault();
+                    missEmail.textContent = 'Format email incorrect';
+                    missEmail.style.color = 'blue';
+                    email.style.backgroundColor = 'orange';
+                      }
+                if (age.validity.valueMissing){
+                    event.preventDefault();
+                    missAge.textContent = 'Age manquant';
+                    missAge.style.color = 'red';
+                    age.style.backgroundColor = 'red';
+                
+                    }else if (ageValid.test(age.value) == false){
+                    event.preventDefault();
+                    missAge.textContent =' Age doit être compris entre 0 et 100 ans.';
+                    missAge.style.color = 'blue';
+                    age.style.backgroundColor = 'orange';
+                     }
+
+
+
+
+
+
+            }
+
+        </script>
+    </body>
+</html>

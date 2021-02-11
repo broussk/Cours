@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../CSS/principale.css">
+  <link rel="stylesheet" href="../CSS/contact.css">
+  <link rel="stylesheet" href="../CSS/credit.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+  <script src="../JS/journuit.js"></script>
+  <script src="../JS/validationform.js"></script>
+
+  <title>GoldHawk | Contact</title>
+
+</head>
+
+<body id="mode">
+
+  <div class="wrapper" id="#htdpage">
+
+    <header id="htdpage">
+
+      <nav>
+
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <div class="logo">
+          <img class="imglogo" src="../Fichiers/gh.jpg" alt="Logo">
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a class="m-link" href="../index.html" onfocus="this.blur()"><i class="fas fa-home"></i> Live</a></li>
+            <li><a class="m-link" href="videos.html" onfocus="this.blur()"><i class="fas fa-video"></i> Vidéos</a></li>
+            <li><a class="m-link" href="commu.html" onfocus="this.blur()"><i class="fas fa-users"></i> Communautée</a></li>
+            <li><a class="m-link" href="contact.html" onfocus="this.blur()"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><input id="nommode" type="button" onclick="changermode()" value="Nuit"></li>
+          </ul>
+        </div>
+      </nav>
+
+
+    </header>
+
+  </div>
+
+
+  <div id="contenuprincipal">
+    <p><strong>Tu as une question ? un projet ? Alors contact moi avec ce formulaire ci dessous :</strong></p>
+  </div>
+
+  <div class="container">
+    <form method="post">
+
+      <label for="info">Nom / Prénoms</label>
+      <input type="text" id="info" name="info" placeholder="Nom / Prénoms" required="">
+      <span id='missInfo'></span><br>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Email" required="">
+      <span id='missEmail'></span><br>
+
+      <label for="tel">Numéro de téléphone</label>
+      <input type="text" id="tel" name="tel" placeholder="Numéro de téléphone" required="">
+      <span id='missTel'></span><br>
+
+
+      <label for="msg">Message</label>
+      <textarea id="msg" name="msg" placeholder="Votre message" style="height:200px"></textarea>
+
+      <input type='submit' value='Valider' id='bouton_envoi'>
+    </form>
+    <script>
+      var formValid = document.getElementById('bouton_envoi');
+      var info = document.getElementById('info');
+      var missInfo = document.getElementById('missInfo');
+      var tel = document.getElementById('tel');
+      var missTel = document.getElementById('missTel');
+      var email = document.getElementById('email');
+      var missEmail = document.getElementById('missEmail');
+      var msg = document.getElementById('msg');
+      var msgEmail = document.getElementById('missMSG');
+      var emailValid = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+      var telValid = /(\+\d+(\s|-))?0\d(\s|-)?(\d{2}(\s|-)?){4}/;
+
+      formValid.addEventListener('click', validation);
+    </script>
+
+    <a onfocus="this.blur()" href="#htdpage">
+      <p class="hautpage">Haut de page</p>
+    </a>
+  </div>
+  <a onfocus="this.blur()" href="#htdpage">
+    <p class="hautpage">Haut de page</p>
+  </a>
+  <div class="bug">
+    <a class="m-link" onfocus="this.blur()" id="credit">
+      <p>Bug & Crédits</p>
+    </a>
+  </div>
+  <div id="popup" class="modal">
+    <div id="textpopup" class="modal-content">
+      <span class="close">&times;</span>
+      <p>Crédit</p>
+      <a href="https://twitter.com/Eowalim" target="_blank"><img id="coco" src="../Fichiers/coco.jpg" alt="Corentin"></a>
+      <a href="https://twitter.com/BuretteQ" target="_blank"><img id="quentin" src="../Fichiers/quentin.jpg" alt="Quentin"></a>
+      <p id="nomcoco">Corentin Dupont</p>
+      <p id="nomquentin">Quentin Burette</p>
+
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('popup');
+    var btn = document.getElementById("credit");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  <div id="footer">
+    <p>Copyright© goldhawk.fr<br> 2018-Tous droits réservés</p>
+    <a target="_blank" class="rs" href="https://twitter.com/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-twitter"></i></a>
+    <a target="_blank" class="rs" href="https://www.youtube.com/user/DatGoldHawk" onfocus="this.blur()"><i class="fab fa-youtube"></i></a>
+  </div>
+
+</body>
+
+</html>
