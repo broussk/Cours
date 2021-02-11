@@ -1,0 +1,8 @@
+gcc point.c main.c 
+
+gcc -o monexecutable point.c main.c OU gcc -c point.c  ==> point.o
+
+gcc -c main.c ==> main.o 
+
+
+gcc point.o main.o OU gcc -o nomexecutable point.o main.o

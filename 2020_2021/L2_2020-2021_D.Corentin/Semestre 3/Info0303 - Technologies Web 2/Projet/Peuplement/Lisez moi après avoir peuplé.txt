@@ -1,0 +1,19 @@
+Vous avez choisis de peupler la base de données. Voici donc les logins de 4 comptes qui peut être utile:
+
+- Admin:
+    email: odin@gmail.com
+    mdp: gungnir51
+
+- Responsable (Informatique): 
+    email: rc@gmail.com
+    mdp: urca2020
+
+- Un enseignant (Informatique): 
+    email: dp@gmail.com
+    mdp: urca2020
+
+- Un étudiant (Informatique): 
+    email: dc@gmail.com
+    mdp: cyberpunk2077
+
+Pour les autres utilisateurs présent leur mot de passe c'est "123456789" (sans les guillemets)

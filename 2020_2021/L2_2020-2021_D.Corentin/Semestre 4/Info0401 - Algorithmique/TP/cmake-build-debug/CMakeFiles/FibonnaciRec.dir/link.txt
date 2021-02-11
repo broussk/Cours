@@ -1,0 +1,3 @@
+C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\FibonnaciRec.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\FibonnaciRec.dir/objects.a @CMakeFiles\FibonnaciRec.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\FibonnaciRec.dir/objects.a -Wl,--no-whole-archive  -o FibonnaciRec.exe -Wl,--out-implib,libFibonnaciRec.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\FibonnaciRec.dir\linklibs.rsp

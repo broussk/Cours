@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/altitudeText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="@string/altitude"/>
+
+    <TextView
+        android:id="@+id/altitudeView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_below="@id/altitudeText"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/latitudeText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="@string/latitude"
+        android:layout_below="@id/altitudeView"/>
+
+    <TextView
+        android:id="@+id/latitudeView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_below="@id/latitudeText"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/longitudeText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="@string/longititude"
+        android:layout_below="@id/latitudeView"/>
+
+    <TextView
+        android:id="@+id/longititudeView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_below="@id/longitudeText"
+        android:textSize="30sp" />
+
+</RelativeLayout>

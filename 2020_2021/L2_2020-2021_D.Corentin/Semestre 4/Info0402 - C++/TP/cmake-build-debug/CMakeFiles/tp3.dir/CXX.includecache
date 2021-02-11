@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/eowal/Desktop/Cours/L2/Semestre 4/Info0402 - C++/TP/TP3/Color.h
+SVGstream.h
+C:/Users/eowal/Desktop/Cours/L2/Semestre 4/Info0402 - C++/TP/TP3/SVGstream.h
+
+C:/Users/eowal/Desktop/Cours/L2/Semestre 4/Info0402 - C++/TP/TP3/SVGstream.h
+iostream
+-
+iomanip
+-
+fstream
+-
+
+C:/Users/eowal/Desktop/Cours/L2/Semestre 4/Info0402 - C++/TP/TP3/tp3.cpp
+string
+-
+SVGstream.h
+C:/Users/eowal/Desktop/Cours/L2/Semestre 4/Info0402 - C++/TP/TP3/SVGstream.h
+Color.h
+C:/Users/eowal/Desktop/Cours/L2/Semestre 4/Info0402 - C++/TP/TP3/Color.h
+

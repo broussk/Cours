@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UrcaNetwork</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="connected">Vous êtes connecté au réseau :</string>
+    <string name="notconnected">Vous n êtes pas connecté</string>
+    <string name="checkNetwork">Vérifier le réseau</string>
+</resources>

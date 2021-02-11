@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UrcaDB</string>
+
+    <string name="Add">Ajouter un Étudiant</string>
+    <string name="ShowRandom">Afficher un Étudiant aléatoirement</string>
+    <string name="Show">Liste des Étudiants</string>
+</resources>

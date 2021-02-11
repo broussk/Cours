@@ -1,0 +1,3 @@
+C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Exo1.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\Exo1.dir/objects.a @CMakeFiles\Exo1.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Exo1.dir/objects.a -Wl,--no-whole-archive  -o Exo1.exe -Wl,--out-implib,libExo1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Exo1.dir\linklibs.rsp

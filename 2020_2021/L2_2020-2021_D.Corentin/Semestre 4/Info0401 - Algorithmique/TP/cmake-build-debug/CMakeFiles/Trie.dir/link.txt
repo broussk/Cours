@@ -1,0 +1,3 @@
+C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Trie.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\Trie.dir/objects.a @CMakeFiles\Trie.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\Trie.dir/objects.a -Wl,--no-whole-archive  -o Trie.exe -Wl,--out-implib,libTrie.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Trie.dir\linklibs.rsp

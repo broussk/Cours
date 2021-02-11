@@ -1,0 +1,3 @@
+C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Concatenation.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\Concatenation.dir/objects.a @CMakeFiles\Concatenation.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\Concatenation.dir/objects.a -Wl,--no-whole-archive  -o Concatenation.exe -Wl,--out-implib,libConcatenation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Concatenation.dir\linklibs.rsp

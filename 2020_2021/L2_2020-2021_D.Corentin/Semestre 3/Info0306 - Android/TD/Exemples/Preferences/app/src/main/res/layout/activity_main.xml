@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <Button
+        android:id="@+id/ButtonWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="writeClicked"
+        android:text="@string/ButtonWrite" />
+
+    <Button
+        android:id="@+id/buttonRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ButtonWrite"
+        android:onClick="readClicked"
+        android:text="@string/ButtonRead" />
+
+    <Button
+        android:id="@+id/ButtonDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonRead"
+        android:onClick="deleteClicked"
+        android:text="@string/ButtonDelete" />
+
+    <Button
+        android:id="@+id/ButtonExternalRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ButtonDelete"
+        android:onClick="checkExternalRead"
+        android:text="@string/ButtonExternalRead" />
+
+    <Button
+        android:id="@+id/ButtonExternalWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ButtonExternalRead"
+        android:onClick="checkExternalWrite"
+        android:text="@string/ButtonExternalWrite" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/eowal/Desktop/Cours/L2/Semestre 4/Info0402 - C++/TP/TP2/Exo1.cpp
+cstdio
+-
+cmath
+-
+iostream
+-
+ostream
+-
+

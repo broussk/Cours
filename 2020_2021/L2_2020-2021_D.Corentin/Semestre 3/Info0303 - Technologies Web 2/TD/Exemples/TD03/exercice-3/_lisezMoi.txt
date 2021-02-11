@@ -1,0 +1,17 @@
+Il s'agit ici uniquement des éléments de base. Le reste sera développé en TP.
+
+Créez la table 'actualite' :
+
+CREATE TABLE `actualite` (
+   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   `titre` varchar(100) NOT NULL,
+   `message` TEXT NOT NULL,
+   `date` varchar(10) NOT NULL
+   ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+Insérez les éléments suivants :
+
+INSERT INTO `actualite` (`id`, `titre`, `message`, `date`) VALUES
+(NULL, 'Actualité 1', 'Ceci est une actualité', '28/09/2020'),
+(NULL, 'Actualité 2', 'Ceci est une autre actualité', '27/09/2020'),
+(NULL, 'Actualité 3', 'Ceci est encore une autre actualité', '26/09/2020');

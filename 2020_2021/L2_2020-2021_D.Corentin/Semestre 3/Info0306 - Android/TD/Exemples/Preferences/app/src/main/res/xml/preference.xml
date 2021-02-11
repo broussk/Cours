@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Paramètres" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preference"
+            android:summaryOff="Activer les préférences"
+            android:summaryOn="Désactiver les préférences"
+            android:title="Préférences" />
+        <EditTextPreference
+            android:defaultValue="Billie Jean"
+            android:dependency="preference"
+            android:key="utilisateur"
+            android:summary="Entrez votre nom"
+            android:title="Utilisateur" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notifications" >
+        <SwitchPreference
+            android:key="notification"
+            android:summary="Recevoir les news"
+            android:title="Notifications" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Support" >
+        <Preference
+            android:key="support"
+            android:summary="Visiter le site de l'URCA"
+            android:title="Site" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.univ-reims.fr" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

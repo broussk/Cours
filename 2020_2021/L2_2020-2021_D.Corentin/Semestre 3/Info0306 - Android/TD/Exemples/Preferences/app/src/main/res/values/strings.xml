@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UrcaPreferences</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ButtonWrite">Ecrire "Urca" dans "urca.txt"</string>
+    <string name="ButtonRead">Lire le fichier "urca.txt"</string>
+    <string name="ButtonDelete">Supprime le fichier "urca.txt"</string>
+    <string name="ButtonExternalRead">Vérifier External (Read)</string>
+    <string name="ButtonExternalWrite">Vérifier External (Read/Write)"</string>
+
+</resources>
