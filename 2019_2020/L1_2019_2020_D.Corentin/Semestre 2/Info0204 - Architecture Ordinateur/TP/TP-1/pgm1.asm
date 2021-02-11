@@ -1,0 +1,7 @@
+;DUPONT Corentin
+;02/04/2020
+
+IN
+MUL 2
+OUT
+END
