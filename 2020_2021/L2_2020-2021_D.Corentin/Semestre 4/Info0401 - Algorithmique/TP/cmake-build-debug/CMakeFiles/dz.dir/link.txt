@@ -1,3 +1,0 @@
-C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.6682.181\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\dz.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\dz.dir/objects.a @CMakeFiles\dz.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\dz.dir/objects.a -Wl,--no-whole-archive  -o dz.exe -Wl,--out-implib,libdz.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\dz.dir\linklibs.rsp

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         table, th, td {
+         border: 1px solid black;
+         }
+      </style>
+   </head>
+   <body>
+      <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Projet_de_C_SET_0"></a>Projet de C++ (SET)</h1>
+      <h2 class="code-line" data-line-start=1 data-line-end=2 ><a id="Dclaration_pour_projet_set_1"></a>Déclaration pour projet <strong>set</strong></h2>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>Binôme</th>
+               <th>DUPONT Corentin, LACROIX Owen</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Groupe</td>
+               <td>S4F3-B</td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="has-line-data" data-line-start="7" data-line-end="9">Remplir les tableaux et sections ci-dessous en fonction de ce que vous avez réalisé.
+      </p>
+      <p class="has-line-data" data-line-start="10" data-line-end="12"><strong>Attention:</strong> toute déclaration incorrecte retire des points à votre note finale.
+      </p>
+      <h2 class="code-line" data-line-start=13 data-line-end=14 ><a id="Base_fonctionnelle_13"></a>Base fonctionnelle</h2>
+      <p class="has-line-data" data-line-start="15" data-line-end="16">Pour la base des arbres c’est à dire les noeuds, étant donné que nous les avons vus en Info0401 en C nous nous sommes basés sur ça.</p>
+      <h2 class="code-line" data-line-start=18 data-line-end=19 ><a id="Explications_18"></a>Explications</h2>
+      <p class="has-line-data" data-line-start="20" data-line-end="21">Pour commencer nous avons pris ce sujet qui certes est plus difficile que le deque, mais nous n’avons vraiment pas compris le principe de celui-ci, et on voulait tout de même essayer de rendre quelque chose certes pas fonctionnel. Ce qui nous a donc conduits au choix du SET.</p>
+      <p class="has-line-data" data-line-start="22" data-line-end="23">Donc une fois les nœuds réalisés, nous avons fait une classe AVLTree pour gérer les arbres équilibrés. Nous avons passé déjà pas mal de temps sur ça, car nous les avions jamais vus. Pour tester le fonctionnement de cette classe un main a été créé à cette occasion : <strong>main_avltree.cpp</strong></p>
+      <p class="has-line-data" data-line-start="24" data-line-end="25">Une fois, cela fait, nous nous sommes attaqués à la classe Set sauf que nous n’avons pas réussi à utiliser la classe AVLTree créée précédemment. On a quand même essayé de développer les méthodes contenant dans la classe Set avec les itérateurs, mais lors de leur définition dans leurs deux classes respectives, nous n’avons pas réussi.</p>
+      <p class="has-line-data" data-line-start="26" data-line-end="27">On aimerait aussi rajouter que la difficulté du langage n’a pas facilité l’aboutissement de ce projet.</p>
+      <p class="has-line-data" data-line-start="26" data-line-end="27">Toutes les méthodes non développées, on été mis en commentaire pour vous facilitez la lecture de celui-ci.</p>
+      <p class="has-line-data" data-line-start="26" data-line-end="27"><strong>Temps passé</strong> : ~15-20h</p>
+      <h2 class="code-line" data-line-start=20 data-line-end=21 ><a id="Fonctionnalits_gnrales_20"></a>Fonctionnalités générales</h2>
+      <p class="has-line-data" data-line-start="22" data-line-end="23">Les déclarations possibles sont les suivantes:</p>
+      <ul>
+         <li class="has-line-data" data-line-start="23" data-line-end="24"><em>fait</em> = réalisé ET testé.</li>
+         <li class="has-line-data" data-line-start="24" data-line-end="25"><em>partiel</em> = réalisé mais ne fonctionne pas dans certains cas identifié (à préciser).</li>
+         <li class="has-line-data" data-line-start="25" data-line-end="26"><em>bogué</em> = réalisé mais fonctionne pas dans des cas non identifié.</li>
+         <li class="has-line-data" data-line-start="26" data-line-end="27"><em>non fonctionnel</em> = écrit mais ne fonctionne pas.</li>
+         <li class="has-line-data" data-line-start="27" data-line-end="29">déclaration vide = non réalisé.</li>
+      </ul>
+      <h3 class="code-line" data-line-start=29 data-line-end=30 ><a id="_29"></a>----------------------------------------------------------------------------</h3>
+      <h3 class="code-line" data-line-start=31 data-line-end=32 ><a id="Classe_Node_31"></a>Classe Node</h3>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>version réalisée</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>int</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>template</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>constructeur/destructeur</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Node()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node(T value)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node(T value, Node *parent)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node(T value, Node *parent, Node *left, Node *right)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>explicit Node(const Node* node)</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>méthodes</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>void insert(const T&amp; value)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>static Node* goNextUpNode(Node* &amp;current)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>static Node* goNextLeftNode(Node* &amp;current)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>static Node* goNextRightNode(Node* &amp;current)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>static bool hasNext(Node&lt;T&gt;* &amp;current, Node&lt;T&gt;* &amp;last)</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>getters/setters</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>T&amp; getValue())</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void setValue(T value)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node* getParent()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void setParent(Node *parent)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node* getLeft()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void setLeft(Node *left)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node* getRight()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void setRight(Node *right)</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <h3 class="code-line" data-line-start=66 data-line-end=67 ><a id="_66"></a>----------------------------------------------------------------------------</h3>
+      <h3 class="code-line" data-line-start=68 data-line-end=69 ><a id="Classe_AVLTree_68"></a>Classe AVLTree</h3>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>version réalisée</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>int</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>template</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>constructeur/destructeur</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>AVLTree()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>AVLTree(const AVLTree&lt;T&gt; &amp;copy)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>~AVLTree()</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>méthodes (private)</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>int getHeight(Node&lt;T&gt; *tree)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>int getBalance(Node&lt;T&gt; *tree)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node&lt;T&gt; *doubleRightRotation(Node&lt;T&gt; *node)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node&lt;T&gt; *doubleLeftRotation(Node&lt;T&gt; *node)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node&lt;T&gt; *leftRightRotation(Node&lt;T&gt; *node)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node&lt;T&gt; *rightLeftRotation(Node&lt;T&gt; *node)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node&lt;T&gt; *balance(Node&lt;T&gt; *tree)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>Node&lt;T&gt; *insertNode(Node&lt;T&gt; *tree, const T&amp; value)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void preorder(Node&lt;T&gt; *tree)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void inorder(Node&lt;T&gt; *tree)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void postorder(Node&lt;T&gt; *tree)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void printTree(Node&lt;T&gt; *tree, int minHeight, int maxHeight)</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>méthodes (public)</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>void insert(const T&amp; value)</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>bool isBalanced()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>bool isEmpty()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void preorder()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void inorder()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void postorder()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void print()</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>getters/setters</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Node&lt;T&gt; *getRoot()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>void setRoot(Node&lt;T&gt; *root)</td>
+               <td><em>fait</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <h3 class="code-line" data-line-start=119 data-line-end=120 ><a id="_119"></a>----------------------------------------------------------------------------</h3>
+      <h3 class="code-line" data-line-start=121 data-line-end=122 ><a id="Classe_Set_121"></a>Classe Set</h3>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>version réalisée</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>int</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>template</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>constructeur/destructeur</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>set()</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>set( const Compare&amp; comp )</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>template&lt; class InputIt &gt; set( InputIt first, InputIt last, const Compare&amp; comp = Compare())</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>set( const set&amp; other )</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>set( set&amp;&amp; other )</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>set( std::initializer_list&lt;T&gt; init, const Compare&amp; comp = Compare())</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>~set()</td>
+               <td><em>bogué</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>assignation</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>set&amp; operator=( const set&amp; other )</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>set&amp; operator=( set&amp;&amp; other )</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>set&amp; operator=( std::initializer_list&lt;T&gt; ilist )</td>
+               <td>-</td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>accès aux éléments</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>iterator find( const T&amp; value )</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+            <tr>
+               <td>std::pair&lt;iterator,iterator&gt; equal_range( const T&amp; value ) const</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>iterator lower_bound( const T&amp; value ) const</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>iterator upper_bound( const T&amp; value ) const</td>
+               <td>-</td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>ajout/suppression d’éléments</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>std::pair&lt;iterator,bool&gt; insertNode( const T&amp; value )</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+            <tr>
+               <td>std::pair&lt;iterator,bool&gt; insertNode( T&amp;&amp; value )</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>template&lt; class InputIt &gt; void insertNode( InputIt first, InputIt last )</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>void insertNode( std::initializer_list&lt;T&gt; ilist )</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>template&lt; class… Args &gt; std::pair&lt;iterator,bool&gt; emplace( Args&amp;&amp;… args )</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>iterator erase( const_iterator pos )</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>void erase( const_iterator first, const_iterator last )</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>size_t erase( const T&amp; value )</td>
+               <td>-</td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>modification</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>void clear()</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>void swap( set&amp; other )</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+            <tr>
+               <td>swap (version externe)</td>
+               <td>-</td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>tests</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>bool operator==</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>bool operator!=</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>bool operator&lt;</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>bool operator&lt;=</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>bool operator&gt;</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>bool operator&gt;=</td>
+               <td><em>bogué</em></td>
+            </tr>
+            <tr>
+               <td>bool empty() const { return true; }</td>
+               <td><em>fait</em></td>
+            </tr>
+            <tr>
+               <td>bool contains( const T&amp; value ) const</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+            <tr>
+               <td>size_t size() const</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+            <tr>
+               <td>size_t count( const T&amp; value ) const</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <table class="table table-striped table-bordered">
+         <thead>
+            <tr>
+               <th>itérateurs</th>
+               <th>Déclaration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>bidirectionnel</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+            <tr>
+               <td>constant</td>
+               <td><em>non fonctionnel</em></td>
+            </tr>
+            <tr>
+               <td>inverse</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <td>inverse constant</td>
+               <td>-</td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <h2 class="code-line" data-line-start=188 data-line-end=189 ><a id="Tests_unitaires_188"></a>Tests unitaires</h2>
+      <p class="has-line-data" data-line-start="190" data-line-end="191">Il n’y a aucun test unitaire, car notre SET est non fonctionnel.</p>
+   </body>
+</html>

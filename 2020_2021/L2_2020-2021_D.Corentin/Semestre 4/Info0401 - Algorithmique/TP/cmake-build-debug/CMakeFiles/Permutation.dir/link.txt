@@ -1,3 +1,0 @@
-C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Permutation.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Permutation.dir/objects.a @CMakeFiles\Permutation.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\Permutation.dir/objects.a -Wl,--no-whole-archive  -o Permutation.exe -Wl,--out-implib,libPermutation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Permutation.dir\linklibs.rsp

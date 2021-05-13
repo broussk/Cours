@@ -1,3 +1,0 @@
-C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\tp03-solve.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\tp03-solve.dir/objects.a @CMakeFiles\tp03-solve.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\tp03-solve.dir/objects.a -Wl,--no-whole-archive  -o tp03-solve.exe -Wl,--out-implib,libtp03-solve.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tp03-solve.dir\linklibs.rsp

@@ -1,3 +1,0 @@
-C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Tassement.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Tassement.dir/objects.a @CMakeFiles\Tassement.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\Tassement.dir/objects.a -Wl,--no-whole-archive  -o Tassement.exe -Wl,--out-implib,libTassement.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Tassement.dir\linklibs.rsp

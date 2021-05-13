@@ -1,3 +1,0 @@
-C:\Users\eowal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\MulMatrice.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\MulMatrice.dir/objects.a @CMakeFiles\MulMatrice.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\MulMatrice.dir/objects.a -Wl,--no-whole-archive  -o MulMatrice.exe -Wl,--out-implib,libMulMatrice.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MulMatrice.dir\linklibs.rsp

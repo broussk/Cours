@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 #include <ostream>
+#include <deque>
 using namespace std;
 
 struct Complex {
